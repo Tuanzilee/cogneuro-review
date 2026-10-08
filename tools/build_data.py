@@ -340,6 +340,17 @@ WEEKS = [
   ['10/15 複習測驗範圍到第 4 章（腦造影），第 5 章不在這次', '10/08 開始第二次分組討論（Ch4＋5）', '第 5 章下週 W5 繼續，W5 的新內容等逐字稿到了再補'], 'W4'),
 ]
 
+# 概念卡配圖：英文名 -> (檔名, 替代文字)。圖是自畫 SVG 示意圖，放在 img/
+IMG = {
+ 'frontal lobe': 'lobes', 'parietal lobe': 'lobes', 'temporal lobe': 'lobes', 'occipital lobe': 'lobes',
+ 'neuron structure': 'neuron', 'myelin sheath, nodes of Ranvier': 'neuron',
+ 'graded potentials (gradient potentials)': 'potentials', 'action potential': 'potentials',
+ 'BOLD signal, hemodynamic response function': 'bold',
+ 'blocked design': 'design', 'event-related design': 'design',
+}
+ALT = {'lobes': '大腦側面圖：額葉、頂葉、顳葉、枕葉與中央溝、側溝', 'neuron': '神經元構造圖：樹突、細胞體、軸突、髓鞘、蘭氏結、末端膨大處',
+       'potentials': '漸變電位與動作電位的波形比較', 'bold': 'BOLD 訊號隨時間變化的曲線', 'design': '區塊設計與事件相關設計的刺激排序'}
+
 def build():
     cards, ids = [], {}
     cnt = {}
@@ -348,6 +359,7 @@ def build():
         cid = f'C_W{w}_C{cnt[w]:02d}'
         ids[en] = cid
         cards.append({'id': cid, 'week': w, 'topic': topic, 'term': zh, 'en': en, 'def': d, 'example': ex, 'tags': []})
+        if en in IMG: cards[-1]['img'] = IMG[en]; cards[-1]['alt'] = ALT[IMG[en]]
     random.seed(7)
     quiz, qc = [], {}
     for w, q, opts, why, key in QUIZ:

@@ -23,6 +23,8 @@ for w in weeks:
 import os
 for k in cids | {q['id'] for q in quiz} | {f"W{w['week']}" for w in weeks if w['points']}:
     if not os.path.exists(f'audio/{k}.mp3'): errors.append(f'缺音檔 audio/{k}.mp3（跑 tools/gen_audio.py）')
+for c in concepts:
+    if c.get('img') and not os.path.exists(f"img/{c['img']}.svg"): errors.append(f"{c['id']}：缺圖 img/{c['img']}.svg")
 print(f'概念卡 {len(concepts)}、情境題 {len(quiz)}、週次 {len(weeks)}')
 print('\n'.join(errors) if errors else '✅ 全部通過')
 sys.exit(1 if errors else 0)

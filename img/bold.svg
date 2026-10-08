@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<g stroke="#2b1d14" stroke-width="2" fill="none"><path d="M40,30 L40,200 L370,200"/></g>
+<path d="M40,170 L370,170" stroke="#cbbfa8" stroke-width="1.5" stroke-dasharray="4 4"/>
+<path d="M60,200 L60,60" stroke="#6fa8c7" stroke-width="5"/>
+<text x="68" y="64" font-size="12" font-weight="700" fill="#4a86a6">神經活動：很快</text>
+<path d="M60,170 C90,170 110,168 140,120 C165,75 185,60 205,70 C235,85 245,140 275,176 C295,188 320,176 360,170" fill="none" stroke="#e08a4f" stroke-width="5"/>
+<text x="215" y="58" font-size="14" font-weight="700" fill="#2b1d14">BOLD 訊號（HRF）</text>
+<text x="215" y="76" font-size="12" fill="#2b1d14" opacity=".75">血氧變化：慢，幾秒後才到高峰</text>
+<text x="60" y="218" font-size="12" fill="#2b1d14" text-anchor="middle">刺激出現</text>
+<text x="370" y="218" font-size="12" fill="#2b1d14" text-anchor="end">時間 →</text>
+<text x="200" y="244" font-size="12" fill="#6b5a4a" text-anchor="middle">fMRI 量的是血氧，是神經活動的間接指標</text>
+</svg>

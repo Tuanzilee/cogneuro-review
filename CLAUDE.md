@@ -1,7 +1,7 @@
 # CLAUDE.md — cogneuro-review
 
 ## Repo 用途
-hai 的「認知神經科學導論」（邱倚璿老師，1151）每週複習 PWA（手機為主）。骨架複製自 `psychtest-review`：單頁 `index.html` ＋ runtime fetch JSON，無 build、無框架。目前只在本機（2026-10-08 建立），**尚未建 GitHub repo、尚未 push**；建 repo 與每次 push 前一律先問 hai（公開 repo，內容不放講義或課本原文）。預計 repo 名 `cogneuro-review`，Pages `tuanzilee.github.io/cogneuro-review`。
+hai 的「認知神經科學導論」（邱倚璿老師，1151）每週複習 PWA（手機為主）。骨架複製自 `psychtest-review`：單頁 `index.html` ＋ runtime fetch JSON，無 build、無框架。已部署：公開 repo `github.com/Tuanzilee/cogneuro-review`，Pages `tuanzilee.github.io/cogneuro-review`（main 分支根目錄，2026-10-08 上線）。每次 push 前一律先問 hai（公開 repo，內容不放講義或課本原文）。
 
 ## 檔案結構
 ```
@@ -9,6 +9,7 @@ index.html     ← 全部 UI 與邏輯（localStorage 前綴 cn_）
 concepts.json / quiz.json / weeks.json  ← 由 tools/build_data.py 產生，不要直接改 JSON
 tools/build_data.py ← 內容原始檔（CARDS／QUIZ／WEEKS）：改這裡再執行 python3 tools/build_data.py
 tools/gen_audio.py  ← 雲哲男聲 zh-TW-YunJheNeural：`~/.venvs/tts/bin/python tools/gen_audio.py`
+img/ ← 自畫 SVG 示意圖（lobes、neuron、potentials、bold、design），米色底、卡通扁平風；build_data.py 的 IMG 對照表決定哪張卡配哪張圖
 audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 ```
 預覽：母資料夾 `.claude/launch.json` 的 `cogneuro-review`，埠 8768。

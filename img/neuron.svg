@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<g stroke="#2b1d14" stroke-width="3.5" fill="none">
+<path d="M70,110 L40,80 M40,80 L22,78 M40,80 L30,58 M70,125 L36,130 M36,130 L20,150 M36,130 L18,122 M78,142 L52,176 M52,176 L36,190 M52,176 L66,196"/></g>
+<circle cx="100" cy="128" r="36" fill="#f2b48a" stroke="#2b1d14" stroke-width="3.5"/>
+<circle cx="100" cy="128" r="12" fill="#c98a5e" stroke="#2b1d14" stroke-width="2.5"/>
+<path d="M136,128 L330,128" stroke="#2b1d14" stroke-width="4"/>
+<g fill="#9ccaa0" stroke="#2b1d14" stroke-width="3"><rect x="150" y="116" width="40" height="24" rx="10"/><rect x="200" y="116" width="40" height="24" rx="10"/><rect x="250" y="116" width="40" height="24" rx="10"/></g>
+<path d="M330,128 L350,108 M330,128 L352,128 M330,128 L350,148" stroke="#2b1d14" stroke-width="3.5"/>
+<g fill="#e8a3b6" stroke="#2b1d14" stroke-width="3"><circle cx="356" cy="106" r="7"/><circle cx="360" cy="128" r="7"/><circle cx="356" cy="150" r="7"/></g>
+<g font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">
+<text x="50" y="38">樹突（收）</text><text x="100" y="196">細胞體</text><text x="200" y="76">髓鞘</text><text x="312" y="180">軸突（送）</text><text x="345" y="226">末端膨大處</text></g>
+<g font-size="11" fill="#2b1d14" opacity=".75" text-anchor="middle"><text x="50" y="52">dendrites</text><text x="100" y="212">cell body</text><text x="200" y="90">myelin</text><text x="312" y="195">axon</text><text x="345" y="241">terminal buttons</text></g>
+<path d="M200,96 L200,114" stroke="#6b5a4a" stroke-width="1.5"/>
+<path d="M312,132 L312,166" stroke="#6b5a4a" stroke-width="1.5"/>
+<text x="245" y="180" font-size="13" font-weight="700" fill="#c0504d" text-anchor="middle">蘭氏結</text>
+<text x="245" y="195" font-size="11" fill="#c0504d" text-anchor="middle">髓鞘間的缺口</text>
+<path d="M245,134 L245,166" stroke="#c0504d" stroke-width="1.5"/>
+<text x="60" y="256" font-size="12" fill="#6b5a4a">訊息方向：在蘭氏結之間跳躍傳導</text>
+<path d="M265,252 L330,252" stroke="#6b5a4a" stroke-width="2"/><path d="M322,246 L332,252 L322,258" fill="none" stroke="#6b5a4a" stroke-width="2"/>
+<path d="M357,160 L350,212" stroke="#6b5a4a" stroke-width="1.5"/></svg>
