@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">Donders 減法法：B 減 A</text>
+<g font-size="10" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="96" y="46">視覺輸入</text><text x="168" y="46">視覺處理</text><text x="240" y="46">字詞辨認</text><text x="310" y="46">語意記憶</text><text x="362" y="46">動作反應</text></g>
+<g stroke="#2b1d14" stroke-width="2.5"><rect x="60" y="56" width="72" height="30" rx="6" fill="#f2b48a"/><rect x="136" y="56" width="64" height="30" rx="6" fill="#f2b48a"/><rect x="204" y="56" width="0" height="30" rx="6" fill="#fffdf7" stroke="none"/><rect x="276" y="56" width="68" height="30" rx="6" fill="#f2b48a"/><rect x="346" y="56" width="40" height="30" rx="6" fill="#f2b48a"/>
+<rect x="60" y="106" width="72" height="30" rx="6" fill="#8cbbd6"/><rect x="136" y="106" width="64" height="30" rx="6" fill="#8cbbd6"/><rect x="204" y="106" width="68" height="30" rx="6" fill="#e8c46a"/><rect x="276" y="106" width="68" height="30" rx="6" fill="#8cbbd6"/><rect x="346" y="106" width="40" height="30" rx="6" fill="#8cbbd6"/></g>
+<g font-size="12" font-weight="700" fill="#2b1d14"><text x="22" y="76">A</text><text x="22" y="126">B</text></g>
+<g font-size="10" fill="#2b1d14" text-anchor="middle"><text x="96" y="76">看</text><text x="168" y="76">看</text><text x="310" y="76">想</text><text x="366" y="76">說</text><text x="96" y="126">看</text><text x="168" y="126">看</text><text x="238" y="126">多出來！</text><text x="310" y="126">想</text><text x="366" y="126">說</text></g>
+<text x="240" y="76" font-size="10" fill="#6b5a4a" text-anchor="middle">（沒有）</text>
+<text x="200" y="162" font-size="12" fill="#2b1d14" text-anchor="middle">A＝看圖命名　B＝看詞命名（多一步字詞辨認）</text>
+<text x="200" y="184" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">B 的活動 − A 的活動 ＝ 字詞辨認的腦區</text>
+<text x="200" y="214" font-size="12" font-weight="700" fill="#c0504d" text-anchor="middle">前提：純插入（pure insertion）</text>
+<text x="200" y="232" font-size="11" fill="#6b5a4a" text-anchor="middle">多加一個成分，其他步驟不會跟著改變——常常不成立</text>
+</svg>

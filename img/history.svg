@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/><text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">腦與心的歷史（投影片版本）</text>
+<g font-size="11" fill="#2b1d14">
+<text x="18" y="52" font-weight="700">古希臘</text><text x="78" y="52">Plato：心在頭</text><text x="78" y="68">Aristotle：心在心臟</text>
+<text x="18" y="92" font-weight="700">古羅馬</text><text x="78" y="92">Galen：切豬喉白索</text>
+<text x="18" y="116" font-weight="700">1664</text><text x="78" y="116">Willis：分灰質白質</text>
+<text x="18" y="140" font-weight="700">1745</text><text x="78" y="140">Swedenborg：功能定位</text>
+<text x="18" y="164" font-weight="700">1780</text><text x="78" y="164">Galvani：青蛙腿</text>
+<text x="212" y="52" font-weight="700">1861</text><text x="262" y="52">Broca：語言病人</text>
+<text x="212" y="76" font-weight="700">1870</text><text x="262" y="76">Fritsch &amp; Hitzig</text><text x="262" y="90" font-size="10" fill="#6b5a4a">電刺激運動區</text>
+<text x="212" y="116" font-weight="700">1891</text><text x="262" y="116">Waldeyer：neuron</text>
+<text x="212" y="140" font-weight="700">1909</text><text x="262" y="140">Brodmann：52 區</text>
+<text x="212" y="164" font-weight="700">1929</text><text x="262" y="164">Berger：α β θ δ</text>
+<text x="212" y="188" font-weight="700">1950</text><text x="262" y="188">Palay：突觸間隙</text></g>
+<g stroke="#cbbfa8" stroke-width="1.5"><path d="M200,36 L200,196"/></g>
+<text x="200" y="222" font-size="11" fill="#2b1d14" text-anchor="middle">反定位：Flourens（鴿）、Goltz（狗）、Lashley（大鼠）</text>
+<text x="200" y="244" font-size="10" fill="#6b5a4a" text-anchor="middle">年代以投影片為準；Broca 年代取自交接檔</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="105" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">裂腦</text><text x="297" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">H.M. 病人</text>
+<g stroke="#2b1d14" stroke-width="3" fill="#fffdf7"><ellipse cx="82" cy="94" rx="46" ry="52"/><ellipse cx="130" cy="94" rx="46" ry="52"/></g>
+<path d="M106,96 L106,96" stroke="#c0504d" stroke-width="3"/>
+<rect x="84" y="86" width="44" height="16" rx="6" fill="#e8a3b6" stroke="#2b1d14" stroke-width="2.5"/>
+<path d="M96,80 L116,108" stroke="#c0504d" stroke-width="4"/><path d="M116,80 L96,108" stroke="#c0504d" stroke-width="4"/>
+<text x="105" y="168" font-size="11" fill="#2b1d14" text-anchor="middle">胼胝體被切斷</text><text x="105" y="184" font-size="10" fill="#6b5a4a" text-anchor="middle">corpus callosum</text><text x="105" y="200" font-size="11" fill="#2b1d14" text-anchor="middle">左右半球無法直接溝通</text>
+<g stroke="#2b1d14" stroke-width="3"><path d="M236,150 C222,80 262,44 306,44 C350,44 372,84 366,150 Z" fill="#f6e3cf"/></g>
+<path d="M300,128 C318,120 342,120 354,130 C342,140 318,142 300,134 Z" fill="#c0504d" stroke="#2b1d14" stroke-width="2.5" opacity=".85"/>
+<text x="326" y="128" font-size="9" font-weight="700" fill="#fffdf7" text-anchor="middle">海馬迴</text>
+<path d="M312,112 L336,146" stroke="#2b1d14" stroke-width="3.5" fill="none"/><path d="M336,112 L312,146" stroke="#2b1d14" stroke-width="3.5" fill="none"/>
+<text x="297" y="168" font-size="11" fill="#2b1d14" text-anchor="middle">切除內側顳葉（含海馬迴）</text><text x="297" y="184" font-size="10" fill="#6b5a4a" text-anchor="middle">medial temporal lobe, hippocampus</text><text x="297" y="200" font-size="11" fill="#2b1d14" text-anchor="middle">無法形成新的長期記憶</text>
+<text x="200" y="232" font-size="11" fill="#6b5a4a" text-anchor="middle">兩者都是為了治療癲癇而動的手術</text>
+</svg>

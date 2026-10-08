@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">邊緣系統 vs 基底核：交集是杏仁核</text>
+<g stroke="#2b1d14" stroke-width="3"><ellipse cx="140" cy="130" rx="108" ry="84" fill="#e8a3b6" fill-opacity=".55"/><ellipse cx="262" cy="130" rx="108" ry="84" fill="#8cbbd6" fill-opacity=".55"/></g>
+<g font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="96" y="84">邊緣系統</text><text x="306" y="84">基底核</text></g>
+<g font-size="9" fill="#2b1d14" text-anchor="middle"><text x="96" y="97">limbic system</text><text x="306" y="97">basal ganglia</text></g>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="90" y="118">海馬迴</text><text x="90" y="134">乳狀體</text><text x="90" y="150">穹窿</text><text x="90" y="166">扣帶迴</text><text x="90" y="182">中隔區</text>
+<text x="312" y="118">紋狀體</text><text x="312" y="134">（尾狀核、殼核）</text><text x="312" y="154">蒼白球</text></g>
+<circle cx="201" cy="128" r="30" fill="#e8c46a" stroke="#2b1d14" stroke-width="3"/>
+<text x="201" y="126" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">杏仁核</text><text x="201" y="140" font-size="9" fill="#2b1d14" text-anchor="middle">amygdala</text>
+<g font-size="11" fill="#6b5a4a" text-anchor="middle"><text x="140" y="228">管動機行為</text><text x="262" y="228">管動作系統</text></g>
+<text x="200" y="250" font-size="10" fill="#6b5a4a" text-anchor="middle">海馬迴與中隔區只在邊緣系統，不在基底核</text>
+</svg>

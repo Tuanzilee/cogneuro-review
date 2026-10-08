@@ -7,7 +7,9 @@
   "en": "mind–body problem",
   "def": "想法、感覺、意識摸不到，可是動大腦又會改變心智，所以問題是：心跟身體到底怎麼連在一起？課堂列了三種立場：笛卡兒（Descartes）的二元論（dualism）、雙重屬性論（double-aspect theory）、一元論（identity theory）。考場句：認知神經科學站在一元論這邊，認為心智是大腦功能的產物，可以靠研究大腦活動來理解。",
   "example": "隨堂測驗第 1 題問哪個選項最能支持認知神經科學的觀點，答案是「心智是大腦功能的產物，可以透過研究大腦活動來理解」。松果體（pineal gland）那個選項是笛卡兒（Descartes），不是答案。",
-  "tags": []
+  "tags": [],
+  "img": "mindbody",
+  "alt": "二元論、雙重屬性論、一元論三種心身問題立場"
  },
  {
   "id": "C_W1_C02",
@@ -17,7 +19,9 @@
   "en": "Cartesian interactionism (dualism)",
   "def": "心靈是非物質的、身體是物質的，兩個系統各自獨立，卻能互相溝通、交換能量，連接的地方被說成松果體（pineal gland）。考場句：二元論（dualism）若是對的，認知神經科學就沒指望，因為物理和生物的方法碰不到非物質的心靈。",
   "example": "重點不在於今天還有人相信松果體（pineal gland）是接口，而是它把「非物質的心怎麼推動物質的身體」這個難題清楚講了出來。",
-  "tags": []
+  "tags": [],
+  "img": "mindbody",
+  "alt": "二元論、雙重屬性論、一元論三種心身問題立場"
  },
  {
   "id": "C_W1_C03",
@@ -27,7 +31,9 @@
   "en": "double-aspect theory / identity theory",
   "def": "雙重屬性論（double-aspect theory）認為底下只有一個實在，生理學看到一面、心理學看到另一面（本體一元、認識上二元）。一元論（identity theory）則把重點放在可測量的生理結構，也就是大腦。考場句：雙重屬性論是同一個東西兩個面向，一元論是只盯著大腦本身。",
   "example": "教師的用詞和課本不同：她用 identity theory 和 double-aspect theory，課本分別寫 reductionism 和 dual-aspect theory，考試以教師的說法為準。",
-  "tags": []
+  "tags": [],
+  "img": "mindbody",
+  "alt": "二元論、雙重屬性論、一元論三種心身問題立場"
  },
  {
   "id": "C_W1_C04",
@@ -37,7 +43,9 @@
   "en": "functional localization",
   "def": "某些腦區對某類功能特別重要，所以不同區域有不同分工。但特別重要不等於整個功能只住在那一區。考場句：大腦區域高度互聯，不過特定腦區在特定功能上扮演更關鍵的角色（Goldstein 的折衷）。",
   "example": "1745 年 Swedenborg 提出不同腦區負責不同功能，額葉（frontal lobe）管高級心智、中央裂（central fissure）之前管自主運動，是這條線的開始。後來有 Broca、Wernicke 的病人證據，以及 Fritsch 與 Hitzig 在 1870 年電刺激狗的運動區。",
-  "tags": []
+  "tags": [],
+  "img": "localization",
+  "alt": "功能定位、分散式與折衷三種觀點的比較"
  },
  {
   "id": "C_W1_C05",
@@ -47,7 +55,9 @@
   "en": "parallel neural network (distribution)",
   "def": "功能不是只靠一個區域，而是很多節點同時處理、靠連結一起得出結果。分散式不代表每個區域都做一樣的事。考場句：支持分散論的標準人物是 Lashley。",
   "example": "Flourens 用鴿子、Goltz 用狗（1881）、Lashley 用大鼠（1950 年代）都看到損傷後功能會恢復，反對嚴格定位，Lashley 提出 equipotentiality 與 mass action。",
-  "tags": []
+  "tags": [],
+  "img": "localization",
+  "alt": "功能定位、分散式與折衷三種觀點的比較"
  },
  {
   "id": "C_W1_C06",
@@ -57,7 +67,9 @@
   "en": "phrenology",
   "def": "顱相學（phrenology）想從頭骨的隆起推斷人的能力與個性。它的第一個假設（不同腦區有不同功能）活了下來，第二個假設（頭骨形狀反映心智）是錯的。教師的框架是列出 Gall 與 Spurzheim 答對的解剖學貢獻。考場句：顱相學的方法是錯的，但它提出的問題（功能是否依賴不同腦區）有啟發性。",
   "example": "Gall 與 Spurzheim 答對的六點：皮質（cortex）由神經組成、皮質與皮質下（subcortical）有聯絡、錐體系統（pyramidal system）在腦幹交叉、脊髓（spinal cord）分灰質（gray matter）白質（white matter）、兩半球經胼胝體（corpus callosum）交換、在皮質上定位功能。",
-  "tags": []
+  "tags": [],
+  "img": "phrenology",
+  "alt": "顱相學的兩個假設與 Gall、Spurzheim 答對的六點"
  },
  {
   "id": "C_W1_C07",
@@ -67,7 +79,9 @@
   "en": "history of the brain and mind",
   "def": "古代誰說了算：Plato 認為腦最圓最接近神，mind 在頭；Aristotle 認為 mind 在心臟，腦只是冷卻血液。Galen 切斷豬喉部通往大腦的白索，豬就叫不出聲，是第一個支持「腦控制行為」的實驗證據。Willis 在 1664 年把皮質（cortex）分成灰質（gray matter）與白質（white matter）。",
   "example": "歷史、人物、年代以投影片為準。這條線在課本第 1 章裡找不到，所以考題要靠課堂投影片的版本。",
-  "tags": []
+  "tags": [],
+  "img": "history",
+  "alt": "腦與心的歷史年代表"
  },
  {
   "id": "C_W1_C08",
@@ -77,7 +91,9 @@
   "en": "neuron doctrine",
   "def": "十九世紀爭論神經細胞是互相連成一整片的網（Golgi，連續論），還是彼此獨立的細胞（Cajal，不連續）。Cajal 那邊贏了，Waldeyer 在 1891 年把這個單位命名為 neuron。考場句：Golgi 與 Cajal 爭的是神經細胞連不連續，不是功能定位（functional localization）或分散。",
   "example": "隨堂測驗第 3 題的陷阱：選項 Golgi 也算整體論，但那是細胞連續性的問題，不是大腦功能分散論。分散論答 Lashley。電子顯微鏡到 1950 年 Palay 才看到突觸間隙（synaptic cleft）。",
-  "tags": []
+  "tags": [],
+  "img": "neurondoctrine",
+  "alt": "Golgi 的連續網與 Cajal 的獨立神經元"
  },
  {
   "id": "C_W1_C09",
@@ -87,7 +103,9 @@
   "en": "bottom-up, top-down, sequential, parallel processing",
   "def": "由下而上（bottom-up）是從感官資料往上堆；由上而下（top-down）是靠知識與期待往下影響；序列處理（sequential processing）是一站接一站；平行處理（parallel processing）是同時進行。考場句：感官記憶（sensory memory）、短期記憶（short-term memory）、長期記憶（long-term memory）一個接一個，屬於序列處理。",
   "example": "隨堂測驗第 4 題：「訊息先由感官記憶（sensory memory）處理，再由短期記憶（short-term memory）維持，最後進入長期記憶（long-term memory）」是序列處理（sequential processing），不是由下而上（bottom-up）。",
-  "tags": []
+  "tags": [],
+  "img": "processing",
+  "alt": "由下而上、由上而下、序列與平行處理"
  },
  {
   "id": "C_W2_C01",
@@ -189,7 +207,9 @@
   "en": "superior colliculus, inferior colliculus",
   "def": "兩個都在中腦（midbrain）的頂蓋（tectum）。上丘（superior colliculus）和視覺比較有關（也碰觸覺、聽覺），下丘（inferior colliculus）和聽覺有關。記法：上視下聽。",
   "example": "隨堂測驗第 3 題：與視覺運作比較有關的是上丘（superior colliculus）。海馬迴（hippocampus）與黑質（substantia nigra）都不是答案。",
-  "tags": []
+  "tags": [],
+  "img": "colliculi",
+  "alt": "上丘管視覺、下丘管聽覺"
  },
  {
   "id": "C_W2_C10",
@@ -199,7 +219,9 @@
   "en": "limbic system, basal ganglia",
   "def": "邊緣系統（limbic system）管動機行為，成員有乳狀體（mammillary bodies）、海馬迴（hippocampus）、杏仁核（amygdala）、穹窿（fornix）、扣帶迴（cingulate gyrus）、中隔區（septum）。基底核（basal ganglia）管動作系統，包含杏仁核、紋狀體（striatum）（尾狀核（caudate nucleus）與殼核（putamen））、蒼白球（globus pallidus）。杏仁核兩邊都算。考場句：同時被歸在邊緣系統與基底核的是杏仁核。",
   "example": "海馬迴（hippocampus）只在邊緣系統（limbic system），不在基底核（basal ganglia）；中隔區（septum）也只在邊緣系統。所以兩邊重疊的選項是杏仁核（amygdala）。",
-  "tags": []
+  "tags": [],
+  "img": "limbic",
+  "alt": "邊緣系統與基底核的重疊是杏仁核"
  },
  {
   "id": "C_W2_C11",
@@ -209,7 +231,9 @@
   "en": "evolution of the brain",
   "def": "魚類小腦（cerebellum）發達，管平衡；兩棲類前腦（forebrain）發展、嗅球（olfactory bulb）重要；爬蟲類前腦底部有更多嗅覺相關的核；鳥類小腦再發達，管平衡與飛行；哺乳類多了邊緣系統（limbic system）和皮質（cortex）皺褶；人類皮質更大、皺褶更細，還負責推理、決策與語言。考場句：人類與其他動物的差別主要在皮質皺褶多，不是邊緣系統或小腦。",
   "example": "隨堂測驗第 1 題：人類大腦和其他動物比，正確敘述是「有更多的皺褶」。「大腦比較大」不是答案。",
-  "tags": []
+  "tags": [],
+  "img": "evolution",
+  "alt": "各物種腦區的強項與人類的皮質皺褶"
  },
  {
   "id": "C_W3_C01",
@@ -219,7 +243,9 @@
   "en": "reaction time (RT)",
   "def": "從刺激出現到按鍵反應的時間，單位是毫秒，要用電腦精準記錄。它是行為指標，用條件之間的時間差去推論認知處理的階段，不是直接量到神經電位。考場句：條件間的時間差，可以透露額外認知處理的成本。",
   "example": "流程是凝視點、刺激、按鍵。研究多半看答對的 Yes 試次（trial），No 反應可當成有沒有認真作答的檢核。清楚的刺激 RT 比較快，模糊的比較慢。",
-  "tags": []
+  "tags": [],
+  "img": "rt",
+  "alt": "反應時間的測量流程與加法因素法"
  },
  {
   "id": "C_W3_C02",
@@ -229,7 +255,9 @@
   "en": "additive factors method (Sternberg, 1969)",
   "def": "操弄作業中的某個變項（例如要比較的項目數），看反應時間（reaction time）怎麼跟著變，來推測有哪些處理階段。這是心理計時學（mental chronometry）的做法。",
   "example": "心理計時學這條線，後來在 W4 的 Donders 減法法（subtraction method）裡又會出現，兩個都是用時間或活動的差去推階段。",
-  "tags": []
+  "tags": [],
+  "img": "rt",
+  "alt": "反應時間的測量流程與加法因素法"
  },
  {
   "id": "C_W3_C03",
@@ -307,7 +335,9 @@
   "en": "brain rhythms (γ, β, α, θ, δ)",
   "def": "越專注頻率越高，越放鬆頻率越低。依投影片：Gamma 約 30–80 Hz 與注意有關；Beta 12–30 Hz 是警覺、專注；Alpha 8–12 Hz 是平靜、冥想；Theta 4–8 Hz；Delta 在 4 Hz 以下，深睡時常見。考場句：受試者專注時最可能出現 Beta 或 Gamma。",
   "example": "1929 年 Berger 第一次在人的頭皮上量到 α、β、θ、δ，不同時間的不同頻段反映不同的心智狀態。隨堂測驗第 3 題是複選，專注時選 Beta 與 Gamma。",
-  "tags": []
+  "tags": [],
+  "img": "rhythms",
+  "alt": "五種腦波的頻率與狀態"
  },
  {
   "id": "C_W3_C10",
@@ -363,7 +393,9 @@
   "en": "structural vs. functional imaging",
   "def": "結構影像（structural imaging）看組織長什麼樣子：X 光、CT、MRI（T1）。功能影像（functional imaging）看活動：PET、fMRI（T2）、fNIRS。VBM 用結構影像比較灰質（gray matter）與白質（white matter）的差異；DTI 看腦區之間的白質連結。",
   "example": "MRI 的 T1 是結構影像（structural imaging）：氫原子被射頻脈衝共振後再回復，不同組織回復快慢不同，白質（white matter） T1 短、灰質（gray matter） T1 長，就形成影像的對比。",
-  "tags": []
+  "tags": [],
+  "img": "imaging",
+  "alt": "結構影像與功能影像的分類"
  },
  {
   "id": "C_W4_C03",
@@ -385,7 +417,9 @@
   "en": "PET vs. fMRI vs. fNIRS",
   "def": "三種都是功能影像（functional imaging）。PET 看葡萄糖等代謝，偏侵入、成本高；fMRI 看 BOLD 的血氧；fNIRS 用近紅外光（約 800 奈米）量血氧，比較便攜。跟 EEG／MEG 不同，這幾個都是靠「代謝」而不是「電」去推活動。",
   "example": "W1 衝接課程講的是：腦細胞活動要耗氧氣與葡萄糖，所以能用 PET、fMRI、fNIRS 去量；溝通有電位，所以能用 EEG、MEG。",
-  "tags": []
+  "tags": [],
+  "img": "imaging",
+  "alt": "結構影像與功能影像的分類"
  },
  {
   "id": "C_W4_C05",
@@ -419,7 +453,9 @@
   "en": "Donders' subtraction method, pure insertion",
   "def": "拿一個用到某個認知成分的作業，減掉一個沒用到那個成分的基線（baseline）作業，剩下的差異就推論為該成分對應的腦區。它的問題是純插入（pure insertion）假設：加進一個成分，並不會改變其他部分的運作。這個假設常常不成立。",
   "example": "課堂例子：看圖命名（A）與看詞命名（B），B 多了字詞辨認的步驟，B 減 A 就是字詞辨認的活動。",
-  "tags": []
+  "tags": [],
+  "img": "donders",
+  "alt": "Donders 減法法與純插入假設"
  },
  {
   "id": "C_W4_C08",
@@ -429,7 +465,9 @@
   "en": "factorial design, parametric design",
   "def": "因子設計（factorial design）同時操弄兩個以上因素，可以看到單一因素的效果，也可以看到兩個因素的交互作用（interaction），而且不需要純插入（pure insertion）的假設。參數設計（parametric design）則是把自變項做成連續的量，例如每分鐘字數 0、10、30、50、70、90。",
   "example": "課堂例子：觸覺（A−B 與 C−D）、動作產出（A−C 與 B−D）、交互作用（A−B 對 C−D）。隨堂測驗第 3 題問不符合因子設計（factorial design）的特性，答「需要純插入（pure insertion）假設」。",
-  "tags": []
+  "tags": [],
+  "img": "factorial",
+  "alt": "2×2 因子設計"
  },
  {
   "id": "C_W4_C09",
@@ -461,7 +499,9 @@
   "en": "split-brain",
   "def": "為了治療癲癇切斷胼胝體（corpus callosum），左右半球就沒辦法直接溝通。研究者讓資訊只進一側半球，再看兩邊各自的能力。它不是變成兩個人格，而是半球之間的資訊整合受阻。考場句：裂腦（split-brain）研究讓我們知道胼胝體的重要性，以及兩半球的能力差異。",
   "example": "裂腦（split-brain）病人是 W4 下半堂「腦傷病人」的第一個例子，第二個是 H.M.。",
-  "tags": []
+  "tags": [],
+  "img": "lesions",
+  "alt": "裂腦與 H.M. 兩個腦傷病例"
  },
  {
   "id": "C_W4_C12",
@@ -471,7 +511,9 @@
   "en": "patient H.M.",
   "def": "為了治療癲癇，切除內側顳葉（medial temporal lobe）（含海馬迴（hippocampus）），術後無法形成新的長期記憶（long-term memory）。這個病例把海馬迴與內側顳葉和長期記憶的形成連起來。",
   "example": "呼應 W2：海馬迴（hippocampus）在內側顳葉（medial temporal lobe），幫助新的經驗變成可回想的記憶。",
-  "tags": []
+  "tags": [],
+  "img": "lesions",
+  "alt": "裂腦與 H.M. 兩個腦傷病例"
  },
  {
   "id": "C_W4_C13",

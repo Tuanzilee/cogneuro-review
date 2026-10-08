@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">大腦的演化：各物種的強項</text>
+<g font-size="34" text-anchor="middle"><text x="42" y="82">🐟</text><text x="108" y="82">🐸</text><text x="174" y="82">🦎</text><text x="240" y="82">🐦</text><text x="306" y="82">🐭</text><text x="368" y="82">🧑</text></g>
+<g stroke="#2b1d14" stroke-width="2.5"><rect x="12" y="96" width="60" height="28" rx="8" fill="#cfe0f0"/><rect x="78" y="96" width="60" height="28" rx="8" fill="#cfe6cf"/><rect x="144" y="96" width="60" height="28" rx="8" fill="#cfe6cf"/><rect x="210" y="96" width="60" height="28" rx="8" fill="#cfe0f0"/><rect x="276" y="96" width="60" height="28" rx="8" fill="#f6dcc2"/><rect x="342" y="96" width="52" height="28" rx="8" fill="#e8a3b6"/></g>
+<g font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="42" y="115">小腦</text><text x="108" y="115">前腦</text><text x="174" y="115">前腦</text><text x="240" y="115">小腦</text><text x="306" y="115">邊緣＋皮質</text><text x="368" y="115">皮質</text></g>
+<g font-size="10" fill="#2b1d14" text-anchor="middle"><text x="42" y="144">平衡</text><text x="42" y="158">調節水壓</text><text x="108" y="144">嗅球</text><text x="108" y="158">嗅覺訊號</text><text x="174" y="144">前腦底部</text><text x="174" y="158">更多嗅覺核</text><text x="240" y="144">平衡</text><text x="240" y="158">飛行、定位</text><text x="306" y="144">情緒、記憶</text><text x="306" y="158">皮質有皺褶</text><text x="368" y="144">皮質更大</text><text x="368" y="158">皺褶更細</text></g>
+<text x="366" y="172" font-size="10" fill="#2b1d14" text-anchor="middle">推理、決策</text><text x="366" y="186" font-size="10" fill="#2b1d14" text-anchor="middle">語言</text>
+<text x="200" y="214" font-size="12" font-weight="700" fill="#c0504d" text-anchor="middle">人類 vs 其他哺乳類：差在皮質皺褶，不是邊緣系統或小腦</text>
+<text x="200" y="236" font-size="10" fill="#6b5a4a" text-anchor="middle">不是把物種排高低，而是各腦區配合生存環境發展</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">Golgi vs Cajal：神經連續嗎？</text>
+<g stroke="#2b1d14" stroke-width="3" fill="#f2b48a"><circle cx="60" cy="90" r="14"/><circle cx="130" cy="70" r="14"/><circle cx="160" cy="130" r="14"/><circle cx="70" cy="150" r="14"/></g>
+<g stroke="#2b1d14" stroke-width="3" fill="none"><path d="M74,88 L116,72 M142,78 L156,116 M146,134 L84,148 M64,104 L66,136"/></g>
+<g stroke="#2b1d14" stroke-width="3" fill="#8cbbd6"><circle cx="250" cy="90" r="14"/><circle cx="320" cy="70" r="14"/><circle cx="350" cy="130" r="14"/><circle cx="260" cy="150" r="14"/></g>
+<g stroke="#2b1d14" stroke-width="3" fill="none"><path d="M264,87 L284,81 M298,77 L306,74"/><path d="M330,82 L337,96 M341,108 L346,118"/><path d="M336,134 L312,140 M298,144 L274,148"/><path d="M254,136 L253,124 M252,112 L251,104"/></g>
+<g font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="110" y="190">Golgi：連續的網</text><text x="300" y="190">Cajal：獨立的細胞</text></g>
+<g font-size="10" fill="#6b5a4a" text-anchor="middle"><text x="110" y="205">continuous</text><text x="300" y="205">discontinuous（成立）</text></g>
+<text x="200" y="228" font-size="11" fill="#2b1d14" text-anchor="middle">1891 Waldeyer 把神經細胞命名為 neuron</text>
+<text x="200" y="246" font-size="10" fill="#c0504d" text-anchor="middle">爭的是細胞連不連續，不是功能定位或分散</text>
+</svg>

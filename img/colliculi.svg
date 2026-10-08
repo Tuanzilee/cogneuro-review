@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">中腦頂蓋：上視下聽</text>
+<g stroke="#2b1d14" stroke-width="3"><path d="M120,50 C120,36 180,36 180,50 L180,92 L120,92 Z" fill="#cfe6cf"/><path d="M216,50 C216,36 276,36 276,50 L276,92 L216,92 Z" fill="#cfe6cf"/>
+<path d="M120,100 C120,92 180,92 180,100 L180,142 L120,142 Z" fill="#f2b48a"/><path d="M216,100 C216,92 276,92 276,100 L276,142 L216,142 Z" fill="#f2b48a"/></g>
+<g font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="150" y="72">上丘</text><text x="246" y="72">上丘</text><text x="150" y="124">下丘</text><text x="246" y="124">下丘</text></g>
+<g font-size="9" fill="#2b1d14" text-anchor="middle"><text x="150" y="84">superior</text><text x="246" y="84">superior</text><text x="150" y="136">inferior</text><text x="246" y="136">inferior</text></g>
+<g font-size="13" font-weight="700" text-anchor="start"><text x="294" y="64" fill="#3f7a4f">視覺</text><text x="294" y="80" fill="#3f7a4f" font-size="10" font-weight="400">（也碰觸覺、聽覺）</text><text x="294" y="124" fill="#c06a3a">聽覺</text></g>
+<text x="200" y="176" font-size="11" fill="#2b1d14" text-anchor="middle">頂蓋 tectum 上面一對管視覺，下面一對管聽覺</text>
+<text x="200" y="200" font-size="11" fill="#6b5a4a" text-anchor="middle">蓋膜 tegmentum：導水管旁灰質、紅核、黑質</text>
+<text x="200" y="232" font-size="12" font-weight="700" fill="#c0504d" text-anchor="middle">記法：上＝視、下＝聽</text>
+</svg>

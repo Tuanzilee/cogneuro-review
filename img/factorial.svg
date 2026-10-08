@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">因子設計（factorial design）：2 × 2</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><rect x="120" y="58" width="220" height="110" rx="10"/><path d="M230,58 L230,168 M120,113 L340,113"/></g>
+<rect x="122" y="60" width="106" height="51" fill="#cfe6cf"/><rect x="232" y="60" width="106" height="51" fill="#f6dcc2"/><rect x="122" y="115" width="106" height="51" fill="#f6dcc2"/><rect x="232" y="115" width="106" height="51" fill="#e7e1d3"/>
+<g font-size="22" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="175" y="94">A</text><text x="285" y="94">B</text><text x="175" y="149">C</text><text x="285" y="149">D</text></g>
+<g font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="175" y="50">有觸覺</text><text x="285" y="50">無觸覺</text></g>
+<g font-size="11" font-weight="700" fill="#2b1d14" text-anchor="end"><text x="112" y="88">有動作</text><text x="112" y="143">無動作</text></g>
+<g font-size="11" fill="#2b1d14"><text x="30" y="196">觸覺的效果：(A−B) 與 (C−D)</text><text x="30" y="214">動作的效果：(A−C) 與 (B−D)</text><text x="30" y="232">交互作用：(A−B) 對 (C−D) 有沒有不同</text></g>
+<text x="372" y="214" font-size="11" font-weight="700" fill="#c0504d" text-anchor="end">不需要純插入假設</text>
+</svg>

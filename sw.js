@@ -1,6 +1,6 @@
 // 每次改 concepts.json / quiz.json / weeks.json / index.html 都要把版本號 +1，手機才會拿到新內容
-const CACHE = 'cogneuro-review-v4';
-const FILES = ['./', 'index.html', 'concepts.json', 'quiz.json', 'weeks.json', 'manifest.json', 'icon-192.png', 'icon-512.png', 'img/lobes.svg', 'img/neuron.svg', 'img/potentials.svg', 'img/bold.svg', 'img/design.svg', 'img/erp.svg', 'img/dissociation.svg', 'img/stimulation.svg', 'img/mismatch.svg', 'img/tradeoff.svg'];
+const CACHE = 'cogneuro-review-v5';
+const FILES = ['./', 'index.html', 'concepts.json', 'quiz.json', 'weeks.json', 'manifest.json', 'icon-192.png', 'icon-512.png', 'img/lobes.svg', 'img/neuron.svg', 'img/potentials.svg', 'img/bold.svg', 'img/design.svg', 'img/erp.svg', 'img/dissociation.svg', 'img/stimulation.svg', 'img/mismatch.svg', 'img/tradeoff.svg', 'img/mindbody.svg', 'img/localization.svg', 'img/history.svg', 'img/processing.svg', 'img/limbic.svg', 'img/rhythms.svg', 'img/colliculi.svg', 'img/donders.svg', 'img/factorial.svg', 'img/lesions.svg', 'img/imaging.svg', 'img/evolution.svg', 'img/rt.svg', 'img/phrenology.svg', 'img/neurondoctrine.svg'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));

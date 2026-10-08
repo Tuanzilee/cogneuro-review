@@ -352,12 +352,27 @@ IMG = {
  'transcranial magnetic stimulation (TMS)': 'stimulation', 'transcranial electrical stimulation (tES)': 'stimulation',
  'why imaging and lesion data disagree': 'mismatch',
  'spatial resolution vs. temporal resolution': 'tradeoff', 'MEG': 'tradeoff',
+ 'mind–body problem': 'mindbody', 'Cartesian interactionism (dualism)': 'mindbody', 'double-aspect theory / identity theory': 'mindbody',
+ 'functional localization': 'localization', 'parallel neural network (distribution)': 'localization',
+ 'history of the brain and mind': 'history', 'phrenology': 'phrenology', 'neuron doctrine': 'neurondoctrine',
+ 'bottom-up, top-down, sequential, parallel processing': 'processing',
+ 'superior colliculus, inferior colliculus': 'colliculi', 'limbic system, basal ganglia': 'limbic', 'evolution of the brain': 'evolution',
+ 'reaction time (RT)': 'rt', 'additive factors method (Sternberg, 1969)': 'rt', 'brain rhythms (γ, β, α, θ, δ)': 'rhythms',
+ 'structural vs. functional imaging': 'imaging', 'PET vs. fMRI vs. fNIRS': 'imaging',
+ "Donders' subtraction method, pure insertion": 'donders', 'factorial design, parametric design': 'factorial',
+ 'split-brain': 'lesions', 'patient H.M.': 'lesions',
 }
 ALT = {'lobes': '大腦側面圖：額葉、頂葉、顳葉、枕葉與中央溝、側溝', 'neuron': '神經元構造圖：樹突、細胞體、軸突、髓鞘、蘭氏結、末端膨大處',
        'potentials': '漸變電位與動作電位的波形比較', 'bold': 'BOLD 訊號隨時間變化的曲線', 'design': '區塊設計與事件相關設計的刺激排序',
        'erp': '多個試次平均成 ERP，並標出 N170 與 N400', 'dissociation': 'Broca 與 Wernicke 病人的雙重分離表',
        'stimulation': 'TMS 與 tDCS 的示意圖', 'mismatch': '造影與損傷結果一致或不一致的四種情況',
-       'tradeoff': 'fMRI、MEG、EEG／ERP 在時間與空間解析度上的位置'}
+       'tradeoff': 'fMRI、MEG、EEG／ERP 在時間與空間解析度上的位置',
+       'mindbody': '二元論、雙重屬性論、一元論三種心身問題立場', 'localization': '功能定位、分散式與折衷三種觀點的比較',
+       'history': '腦與心的歷史年代表', 'phrenology': '顱相學的兩個假設與 Gall、Spurzheim 答對的六點',
+       'neurondoctrine': 'Golgi 的連續網與 Cajal 的獨立神經元', 'processing': '由下而上、由上而下、序列與平行處理',
+       'colliculi': '上丘管視覺、下丘管聽覺', 'limbic': '邊緣系統與基底核的重疊是杏仁核', 'evolution': '各物種腦區的強項與人類的皮質皺褶',
+       'rt': '反應時間的測量流程與加法因素法', 'rhythms': '五種腦波的頻率與狀態', 'imaging': '結構影像與功能影像的分類',
+       'donders': 'Donders 減法法與純插入假設', 'factorial': '2×2 因子設計', 'lesions': '裂腦與 H.M. 兩個腦傷病例'}
 
 # 專有名詞中英對照：build 時，每個欄位裡「第一次出現」的中文詞會補成「中文（English）」；已有英文括號的跳過。
 # 新增名詞往下加即可；長詞會優先比對（例如「前額葉」先於「額葉」）。

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">顱相學：頭骨形狀 → 能力？</text>
+<path d="M30,196 C22,110 60,50 112,50 C160,50 188,80 184,120 C188,130 180,134 176,136 C180,146 170,150 164,150 C164,170 150,184 130,184 L130,196 Z" fill="#f6e3cf" stroke="#2b1d14" stroke-width="3"/>
+<g stroke="#2b1d14" stroke-width="1.8" fill="none"><path d="M70,60 C74,100 78,140 80,184"/><path d="M104,52 C112,96 116,130 120,180"/><path d="M40,130 C80,118 130,110 178,114"/><path d="M42,96 C70,86 110,74 150,66"/></g>
+<g font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="54" y="104">1</text><text x="92" y="92">2</text><text x="126" y="90">3</text><text x="60" y="152">4</text><text x="98" y="150">5</text><text x="142" y="144">6</text></g>
+<g font-size="12" font-weight="700" text-anchor="start"><text x="214" y="70" fill="#3f7a4f">✓ 假設一：不同腦區有不同功能</text><text x="214" y="86" fill="#3f7a4f" font-size="10" font-weight="400">→ 活下來，成為功能定位</text>
+<text x="214" y="118" fill="#c0504d">✗ 假設二：頭骨形狀反映心智</text><text x="214" y="134" fill="#c0504d" font-size="10" font-weight="400">→ 完全錯誤</text></g>
+<text x="214" y="168" font-size="11" font-weight="700" fill="#2b1d14">Gall 與 Spurzheim 答對的</text>
+<g font-size="10" fill="#2b1d14"><text x="214" y="184">皮質由神經組成　皮質與皮質下有聯絡</text><text x="214" y="198">錐體系統在腦幹交叉　脊髓分灰白質</text><text x="214" y="212">兩半球經胼胝體交換　在皮質上定位功能</text></g>
+<text x="200" y="244" font-size="10" fill="#6b5a4a" text-anchor="middle">課本把它當失敗的想法，考試以教師的框架為準</text>
+</svg>

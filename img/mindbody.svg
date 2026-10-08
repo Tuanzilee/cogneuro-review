@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">心身問題的三種立場</text>
+<g stroke="#2b1d14" stroke-width="3">
+<rect x="14" y="48" width="56" height="34" rx="8" fill="#e8a3b6"/><rect x="14" y="128" width="56" height="34" rx="8" fill="#8cbbd6"/>
+<rect x="148" y="70" width="80" height="60" rx="30" fill="#f2b48a"/>
+<rect x="288" y="48" width="56" height="34" rx="8" fill="#8cbbd6"/><rect x="288" y="128" width="56" height="34" rx="8" fill="#8cbbd6"/></g>
+<g font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="42" y="70">心靈</text><text x="42" y="150">身體</text><text x="188" y="105">同一個實在</text><text x="316" y="70">心智</text><text x="316" y="150">大腦</text></g>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><path d="M42,86 L42,124"/><path d="M36,114 L42,126 L48,114 M36,96 L42,84 L48,96"/><path d="M316,126 L316,86"/><path d="M310,98 L316,86 L322,98"/></g>
+<text x="42" y="182" font-size="10" fill="#6b5a4a" text-anchor="middle">非物質 ↔ 物質</text>
+<g stroke="#6b5a4a" stroke-width="1.8" fill="none"><path d="M158,60 L170,76 M218,60 L206,76"/><path d="M150,172 L168,134 M226,172 L208,134"/></g>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="148" y="58" >心理學看</text><text x="228" y="58">生理學看</text><text x="188" y="182">兩個面向</text></g>
+<g font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="42" y="212">二元論</text><text x="188" y="212">雙重屬性論</text><text x="316" y="212">一元論</text></g>
+<g font-size="10" fill="#6b5a4a" text-anchor="middle"><text x="42" y="226">dualism</text><text x="188" y="226">double-aspect theory</text><text x="316" y="226">identity theory</text></g>
+<text x="42" y="244" font-size="10" fill="#6b5a4a" text-anchor="middle">笛卡兒、松果體</text><text x="316" y="244" font-size="10" fill="#c0504d" font-weight="700" text-anchor="middle">認知神經科學站這邊</text><text x="316" y="182" font-size="10" fill="#6b5a4a" text-anchor="middle">心智是大腦功能</text>
+</svg>
