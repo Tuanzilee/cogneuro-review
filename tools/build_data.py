@@ -1,7 +1,7 @@
 """由本檔產生 concepts.json / quiz.json / weeks.json（W1–W4 初版）。
 之後新增週次：在 CARDS / QUIZ / WEEKS 追加，再執行 python3 tools/build_data.py。
 已存在的 id 不會變動（依 CARDS 順序編號，只能往後追加，不要插在中間或刪除）。"""
-import json, random
+import json, random, re
 
 T1, T2, T3, T4, T5 = '心智與大腦', '腦結構', '電生理', '腦造影方法', '損傷與刺激'
 
@@ -359,6 +359,50 @@ ALT = {'lobes': '大腦側面圖：額葉、頂葉、顳葉、枕葉與中央溝
        'stimulation': 'TMS 與 tDCS 的示意圖', 'mismatch': '造影與損傷結果一致或不一致的四種情況',
        'tradeoff': 'fMRI、MEG、EEG／ERP 在時間與空間解析度上的位置'}
 
+# 專有名詞中英對照：build 時，每個欄位裡「第一次出現」的中文詞會補成「中文（English）」；已有英文括號的跳過。
+# 新增名詞往下加即可；長詞會優先比對（例如「前額葉」先於「額葉」）。
+GLOSSARY = {
+ '心身問題': 'mind–body problem', '二元論': 'dualism', '笛卡兒交互作用論': 'Cartesian interactionism', '笛卡兒': 'Descartes', '松果體': 'pineal gland',
+ '雙重屬性論': 'double-aspect theory', '一元論': 'identity theory', '功能定位': 'functional localization', '分散式處理': 'distributed processing',
+ '顱相學': 'phrenology', '胼胝體': 'corpus callosum', '灰質': 'gray matter', '白質': 'white matter', '錐體系統': 'pyramidal system', '脊髓': 'spinal cord',
+ '神經元': 'neuron', '樹突': 'dendrite', '細胞體': 'cell body', '軸突': 'axon', '髓鞘': 'myelin sheath', '蘭氏結': 'node of Ranvier',
+ '末端膨大處': 'terminal buttons', '神經傳導物質': 'neurotransmitter', '突觸間隙': 'synaptic cleft', '突觸後神經元': 'postsynaptic neuron', '突觸': 'synapse',
+ '額葉': 'frontal lobe', '頂葉': 'parietal lobe', '顳葉': 'temporal lobe', '枕葉': 'occipital lobe', '前額葉': 'prefrontal cortex', '內側前額葉': 'medial prefrontal cortex',
+ '左下額葉': 'left inferior frontal gyrus', '左前顳葉': 'left anterior temporal lobe', '下頂葉': 'inferior parietal cortex', '內側顳葉': 'medial temporal lobe',
+ '大腦皮質': 'cerebral cortex', '主要運動皮質': 'primary motor cortex', '主要感覺皮質': 'primary somatosensory cortex', '視覺皮質': 'visual cortex',
+ '海馬迴': 'hippocampus', '杏仁核': 'amygdala', '中央溝': 'central sulcus', '側溝': 'lateral sulcus', '中央縱裂': 'longitudinal fissure', '縱裂': 'longitudinal fissure',
+ '上丘': 'superior colliculus', '下丘': 'inferior colliculus', '邊緣系統': 'limbic system', '基底核': 'basal ganglia', '小腦': 'cerebellum', '視丘': 'thalamus',
+ '紋狀體': 'striatum', '尾狀核': 'caudate nucleus', '殼核': 'putamen', '蒼白球': 'globus pallidus', '扣帶迴': 'cingulate gyrus', '後扣帶迴': 'posterior cingulate cortex',
+ '楔前葉': 'precuneus', '乳狀體': 'mammillary bodies', '穹窿': 'fornix', '中隔區': 'septum', '蓋膜': 'tegmentum', '黑質': 'substantia nigra', '頂蓋': 'tectum',
+ '延髓': 'medulla', '橋腦': 'pons', '網狀系統': 'reticular formation', '中腦': 'midbrain', '間腦': 'diencephalon', '前腦': 'forebrain', '嗅球': 'olfactory bulb',
+ '反應時間': 'reaction time', '漸變電位': 'graded potential', '動作電位': 'action potential', '閾值': 'threshold', '訊噪比': 'signal-to-noise ratio',
+ '時間鎖定': 'time-locked', '腦磁圖': 'MEG', '偶極子': 'dipole', '外生性': 'exogenous', '內生性': 'endogenous', '加法因素法': 'additive factors method',
+ '空間解析度': 'spatial resolution', '時間解析度': 'temporal resolution', '血氧濃度依賴訊號': 'BOLD signal', '血液動力反應函數': 'hemodynamic response function',
+ '區塊設計': 'blocked design', '事件相關設計': 'event-related design', '純插入': 'pure insertion', '減法法': 'subtraction method', '因子設計': 'factorial design',
+ '參數設計': 'parametric design', '預設模式網路': 'default mode network', '功能連結': 'functional connectivity', '休息狀態': 'resting state',
+ '結構影像': 'structural imaging', '功能影像': 'functional imaging', '基線': 'baseline', '交互作用': 'interaction',
+ '裂腦': 'split-brain', '雙重分離': 'double dissociation', '單一分離': 'single dissociation', '單一個案研究': 'single-case study', '團體研究': 'group study',
+ '經顱磁刺激': 'TMS', '經顱電刺激': 'tES', '假刺激': 'sham stimulation', '資源假象': 'task-resource artifact', '作業要求假象': 'task-demand artifact',
+ '陽極': 'anode', '陰極': 'cathode', '語意型失智症': 'semantic dementia', '皮質盲': 'cortical blindness',
+ '由下而上': 'bottom-up', '由上而下': 'top-down', '序列處理': 'sequential processing', '平行處理': 'parallel processing',
+ '皮質下': 'subcortical', '皮質': 'cortex', '中央裂': 'central fissure', '腦波': 'brain waves', '試次': 'trial', '神經心理測驗': 'neuropsychological test',
+ '感官記憶': 'sensory memory', '短期記憶': 'short-term memory', '長期記憶': 'long-term memory', '工作記憶': 'working memory',
+ '情節記憶': 'episodic memory', '陳述性記憶': 'declarative memory', '程序學習': 'procedural learning', '語意整合': 'semantic integration',
+}
+_GRE = re.compile('|'.join(map(re.escape, sorted(GLOSSARY, key=len, reverse=True))))
+
+def ann(text):
+    """每個詞在同一欄位只標第一次；後面已經接英文括號的略過"""
+    seen = set()
+    def sub(m):
+        w = m.group(0)
+        if w in seen: return w
+        seen.add(w)
+        rest = text[m.end():m.end() + 2]
+        if re.match(r'[（(][A-Za-z]', rest): return w
+        return f'{w}（{GLOSSARY[w]}）'
+    return _GRE.sub(sub, text)
+
 def build():
     cards, ids = [], {}
     cnt = {}
@@ -366,7 +410,7 @@ def build():
         cnt[w] = cnt.get(w, 0) + 1
         cid = f'C_W{w}_C{cnt[w]:02d}'
         ids[en] = cid
-        cards.append({'id': cid, 'week': w, 'topic': topic, 'term': zh, 'en': en, 'def': d, 'example': ex, 'tags': []})
+        cards.append({'id': cid, 'week': w, 'topic': topic, 'term': zh, 'en': en, 'def': ann(d), 'example': ann(ex), 'tags': []})
         if en in IMG: cards[-1]['img'] = IMG[en]; cards[-1]['alt'] = ALT[IMG[en]]
     random.seed(7)
     quiz, qc = [], {}
@@ -374,10 +418,10 @@ def build():
         qc[w] = qc.get(w, 0) + 1
         right = opts[0]
         o = opts[:]; random.shuffle(o)
-        quiz.append({'id': f'C_W{w}_Q{qc[w]:02d}', 'week': w, 'q': q, 'options': o, 'answer': o.index(right), 'why': why, 'concept': ids[key]})
+        quiz.append({'id': f'C_W{w}_Q{qc[w]:02d}', 'week': w, 'q': ann(q), 'options': [ann(x) for x in o], 'answer': o.index(right), 'why': ann(why), 'concept': ids[key]})
     weeks = []
     for w, date, title, summ, pts, todo, _ in WEEKS:
-        weeks.append({'week': w, 'date': date, 'title': title, 'summary': summ, 'points': pts, 'todo': todo,
+        weeks.append({'week': w, 'date': date, 'title': title, 'summary': ann(summ), 'points': [ann(p) for p in pts], 'todo': [ann(t) for t in todo],
                       'concepts': [c['id'] for c in cards if c['week'] == w]})
     for n, d in (('concepts', cards), ('quiz', quiz), ('weeks', weeks)):
         json.dump(d, open(f'{n}.json', 'w'), ensure_ascii=False, indent=1)

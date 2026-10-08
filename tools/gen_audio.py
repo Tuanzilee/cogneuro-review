@@ -1,15 +1,16 @@
 """產生預錄音檔（edge-tts，雲哲男聲）。只補新增或文字有改的。
 用法：~/.venvs/tts/bin/python tools/gen_audio.py
 音檔：audio/{概念卡id}.mp3、audio/{題目id}.mp3、audio/W{週}.mp3；audio/index.json 記錄文字雜湊"""
-import asyncio, hashlib, json, os
+import asyncio, hashlib, json, os, re
 import edge_tts
 VOICE, RATE = 'zh-TW-YunJheNeural', '-5%'
 concepts = json.load(open('concepts.json')); quiz = json.load(open('quiz.json')); weeks = json.load(open('weeks.json'))
+def clean(t): return re.sub(r'（[A-Za-z][^）]*）', '', t)  # 語音不唸括號裡的英文標註
 items = {}
-for c in concepts: items[c['id']] = f"{c['term']}。{c['def']}。例如：{c['example']}"
-for q in quiz: items[q['id']] = q['why']
+for c in concepts: items[c['id']] = clean(f"{c['term']}。{c['def']}。例如：{c['example']}")
+for q in quiz: items[q['id']] = clean(q['why'])
 for w in weeks:
-    if w['points']: items[f"W{w['week']}"] = f"第{w['week']}週，{w['title']}。" + '。'.join(w['points'])
+    if w['points']: items[f"W{w['week']}"] = f"第{w['week']}週，{w['title']}。" + clean('。'.join(w['points']))
 idx = json.load(open('audio/index.json')) if os.path.exists('audio/index.json') else {}
 async def main():
     n = 0
