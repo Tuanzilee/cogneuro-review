@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/><text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">TMS 盲人點字研究</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><rect x="20" y="40" width="360" height="118" rx="12"/><path d="M20,80 L380,80 M20,119 L380,119 M130,40 L130,158 M255,40 L255,158"/></g>
+<rect x="132" y="42" width="121" height="36" fill="#cfe6cf" opacity=".7"/><rect x="257" y="42" width="121" height="36" fill="#f6dcc2" opacity=".7"/>
+<g font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="192" y="58">打中枕葉</text><text x="192" y="72" font-size="9" font-weight="400">（視覺皮質）</text><text x="318" y="58">打感覺運動區</text><text x="318" y="72" font-size="9" font-weight="400">（觸覺）</text><text x="75" y="104">盲人</text><text x="75" y="118" font-size="9" font-weight="400">讀點字</text><text x="75" y="143">蒙眼明眼人</text></g>
+<g font-size="12" font-weight="700" text-anchor="middle"><text x="192" y="106" fill="#c0504d">✗ 辨認變差</text><text x="318" y="106" fill="#6b5a4a" font-weight="400">課堂未說</text><text x="192" y="144" fill="#3f7a4f">○ 不受影響</text><text x="318" y="144" fill="#c0504d">✗ 觸覺辨識變差</text></g>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="200" y="184">假刺激（線圈朝空中）當基準，聲音相同但不刺激腦</text><text x="200" y="208" font-weight="700">結論：盲人的「視覺」皮質被重組，去處理觸覺</text></g>
+<text x="200" y="232" font-size="10" fill="#6b5a4a" text-anchor="middle">明眼人要打感覺運動區，觸覺才會受影響</text>
+</svg>

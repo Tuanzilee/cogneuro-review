@@ -187,7 +187,9 @@
   "en": "hippocampus",
   "def": "位在內側顳葉（medial temporal lobe），對形成新的情節記憶（episodic memory）與陳述性記憶（declarative memory）特別重要，同時屬於邊緣系統（limbic system）。它不是所有記憶的永久倉庫，程序學習（procedural learning）也不一定靠它。考場句：海馬迴（hippocampus）幫助新的經驗變成可回想的記憶。",
   "example": "課堂講第 5 章 H.M. 時，切掉內側顳葉（medial temporal lobe）（含海馬迴（hippocampus））之後，新的長期記憶（long-term memory）就很難形成。",
-  "tags": []
+  "tags": [],
+  "img": "hippocampus",
+  "alt": "海馬迴在內側顳葉的位置與功能"
  },
  {
   "id": "C_W2_C08",
@@ -197,7 +199,9 @@
   "en": "corpus callosum, longitudinal fissure",
   "def": "中央縱裂（longitudinal fissure）是把左右大腦分開的那條溝，胼胝體（corpus callosum）是連接左右半球最大的神經纖維束。考場句：連結左右大腦的是胼胝體，不是縱裂（longitudinal fissure）或中央溝（central sulcus）。",
   "example": "隨堂測驗第 2 題：「哪個結構連結左右大腦」答胼胝體（corpus callosum）。第 5 章裂腦（split-brain）病人就是切斷胼胝體。",
-  "tags": []
+  "tags": [],
+  "img": "callosum",
+  "alt": "從上往下看：縱裂是溝、胼胝體是連接纖維束"
  },
  {
   "id": "C_W2_C09",
@@ -279,7 +283,9 @@
   "en": "features of electrophysiological tools",
   "def": "時間解析度（temporal resolution）好（毫秒等級）、非侵入性、受試者不用做出行為反應也能量到訊號。空間解析度（spatial resolution）比較差，ERP 只能分出左右、前後這種粗略區域。考場句：設備便宜是 EEG 的優點，但便宜不是電生理工具共通的特性。",
   "example": "隨堂測驗第 2 題問哪個「不是」電生理工具的優點，答案是「設備價錢比較便宜」，因為 MEG 就很貴。",
-  "tags": []
+  "tags": [],
+  "img": "eegfeatures",
+  "alt": "電生理工具的共同優點與代價"
  },
  {
   "id": "C_W3_C05",
@@ -313,7 +319,9 @@
   "en": "postsynaptic neuron",
   "def": "突觸（synapse）傳遞時接收傳導物質的那一方。它會把大量興奮與抑制的輸入加起來，再決定要不要放電，不是收到一次就一定放電。EEG 與 ERP 主要記錄到的就是突觸後的活動。考場句：突觸後神經元（postsynaptic neuron）整合輸入，再決定是否產生動作電位（action potential）。",
   "example": "突觸（synapse）前（presynaptic）多半指前一個細胞的軸突（axon）末端；突觸後指後一個細胞的樹突（dendrite）或受體區。",
-  "tags": []
+  "tags": [],
+  "img": "synapse",
+  "alt": "突觸後神經元整合興奮與抑制輸入再決定放電"
  },
  {
   "id": "C_W3_C08",
@@ -359,7 +367,9 @@
   "en": "exogenous vs. endogenous",
   "def": "外生性（exogenous）成分由刺激本身的特性驅動，出現得比較早；內生性（endogenous）成分和作業要求有關，需要注意與由上而下（top-down）的規則判斷，出現得比較晚。同樣的刺激，只判斷有沒有，是外生；要判斷像不像眼睛，就需要內在規則。",
   "example": "看「是刺激的特性」還是「作業的要求」，就能分外生與內生。",
-  "tags": []
+  "tags": [],
+  "img": "exoendo",
+  "alt": "外生性較早、內生性較晚的成分"
  },
  {
   "id": "C_W3_C12",
@@ -477,7 +487,9 @@
   "en": "default mode network, functional connectivity",
   "def": "預設模式網路（DMN）是休息時反而比較活躍、做認知作業時被抑制的一組腦區，包含後扣帶迴（posterior cingulate cortex）、楔前葉（precuneus）、內側前額葉（medial prefrontal cortex）與下頂葉（inferior parietal cortex），和自我參照、回想過去、想像未來有關。功能連結（functional connectivity）則是用不同區域活動的相關，去看區域之間有沒有在溝通。",
   "example": "休息狀態（resting state）研究（resting state）就是讓受試者不做任何作業，來看這些網路。",
-  "tags": []
+  "tags": [],
+  "img": "dmn",
+  "alt": "預設模式網路的腦區與休息、作業時的活躍程度"
  },
  {
   "id": "C_W4_C10",
@@ -547,7 +559,9 @@
   "en": "single-case vs. group studies",
   "def": "團體研究（group study）依症狀、認知缺陷或病灶位置分組，找共同性，缺點是忽略個別差異。單一個案研究（single-case study）深入看一個特殊的病人，特別適合看認知歷程能怎麼拆分。缺點是不能只靠一個個案就建立理論，也不能直接推到所有人。",
   "example": "古典神經心理學問「某個腦區的功能是什麼」，常用團體研究（group study）；認知神經心理學看「哪些能力保留、哪些受損」的模式，常用單一個案。",
-  "tags": []
+  "tags": [],
+  "img": "singlecase",
+  "alt": "單一個案研究與團體研究的優缺點"
  },
  {
   "id": "C_W4_C16",
@@ -569,7 +583,9 @@
   "en": "TMS study of Braille in blind people",
   "def": "有三種條件：假刺激（sham stimulation）（線圈朝空中）、感覺運動區、中枕葉（occipital lobe）。結果是，TMS 打中枕葉的「視覺」皮質（cortex），會干擾盲人的觸覺辨識（點字），但不影響蒙眼的明眼人；明眼人則是感覺運動區被打才會影響觸覺。考場句：盲人的視覺皮質（visual cortex）被重組去處理觸覺。",
   "example": "隨堂測驗第 3 題答案：以 TMS 影響視覺區域，會顯著影響盲人的點字辨識。",
-  "tags": []
+  "tags": [],
+  "img": "braille",
+  "alt": "TMS 打中枕葉與感覺運動區對盲人與明眼人的影響"
  },
  {
   "id": "C_W4_C18",
@@ -579,7 +595,9 @@
   "en": "TMS over V5 in visual search",
   "def": "刺激 V5（動作處理區）後：如果作業含有移動的資訊（目標在動，或干擾物在動），搜尋會變慢；如果作業完全沒有移動資訊（只靠顏色），搜尋反而變快。考場句：TMS 對作業的影響，取決於這個腦區的資訊和作業有沒有關係。",
   "example": "三種作業：目標動、目標不動但干擾物動（兩者都變慢，叫干擾）；全是靜止、靠顏色找（變快，叫促進）。",
-  "tags": []
+  "tags": [],
+  "img": "v5",
+  "alt": "TMS 打 V5 在三種搜尋作業中的結果"
  },
  {
   "id": "C_W4_C19",

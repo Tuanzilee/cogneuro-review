@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/><text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">電生理工具（EEG／ERP／MEG）的特點</text>
+<g stroke="#2b1d14" stroke-width="3"><rect x="18" y="36" width="172" height="150" rx="12" fill="#cfe6cf"/><rect x="210" y="36" width="172" height="150" rx="12" fill="#f6dcc2"/></g>
+<g font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="104" y="58">共同優點</text><text x="296" y="58">代價</text></g>
+<g font-size="12" fill="#2b1d14"><text x="32" y="86">✓ 時間解析度好（毫秒）</text><text x="32" y="112">✓ 非侵入性</text><text x="32" y="138">✓ 受試者不用做行為反應</text><text x="46" y="154" font-size="10" fill="#6b5a4a">也量得到相關訊號</text>
+<text x="224" y="86">✗ 空間解析度較差</text><text x="238" y="102" font-size="10" fill="#6b5a4a">ERP 只分得出左右、前後</text><text x="224" y="128">✗ ERP 需要很多試次</text><text x="224" y="154">✗ 主要記錄突觸後電位</text></g>
+<g stroke="#2b1d14" stroke-width="2.5" fill="#fffdf7"><rect x="18" y="198" width="364" height="48" rx="10"/></g>
+<g font-size="12" fill="#2b1d14" text-anchor="middle"><text x="200" y="218" font-weight="700">「設備便宜」不是共同優點</text><text x="200" y="236">EEG 便宜普及，但 MEG 很貴、場地要求高</text></g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/><text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">從上往下看：縱裂 vs 胼胝體</text>
+<g stroke="#2b1d14" stroke-width="3.5"><ellipse cx="148" cy="132" rx="64" ry="74" fill="#f6e3cf"/><ellipse cx="252" cy="132" rx="64" ry="74" fill="#f6e3cf"/></g>
+<rect x="160" y="120" width="80" height="26" rx="10" fill="#e8a3b6" stroke="#2b1d14" stroke-width="3"/>
+<path d="M200,58 L200,118 M200,148 L200,206" stroke="#2b1d14" stroke-width="3.5"/>
+<g font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="110" y="136">左半球</text><text x="292" y="136">右半球</text><text x="200" y="138" fill="#7a2f2c">胼胝體</text></g>
+<text x="200" y="44" font-size="11" font-weight="700" fill="#4a86a6" text-anchor="middle">中央縱裂（溝）</text><path d="M200,48 L200,56" stroke="#4a86a6" stroke-width="2"/>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="200" y="226"><tspan font-weight="700">縱裂 longitudinal fissure：</tspan>只是把左右分開的溝</text><text x="200" y="242"><tspan font-weight="700" fill="#c0504d">胼胝體 corpus callosum：</tspan>連接左右半球最大的纖維束</text></g>
+</svg>

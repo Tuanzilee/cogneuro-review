@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/><text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">海馬迴：位置與功能</text>
+<g transform="translate(-20,0) scale(.78) translate(10,44)"><path d="M58,140 C48,85 95,38 175,32 C255,26 338,52 352,120 C358,158 332,176 302,172 C284,190 255,186 240,178 C215,200 150,200 122,182 C92,178 62,168 58,140 Z" fill="#f6e3cf" stroke="#2b1d14" stroke-width="4"/>
+<path d="M105,108 C150,82 250,82 300,115" fill="none" stroke="#cbbfa8" stroke-width="9"/>
+<path d="M150,160 C175,172 215,170 238,150 C252,138 246,122 232,126 C222,128 224,142 236,142" fill="none" stroke="#c0504d" stroke-width="12"/>
+<ellipse cx="200" cy="165" rx="70" ry="22" fill="none" stroke="#6b5a4a" stroke-width="2.5" stroke-dasharray="6 5"/></g>
+<text x="108" y="196" font-size="11" fill="#6b5a4a" text-anchor="middle">內側面示意（腦由中間剖開）</text>
+<g font-size="13" font-weight="700" fill="#c0504d"><text x="284" y="100">海馬迴</text></g><text x="284" y="114" font-size="10" fill="#6b5a4a">hippocampus</text>
+<path d="M280,106 L232,142" stroke="#c0504d" stroke-width="1.8"/>
+<g font-size="11" fill="#2b1d14"><text x="284" y="138">位在內側顳葉</text><text x="284" y="154">屬於邊緣系統</text></g>
+<g font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="200" y="222">幫助新的經驗變成可回想的情節記憶</text></g>
+<text x="200" y="242" font-size="10" fill="#6b5a4a" text-anchor="middle">不是所有記憶的永久倉庫；程序學習也不一定靠它（H.M.）</text>
+</svg>

@@ -361,6 +361,9 @@ IMG = {
  'structural vs. functional imaging': 'imaging', 'PET vs. fMRI vs. fNIRS': 'imaging',
  "Donders' subtraction method, pure insertion": 'donders', 'factorial design, parametric design': 'factorial',
  'split-brain': 'lesions', 'patient H.M.': 'lesions',
+ 'hippocampus': 'hippocampus', 'corpus callosum, longitudinal fissure': 'callosum', 'features of electrophysiological tools': 'eegfeatures',
+ 'postsynaptic neuron': 'synapse', 'exogenous vs. endogenous': 'exoendo', 'default mode network, functional connectivity': 'dmn',
+ 'single-case vs. group studies': 'singlecase', 'TMS study of Braille in blind people': 'braille', 'TMS over V5 in visual search': 'v5',
 }
 ALT = {'lobes': '大腦側面圖：額葉、頂葉、顳葉、枕葉與中央溝、側溝', 'neuron': '神經元構造圖：樹突、細胞體、軸突、髓鞘、蘭氏結、末端膨大處',
        'potentials': '漸變電位與動作電位的波形比較', 'bold': 'BOLD 訊號隨時間變化的曲線', 'design': '區塊設計與事件相關設計的刺激排序',
@@ -372,7 +375,10 @@ ALT = {'lobes': '大腦側面圖：額葉、頂葉、顳葉、枕葉與中央溝
        'neurondoctrine': 'Golgi 的連續網與 Cajal 的獨立神經元', 'processing': '由下而上、由上而下、序列與平行處理',
        'colliculi': '上丘管視覺、下丘管聽覺', 'limbic': '邊緣系統與基底核的重疊是杏仁核', 'evolution': '各物種腦區的強項與人類的皮質皺褶',
        'rt': '反應時間的測量流程與加法因素法', 'rhythms': '五種腦波的頻率與狀態', 'imaging': '結構影像與功能影像的分類',
-       'donders': 'Donders 減法法與純插入假設', 'factorial': '2×2 因子設計', 'lesions': '裂腦與 H.M. 兩個腦傷病例'}
+       'donders': 'Donders 減法法與純插入假設', 'factorial': '2×2 因子設計', 'lesions': '裂腦與 H.M. 兩個腦傷病例',
+       'hippocampus': '海馬迴在內側顳葉的位置與功能', 'callosum': '從上往下看：縱裂是溝、胼胝體是連接纖維束', 'eegfeatures': '電生理工具的共同優點與代價',
+       'synapse': '突觸後神經元整合興奮與抑制輸入再決定放電', 'exoendo': '外生性較早、內生性較晚的成分', 'dmn': '預設模式網路的腦區與休息、作業時的活躍程度',
+       'singlecase': '單一個案研究與團體研究的優缺點', 'braille': 'TMS 打中枕葉與感覺運動區對盲人與明眼人的影響', 'v5': 'TMS 打 V5 在三種搜尋作業中的結果'}
 
 # 專有名詞中英對照：build 時，每個欄位裡「第一次出現」的中文詞會補成「中文（English）」；已有英文括號的跳過。
 # 新增名詞往下加即可；長詞會優先比對（例如「前額葉」先於「額葉」）。

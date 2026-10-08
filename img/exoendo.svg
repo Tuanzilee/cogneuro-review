@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/><text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">外生性 vs 內生性成分</text>
+<g stroke="#2b1d14" stroke-width="2" fill="none"><path d="M40,40 L40,160 L372,160"/></g>
+<path d="M41,150 C60,150 70,148 80,118 C88,92 100,92 110,120 C118,146 130,150 160,150 C200,150 230,148 250,122 C268,92 296,84 318,110 C334,128 348,148 370,150" fill="none" stroke="#e08a4f" stroke-width="4.5"/>
+<g font-size="10" fill="#2b1d14" text-anchor="middle"><text x="41" y="174">0</text><text x="150" y="174">時間（毫秒）→</text></g>
+<g font-size="12" font-weight="700" text-anchor="middle"><text x="96" y="80" fill="#4a86a6">外生性</text><text x="290" y="72" fill="#7a5aa0">內生性</text></g>
+<g font-size="10" fill="#6b5a4a" text-anchor="middle"><text x="96" y="92">exogenous 較早</text><text x="290" y="84">endogenous 較晚</text></g>
+<g font-size="11" fill="#2b1d14"><text x="24" y="196">外生：由刺激本身的特性驅動</text><text x="24" y="212">內生：和作業要求有關（注意、規則、由上而下）</text></g>
+<text x="200" y="236" font-size="11" font-weight="700" fill="#c0504d" text-anchor="middle">只判斷有沒有點＝外生；判斷像不像眼睛＝內生</text>
+<text x="200" y="252" font-size="10" fill="#6b5a4a" text-anchor="middle">判斷標準：看是「刺激的特性」還是「作業的要求」</text>
+</svg>

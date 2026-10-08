@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/><text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">突觸後神經元：整合，再決定放不放電</text>
+<g stroke="#2b1d14" stroke-width="3"><path d="M20,70 C60,52 100,52 120,70 C130,82 130,98 120,110 C100,128 60,128 20,110 Z" fill="#8cbbd6"/><path d="M200,60 C240,50 290,52 330,66 L330,114 C290,128 240,130 200,120 Z" fill="#f2b48a"/></g>
+<g fill="#e8c46a" stroke="#2b1d14" stroke-width="2"><circle cx="100" cy="82" r="5"/><circle cx="108" cy="98" r="5"/><circle cx="92" cy="96" r="5"/></g>
+<g fill="#e8c46a" stroke="#2b1d14" stroke-width="2"><circle cx="150" cy="88" r="4"/><circle cx="160" cy="98" r="4"/><circle cx="172" cy="84" r="4"/></g>
+<g font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="62" y="94">突觸前</text><text x="265" y="92">突觸後神經元</text></g>
+<g font-size="9" fill="#6b5a4a" text-anchor="middle"><text x="62" y="106">presynaptic</text><text x="265" y="106">postsynaptic neuron</text><text x="160" y="124">突觸間隙</text></g>
+<text x="160" y="72" font-size="9" fill="#6b5a4a" text-anchor="middle">傳導物質 →</text>
+<g font-size="12" font-weight="700"><text x="212" y="156" fill="#3f7a4f">＋ 興奮（EPSP）</text><text x="212" y="174" fill="#c0504d">－ 抑制（IPSP）</text></g>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><path d="M312,150 L336,162 L312,174"/></g>
+<rect x="344" y="146" width="40" height="32" rx="8" fill="#fffdf7" stroke="#2b1d14" stroke-width="2.5"/>
+<text x="364" y="160" font-size="9" font-weight="700" fill="#2b1d14" text-anchor="middle">加總</text><text x="364" y="172" font-size="9" fill="#2b1d14" text-anchor="middle">到閾值？</text>
+<text x="200" y="208" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">收到一次訊息，不一定就放電</text>
+<text x="200" y="228" font-size="11" fill="#2b1d14" text-anchor="middle">大量興奮與抑制輸入加起來 → 超過閾值才產生動作電位</text>
+<text x="200" y="248" font-size="10" fill="#6b5a4a" text-anchor="middle">EEG／ERP 主要記錄的就是突觸後的活動</text>
+</svg>
