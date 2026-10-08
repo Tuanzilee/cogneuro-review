@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="22" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">哪裡 vs 什麼時候：工具的取捨</text>
+<path d="M60,34 L60,208 L376,208" stroke="#2b1d14" stroke-width="2.5" fill="none"/>
+<path d="M54,42 L60,32 L66,42 M366,202 L376,208 L366,214" fill="none" stroke="#2b1d14" stroke-width="2.5"/>
+<text x="218" y="236" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">時間解析度（什麼時候）→ 越右越好</text>
+<text x="22" y="120" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle" transform="rotate(-90 22 120)">空間解析度（在哪裡）→ 越上越好</text>
+<g stroke="#2b1d14" stroke-width="3">
+<ellipse cx="116" cy="70" rx="48" ry="26" fill="#e8a3b6"/>
+<ellipse cx="318" cy="170" rx="52" ry="24" fill="#9ccaa0"/>
+<ellipse cx="318" cy="102" rx="46" ry="24" fill="#8cbbd6"/></g>
+<g font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="116" y="68">fMRI</text><text x="318" y="168">EEG／ERP</text><text x="318" y="100">MEG</text></g>
+<g font-size="10" fill="#2b1d14" text-anchor="middle"><text x="116" y="82">血氧慢、位置細</text><text x="318" y="183">毫秒、位置粗</text><text x="318" y="114">毫秒、定位較好</text></g>
+<text x="375" y="248" font-size="9" fill="#6b5a4a" text-anchor="end">示意位置，不是精確數值</text>
+</svg>

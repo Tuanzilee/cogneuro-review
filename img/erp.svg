@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="95" y="28" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">每個試次＝訊號＋噪音</text>
+<g fill="none" stroke="#b8a98f" stroke-width="2.5">
+<path d="M20,70 C30,50 38,95 48,66 C58,40 66,100 78,72 C88,52 96,88 108,64 C118,48 130,90 168,70"/>
+<path d="M20,125 C32,140 40,100 52,128 C62,150 72,104 84,132 C96,150 104,106 118,130 C130,148 146,112 168,128"/>
+<path d="M20,180 C30,168 42,200 54,176 C66,158 74,196 86,180 C98,166 110,200 124,178 C138,160 150,196 168,182"/></g>
+<text x="95" y="222" font-size="11" fill="#6b5a4a" text-anchor="middle">眨眼、頭動、背景活動（隨機）</text>
+<path d="M176,125 L212,125" stroke="#2b1d14" stroke-width="3"/><path d="M204,118 L214,125 L204,132" fill="none" stroke="#2b1d14" stroke-width="3"/>
+<text x="194" y="112" font-size="13" font-weight="700" fill="#c0504d" text-anchor="middle">平均</text>
+<text x="194" y="146" font-size="10" fill="#6b5a4a" text-anchor="middle">以刺激對齊</text>
+<text x="305" y="28" font-size="14" font-weight="700" fill="#2b1d14" text-anchor="middle">ERP：噪音抵銷，訊號浮現</text>
+<path d="M226,40 L226,200 L384,200" stroke="#2b1d14" stroke-width="2" fill="none"/>
+<path d="M226,120 L384,120" stroke="#cbbfa8" stroke-width="1.5" stroke-dasharray="4 4"/>
+<path d="M227,120 C245,120 255,118 262,128 C266,136 268,156 272,156 C278,156 280,118 290,112 C300,108 306,125 312,142 C318,160 326,168 332,166 C342,162 350,126 380,121" fill="none" stroke="#e08a4f" stroke-width="4.5"/>
+<g font-size="10" fill="#2b1d14" text-anchor="middle"><text x="227" y="214">0</text><text x="278" y="214">200</text><text x="329" y="214">400</text><text x="380" y="214">600 毫秒</text></g>
+<text x="266" y="184" font-size="12" font-weight="700" fill="#4a86a6" text-anchor="middle">N170</text>
+<text x="266" y="196" font-size="9" fill="#4a86a6" text-anchor="middle">臉</text>
+<text x="338" y="188" font-size="12" font-weight="700" fill="#7a5aa0" text-anchor="middle">N400</text>
+<text x="338" y="200" font-size="9" fill="#7a5aa0" text-anchor="middle"></text>
+<text x="338" y="226" font-size="10" fill="#7a5aa0" text-anchor="middle">語意</text>
+<text x="200" y="250" font-size="11" fill="#6b5a4a" text-anchor="middle">N＝負向、P＝正向；試次越多，訊噪比越好</text>
+</svg>

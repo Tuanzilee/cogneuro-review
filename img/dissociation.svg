@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="28" font-size="15" font-weight="700" fill="#2b1d14" text-anchor="middle">雙重分離：兩個互補的單一分離</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><rect x="30" y="46" width="340" height="120" rx="12"/><path d="M30,86 L370,86 M30,126 L370,126 M148,46 L148,166 M259,46 L259,166"/></g>
+<rect x="150" y="48" width="108" height="36" fill="#f2b48a" opacity=".45"/><rect x="261" y="48" width="107" height="36" fill="#8cbbd6" opacity=".45"/>
+<g font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="204" y="72">語言產出</text><text x="314" y="72">語言理解</text></g>
+<g font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="89" y="106">甲：Broca</text><text x="89" y="120" font-weight="400">區受損</text><text x="89" y="146">乙：Wernicke</text><text x="89" y="160" font-weight="400">區受損</text></g>
+<g font-size="26" font-weight="700" text-anchor="middle"><text x="204" y="116" fill="#c0504d">×</text><text x="314" y="116" fill="#5a9a6a">○</text><text x="204" y="156" fill="#5a9a6a">○</text><text x="314" y="156" fill="#c0504d">×</text></g>
+<text x="200" y="192" font-size="12" fill="#2b1d14" text-anchor="middle">○＝相對正常　×＝受損</text>
+<text x="200" y="214" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">只有一列＝單一分離，可能只是某個作業比較難</text>
+<text x="200" y="234" font-size="12" font-weight="700" fill="#c0504d" text-anchor="middle">兩列互補＝雙重分離，更能支持是不同機制</text>
+</svg>

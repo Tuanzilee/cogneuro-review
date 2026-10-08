@@ -1,6 +1,6 @@
 // 每次改 concepts.json / quiz.json / weeks.json / index.html 都要把版本號 +1，手機才會拿到新內容
-const CACHE = 'cogneuro-review-v2';
-const FILES = ['./', 'index.html', 'concepts.json', 'quiz.json', 'weeks.json', 'manifest.json', 'icon-192.png', 'icon-512.png', 'img/lobes.svg', 'img/neuron.svg', 'img/potentials.svg', 'img/bold.svg', 'img/design.svg'];
+const CACHE = 'cogneuro-review-v3';
+const FILES = ['./', 'index.html', 'concepts.json', 'quiz.json', 'weeks.json', 'manifest.json', 'icon-192.png', 'icon-512.png', 'img/lobes.svg', 'img/neuron.svg', 'img/potentials.svg', 'img/bold.svg', 'img/design.svg', 'img/erp.svg', 'img/dissociation.svg', 'img/stimulation.svg', 'img/mismatch.svg', 'img/tradeoff.svg'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));

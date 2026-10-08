@@ -9,7 +9,7 @@ index.html     ← 全部 UI 與邏輯（localStorage 前綴 cn_）
 concepts.json / quiz.json / weeks.json  ← 由 tools/build_data.py 產生，不要直接改 JSON
 tools/build_data.py ← 內容原始檔（CARDS／QUIZ／WEEKS）：改這裡再執行 python3 tools/build_data.py
 tools/gen_audio.py  ← 雲哲男聲 zh-TW-YunJheNeural：`~/.venvs/tts/bin/python tools/gen_audio.py`
-img/ ← 自畫 SVG 示意圖（lobes、neuron、potentials、bold、design），米色底、卡通扁平風；build_data.py 的 IMG 對照表決定哪張卡配哪張圖
+img/ ← 自畫 SVG 示意圖 10 張（lobes、neuron、potentials、bold、design、erp、dissociation、stimulation、mismatch、tradeoff），米色底、卡通扁平風；build_data.py 的 IMG 對照表決定哪張卡配哪張圖
 audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 ```
 預覽：母資料夾 `.claude/launch.json` 的 `cogneuro-review`，埠 8768。

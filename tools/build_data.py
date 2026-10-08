@@ -347,9 +347,17 @@ IMG = {
  'graded potentials (gradient potentials)': 'potentials', 'action potential': 'potentials',
  'BOLD signal, hemodynamic response function': 'bold',
  'blocked design': 'design', 'event-related design': 'design',
+ 'EEG vs ERP': 'erp', 'signal-to-noise ratio (SNR)': 'erp', 'ERP components: N170, N400': 'erp',
+ 'single dissociation': 'dissociation', 'double dissociation': 'dissociation',
+ 'transcranial magnetic stimulation (TMS)': 'stimulation', 'transcranial electrical stimulation (tES)': 'stimulation',
+ 'why imaging and lesion data disagree': 'mismatch',
+ 'spatial resolution vs. temporal resolution': 'tradeoff', 'MEG': 'tradeoff',
 }
 ALT = {'lobes': '大腦側面圖：額葉、頂葉、顳葉、枕葉與中央溝、側溝', 'neuron': '神經元構造圖：樹突、細胞體、軸突、髓鞘、蘭氏結、末端膨大處',
-       'potentials': '漸變電位與動作電位的波形比較', 'bold': 'BOLD 訊號隨時間變化的曲線', 'design': '區塊設計與事件相關設計的刺激排序'}
+       'potentials': '漸變電位與動作電位的波形比較', 'bold': 'BOLD 訊號隨時間變化的曲線', 'design': '區塊設計與事件相關設計的刺激排序',
+       'erp': '多個試次平均成 ERP，並標出 N170 與 N400', 'dissociation': 'Broca 與 Wernicke 病人的雙重分離表',
+       'stimulation': 'TMS 與 tDCS 的示意圖', 'mismatch': '造影與損傷結果一致或不一致的四種情況',
+       'tradeoff': 'fMRI、MEG、EEG／ERP 在時間與空間解析度上的位置'}
 
 def build():
     cards, ids = [], {}
