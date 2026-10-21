@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="18" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">動作理論：用說話的動作系統來聽語音</text>
+<rect x="14" y="36" width="96" height="44" rx="10" fill="#cfe0f0" stroke="#2b1d14" stroke-width="2.5"/><text x="62.0" y="58.0" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">耳朵</text><text x="62.0" y="72.0" font-size="9" fill="#2b1d14" text-anchor="middle">聽到的聲音</text><rect x="14" y="96" width="96" height="44" rx="10" fill="#cfe0f0" stroke="#2b1d14" stroke-width="2.5"/><text x="62.0" y="118.0" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">眼睛</text><text x="62.0" y="132.0" font-size="9" fill="#2b1d14" text-anchor="middle">看到的口型</text>
+<path d="M112,58 L146,90 M112,118 L146,104" stroke="#2b1d14" stroke-width="2.5" fill="none"/><path d="M140,86 L148,92 L138,96" stroke="#2b1d14" stroke-width="2.5" fill="none"/>
+<rect x="150" y="56" width="154" height="82" rx="10" fill="#e8a3b6" stroke="#2b1d14" stroke-width="2.5"/><text x="227" y="92" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">說話的動作系統</text><text x="227" y="108" font-size="9" fill="#2b1d14" text-anchor="middle">額葉：下額葉、前運動區、腦島</text>
+<path d="M306,97 L324,97" stroke="#2b1d14" stroke-width="2.5" fill="none"/><path d="M318,91 L326,97 L318,103" stroke="#2b1d14" stroke-width="2.5" fill="none"/>
+<rect x="328" y="72" width="62" height="50" rx="10" fill="#cfe6cf" stroke="#2b1d14" stroke-width="2.5"/><text x="359" y="94" font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle">知覺到</text><text x="359" y="110" font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle">的語音</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="#fffdf7"><rect x="14" y="156" width="372" height="88" rx="12"/></g>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="200" y="176" font-weight="700">Liberman 等人（1967）</text><text x="200" y="194">語音知覺依賴聽到的發音，以及推論說話者想做的發音動作</text>
+<text x="200" y="214" font-weight="700" fill="#c0504d">ordinary：語音＝聲音　vs　special：語音≠聲音</text><text x="200" y="230" font-size="10">special 的證據：動作理論、範疇知覺</text></g>
+</svg>

@@ -410,6 +410,9 @@ GLOSSARY = {
  '感官記憶': 'sensory memory', '短期記憶': 'short-term memory', '長期記憶': 'long-term memory', '工作記憶': 'working memory',
  '情節記憶': 'episodic memory', '陳述性記憶': 'declarative memory', '程序學習': 'procedural learning', '語意整合': 'semantic integration',
 }
+import data_w5_w6 as X
+import data_w7 as X7
+GLOSSARY.update(X.GLOSS); GLOSSARY.update(X7.GLOSS)
 _GRE = re.compile('|'.join(map(re.escape, sorted(GLOSSARY, key=len, reverse=True))))
 
 def ann(text):
@@ -423,6 +426,9 @@ def ann(text):
         if re.match(r'[（(][A-Za-z]', rest): return w
         return f'{w}（{GLOSSARY[w]}）'
     return _GRE.sub(sub, text)
+
+CARDS += X.CARDS; QUIZ += X.QUIZ; WEEKS += X.WEEKS; IMG.update(X.IMG); ALT.update(X.ALT)
+CARDS += X7.CARDS; QUIZ += X7.QUIZ; WEEKS += X7.WEEKS; IMG.update(X7.IMG); ALT.update(X7.ALT)
 
 def build():
     cards, ids = [], {}

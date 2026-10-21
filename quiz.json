@@ -315,10 +315,10 @@
    "動作電位（action potential）變成漸變電位（graded potential）",
    "單次動作電位（action potential）變得更大",
    "動作電位（action potential）傳得更慢",
-   "放電頻率變高"
+   "放電頻率（firing rate）變高"
   ],
   "answer": 3,
-  "why": "動作電位（action potential）是全有全無，大小固定，所以刺激強度是用放電頻率來編碼，不是單次變大。",
+  "why": "動作電位（action potential）是全有全無，大小固定，所以刺激強度是用放電頻率（firing rate）來編碼，不是單次變大。",
   "concept": "C_W3_C06"
  },
  {
@@ -656,5 +656,621 @@
   "answer": 0,
   "why": "陽極（anode）讓神經細胞比較不負、容易達到閾值（threshold），所以興奮度與表現提高；陰極（cathode）相反。tES 是調整傾向，不是直接按下開關。",
   "concept": "C_W4_C19"
+ },
+ {
+  "id": "C_W5_Q01",
+  "week": 5,
+  "q": "研究者想研究說謊，為什麼不能請受試者從頭到尾一直說謊？",
+  "options": [
+   "因為受試者說謊太累所以不能配合",
+   "真實情境多半是大量真話穿插少數假話，設計要貼近這個特徵",
+   "因為 ERP 只能記錄說真話",
+   "因為說謊不會引起任何腦活動"
+  ],
+  "answer": 1,
+  "why": "實驗要簡化，但也要抓住真實行為的特徵。真實的說謊通常是少數假話混在真話裡，所以設計上通常不會要求受試者持續說謊。",
+  "concept": "C_W5_C01"
+ },
+ {
+  "id": "C_W5_Q02",
+  "week": 5,
+  "q": "光遺傳學（optogenetics）相較於只看腦造影，最大的優勢是什麼？",
+  "options": [
+   "能在毫秒內精準操縱特定細胞，直接檢驗因果",
+   "能直接量到血氧變化",
+   "不需要任何基因操作",
+   "能同時記錄整個大腦的電位"
+  ],
+  "answer": 0,
+  "why": "光遺傳學（optogenetics）把感光蛋白放進特定細胞，再用光開啟，所以能直接操縱那群細胞，檢驗它是不是原因。血氧是 fMRI 的 BOLD，不是它。",
+  "concept": "C_W5_C02"
+ },
+ {
+  "id": "C_W5_Q03",
+  "week": 5,
+  "q": "用蛋白質（white matter）合成抑制劑造成失憶的小鼠，經光重新啟動記憶細胞後，仍然出現恐懼反應。這最支持什麼？",
+  "options": [
+   "記憶痕跡（engram）仍然保留，是自然的提取路徑失效",
+   "光會製造新的記憶",
+   "失憶的小鼠根本沒有學過",
+   "恐懼反應和記憶無關"
+  ],
+  "answer": 0,
+  "why": "光直接啟動那群細胞還是有反應，代表痕跡沒被抹掉，只是平常提取不到。這也說明記憶的儲存和提取要分開討論。",
+  "concept": "C_W5_C03"
+ },
+ {
+  "id": "C_W6_Q01",
+  "week": 6,
+  "q": "關於接受域（receptive field），下列哪個敘述「不正確」？",
+  "options": [
+   "會受到樹突（dendrite）所接收的刺激來源影響",
+   "可以反映神經細胞接收的訊息來源",
+   "可以反映神經細胞偏好的刺激形態",
+   "主要在視覺有這個現象，其他感覺沒有"
+  ],
+  "answer": 3,
+  "why": "接受域（receptive field）不是視覺獨有，聽覺、體感覺的神經元（neuron）也有，只是對應的是頻率、身體部位等不同特性。其他三個都是對的。",
+  "concept": "C_W6_C03"
+ },
+ {
+  "id": "C_W6_Q02",
+  "week": 6,
+  "q": "左視野（visual field）的訊息，最後會在哪個半球處理？",
+  "options": [
+   "左半球",
+   "只有左眼那邊的訊息到左腦",
+   "兩個半球各一半",
+   "右半球（兩眼接到的左視野（visual field）訊息都到右腦）"
+  ],
+  "answer": 3,
+  "why": "左視野（visual field）落在兩眼各自的一部分視網膜（retina）上，經視交叉（optic chiasm）整理後，都匯集到對側（右）半球。所以不是左眼管左邊、左腦管左邊。",
+  "concept": "C_W6_C01"
+ },
+ {
+  "id": "C_W6_Q03",
+  "week": 6,
+  "q": "在視交叉（optic chiasm），哪一部分的視網膜（retina）纖維會交叉到對側？",
+  "options": [
+   "兩邊都不交叉",
+   "鼻側（內側）視網膜（retina）",
+   "只有中央小窩",
+   "顳側（外側）視網膜（retina）"
+  ],
+  "answer": 1,
+  "why": "鼻側視網膜（nasal retina）的纖維在視交叉（optic chiasm）交叉到對側，顳側的維持同側。",
+  "concept": "C_W6_C01"
+ },
+ {
+  "id": "C_W6_Q04",
+  "week": 6,
+  "q": "視覺訊息進入初級視覺皮質（V1）之前，在視丘（thalamus）的重要中繼站是什麼？",
+  "options": [
+   "上丘（superior colliculus）",
+   "視交叉上核（SCN）",
+   "視交叉（optic chiasm）",
+   "外側膝狀核（LGN）"
+  ],
+  "answer": 3,
+  "why": "LGN 位於視丘（thalamus），是 V1 之前的中繼站。視交叉（optic chiasm）是交叉的位置，不是中繼站；上丘（superior colliculus）與 SCN 是不經 LGN 的其他路徑。",
+  "concept": "C_W6_C02"
+ },
+ {
+  "id": "C_W6_Q05",
+  "week": 6,
+  "q": "某 LGN 神經元（neuron）偏好「中央亮、周邊暗」的光點。它是哪一種？",
+  "options": [
+   "Off-center 細胞",
+   "K 細胞",
+   "V5 細胞",
+   "On-center 細胞"
+  ],
+  "answer": 3,
+  "why": "偏好中央亮周邊暗的是 On-center；Off-center 偏好中央暗周邊亮。刺激剛好相反時，反應會被抑制。",
+  "concept": "C_W6_C04"
+ },
+ {
+  "id": "C_W6_Q06",
+  "week": 6,
+  "q": "依投影片，LGN 中處理「形狀、顏色、大小」的是哪種細胞？",
+  "options": [
+   "K 細胞",
+   "都不是",
+   "M 細胞",
+   "P 細胞"
+  ],
+  "answer": 3,
+  "why": "投影片：M 管位置、P 管形狀顏色大小、K 管移動。",
+  "concept": "C_W6_C05"
+ },
+ {
+  "id": "C_W6_Q07",
+  "week": 6,
+  "q": "哪個結構接收光訊號，負責調節生理時鐘（biological clock）與睡眠週期？",
+  "options": [
+   "外側膝狀核（LGN）",
+   "上丘（superior colliculus）",
+   "視丘枕（pulvinar）",
+   "視交叉上核（SCN）"
+  ],
+  "answer": 3,
+  "why": "SCN 位在下視丘（thalamus）、視交叉（optic chiasm）上方，管生理時鐘（biological clock）。上丘（superior colliculus）管定向與眼動。",
+  "concept": "C_W6_C06"
+ },
+ {
+  "id": "C_W6_Q08",
+  "week": 6,
+  "q": "左側視覺皮質（visual cortex）受損，最可能造成什麼？",
+  "options": [
+   "右側視野（visual field）缺損（半盲（hemianopia））",
+   "只有暗點（scotoma）",
+   "兩眼各失去一半視網膜（retina）",
+   "左側視野（visual field）缺損"
+  ],
+  "answer": 0,
+  "why": "視覺皮質（visual cortex）接對側視野（visual field）：左邊受損，右邊視野缺失，缺半側叫半盲（hemianopia）。",
+  "concept": "C_W6_C07"
+ },
+ {
+  "id": "C_W6_Q09",
+  "week": 6,
+  "q": "視野（visual field）中只有一小塊區域看不見，這叫什麼？",
+  "options": [
+   "暗點（scotoma）",
+   "半盲（hemianopia）",
+   "忽略症（neglect）",
+   "四分之一偏盲（quadrantanopia）"
+  ],
+  "answer": 0,
+  "why": "暗點（scotoma）是小區域缺失；四分之一偏盲（quadrantanopia）缺一個象限；半盲（hemianopia）缺半側視野（visual field）。忽略症（neglect）不是看不見，是沒注意到。",
+  "concept": "C_W6_C07"
+ },
+ {
+  "id": "C_W6_Q10",
+  "week": 6,
+  "q": "哪一種病人「覺得自己看不到，但強迫判斷方位時，正確率高於 50% 的猜測水準」？",
+  "options": [
+   "皮質盲（cortical blindness）",
+   "偏盲",
+   "盲視（blindsight）",
+   "忽略症（neglect）"
+  ],
+  "answer": 2,
+  "why": "這是盲視（blindsight）：沒有視覺經驗，卻仍有視覺處理。皮質盲（cortical blindness）是看不見，偏盲是視野（visual field）缺半側，忽略症（neglect）是沒注意到。",
+  "concept": "C_W6_C08"
+ },
+ {
+  "id": "C_W6_Q11",
+  "week": 6,
+  "q": "盲視（blindsight）的可能機制是什麼？",
+  "options": [
+   "V1 損傷不完整，殘存的組織（上丘（superior colliculus）、視丘枕（pulvinar）、prestriate 皮質（cortex））仍在處理",
+   "病人在說謊",
+   "眼睛其實還能看",
+   "右腦完整取代了 V1"
+  ],
+  "answer": 0,
+  "why": "投影片：V1 的損傷是不完整的，殘存功能來自上丘（superior colliculus）、視丘枕（pulvinar）與 prestriate 皮質（cortex）。所以盲視（blindsight）是「視覺受損＋沒有意識」，不是正常視覺減掉意識。",
+  "concept": "C_W6_C08"
+ },
+ {
+  "id": "C_W6_Q12",
+  "week": 6,
+  "q": "「認出這是杯子還是帽子」主要靠哪條路徑？",
+  "options": [
+   "只靠 LGN",
+   "腹側路徑（What），經 V4 到下顳區（inferior temporal region）",
+   "背側路徑（Where），經 V5 到後頂葉（posterior parietal cortex）",
+   "只靠上丘（superior colliculus）"
+  ],
+  "answer": 1,
+  "why": "辨認物體是腹側路徑（ventral stream）（偏顳葉（temporal lobe））的工作；背側路徑（dorsal stream）管位置、移動與動作引導。",
+  "concept": "C_W6_C09"
+ },
+ {
+  "id": "C_W6_Q13",
+  "week": 6,
+  "q": "某病人分不出色調（hue），但亮度、深度、質地知覺都還在。最可能是哪裡受損？",
+  "options": [
+   "V1 全部",
+   "STS",
+   "V4",
+   "V5/MT"
+  ],
+  "answer": 2,
+  "why": "V4 是顏色區，受損造成色覺障礙（achromatopsia）。V5 管移動，STS 管生物運動（biological motion）。",
+  "concept": "C_W6_C10"
+ },
+ {
+  "id": "C_W6_Q14",
+  "week": 6,
+  "q": "akinetopsia 的症狀是「無法處理判斷運動的訊息」，主要是哪裡受損？",
+  "options": [
+   "顳上溝（STS）",
+   "V5",
+   "V1",
+   "V4"
+  ],
+  "answer": 1,
+  "why": "動覺失認（akinetopsia）是 V5/MT 受損。V4 是顏色，STS 處理的是比較複雜的生物運動（biological motion）。",
+  "concept": "C_W6_C11"
+ },
+ {
+  "id": "C_W6_Q15",
+  "week": 6,
+  "q": "病人 M.P. 倒水時常常溢出來，最可能是因為什麼受損？",
+  "options": [
+   "形狀知覺",
+   "顏色知覺",
+   "聽覺",
+   "移動知覺（MT），追蹤不到水流與液面"
+  ],
+  "answer": 3,
+  "why": "M.P. 是雙側顳頂區的 MT 受損，移動知覺受損，但顏色與形狀保留，所以追蹤不到水位變化。",
+  "concept": "C_W6_C11"
+ },
+ {
+  "id": "C_W6_Q16",
+  "week": 6,
+  "q": "TMS 打 MT、V1 與控制位置，哪個結果最符合課堂講的？",
+  "options": [
+   "打 V1 完全消除移動偵測",
+   "打 MT 干擾移動偵測最明顯，控制位置影響很小",
+   "打控制位置影響最大",
+   "三個位置影響一樣大"
+  ],
+  "answer": 1,
+  "why": "打 MT 影響最明顯。打 V1 沒有讓移動偵測完全崩解，是因為還有視網膜（retina） → 上丘（superior colliculus） → MT 的路徑。",
+  "concept": "C_W6_C12"
+ },
+ {
+  "id": "C_W6_Q17",
+  "week": 6,
+  "q": "只靠一堆移動光點，就能看出是不是有生命的個體走路。這和哪個腦區最相關？",
+  "options": [
+   "V4",
+   "顳上溝（STS）",
+   "外側枕葉複合區（lateral occipital complex (LOC)）",
+   "LGN"
+  ],
+  "answer": 1,
+  "why": "這是生物運動（biological motion），相關區域是 STS，前運動皮質（premotor cortex）也可能參與。V5/MT 則處理一般的移動資訊。",
+  "concept": "C_W6_C13"
+ },
+ {
+  "id": "C_W6_Q18",
+  "week": 6,
+  "q": "病人無法認出人臉（面孔失認症（prosopagnosia）），代表哪個系統受損？",
+  "options": [
+   "What 系統（腹側）",
+   "Where 系統（背側）",
+   "運動皮質（cortex）",
+   "聽覺系統"
+  ],
+  "answer": 0,
+  "why": "面孔失認症（prosopagnosia）與視覺失認症（visual agnosia）是 What 系統受損；忽略症（neglect）是 Where 系統受損，兩邊互補是雙重分離（double dissociation）。",
+  "concept": "C_W6_C14"
+ },
+ {
+  "id": "C_W6_Q19",
+  "week": 6,
+  "q": "一群點全部朝同一方向移動，被看成同一個整體。這是哪個格式塔（Gestalt）原則？",
+  "options": [
+   "相似性",
+   "共同命運（common fate）",
+   "封閉性（closure）",
+   "接近性（proximity）"
+  ],
+  "answer": 1,
+  "why": "朝同方向一起移動的元素會被歸成一組，是共同命運（common fate）。接近性（proximity）看距離、相似性看外觀、封閉性（closure）是補完缺口。",
+  "concept": "C_W6_C15"
+ },
+ {
+  "id": "C_W6_Q20",
+  "week": 6,
+  "q": "一個缺了一小段的圓，仍被看成完整的圓。這是哪個格式塔（Gestalt）原則？",
+  "options": [
+   "連續性",
+   "封閉性（closure）",
+   "共同命運（common fate）",
+   "接近性（proximity）"
+  ],
+  "answer": 1,
+  "why": "即使圖形不完整，也傾向知覺為完整形狀，是封閉性（closure）。連續性是把線條看成連續。",
+  "concept": "C_W6_C15"
+ },
+ {
+  "id": "C_W6_Q21",
+  "week": 6,
+  "q": "同一個杯子從不同角度看，影像不一樣，我們仍認得是同一個杯子。這叫什麼？",
+  "options": [
+   "盲視（blindsight）",
+   "皮質盲（cortical blindness）",
+   "物體恆常性（object constancy）",
+   "適應"
+  ],
+  "answer": 2,
+  "why": "影像因視角、距離、光線改變，仍認得是同一個物體，是物體恆常性（object constancy）。",
+  "concept": "C_W6_C17"
+ },
+ {
+  "id": "C_W6_Q22",
+  "week": 6,
+  "q": "先看一張圖，再看一張「名稱相同、大小不同」的圖，結果布洛卡區的反應變小。這最能說明什麼？",
+  "options": [
+   "布洛卡區處理的是顏色",
+   "布洛卡區沒有參與",
+   "布洛卡區處理的是名稱／概念，把兩張視為相同",
+   "布洛卡區處理的是大小"
+  ],
+  "answer": 2,
+  "why": "適應：把前後視為相同的腦區，第二次反應較小。LOC 處理形狀與大小，左紡錘狀回（fusiform gyrus）處理視角，布洛卡區處理名稱與例子。",
+  "concept": "C_W6_C18"
+ },
+ {
+  "id": "C_W6_Q23",
+  "week": 6,
+  "q": "關於類別特異性（category specificity），哪個說法比較合理？",
+  "options": [
+   "一個類別只由一個腦區負責",
+   "某些腦區對特定類別反應較強，和定位論相容，但不代表只靠單一腦區",
+   "只有視覺有類別特異性（category specificity）",
+   "完全否定定位論"
+  ],
+  "answer": 1,
+  "why": "課堂用大股東與小股東比喻：某區作用較大，其他區也參與，所以定位與分散並不衝突。",
+  "concept": "C_W6_C19"
+ },
+ {
+  "id": "C_W7_Q01",
+  "week": 7,
+  "q": "關於聽覺的神經路徑，下列哪個敘述「不正確」？",
+  "options": [
+   "會經過中腦（midbrain）的下丘（inferior colliculus）",
+   "會經過視丘（thalamus）的內側膝狀核（MGN）",
+   "會經過耳蝸神經核（cochlear nuclei）",
+   "聽覺神經路徑有清楚的大腦側化"
+  ],
+  "answer": 3,
+  "why": "路徑是耳蝸神經核（cochlear nuclei） → 下丘（inferior colliculus） → MGN → A1。聽覺路徑沒有清楚的側化，所以「有清楚的大腦側化」才是不正確的。",
+  "concept": "C_W7_C01"
+ },
+ {
+  "id": "C_W7_Q02",
+  "week": 7,
+  "q": "聲音訊息在進入初級聽覺皮質（primary auditory cortex (A1)）前，視丘（thalamus）的中繼站是什麼？",
+  "options": [
+   "視丘枕（pulvinar）",
+   "外側膝狀核（LGN）",
+   "內側膝狀核（MGN）",
+   "視交叉（optic chiasm）"
+  ],
+  "answer": 2,
+  "why": "聽覺是 MGN，視覺是 LGN。",
+  "concept": "C_W7_C01"
+ },
+ {
+  "id": "C_W7_Q03",
+  "week": 7,
+  "q": "初級聽覺皮質（A1）位在哪裡？",
+  "options": [
+   "顳葉（temporal lobe）的赫氏迴（Heschl's gyrus）",
+   "枕葉（occipital lobe）",
+   "額葉（frontal lobe）的運動皮質（cortex）",
+   "頂葉（parietal lobe）的後頂區"
+  ],
+  "answer": 0,
+  "why": "A1（核心區）在顳葉（temporal lobe）的赫氏迴（Heschl's gyrus）。A2 是 belt 與 parabelt 區。",
+  "concept": "C_W7_C01"
+ },
+ {
+  "id": "C_W7_Q04",
+  "week": 7,
+  "q": "「頻率相近的聲音，由空間上相近的神經元（neuron）表徵」，這個原理叫什麼？",
+  "options": [
+   "視網膜拓樸（retinotopic organization）排列",
+   "雙重分離（double dissociation）",
+   "音調拓樸排列（tonotopic organization）",
+   "範疇知覺（categorical perception）"
+  ],
+  "answer": 2,
+  "why": "音調拓樸（tonotopic organization）就是頻率與皮質（cortex）位置的整齊對應。視覺對應的是視網膜拓樸（retinotopic organization）。",
+  "concept": "C_W7_C02"
+ },
+ {
+  "id": "C_W7_Q05",
+  "week": 7,
+  "q": "關於聽覺皮質（cortex）的接受域（receptive field），下列哪個敘述「不正確」？",
+  "options": [
+   "主要聽覺皮質（cortex）內側的神經偏好較低頻率",
+   "主要聽覺皮質（cortex）的神經會偏好不同的聲音頻率",
+   "主要聽覺皮質（cortex）外側的神經偏好較高頻率",
+   "次要聽覺皮質（secondary auditory cortex (A2)）的神經會偏好不同的樂器聲音"
+  ],
+  "answer": 3,
+  "why": "A1 的組織原則是頻率拓樸：中央（內側）低頻、外側高頻。A2 處理的是複雜聲音，並沒有「偏好不同樂器」這樣的說法。",
+  "concept": "C_W7_C02"
+ },
+ {
+  "id": "C_W7_Q06",
+  "week": 7,
+  "q": "下列哪一項是聽覺相對於視覺的特性？",
+  "options": [
+   "早期處理是視網膜拓樸（retinotopic organization）",
+   "時間敏感度比空間敏感度強",
+   "丘腦中繼站是 LGN",
+   "空間敏感度比時間敏感度強"
+  ],
+  "answer": 1,
+  "why": "聽覺時間 > 空間，視覺空間 > 時間。視網膜拓樸（retinotopic organization）與 LGN 是視覺。",
+  "concept": "C_W7_C03"
+ },
+ {
+  "id": "C_W7_Q07",
+  "week": 7,
+  "q": "依 Rauschecker 與 Tian（2000），處理「頻率（what）」並走腹側路徑（ventral stream）到前額葉（prefrontal cortex）的是哪個區域？",
+  "options": [
+   "後側 belt 區",
+   "前側 belt 區",
+   "初級聽覺皮質（primary auditory cortex (A1)）的外側",
+   "枕葉（occipital lobe）"
+  ],
+  "answer": 1,
+  "why": "前側 belt 區處理頻率（what），走腹側路徑（ventral stream）到前額葉（prefrontal cortex）；後側 belt 區處理空間位置（where），走背側路徑（dorsal stream）到後頂葉（posterior parietal cortex）。",
+  "concept": "C_W7_C04"
+ },
+ {
+  "id": "C_W7_Q08",
+  "week": 7,
+  "q": "聽覺「在哪裡」的資訊，主要走哪條路徑？",
+  "options": [
+   "背側路徑（dorsal stream），到後頂葉（posterior parietal cortex）",
+   "腹側路徑（ventral stream），到前額葉（prefrontal cortex）",
+   "只靠 MGN",
+   "只靠下丘（inferior colliculus）"
+  ],
+  "answer": 0,
+  "why": "空間位置（where）走背側路徑（dorsal stream）到後頂葉（posterior parietal cortex）；Isenberg 等人再發現背側路徑還包含動作表徵（how）。",
+  "concept": "C_W7_C04"
+ },
+ {
+  "id": "C_W7_Q09",
+  "week": 7,
+  "q": "後側 STS 對語音知覺的重要貢獻之一是什麼？",
+  "options": [
+   "只負責偵測聲音的頻率",
+   "負責控制舌頭的肌肉",
+   "只負責聲音的左右定位",
+   "整合「看到說話」與「聽到說話」的多感官資訊"
+  ],
+  "answer": 3,
+  "why": "後側 STS 是多感官區，整合口型與聲音，相當於說話動作的知覺對應。",
+  "concept": "C_W7_C05"
+ },
+ {
+  "id": "C_W7_Q10",
+  "week": 7,
+  "q": "大腦判斷聲音來自「左邊還是右邊」，主要靠什麼線索？",
+  "options": [
+   "頭部相關傳遞函數（head-related transfer function）造成的扭曲",
+   "兩耳之間的差異",
+   "聽覺皮質（cortex）的頻率拓樸",
+   "視覺皮質（visual cortex）的回饋"
+  ],
+  "answer": 1,
+  "why": "左右定位靠兩耳差異（inter-aural differences）。要分上下，才需要頭與耳廓造成的聲波扭曲（頭部相關傳遞函數（head-related transfer function））。",
+  "concept": "C_W7_C06"
+ },
+ {
+  "id": "C_W7_Q11",
+  "week": 7,
+  "q": "連音（coarticulation）讓語音知覺變難的原因是什麼？",
+  "options": [
+   "每個音素（phoneme）都剛好分開",
+   "聲音太小聲",
+   "音素（phoneme）在時間上重疊，所以聲學訊號與聽到的語音沒有一對一對應",
+   "外語音素（phoneme）每秒只有 1 個"
+  ],
+  "answer": 2,
+  "why": "連音（coarticulation）讓音素（phoneme）重疊，情境會影響訊號、訊號有變異，所以聲音與聽到的語音沒有一對一的關係。",
+  "concept": "C_W7_C07"
+ },
+ {
+  "id": "C_W7_Q12",
+  "week": 7,
+  "q": "依動作理論（motor theory），語音知覺與什麼有關？",
+  "options": [
+   "只和海馬迴（hippocampus）有關",
+   "只和耳蝸有關",
+   "說話的動作系統（額葉（frontal lobe）），包含推論說話者想要的發音",
+   "只和枕葉（occipital lobe）有關"
+  ],
+  "answer": 2,
+  "why": "Liberman 等人（1967）：語音知覺依賴聽到的發音，以及我們推論的說話者想做的發音動作，聽覺與視覺都匯聚到說話的動作系統。",
+  "concept": "C_W7_C08"
+ },
+ {
+  "id": "C_W7_Q13",
+  "week": 7,
+  "q": "視覺看到的口型是 ba，聽覺聽到的聲音是 da，結果人們聽成折衷的聲音。這個現象叫什麼？",
+  "options": [
+   "純詞聾（pure word deafness）",
+   "McGurk 效應",
+   "範疇知覺（categorical perception）",
+   "音調拓樸（tonotopic organization）"
+  ],
+  "answer": 1,
+  "why": "這是 McGurk 與 MacDonald（1976）的效應：視覺與聽覺衝突時，大腦做「最佳猜測」。",
+  "concept": "C_W7_C09"
+ },
+ {
+  "id": "C_W7_Q14",
+  "week": 7,
+  "q": "下列哪個位置被干擾，可能會影響 McGurk 效應？",
+  "options": [
+   "下顳葉（temporal lobe）",
+   "前頂葉（parietal lobe）",
+   "後側顳上溝（posterior STS）",
+   "前側顳上溝（superior temporal sulcus (STS)）"
+  ],
+  "answer": 2,
+  "why": "後側 STS 負責語音的多感官知覺，干擾它可能影響 McGurk 效應。",
+  "concept": "C_W7_C09"
+ },
+ {
+  "id": "C_W7_Q15",
+  "week": 7,
+  "q": "關於範疇知覺（categorical perception），哪個敘述正確？",
+  "options": [
+   "只有視覺有範疇知覺（categorical perception）",
+   "同一類別之內的辨別比不同類別之間更好",
+   "範疇知覺（categorical perception）和語音無關",
+   "不同類別之間的辨別，比同一類別之內更好"
+  ],
+  "answer": 3,
+  "why": "範疇知覺（categorical perception）指不同類別之間的辨別比同類別之內更好，在類別邊界附近辨別最準。",
+  "concept": "C_W7_C10"
+ },
+ {
+  "id": "C_W7_Q16",
+  "week": 7,
+  "q": "和一般兒童相比，閱讀障礙兒童在範疇知覺（categorical perception）上的特點是什麼？",
+  "options": [
+   "跨類別的辨別較差、類別內的辨別較好",
+   "兩者完全一樣",
+   "完全沒有範疇知覺（categorical perception）",
+   "跨類別的辨別較好、類別內的辨別較差"
+  ],
+  "answer": 0,
+  "why": "投影片：閱讀障礙兒童的 between category 較差、within category 反而較好。",
+  "concept": "C_W7_C10"
+ },
+ {
+  "id": "C_W7_Q17",
+  "week": 7,
+  "q": "病人 CN（雙側顳葉（temporal lobe）受損）最可能出現什麼表現？",
+  "options": [
+   "完全聽不到聲音",
+   "認不出所有環境聲音",
+   "認不出熟悉的旋律",
+   "不能說話"
+  ],
+  "answer": 2,
+  "why": "CN 認不出熟悉旋律，語調的知覺只部分保留，支持音樂與語音知覺可以分離。",
+  "concept": "C_W7_C11"
+ },
+ {
+  "id": "C_W7_Q18",
+  "week": 7,
+  "q": "某病人左顳葉（temporal lobe）受損，仍能說話，也能認出環境聲音與音樂，卻認不出語音。這是什麼？",
+  "options": [
+   "皮質盲（cortical blindness）",
+   "忽略症（neglect）",
+   "動覺失認（akinetopsia）",
+   "純詞聾（pure word deafness）（聽覺失認症（auditory agnosia）的一種）"
+  ],
+  "answer": 3,
+  "why": "純詞聾（pure word deafness）是選擇性認不出語音，不是聽不到，也不是不會說。",
+  "concept": "C_W7_C12"
  }
 ]

@@ -7,9 +7,9 @@ hai 的「認知神經科學導論」（邱倚璿老師，1151）每週複習 PW
 ```
 index.html     ← 全部 UI 與邏輯（localStorage 前綴 cn_）
 concepts.json / quiz.json / weeks.json  ← 由 tools/build_data.py 產生，不要直接改 JSON
-tools/build_data.py ← 內容原始檔（CARDS／QUIZ／WEEKS）：改這裡再執行 python3 tools/build_data.py
+tools/build_data.py ← W1–W4 內容與專有名詞對照表 GLOSSARY；tools/data_w5_w6.py ← W5、W6 內容；tools/data_w7.py ← W7 聽覺（之後新週次可照樣新增 data_wN.py 並在 build_data.py 匯入）：改這裡再執行 python3 tools/build_data.py
 tools/gen_audio.py  ← 雲哲男聲 zh-TW-YunJheNeural：`~/.venvs/tts/bin/python tools/gen_audio.py`
-img/ ← 自畫 SVG 示意圖 34 張，一張圖可配多張卡，51 張卡全部有圖（對照表在 build_data.py 的 IMG），米色底、卡通扁平風；build_data.py 的 IMG 對照表決定哪張卡配哪張圖
+img/ ← 自畫 SVG 示意圖 52 張，一張圖可配多張卡，85 張卡全部有圖（對照表在 build_data.py 的 IMG），米色底、卡通扁平風；build_data.py 的 IMG 對照表決定哪張卡配哪張圖
 audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 ```
 預覽：母資料夾 `.claude/launch.json` 的 `cogneuro-review`，埠 8768。
@@ -26,7 +26,7 @@ audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 
 ## 素材（`~/Desktop/P. 進行中專案/FJU psy/02_修課/1151/1151_認知神經科學導論/`）
 - 優先序：**投影片 ＞ 課本**；歷史、人物、年代、實驗以投影片為準；用詞與課本不同處以教師為準（identity theory、double-aspect theory、phrenology 評價）。
-- `cogneuro-handover.md`（進度、評分、68 個教師關鍵字白名單、章號對照）、`20260917_認知神經科學_課本關鍵字解釋.json`（白話解釋與易混淆點，術語校正用）。
+- `09工具交接_cogneuro-handover.md`（進度、評分、68 個教師關鍵字白名單、章號對照）、`03複習測驗_20260917_認知神經科學_課本關鍵字解釋.json`（白話解釋與易混淆點，術語校正用）。
 - Plaud 逐字稿未經核聽，專有名詞以講義為準。Ch10 不考。
 
 ## 每週新增內容（hai 說「更新認知神經科學 W{n}」）
@@ -43,7 +43,15 @@ audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 - 投影片的腦波表格排版混亂（Beta 12–30、Alpha 8–12、Theta 4–8、Delta <4），卡片照講義數值寫。
 - 「上丘偏視覺、下丘偏聽覺」：講義寫上丘管視、聽、觸覺，教師總結補充上丘也與聽覺有關；考場以「上視下聽」為主。
 
+## 2026-10-21 更新（W5、W6）
+- 素材資料夾已重新整理成前綴命名：`01課本教材_`（講義）、`02逐字稿_`、`03複習測驗_`、`04音檔音稿_`。W5＝10/15 逐字稿（期中準備、研究設計、光遺傳學、賴老師演講），W6＝10/21 逐字稿＋ Dis_07 The seeing brain。
+- 新增主題「視覺」（W6）、「研究設計與前沿」（W5）；W5 的光遺傳學／記憶痕跡是課堂補充，不在關鍵字清單，卡片已標註「未查原始論文」。
+- 進度異動（Plaud W5）：原定 11/19 實體課改 11/26（記憶、執行功能）；第 6–8 章 10/15 起提早開放，第 7 章截止 10/29；期中考 11/5 在 801、802，含申論題。
+
 ## 待確認
+- 期中範圍：hai 2026-10-21 確認 **W7 今年是聽覺**，所以期中考（11/5）範圍到 Ch8 聽覺不變，`MID_WEEK = 8`。W6 逐字稿摘要寫的「聽覺延後、10/28 轉入注意力」與此不符，以 hai 說法為準。
+- W7 沒有逐字稿，內容來自 Dis_08 講義與延伸閱讀「Ch08 類別知覺」；上完課後再核對。隨堂測驗第 3 題（後側 STS 的敘述哪個不正確）答案待老師公布，目前只在卡片說明裡寫推論。
+- Plaud W6 的 LGN 細胞描述（M 管周邊與背側）和投影片（M 位置、P 形狀顏色大小、K 移動）略有不同，卡片以投影片為準。
 - 中央溝／側溝的「中央裂（central fissure）」講義寫法與 Plaud「中央溝」是否同義（應為同一條，講義是舊譯）。
 - W4 Ch5 的 H.M. 手術細節（講義只寫切除內側顳葉含海馬迴），沒補課本原文。
 - 賴姿伶老師 Talk（W5）是否納入期中範圍。

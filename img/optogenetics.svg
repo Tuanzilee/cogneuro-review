@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="18" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">光遺傳學：用光操縱特定細胞</text>
+<g stroke="#2b1d14" stroke-width="2.5"><rect x="12" y="38" width="86" height="64" rx="10" fill="#e8d5f0"/><circle cx="170" cy="70" r="26" fill="#f2b48a"/></g>
+<text x="55" y="64" font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle">病毒載體</text><text x="55" y="80" font-size="10" fill="#2b1d14" text-anchor="middle">送進感光蛋白基因</text>
+<path d="M98,70 L140,70 M132,64 L140,70 L132,76" stroke="#2b1d14" stroke-width="2.5" fill="none"/>
+<g fill="#e8c46a" stroke="#2b1d14" stroke-width="1.5"><circle cx="150" cy="58" r="4"/><circle cx="144" cy="74" r="4"/><circle cx="154" cy="88" r="4"/><circle cx="190" cy="52" r="4"/><circle cx="196" cy="72" r="4"/></g>
+<text x="170" y="72" font-size="10" font-weight="700" fill="#2b1d14" text-anchor="middle">神經元</text>
+<path d="M226,40 L196,62" stroke="#4a86a6" stroke-width="10" opacity=".7"/><text x="244" y="36" font-size="11" font-weight="700" fill="#4a86a6">藍光</text>
+<path d="M232,70 L262,70 M254,64 L262,70 L254,76" stroke="#2b1d14" stroke-width="2.5" fill="none"/>
+<path d="M268,86 L282,86 L286,50 L290,86 L304,86 L308,50 L312,86 L326,86 L330,50 L334,86 L360,86" stroke="#c0504d" stroke-width="3" fill="none"/>
+<text x="314" y="106" font-size="10" fill="#2b1d14" text-anchor="middle">毫秒內放電</text>
+<text x="200" y="128" font-size="11" fill="#2b1d14" text-anchor="middle">直接操縱特定細胞，檢驗它是不是原因（比造影更接近因果）</text>
+<rect x="12" y="140" width="376" height="104" rx="12" fill="#fffdf7" stroke="#2b1d14" stroke-width="2.5"/>
+<text x="200" y="160" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">記憶痕跡（engram）實驗</text>
+<g font-size="10" fill="#2b1d14" text-anchor="middle"><rect x="24" y="170" width="106" height="36" rx="8" fill="#f6dcc2" stroke="#2b1d14" stroke-width="2"/><text x="77" y="186">標記恐懼學習時</text><text x="77" y="199">活躍的海馬細胞</text>
+<rect x="147" y="170" width="106" height="36" rx="8" fill="#cfe0f0" stroke="#2b1d14" stroke-width="2"/><text x="200" y="186">之後在安全環境</text><text x="200" y="199">用光重新啟動</text>
+<rect x="270" y="170" width="106" height="36" rx="8" fill="#e8a3b6" stroke="#2b1d14" stroke-width="2"/><text x="323" y="186">小鼠出現</text><text x="323" y="199">恐懼僵直</text></g>
+<path d="M132,188 L145,188 M255,188 L268,188" stroke="#2b1d14" stroke-width="2.5"/>
+<text x="200" y="224" font-size="10" fill="#2b1d14" text-anchor="middle">失憶小鼠仍可被光啟動 → 痕跡還在，是提取失效</text><text x="200" y="238" font-size="9" fill="#6b5a4a" text-anchor="middle">課堂補充，不在關鍵字清單；來源為 Plaud 摘要，未查原始論文</text>
+</svg>

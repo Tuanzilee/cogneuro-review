@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="18" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">物體恆常性與適應</text>
+<g font-size="24" text-anchor="middle"><text x="140" y="50">☕</text><text x="200" y="48" transform="rotate(-18 200 44)">☕</text><text x="262" y="50" transform="translate(-80,0) scale(1.3,1) translate(60,0)">☕</text></g>
+<text x="200" y="68" font-size="10" fill="#2b1d14" text-anchor="middle">視角、大小改變，仍是同一個杯子 ＝ 物體恆常性</text>
+<text x="200" y="83" font-size="9" fill="#6b5a4a" text-anchor="middle">辨認物體偏左下顳葉（紡錘狀回）；視角、方向偏右頂葉與右下顳葉</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><rect x="14" y="92" width="372" height="136" rx="12" fill="#fffdf7"/><path d="M14,118 L386,118 M14,150 L386,150 M14,182 L386,182 M110,92 L110,228 M184,92 L184,228 M258,92 L258,228"/></g>
+<g font-size="10" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="147" y="110">改變大小</text><text x="221" y="110">改變視角</text><text x="322" y="110">改變名稱／例子</text></g>
+<g font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="62" y="138">LOC</text><text x="62" y="170">左紡錘狀回</text><text x="62" y="202">布洛卡區</text></g>
+<g font-size="9" fill="#6b5a4a" text-anchor="middle"><text x="62" y="148">形狀、大小</text><text x="62" y="180">視角</text><text x="62" y="212">例子、名稱</text></g>
+<g font-size="20" font-weight="700" text-anchor="middle"><text x="147" y="142" fill="#c0504d">↑</text><text x="221" y="142" fill="#3f7a4f">↓</text><text x="322" y="142" fill="#3f7a4f">↓</text><text x="147" y="174" fill="#3f7a4f">↓</text><text x="221" y="174" fill="#c0504d">↑</text><text x="322" y="174" fill="#3f7a4f">↓</text><text x="147" y="206" fill="#3f7a4f">↓</text><text x="221" y="206" fill="#3f7a4f">↓</text><text x="322" y="206" fill="#c0504d">↑</text></g>
+<text x="200" y="246" font-size="9" fill="#6b5a4a" text-anchor="middle">↓＝第二次反應仍小（視為相同）；↑＝反應變大（視為不同）。對角線是各區在意的特徵（推論）</text>
+</svg>

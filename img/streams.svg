@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="16" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">V1 之後的兩條路</text>
+<g transform="translate(6,22) scale(.68)"><path d="M58,140 C48,85 95,38 175,32 C255,26 338,52 352,120 C358,158 332,176 302,172 C284,190 255,186 240,178 C215,200 150,200 122,182 C92,178 62,168 58,140 Z" fill="#f6e3cf" stroke="#2b1d14" stroke-width="5"/>
+<ellipse cx="318" cy="110" rx="26" ry="34" fill="#e8a3b6" stroke="#2b1d14" stroke-width="4"/>
+<path d="M300,86 C280,60 250,56 214,64" fill="none" stroke="#4a86a6" stroke-width="9"/><path d="M226,50 L206,64 L228,78" fill="none" stroke="#4a86a6" stroke-width="7"/>
+<path d="M300,134 C280,160 244,168 196,162" fill="none" stroke="#e08a4f" stroke-width="9"/><path d="M208,148 L188,162 L210,176" fill="none" stroke="#e08a4f" stroke-width="7"/>
+<text x="318" y="116" font-size="22" font-weight="700" fill="#2b1d14" text-anchor="middle">V1</text></g>
+<g font-size="10" font-weight="700" fill="#4a86a6"><text x="262" y="38">背側路徑（Where／How）</text></g>
+<g font-size="10" fill="#2b1d14"><text x="262" y="52">V5/MT、後頂葉、STS</text><text x="262" y="66">移動、位置、視覺引導動作</text><text x="262" y="80" fill="#c0504d">受損：動覺失認、忽略症</text></g>
+<g font-size="10" font-weight="700" fill="#c06a3a"><text x="262" y="116">腹側路徑（What）</text></g>
+<g font-size="10" fill="#2b1d14"><text x="262" y="130">V4、下顳區</text><text x="262" y="144">顏色、形狀、辨認物體</text><text x="262" y="158" fill="#c0504d">受損：色覺障礙、面孔失認</text></g>
+<g stroke="#2b1d14" stroke-width="2.5" fill="#fffdf7"><rect x="20" y="182" width="360" height="62" rx="12"/></g>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="200" y="202" font-weight="700">雙重分離</text><text x="200" y="220">V4 受損：色調差、移動正常　｜　V5 受損：移動差、顏色正常</text><text x="200" y="236">What 受損：認不出臉與物　｜　Where 受損：忽略一側空間</text></g>
+</svg>

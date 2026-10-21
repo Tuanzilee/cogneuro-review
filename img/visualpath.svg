@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="18" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">視野 → 視網膜 → 視交叉 → LGN → V1</text>
+<g font-size="12" font-weight="700" text-anchor="middle"><text x="95" y="42" fill="#4a86a6">左視野</text><text x="305" y="42" fill="#e08a4f">右視野</text></g>
+<path d="M130,50 L150,64 M270,50 L250,64" stroke="#6b5a4a" stroke-width="2" fill="none"/>
+<g stroke="#2b1d14" stroke-width="2.5"><circle cx="150" cy="84" r="22" fill="#fffdf7"/><circle cx="250" cy="84" r="22" fill="#fffdf7"/></g>
+<g stroke="none"><path d="M150,62 A22,22 0 0 0 150,106 Z" fill="#e08a4f" opacity=".75"/><path d="M150,62 A22,22 0 0 1 150,106 Z" fill="#4a86a6" opacity=".75"/><path d="M250,62 A22,22 0 0 0 250,106 Z" fill="#e08a4f" opacity=".75"/><path d="M250,62 A22,22 0 0 1 250,106 Z" fill="#4a86a6" opacity=".75"/></g>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><circle cx="150" cy="84" r="22"/><circle cx="250" cy="84" r="22"/></g>
+<g font-size="9" fill="#2b1d14" text-anchor="middle"><text x="128" y="119">顳側</text><text x="172" y="119">鼻側</text><text x="228" y="119">鼻側</text><text x="272" y="119">顳側</text><text x="112" y="88" font-size="11" font-weight="700">左眼</text><text x="288" y="88" font-size="11" font-weight="700">右眼</text></g>
+<g fill="none" stroke-width="3.5"><path d="M138,106 C138,130 146,145 148,160" stroke="#e08a4f"/><path d="M162,106 C170,125 196,135 200,138 C206,142 244,148 250,160" stroke="#4a86a6"/><path d="M238,106 C230,125 204,135 200,138 C194,142 156,148 150,160" stroke="#e08a4f"/><path d="M262,106 C262,130 254,145 252,160" stroke="#4a86a6"/></g>
+<text x="200" y="152" font-size="10" font-weight="700" fill="#c0504d" text-anchor="middle">視交叉</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="#cfe6cf"><ellipse cx="150" cy="170" rx="16" ry="9"/><ellipse cx="250" cy="170" rx="16" ry="9"/></g>
+<text x="108" y="174" font-size="10" fill="#2b1d14" text-anchor="middle">LGN</text><text x="292" y="174" font-size="10" fill="#2b1d14" text-anchor="middle">LGN</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="#e8a3b6"><rect x="110" y="196" width="80" height="30" rx="10"/><rect x="210" y="196" width="80" height="30" rx="10"/></g>
+<g font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="150" y="216">左腦 V1</text><text x="250" y="216">右腦 V1</text></g>
+<path d="M150,180 L150,194 M250,180 L250,194" stroke="#2b1d14" stroke-width="2.5"/>
+<text x="200" y="248" font-size="10" fill="#6b5a4a" text-anchor="middle">橘＝右視野的訊息，藍＝左視野的訊息；鼻側纖維交叉，顳側不交叉</text>
+</svg>

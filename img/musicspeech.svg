@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="18" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">音樂 ≠ 語音：選擇性的損傷</text>
+<g stroke="#2b1d14" stroke-width="2" fill="none"><rect x="12" y="30" width="376" height="104" rx="12" fill="#fffdf7" stroke-width="2.5"/><path d="M12,56 L388,56 M12,84 L388,84 M12,112 L388,112 M150,30 L150,112 M232,30 L232,112 M312,30 L312,112"/></g>
+<g font-size="10" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="191" y="47">語意記憶</text><text x="272" y="47">認熟悉旋律</text><text x="350" y="47">情節記憶</text></g>
+<g font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle"><text x="81" y="75">右前顳葉受損</text><text x="81" y="102">阿茲海默症</text></g>
+<g font-size="20" font-weight="700" text-anchor="middle"><text x="191" y="76" fill="#c0504d">×</text><text x="272" y="76" fill="#c0504d">×</text><text x="350" y="76" fill="#d9a441">△</text><text x="191" y="104" fill="#d9a441">△</text><text x="272" y="104" fill="#d9a441">△</text><text x="350" y="104" fill="#c0504d">×</text></g>
+<text x="200" y="127" font-size="9" fill="#6b5a4a" text-anchor="middle">×＝受損　△＝部分受損　（兩種病人的模式互補）</text>
+<g stroke="#2b1d14" stroke-width="2.5"><rect x="12" y="146" width="182" height="98" rx="12" fill="#f6dcc2"/><rect x="206" y="146" width="182" height="98" rx="12" fill="#cfe0f0"/></g>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="103" y="166" font-weight="700">病人 CN（雙側顳葉受損）</text><text x="103" y="184">認不出熟悉旋律</text><text x="103" y="200">語調知覺部分保留</text><text x="103" y="220" font-size="10" fill="#6b5a4a">旋律記憶：前顳葉—前額葉</text>
+<text x="297" y="166" font-weight="700">純詞聾（左顳葉受損）</text><text x="297" y="184">能說話 ○　環境聲與音樂 ○</text><text x="297" y="200" fill="#c0504d" font-weight="700">認不出語音 ×</text><text x="297" y="220" font-size="10" fill="#6b5a4a">聽覺失認症的一種</text></g>
+</svg>

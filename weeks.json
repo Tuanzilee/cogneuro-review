@@ -132,5 +132,105 @@
    "C_W4_C18",
    "C_W4_C19"
   ]
+ },
+ {
+  "week": 5,
+  "date": "2026-10-15",
+  "title": "期中準備、研究設計與光遺傳學",
+  "summary": "這週沒有新章節要背，重點是期中考的安排、非同步討論的回饋、以及研究設計的觀念：實驗要簡化、選工具要看研究問題。課堂還介紹了光遺傳學（optogenetics）與記憶痕跡（engram）的前沿研究，並由賴老師講心理測量的職涯。",
+  "points": [
+   "期中考 11/5 在第 8 週，801、802 教室，含申論題，要用專業術語寫",
+   "研究設計要簡化，選工具是用最適當、簡潔的工具回答核心問題",
+   "研究說謊時，真實情境是多真話穿插少數假話",
+   "光遺傳學（optogenetics）：用光精準操縱特定細胞，檢驗因果",
+   "記憶痕跡（engram）實驗：光能啟動記憶，儲存與提取可分開",
+   "學習反思要針對課程或演講的內容論述，不是只寫自己的學習狀態"
+  ],
+  "todo": [
+   "第 6–8 章已提早開放，第 7 章截止 10/29",
+   "原定 11/19 的實體課改到 11/26（記憶與執行功能）",
+   "光遺傳學（optogenetics）是課堂補充，不在關鍵字清單，是否考不確定"
+  ],
+  "concepts": [
+   "C_W5_C01",
+   "C_W5_C02",
+   "C_W5_C03"
+  ]
+ },
+ {
+  "week": 6,
+  "date": "2026-10-21",
+  "title": "視覺：從眼睛到物體辨識",
+  "summary": "先沿著視野（visual field）、視網膜（retina）、視交叉（optic chiasm）、LGN、V1 走完整條視覺路徑，再看 V1 受損的皮質盲（cortical blindness）與盲視（blindsight），接著是 V1 以後的腹側（What）與背側（Where／How）路徑，最後談物體辨識：格式塔（Gestalt）、物體恆常性（object constancy）、適應與類別特異性（category specificity）。",
+  "points": [
+   "左右視野（visual field）都被兩眼接收，鼻側纖維在視交叉（optic chiasm）交叉，左視野到右腦",
+   "接受域（receptive field）不是視覺獨有；On-center 與 Off-center",
+   "LGN 的 M、P、K 分工；不經 LGN 的上丘（superior colliculus）、視丘枕（pulvinar）、SCN",
+   "皮質盲（cortical blindness）看的是視覺皮質（visual cortex）；盲視（blindsight）＝視覺受損＋沒有意識，強迫選擇高於 50%",
+   "腹側（What、V4、顳葉（temporal lobe））vs 背側（Where／How、V5、頂葉（parietal lobe））",
+   "V4 色覺障礙（achromatopsia）與 V5 動覺失認（akinetopsia）是雙重分離（double dissociation）；TMS 打 MT 干擾移動偵測",
+   "格式塔（Gestalt）五原則、物體恆常性（object constancy）、適應與促發（priming）、類別特異性（category specificity）"
+  ],
+  "todo": [
+   "課後作業：手繪視覺傳導路徑圖，標清楚左右視野（visual field）、鼻側與顳側、視交叉（optic chiasm）、LGN、V1",
+   "創客「Seeing Brain」隨堂測驗要完成（接受域（receptive field）、盲視（blindsight）辨識）",
+   "課堂提到 10/28 轉入注意力、聽覺延後，與 W5 說的進度不同，待確認期中範圍"
+  ],
+  "concepts": [
+   "C_W6_C01",
+   "C_W6_C02",
+   "C_W6_C03",
+   "C_W6_C04",
+   "C_W6_C05",
+   "C_W6_C06",
+   "C_W6_C07",
+   "C_W6_C08",
+   "C_W6_C09",
+   "C_W6_C10",
+   "C_W6_C11",
+   "C_W6_C12",
+   "C_W6_C13",
+   "C_W6_C14",
+   "C_W6_C15",
+   "C_W6_C16",
+   "C_W6_C17",
+   "C_W6_C18",
+   "C_W6_C19"
+  ]
+ },
+ {
+  "week": 7,
+  "date": "2026-10-29",
+  "title": "聽覺：從耳朵到語音知覺",
+  "summary": "這週把視覺學到的架構拿來對照聽覺：先走完聽覺路徑，再看音調拓樸（tonotopic organization）、聽覺的 what 與 where／how 路徑，最後進到語音知覺（動作理論（motor theory）、McGurk 效應、範疇知覺（categorical perception））和聽覺失認症（auditory agnosia）。這週的內容來自講義，還沒有逐字稿。",
+  "points": [
+   "聽覺路徑：耳蝸神經核（cochlear nuclei） → 下丘（inferior colliculus） → MGN → A1（赫氏迴（Heschl's gyrus））→ A2，沒有清楚的側化",
+   "音調拓樸（tonotopic organization）：A1 中央低頻、外側高頻；A2 處理複雜音",
+   "聽覺：時間 > 空間；視覺：空間 > 時間",
+   "前側 belt（what、腹側、前額葉（prefrontal cortex））vs 後側 belt（where、背側、後頂葉（posterior parietal cortex））",
+   "後側 STS：多感官整合，McGurk 效應",
+   "動作理論（motor theory）：語音知覺靠說話動作系統（額葉（frontal lobe））",
+   "範疇知覺（categorical perception）：不同類別之間辨別更好",
+   "純詞聾（pure word deafness）：認不出語音，其他聲音與說話都還在"
+  ],
+  "todo": [
+   "期中考 11/5 範圍到這章（Ch8 聽覺）",
+   "本週內容來自 Dis_08 講義，沒有逐字稿，上完課後再核對",
+   "隨堂測驗第 3 題（後側 STS 的敘述）答案待老師公布"
+  ],
+  "concepts": [
+   "C_W7_C01",
+   "C_W7_C02",
+   "C_W7_C03",
+   "C_W7_C04",
+   "C_W7_C05",
+   "C_W7_C06",
+   "C_W7_C07",
+   "C_W7_C08",
+   "C_W7_C09",
+   "C_W7_C10",
+   "C_W7_C11",
+   "C_W7_C12"
+  ]
  }
 ]

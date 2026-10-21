@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="16" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">聽覺也有兩條路：What 與 Where／How</text>
+<g transform="translate(4,22) scale(.68)"><path d="M58,140 C48,85 95,38 175,32 C255,26 338,52 352,120 C358,158 332,176 302,172 C284,190 255,186 240,178 C215,200 150,200 122,182 C92,178 62,168 58,140 Z" fill="#f6e3cf" stroke="#2b1d14" stroke-width="5"/>
+<ellipse cx="198" cy="150" rx="46" ry="14" fill="#e8a3b6" stroke="#2b1d14" stroke-width="4" transform="rotate(-8 198 150)"/>
+<path d="M170,144 C150,120 124,104 100,92" fill="none" stroke="#e08a4f" stroke-width="9"/><path d="M118,84 L98,92 L112,110" fill="none" stroke="#e08a4f" stroke-width="7"/>
+<path d="M236,138 C256,110 270,86 276,62" fill="none" stroke="#4a86a6" stroke-width="9"/><path d="M258,68 L276,56 L284,78" fill="none" stroke="#4a86a6" stroke-width="7"/>
+<text x="198" y="154" font-size="16" font-weight="700" fill="#2b1d14" text-anchor="middle">A1</text></g>
+<g font-size="10" font-weight="700" fill="#c06a3a"><text x="262" y="40">腹側（What）</text></g><g font-size="10" fill="#2b1d14"><text x="262" y="54">前側 belt：頻率</text><text x="262" y="68">→ 前額葉</text></g>
+<g font-size="10" font-weight="700" fill="#4a86a6"><text x="262" y="96">背側（Where／How）</text></g><g font-size="10" fill="#2b1d14"><text x="262" y="110">後側 belt：空間位置</text><text x="262" y="124">→ 後頂葉＋動作表徵</text></g>
+<rect x="20" y="168" width="360" height="76" rx="12" fill="#fffdf7" stroke="#2b1d14" stroke-width="2.5"/>
+<g font-size="11" fill="#2b1d14" text-anchor="middle"><text x="200" y="188" font-weight="700">後側 STS（How 路徑）</text><text x="200" y="206">多感官：整合「看到說話」與「聽到說話」</text><text x="200" y="222">短期覆誦：後側 STS＋左下額回；學新音素：左角迴＋左下額區</text><text x="200" y="237" font-size="9" fill="#6b5a4a">Rauschecker &amp; Tian 2000；Isenberg 等 2012；Scott 等 2009（投影片）</text></g>
+</svg>

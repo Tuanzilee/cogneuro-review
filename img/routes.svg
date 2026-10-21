@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" font-family="PingFang TC, Noto Sans TC, sans-serif" stroke-linecap="round" stroke-linejoin="round"><rect width="400" height="260" rx="18" fill="#fffdf7"/>
+<text x="200" y="18" font-size="13" font-weight="700" fill="#2b1d14" text-anchor="middle">視網膜之後的兩種走法</text>
+<rect x="14" y="94" width="62" height="40" rx="10" fill="#cfe0f0" stroke="#2b1d14" stroke-width="2.5"/><text x="45" y="119" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">視網膜</text>
+<g stroke="#2b1d14" stroke-width="2.5" fill="none"><path d="M76,106 L112,60"/><path d="M76,114 L112,114"/><path d="M76,122 L112,170"/><path d="M76,128 L112,214"/></g>
+<rect x="112" y="34" width="140" height="52" rx="10" fill="#cfe6cf" stroke="#2b1d14" stroke-width="2.5"/>
+<text x="182" y="52" font-size="12" font-weight="700" fill="#2b1d14" text-anchor="middle">LGN → V1</text><text x="182" y="68" font-size="10" fill="#2b1d14" text-anchor="middle">M 位置　P 形狀顏色大小</text><text x="182" y="80" font-size="10" fill="#2b1d14" text-anchor="middle">K 移動</text>
+<rect x="112" y="98" width="140" height="32" rx="10" fill="#f6dcc2" stroke="#2b1d14" stroke-width="2.5"/><text x="182" y="118" font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle">視丘枕（pulvinar）</text>
+<rect x="112" y="146" width="140" height="50" rx="10" fill="#f6dcc2" stroke="#2b1d14" stroke-width="2.5"/><text x="182" y="164" font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle">上丘、pretectum</text><text x="182" y="180" font-size="10" fill="#2b1d14" text-anchor="middle">中腦：眼動、定向</text><text x="182" y="191" font-size="9" fill="#6b5a4a" text-anchor="middle">外生性注意</text>
+<rect x="112" y="204" width="140" height="40" rx="10" fill="#e8d5f0" stroke="#2b1d14" stroke-width="2.5"/><text x="182" y="222" font-size="11" font-weight="700" fill="#2b1d14" text-anchor="middle">視交叉上核（SCN）</text><text x="182" y="236" font-size="10" fill="#2b1d14" text-anchor="middle">下視丘：生理時鐘</text>
+<g font-size="11" fill="#2b1d14"><text x="266" y="56" font-weight="700" fill="#3f7a4f">主要路徑</text><text x="266" y="72">進入皮質做精細分析</text>
+<text x="266" y="150" font-weight="700" fill="#c06a3a">替代路徑</text><text x="266" y="166">不經 LGN</text><text x="266" y="182">V1 受損時可能支援</text><text x="266" y="198">部分視覺處理（盲視）</text></g>
+</svg>
