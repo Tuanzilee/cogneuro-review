@@ -17,8 +17,15 @@ async def main():
     for k, t in items.items():
         h = hashlib.md5((VOICE + t).encode()).hexdigest()
         if idx.get(k) == h and os.path.exists(f'audio/{k}.mp3'): continue
-        await edge_tts.Communicate(t, VOICE, rate=RATE).save(f'audio/{k}.mp3')
+        for attempt in range(25):
+            try:
+                await edge_tts.Communicate(t, VOICE, rate=RATE).save(f'audio/{k}.mp3'); break
+            except Exception as e:
+                print(f'{k} 第 {attempt+1} 次失敗', flush=True) if attempt % 5 == 4 else None
+                if attempt == 24: raise
+                await asyncio.sleep(2)
         idx[k] = h; n += 1
+        json.dump(idx, open('audio/index.json', 'w'), indent=0)  # 逐筆存進度，中斷後不必重做
     for k in list(idx):
         if k not in items: idx.pop(k); 
     json.dump(idx, open('audio/index.json', 'w'), indent=0)

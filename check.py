@@ -3,6 +3,7 @@ import json, sys
 concepts = json.load(open('concepts.json'))
 quiz = json.load(open('quiz.json'))
 weeks = json.load(open('weeks.json'))
+essays = json.load(open('essays.json'))
 errors = []
 ids = [c['id'] for c in concepts] + [q['id'] for q in quiz]
 dup = {i for i in ids if ids.count(i) > 1}
@@ -25,6 +26,16 @@ for k in cids | {q['id'] for q in quiz} | {f"W{w['week']}" for w in weeks if w['
     if not os.path.exists(f'audio/{k}.mp3'): errors.append(f'缺音檔 audio/{k}.mp3（跑 tools/gen_audio.py）')
 for c in concepts:
     if c.get('img') and not os.path.exists(f"img/{c['img']}.svg"): errors.append(f"{c['id']}：缺圖 img/{c['img']}.svg")
+eids = [e['id'] for e in essays]
+if len(set(eids)) != len(eids): errors.append('申論題 id 重複')
+for e in essays:
+    for cid in e['concepts']:
+        if cid not in cids: errors.append(f"{e['id']}：概念 {cid} 不存在")
+    for k in ('q', 'a', 'b', 'terms', 'pitfall'):
+        if not e.get(k): errors.append(f"{e['id']}：缺 {k}")
+    for part in ('a', 'b'):
+        if not e[part]['prompts'] or not e[part]['points']: errors.append(f"{e['id']}：{part} 缺骨架或要點")
+print(f'申論題 {len(essays)}')
 print(f'概念卡 {len(concepts)}、情境題 {len(quiz)}、週次 {len(weeks)}')
 print('\n'.join(errors) if errors else '✅ 全部通過')
 sys.exit(1 if errors else 0)

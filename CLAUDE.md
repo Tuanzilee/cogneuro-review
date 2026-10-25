@@ -9,10 +9,16 @@ index.html     ← 全部 UI 與邏輯（localStorage 前綴 cn_）
 concepts.json / quiz.json / weeks.json  ← 由 tools/build_data.py 產生，不要直接改 JSON
 tools/build_data.py ← W1–W4 內容與專有名詞對照表 GLOSSARY；tools/data_w5_w6.py ← W5、W6 內容；tools/data_w7.py ← W7 聽覺（之後新週次可照樣新增 data_wN.py 並在 build_data.py 匯入）：改這裡再執行 python3 tools/build_data.py
 tools/gen_audio.py  ← 雲哲男聲 zh-TW-YunJheNeural：`~/.venvs/tts/bin/python tools/gen_audio.py`
-img/ ← 自畫 SVG 示意圖 52 張，一張圖可配多張卡，85 張卡全部有圖（對照表在 build_data.py 的 IMG），米色底、卡通扁平風；build_data.py 的 IMG 對照表決定哪張卡配哪張圖
+img/ ← 自畫 SVG 示意圖 52 張，一張圖可配多張卡，86 張卡全部有圖（對照表在 build_data.py 的 IMG），米色底、卡通扁平風；build_data.py 的 IMG 對照表決定哪張卡配哪張圖
 audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 ```
 預覽：母資料夾 `.claude/launch.json` 的 `cogneuro-review`，埠 8768。
+
+## 申論題模式（2026-10-25 新增）
+- 「申論」分頁：19 題，題目編號與優先度沿用 hai《期中考考點》（Ward 第 4 版章末申論題中文轉述；最高 4.1、4.4）。流程三步驟：① 先自己寫或口述（草稿存在手機 localStorage `cn_essay`）→ ② 看答題骨架（兩段式：先說清楚是什麼、再評估能告訴我們什麼＋要用的專業術語）→ ③ 看參考要點、常見陷阱、相關概念卡，再自評（還不行／差不多／可以）。自評「還不行」會把該題的相關概念加進錯題本。
+- 內容在 `tools/data_essays.py`（ESSAYS）；build 後產生 `essays.json`。concepts 用 CARDS 的英文名，build 時轉成卡片 id；申論題的英文術語一律手寫，**不經過 ann() 自動標註**。
+- 要點是用課堂內容（投影片、Plaud、App 概念卡）寫的，不是課本原文。引用到的文獻（Christ 2009、Lisofsky 2014、Monteleone 2009、Delgado-Herrera 2021、Knappe 2025、Rauschecker & Tian 2000、Alain 2001、Lomber 2008、Bizley 2009、Isenberg 2012）都只讀過摘要。5.1 的「假設」是我整理的框架，標了「請對照課本」。
+- 新增申論題：在 ESSAYS 追加 dict（no、ch、pri、q、a、b、terms、pitfall、concepts），執行 `python3 tools/build_data.py`；check.py 會檢查概念存在與骨架完整。
 
 ## 資料 schema（與心理測驗相同，id 前綴 C）
 - concepts：`C_W{週}_C{兩位數}`；quiz：`C_W{週}_Q{兩位數}`。**id 依 CARDS／QUIZ 順序編號，只能往後追加，不要插入或刪除（進度綁 id）**。
@@ -47,6 +53,14 @@ audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 - 素材資料夾已重新整理成前綴命名：`01課本教材_`（講義）、`02逐字稿_`、`03複習測驗_`、`04音檔音稿_`。W5＝10/15 逐字稿（期中準備、研究設計、光遺傳學、賴老師演講），W6＝10/21 逐字稿＋ Dis_07 The seeing brain。
 - 新增主題「視覺」（W6）、「研究設計與前沿」（W5）；W5 的光遺傳學／記憶痕跡是課堂補充，不在關鍵字清單，卡片已標註「未查原始論文」。
 - 進度異動（Plaud W5）：原定 11/19 實體課改 11/26（記憶、執行功能）；第 6–8 章 10/15 起提早開放，第 7 章截止 10/29；期中考 11/5 在 801、802，含申論題。
+
+## 2026-10-25 更新（Ch8 補完＋期中考頁）
+- 新增 W7 第 13 張卡「單細胞記錄與聽覺表徵」（期中考優先題 8.2）與 2 題；補強 W7 既有卡：音調拓樸（耳蝸排列）、動作理論（強版本未獲支持）、McGurk（課本版 ba 聲＋ga 口型→da）、what／where（兩路徑不隔離）。**新卡一律加在該週清單最後面，不要插中間，否則 id 會位移。**
+- 新增 W8 週頁「期中考：考點與答題方式」（無概念卡），內容依 hai 的《期中考考點》docx（Plaud W1–W6＋Ward 第 4 版章末申論題）：老師明說選擇題與申論題都會有，申論要先說是什麼、再評估能告訴我們什麼。
+- 素材資料夾新檔：`03 複習測驗_20261022_…Ch1至Ch8_keywords講義.docx`、`TTS/`（hai 自製的各章音稿）、`01課本教材_單元目標與學習指引_Ch08.docx`（行程表，無內容；Ch8 是 Teams 同步課）。這些是 hai 自製或行程資料，不需要再轉成卡片。
+
+## 查證紀錄（2026-10-25，Consensus 摘要）
+- Rauschecker & Tian (2000, PNAS) 摘要：獼猴 lateral belt 神經元對中心頻率與頻寬、頻率調變掃描、猴叫聲有選擇性；前外側區對猴叫聲最專一，尾外側區空間選擇性最強；至少兩條流（空間流：顳上回後部→頂葉；型態或物體流：前部 lateral belt）。Alain 等人（2001, PNAS）：fMRI＋ERP 顯示辨別音高與辨別位置啟動不同腦區。只讀到摘要，未讀全文。
 
 ## 待確認
 - 期中範圍：hai 2026-10-21 確認 **W7 今年是聽覺**，所以期中考（11/5）範圍到 Ch8 聽覺不變，`MID_WEEK = 8`。W6 逐字稿摘要寫的「聽覺延後、10/28 轉入注意力」與此不符，以 hai 說法為準。

@@ -83,6 +83,9 @@ nav.tabs button.on { background: var(--soft); color: var(--ink); font-weight: 60
 .why { font-size: 14px; background: color-mix(in srgb, var(--gold) 14%, transparent); border-radius: 10px; padding: 8px 12px; margin-top: 10px; }
 .toast { position: fixed; left: 50%; top: 16px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 10px; font-size: 14px; z-index: 20; }
 .warn { border-left: 4px solid var(--mid); }
+textarea.draft { display: block; width: 100%; min-height: 130px; box-sizing: border-box; padding: 12px; margin-top: 8px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: 16px; line-height: 1.6; resize: vertical; }
+.step { display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 13px; font-weight: 700; margin-right: 6px; }
+.eq { font-size: 17px; font-weight: 600; line-height: 1.5; }
 ul.pts { margin: 6px 0 0; padding-left: 20px; }
 ul.pts li { margin: 4px 0; }
 </style>
@@ -97,6 +100,7 @@ ul.pts li { margin: 4px 0; }
   <button data-tab="home"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg>首頁</button>
   <button data-tab="weeks"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>每週重點</button>
   <button data-tab="cards"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="13" height="13" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>概念卡</button>
+  <button data-tab="essay"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg>申論</button>
   <button data-tab="quiz"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 15h8"/></svg>情境題</button>
 </div></nav>
 
@@ -160,7 +164,7 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
 // ---------- 資料與範圍 ----------
-let CONCEPTS = [], QUIZ = [], WEEKS = [];
+let CONCEPTS = [], QUIZ = [], WEEKS = [], ESSAYS = [];
 const MID_WEEK = 8; // 期中考 11/5（W8），範圍到聽覺（Ch8，W7 內容）
 const topicOf = x => x.topic || (CONCEPTS.find(c => c.id === x.concept) || {}).topic;
 const REV1 = ['腦結構', '電生理', '腦造影方法']; // 10/15 實體複習測驗範圍
@@ -185,7 +189,7 @@ let tab = 'home';
 function go(t, arg) {
   stopSpeak(); tab = t;
   document.querySelectorAll('nav.tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === (t === 'weak' ? 'cards' : t)));
-  ({ home: renderHome, weeks: renderWeeks, cards: () => startCards(false), weak: () => startCards(true), quiz: startQuiz })[t](arg);
+  ({ home: renderHome, weeks: renderWeeks, cards: () => startCards(false), weak: () => startCards(true), quiz: startQuiz, essay: a => a ? renderEssay(a) : renderEssayList() })[t](arg);
   window.scrollTo(0, 0);
 }
 document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => go(b.dataset.tab));
@@ -216,6 +220,7 @@ function renderHome() {
       <button class="btn ghost" id="goQuiz">情境題 10 題</button>
       <button class="btn ghost" id="goWeeks">每週重點</button>
     </div>
+    ${ESSAYS.length ? `<button class="btn ghost" id="goEssay" style="margin-top:14px">申論題練習（期中考重點）</button>` : ''}
     ${weak ? `<button class="btn ghost" id="goWeak" style="margin-top:14px">錯題本（${weak}）</button>` : ''}
     <div style="margin-top:28px"><div class="muted" style="margin-bottom:8px">換範圍</div>${scopeChips()}</div>
     <div class="muted" style="text-align:center;margin-top:28px;font-size:12px">共 ${CONCEPTS.length} 張概念卡 · ${QUIZ.length} 題情境題<br>整理自課堂錄音摘要（未經人工核聽），已改寫成自己的話</div>`;
@@ -223,6 +228,7 @@ function renderHome() {
   $('#goCards').onclick = () => go('cards');
   $('#goQuiz').onclick = () => go('quiz');
   $('#goWeeks').onclick = () => go('weeks');
+  if (ESSAYS.length) $('#goEssay').onclick = () => go('essay');
   if (weak) $('#goWeak').onclick = () => go('weak');
 }
 
@@ -342,9 +348,62 @@ function renderQuiz() {
   });
 }
 
+// ---------- 申論題 ----------
+let essayState = load('cn_essay', {}); // id -> {draft, rate(0|1|2), at}
+const saveEssay = () => save('cn_essay', essayState);
+const RATE_LABEL = ['還不行', '差不多', '可以'];
+const eStep = {}; // 每題這輪開到第幾步（不存檔）
+function renderEssayList() {
+  const done = ESSAYS.filter(e => essayState[e.id]?.rate === 2).length;
+  const groups = [['最高', '最高優先'], ['高', '高優先'], ['中高', '中高優先']];
+  app.innerHTML = `
+    <div class="card"><h2 style="margin-top:0">申論題練習</h2>
+      <p style="margin:0 0 8px">老師說期中會有申論題，要用專業語言：<b>先說清楚「是什麼」，再評估「能告訴我們什麼、有什麼問題」</b>。</p>
+      <ol class="pts"><li>先自己寫或口述，不要偷看</li><li>看答題骨架，補漏</li><li>看參考要點，對照後自評</li></ol>
+      <div class="muted" style="margin-top:10px">題目與優先度依你整理的《期中考考點》。已「可以」 ${done} / ${ESSAYS.length}</div></div>
+    ${groups.map(([k, label]) => { const list = ESSAYS.filter(e => e.pri === k); return list.length ? `<div class="muted" style="margin:16px 0 4px">${label}</div>` + list.map(e =>
+      `<button class="opt" data-e="${e.id}"><span class="tag">${esc(e.no)}</span> ${esc(e.q)}${essayState[e.id]?.rate != null ? `<div class="muted" style="margin-top:6px">自評：${RATE_LABEL[essayState[e.id].rate]}</div>` : ''}</button>`).join('') : ''; }).join('')}`;
+  document.querySelectorAll('[data-e]').forEach(b => b.onclick = () => go('essay', b.dataset.e));
+}
+function renderEssay(id) {
+  const e = ESSAYS.find(x => x.id === id); if (!e) return renderEssayList();
+  const st = essayState[id] || (essayState[id] = {});
+  const step = eStep[id] || 0;
+  const skeleton = p => `<div style="margin-top:10px"><b>${esc(p.title)}</b><ul class="pts">${p.prompts.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  const points = p => `<div style="margin-top:10px"><b>${esc(p.title)}</b><ul class="pts">${p.points.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
+  const rels = e.concepts.map(cid => CONCEPTS.find(c => c.id === cid)).filter(Boolean);
+  app.innerHTML = `
+    <button class="spk" id="eBack" style="margin:8px 0">← 題目列表</button>
+    <div class="card"><span class="tag">${esc(e.no)} · ${esc(e.pri)}優先</span><div class="eq" style="margin-top:8px">${esc(e.q)}</div></div>
+    <div class="card"><b><span class="step">1</span>先自己寫或口述</b>
+      <div class="muted" style="margin-top:4px">想像在考場：先說清楚是什麼，再評估能告訴我們什麼。草稿只存在這支手機。</div>
+      <textarea class="draft" id="eDraft" placeholder="在這裡寫你的答案…">${esc(st.draft || '')}</textarea>
+      ${step < 1 ? `<button class="btn" id="eNext1" style="margin-top:12px">我寫好了，看答題骨架</button>` : ''}</div>
+    ${step >= 1 ? `<div class="card" id="eSk"><b><span class="step">2</span>答題骨架（想想這些問題你有沒有答到）</b>${skeleton(e.a)}${skeleton(e.b)}
+      <div style="margin-top:12px"><b>要用的專業語言</b><div class="chips" style="margin-top:6px">${e.terms.map(t => `<span class="tag">${esc(t[0])}　${esc(t[1])}</span>`).join('')}</div></div>
+      ${step < 2 ? `<button class="btn" id="eNext2" style="margin-top:12px">補完了，看參考要點</button>` : ''}</div>` : ''}
+    ${step >= 2 ? `<div class="card" id="eRef"><b><span class="step">3</span>參考要點（對照你的草稿）</b>${points(e.a)}${points(e.b)}
+      <div class="why" style="margin-top:12px"><b>常見陷阱</b><br>${esc(e.pitfall)}</div>
+      ${rels.length ? `<div style="margin-top:12px"><b>相關概念卡</b><div class="chips" style="margin-top:6px">${rels.map(c => `<span class="tag">${esc(c.term)}</span>`).join('')}</div></div>` : ''}</div>
+      <div class="card"><b>這題你覺得…</b><div class="row rate" style="margin-top:10px">${RATE_LABEL.map((l, i) => `<button class="btn ${['bad', 'mid', 'good'][i]}" data-r="${i}">${l}</button>`).join('')}</div>
+        <div class="muted" style="margin-top:8px">選「還不行」會把相關概念加進錯題本${st.rate != null ? `（目前自評：${RATE_LABEL[st.rate]}）` : ''}</div></div>` : ''}`;
+  $('#eBack').onclick = () => go('essay');
+  $('#eDraft').oninput = ev => { st.draft = ev.target.value; saveEssay(); };
+  const adv = (n, anchor) => () => { eStep[id] = n; renderEssay(id); const el = $(anchor); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+  if ($('#eNext1')) $('#eNext1').onclick = adv(1, '#eSk');
+  if ($('#eNext2')) $('#eNext2').onclick = adv(2, '#eRef');
+  document.querySelectorAll('[data-r]').forEach(b => b.onclick = () => {
+    const r = +b.dataset.r; st.rate = r; st.at = Date.now(); saveEssay();
+    if (r === 0) e.concepts.forEach(markWeak);
+    const next = ESSAYS.find(x => x.id !== id && essayState[x.id]?.rate !== 2 && essayState[x.id]?.rate == null) || null;
+    toast(r === 2 ? '很好，這題過關' : r === 1 ? '再看一次會更穩' : '已把相關概念加進錯題本');
+    go('essay', next ? next.id : undefined);
+  });
+}
+
 // ---------- 啟動 ----------
-Promise.all(['concepts.json', 'quiz.json', 'weeks.json'].map(f => fetch(f).then(r => r.json())))
-  .then(([c, q, w]) => { CONCEPTS = c; QUIZ = q; WEEKS = w; buildScopes(); go('home'); })
+Promise.all([...['concepts.json', 'quiz.json', 'weeks.json'].map(f => fetch(f).then(r => r.json())), fetch('essays.json').then(r => r.json()).catch(() => [])])
+  .then(([c, q, w, es]) => { CONCEPTS = c; QUIZ = q; WEEKS = w; ESSAYS = es; buildScopes(); go('home'); })
   .catch(e => { app.innerHTML = `<div class="card">資料載入失敗：${esc(e.message)}</div>`; });
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

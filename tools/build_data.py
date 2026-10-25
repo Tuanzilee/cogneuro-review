@@ -412,6 +412,7 @@ GLOSSARY = {
 }
 import data_w5_w6 as X
 import data_w7 as X7
+import data_essays as XE
 GLOSSARY.update(X.GLOSS); GLOSSARY.update(X7.GLOSS)
 _GRE = re.compile('|'.join(map(re.escape, sorted(GLOSSARY, key=len, reverse=True))))
 
@@ -450,7 +451,16 @@ def build():
     for w, date, title, summ, pts, todo, _ in WEEKS:
         weeks.append({'week': w, 'date': date, 'title': title, 'summary': ann(summ), 'points': [ann(p) for p in pts], 'todo': [ann(t) for t in todo],
                       'concepts': [c['id'] for c in cards if c['week'] == w]})
+    essays = []
+    for e in XE.ESSAYS:
+        miss = [k for k in e['concepts'] if k not in ids]
+        assert not miss, f"申論 {e['no']} 找不到概念：{miss}"
+        part = lambda p: {'title': p['title'], 'prompts': list(p['prompts']), 'points': list(p['points'])}  # 申論題的英文都手寫，不用 ann()
+        essays.append({'id': 'E_' + e['no'].replace('.', '_'), 'no': e['no'], 'ch': e['ch'], 'pri': e['pri'], 'q': e['q'],
+                       'a': part(e['a']), 'b': part(e['b']), 'terms': [list(t) for t in e['terms']], 'pitfall': e['pitfall'],
+                       'concepts': [ids[k] for k in e['concepts']]})
+    json.dump(essays, open('essays.json', 'w'), ensure_ascii=False, indent=1)
     for n, d in (('concepts', cards), ('quiz', quiz), ('weeks', weeks)):
         json.dump(d, open(f'{n}.json', 'w'), ensure_ascii=False, indent=1)
-    print(len(cards), len(quiz), len(weeks))
+    print(len(cards), len(quiz), len(weeks), len(essays))
 build()

@@ -894,7 +894,7 @@
   "term": "音調拓樸排列",
   "en": "tonotopic organization",
   "def": "頻率相近的聲音，由空間上相近的神經元（neuron）表徵。在 A1（核心區），中央（內側）偏好較低頻、外側偏好較高頻，頻率和皮質（cortex）位置有整齊的對應。A2（belt 與 parabelt）則處理比較複雜的聲音。考場句：A1 的組織原則是頻率拓樸，A2 處理複雜音。",
-  "example": "隨堂測驗：「次要聽覺皮質（secondary auditory cortex (A2)）的神經偏好不同樂器的聲音」是比較不正確的敘述；「主要聽覺皮質（cortex）內側偏好低頻、外側偏好高頻」是對的。",
+  "example": "隨堂測驗：「次要聽覺皮質（secondary auditory cortex (A2)）的神經偏好不同樂器的聲音」是比較不正確的敘述；「主要聽覺皮質（cortex）內側偏好低頻、外側偏好高頻」是對的。這是頻率地圖，不是「聲音從左邊或右邊來」的地圖；不是一個音高只由一顆神經元（neuron）負責，而是相近頻率有相鄰的位置。耳蝸也有類似的排列：基底部偏高頻、頂端偏低頻（取自老師的關鍵字整理）。",
   "tags": [],
   "img": "tonotopic",
   "alt": "初級聽覺皮質的音調拓樸：中央低頻、外側高頻"
@@ -918,7 +918,7 @@
   "term": "聽覺的 What 與 Where／How 路徑",
   "en": "auditory ventral and dorsal routes (what and how)",
   "def": "Rauschecker 與 Tian（2000）：前側 belt 區處理頻率（what），走腹側路徑（ventral stream）到前額葉（prefrontal cortex）；後側 belt 區處理空間位置（where），走背側路徑（dorsal stream）到後頂葉（posterior parietal cortex）。Isenberg 等人（2012）：背側路徑還有動作表徵（額葉（frontal lobe）、頂葉（parietal lobe）），把 where 再分出 how。考場句：腹側回答聲音是什麼，背側回答在哪裡、怎麼做。",
-  "example": "背側路徑（dorsal stream）多了一個 how：和說話的動作有關，下一張卡的後側 STS 就屬於這條線。",
+  "example": "背側路徑（dorsal stream）多了一個 how：和說話的動作有關，後側 STS 就屬於這條線。兩條路徑不是完全隔離的，實際的聽覺與語言行為需要互動。例：聽到陌生外語，辨認是哪個詞、什麼意思偏腹側；照著重複那串音節，需要背側把聲音連到發音動作。",
   "tags": [],
   "img": "audstreams",
   "alt": "聽覺的 what 腹側路徑與 where／how 背側路徑"
@@ -965,8 +965,8 @@
   "topic": "聽覺",
   "term": "語音知覺動作理論",
   "en": "motor theory of speech perception",
-  "def": "Liberman 等人（1967）：語音知覺依賴我們聽到說話者怎麼發音，以及我們推論說話者「想要」做出的發音動作。聽覺與視覺都匯聚到說話的動作系統（額葉（frontal lobe））。考場句：我們靠自己的說話動作系統來理解別人的語音。",
-  "example": "McGurk 效應就是這個理論的重要例子：看到的口型也會影響聽到什麼。",
+  "def": "Liberman 等人（1967）：語音知覺依賴我們聽到說話者怎麼發音，以及我們推論說話者「想要」做出的發音動作。聽覺與視覺都匯聚到說話的動作系統（額葉（frontal lobe））。考場句：動作系統可以幫助語音知覺，但不能說每次聽懂都必須靠它。",
+  "example": "McGurk 效應常被拿來連結這個理論：看到的口型也會影響聽到什麼。要小心的是，課本指出動作系統在訊號模糊時可能比較有幫助，但「強版本」（一定要靠動作表徵）並未獲得充分支持，McGurk 效應也不能單獨證明動作理論（motor theory）。（老師的關鍵字整理；期中考優先題 8.6「語音知覺有動作成分的證據」）",
   "tags": [],
   "img": "motortheory",
   "alt": "語音知覺動作理論：聽覺與視覺匯聚到說話的動作系統"
@@ -978,7 +978,7 @@
   "term": "McGurk 效應",
   "en": "McGurk effect",
   "def": "McGurk 與 MacDonald（1976）：視覺看到的口型是 ba，聽覺聽到的聲音是 da，人們會聽成折衷的聲音（投影片寫 tha）。後側 STS 負責語音的多感官知覺，說話的動作系統（下額葉（frontal lobe）、前運動區、腦島（insula））也參與。大腦會用「最佳猜測」產生錯覺。考場句：干擾後側 STS，可能影響 McGurk 效應。",
-  "example": "隨堂測驗第 4 題：哪個位置被干擾可能影響 McGurk 效應？答後側 STS，不是前側 STS，也不是前頂葉（parietal lobe）或下顳葉（temporal lobe）。",
+  "example": "隨堂測驗第 4 題：哪個位置被干擾可能影響 McGurk 效應？答後側 STS，不是前側 STS，也不是前頂葉（parietal lobe）或下顳葉（temporal lobe）。課本版本的例子：播放 ba 的聲音，配上 ga 的口型，有些人聽成 da，閉眼又聽回 ba。投影片版是口型 ba、聲音 da，聽成折衷音。兩個版本的重點相同：視覺與聽覺自動整合，不是故意猜。反應因人與刺激而異。",
   "tags": [],
   "img": "mcgurk",
   "alt": "McGurk 效應：看到 ba、聽到 da、聽成 tha"
@@ -1018,5 +1018,17 @@
   "tags": [],
   "img": "musicspeech",
   "alt": "病人 CN、右前顳葉損傷、阿茲海默症與純詞聾的比較"
+ },
+ {
+  "id": "C_W7_C13",
+  "week": 7,
+  "topic": "聽覺",
+  "term": "單細胞記錄與聽覺表徵",
+  "en": "single-neuron recording in auditory cortex",
+  "def": "單細胞記錄（single-cell recording）量的是單一神經元（neuron）的放電，能直接看到它「偏好什麼聲音」。A1 的神經元偏好特定頻率，累積起來就是音調拓樸（tonotopic organization）；belt 區的神經元則對比較複雜的聲音有選擇性。Rauschecker 與 Tian（2000）在獼猴 lateral belt 區記錄單一神經元，發現前外側區對猴叫聲最專一，尾外側區的空間選擇性最強，因此提出至少兩條處理流：一條處理空間，一條處理聲音的型態或物體。考場句：單細胞記錄提供 what 與 where 分流的細胞層次證據，但它是動物研究。",
+  "example": "摘要查證：Rauschecker 與 Tian（2000, PNAS）摘要提到，lateral belt 神經元（neuron）對中心頻率與頻寬、頻率調變掃描、猴叫聲有選擇性；空間流從顳上回後部到頂葉（parietal lobe），型態流從前部 lateral belt 出發。人類則用造影佐證：Alain 等人（2001）用 fMRI 與 ERP 發現，辨別音高與辨別位置會啟動不同的腦區。（期中考優先題 8.2；未讀全文，細節出自摘要）",
+  "tags": [],
+  "img": "audstreams",
+  "alt": "聽覺的 what 腹側路徑與 where／how 背側路徑"
  }
 ]

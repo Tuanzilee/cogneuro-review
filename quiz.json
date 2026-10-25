@@ -1272,5 +1272,33 @@
   "answer": 3,
   "why": "純詞聾（pure word deafness）是選擇性認不出語音，不是聽不到，也不是不會說。",
   "concept": "C_W7_C12"
+ },
+ {
+  "id": "C_W7_Q19",
+  "week": 7,
+  "q": "Rauschecker 與 Tian（2000）在獼猴聽覺皮質（cortex）記錄單一神經元（neuron），哪個結果最符合他們的結論？",
+  "options": [
+   "單一神經元（neuron）完全不受聲音頻率影響",
+   "前外側區對猴叫聲最專一，尾外側區的空間選擇性最強，支持 what 與 where 兩條處理流",
+   "只有人類有 what 與 where 分流",
+   "所有 belt 區神經元（neuron）都只對空間敏感"
+  ],
+  "answer": 1,
+  "why": "他們發現不同 belt 區各有偏好：前外側偏猴叫聲（型態、物體），尾外側偏空間，所以聽覺皮質（cortex）至少分成兩條流。這是動物單細胞記錄（single-cell recording）的證據，人類用造影佐證。",
+  "concept": "C_W7_C13"
+ },
+ {
+  "id": "C_W7_Q20",
+  "week": 7,
+  "q": "單細胞記錄（single-neuron recording）和 fMRI 相比，在研究聽覺表徵時的特點是什麼？",
+  "options": [
+   "只能量血氧",
+   "時間解析度（temporal resolution）很差",
+   "能看到單一神經元（neuron）偏好什麼聲音，但要開顱、通常用在動物",
+   "能一次看到整個人腦，且完全非侵入"
+  ],
+  "answer": 2,
+  "why": "單細胞記錄（single-cell recording）是細胞層次、時間解析度（temporal resolution）很好，但通常是侵入性的動物研究；人類研究則多用 fMRI 與 ERP 等非侵入方法來佐證。",
+  "concept": "C_W7_C13"
  }
 ]
