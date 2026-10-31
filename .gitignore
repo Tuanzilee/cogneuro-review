@@ -1,2 +1,5 @@
 samples/
 .DS_Store
+
+node_modules/
+FSRS預覽.png

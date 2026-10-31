@@ -107,8 +107,7 @@ ul.pts li { margin: 4px 0; }
 <script>
 const $ = (s, el = document) => el.querySelector(s);
 const app = $('#app');
-const DAY = 864e5;
-const INTERVALS = [1, 2, 4, 7, 14];
+let fsrsEngine = null;
 
 // ---------- 儲存 ----------
 function load(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
@@ -116,7 +115,7 @@ function save(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); 
 let srs = load('cn_srs', {});      // id -> {box, due, weak}
 let prefs = load('cn_prefs', { scope: 'all' });
 const savePrefs = () => save('cn_prefs', prefs);
-const saveSrs = () => save('cn_srs', srs);
+const saveSrs = () => fsrsEngine.saveFlags(srs);
 
 let theme = load('cn_theme', null);
 if (theme) document.documentElement.dataset.theme = theme;
@@ -180,9 +179,12 @@ function buildScopes() {
   ];
 }
 const inScope = list => list.filter((SCOPES.find(s => s.key === prefs.scope) || SCOPES[0]).test);
-const isDue = c => !srs[c.id] || srs[c.id].due <= Date.now();
-const isNew = c => !srs[c.id];
-function markWeak(id) { const s = srs[id] || { box: 1, due: Date.now() }; s.weak = true; srs[id] = s; saveSrs(); }
+const isDue = c => fsrsEngine.isDue(c.id);
+const isNew = c => fsrsEngine.isNew(c.id);
+function markWeak(id) {
+  try { fsrsEngine.saveFlags({ ...srs, [id]: { ...(srs[id] || {}), weak: true } }); srs = fsrsEngine.summary(); }
+  catch(error) { toast('錯題標記未儲存，請檢查瀏覽器儲存空間。'); }
+}
 
 // ---------- 路由 ----------
 let tab = 'home';
@@ -202,19 +204,19 @@ function renderHome() {
   const list = inScope(CONCEPTS);
   const due = list.filter(c => !isNew(c) && isDue(c)).length;
   const fresh = list.filter(isNew).length;
-  const learned = list.filter(c => srs[c.id] && srs[c.id].box >= 3).length;
+  const learned = list.filter(c => fsrsEngine.isLearned(c.id)).length;
   const weak = CONCEPTS.filter(c => srs[c.id]?.weak).length;
   const todo = Math.min(due + fresh, 20);
   const scopeLabel = (SCOPES.find(x => x.key === prefs.scope) || SCOPES[0]).label;
   app.innerHTML = `
-    <div style="text-align:center;padding:36px 0 24px">
+    <div class="muted" style="margin-top:12px">FSRS 本機試用版 · 進度只存在此瀏覽器</div><div style="text-align:center;padding:36px 0 24px">
       <div style="font-size:30px;font-weight:700;letter-spacing:.5px">今天複習什麼？</div>
-      <div class="muted" style="margin-top:8px">範圍：${esc(scopeLabel)} · 已熟 ${learned} / ${list.length} 張</div>
+      <div class="muted" style="margin-top:8px">範圍：${esc(scopeLabel)} · 長期複習 ${learned} / ${list.length} 張</div>
     </div>
     <div class="card" style="text-align:center;padding:28px 20px">
       <div style="font-size:56px;font-weight:700;line-height:1">${todo}</div>
       <div class="muted" style="margin:6px 0 18px">張卡等你複習（到期 ${due} · 新卡 ${fresh}）</div>
-      <button class="btn" id="goCards">開始複習</button>
+      <button class="btn" id="goCards">開始複習</button><p class="muted" style="font-size:12px;margin-top:14px">依每張卡的自評安排下次複習。</p><button class="btn ghost" id="exportProgress" style="margin-top:12px">匯出進度備份</button>
     </div>
     <div class="row" style="margin-top:14px">
       <button class="btn ghost" id="goQuiz">情境題 10 題</button>
@@ -226,6 +228,7 @@ function renderHome() {
     <div class="muted" style="text-align:center;margin-top:28px;font-size:12px">共 ${CONCEPTS.length} 張概念卡 · ${QUIZ.length} 題情境題<br>整理自課堂錄音摘要（未經人工核聽），已改寫成自己的話</div>`;
   bindScope(renderHome);
   $('#goCards').onclick = () => go('cards');
+  $('#exportProgress').onclick = exportProgress;
   $('#goQuiz').onclick = () => go('quiz');
   $('#goWeeks').onclick = () => go('weeks');
   if (ESSAYS.length) $('#goEssay').onclick = () => go('essay');
@@ -274,7 +277,7 @@ function renderCard() {
   if (idx >= deck.length) {
     app.innerHTML = `<div class="card" style="text-align:center">
       <p>這一輪 ${deck.length} 張完成！</p>
-      <button class="btn" onclick="go('${weakMode ? 'weak' : 'cards'}')">再來一輪</button>
+      <button class="btn" onclick="go('${weakMode ? 'weak' : 'cards'}')">檢查下一批到期卡</button>
       <button class="btn ghost" style="margin-top:10px" onclick="go('home')">回首頁</button></div>`;
     return;
   }
@@ -289,7 +292,7 @@ function renderCard() {
     <div class="card flash" id="flash">${flipped ? back : front}</div>
     <div class="row" style="margin-bottom:10px"><button class="btn ghost" id="spkCard">朗讀</button></div>
     ${flipped ? `<div class="row rate">
-      <button class="btn bad" data-r="0">忘了</button><button class="btn mid" data-r="1">模糊</button><button class="btn good" data-r="2">記得</button></div>`
+      ${[{r:1,l:'忘了',c:'bad'},{r:2,l:'吃力想起',c:'mid'},{r:3,l:'記得',c:'good'},{r:4,l:'很熟',c:'good'}].map(x => `<button class="btn ${x.c}" data-r="${x.r}" style="font-size:14px;padding:12px 5px">${x.l}<br><small style="font-weight:400">${esc(nextReviewLabel(c.id,x.r))}</small></button>`).join('')}</div><p class="muted" style="font-size:12px">沒想起來選「忘了」；想起來但費力選「吃力想起」。時間是排程估算。</p>`
       : `<button class="btn" id="flipBtn">翻面</button>`}`;
   const flip = () => { if (!flipped) { flipped = true; renderCard(); } };
   $('#flash').onclick = e => { if (!e.target.closest('button')) flip(); };
@@ -297,13 +300,21 @@ function renderCard() {
   $('#spkCard').onclick = () => flipped ? speak(`${c.term}。${c.def}。例如：${c.example}`, c.id) : speak(c.term);
   document.querySelectorAll('[data-r]').forEach(b => b.onclick = () => rate(c, +b.dataset.r));
 }
+function nextReviewLabel(id, rating) {
+  const next = fsrsEngine.preview(id).find(x => x.rating === rating);
+  return window.CogneuroFSRS.describeDue(next.dueAt);
+}
 function rate(c, r) {
-  const s = srs[c.id] || { box: 0, due: 0, weak: false };
-  if (r === 0) { s.box = 1; s.due = Date.now(); s.weak = true; deck.push(c); }
-  else if (r === 1) { s.box = Math.max(1, s.box); s.due = Date.now() + DAY; }
-  else { s.box = Math.min(5, s.box + 1); s.due = Date.now() + INTERVALS[s.box - 1] * DAY; if (weakMode) s.weak = false; }
-  srs[c.id] = s; saveSrs();
-  idx++; flipped = false; renderCard();
+  try {
+    fsrsEngine.review(c.id, r, { clearWeak: weakMode });
+    srs = fsrsEngine.summary();
+    idx++; flipped = false; renderCard();
+  } catch (error) { toast('進度未儲存，請先匯出備份或檢查瀏覽器儲存空間。'); }
+}
+function exportProgress() {
+  const data = { exportedAt: new Date().toISOString(), course: 'cogneuro-review', ...fsrsEngine.exportState(), essays: essayState, preferences: prefs };
+  const url = URL.createObjectURL(new Blob([JSON.stringify(data,null,2)], {type:'application/json'}));
+  const link = document.createElement('a'); link.href=url; link.download='認知神經科學_複習進度_'+new Date().toISOString().slice(0,10)+'.json'; link.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 
 // ---------- 情境題 ----------
@@ -323,7 +334,7 @@ function renderQuiz() {
   if (qi >= qz.length) {
     app.innerHTML = `<div class="card" style="text-align:center">
       <p style="font-size:22px"><b>${qScore} / ${qz.length}</b></p><p class="muted">答錯的概念已加入錯題本</p>
-      <button class="btn" onclick="go('quiz')">再來一輪</button>
+      <button class="btn" onclick="go('quiz')">檢查下一批到期卡</button>
       <button class="btn ghost" style="margin-top:10px" onclick="go('home')">回首頁</button></div>`;
     return;
   }
@@ -402,9 +413,18 @@ function renderEssay(id) {
 }
 
 // ---------- 啟動 ----------
-Promise.all([...['concepts.json', 'quiz.json', 'weeks.json'].map(f => fetch(f).then(r => r.json())), fetch('essays.json').then(r => r.json()).catch(() => [])])
-  .then(([c, q, w, es]) => { CONCEPTS = c; QUIZ = q; WEEKS = w; ESSAYS = es; buildScopes(); go('home'); })
-  .catch(e => { app.innerHTML = `<div class="card">資料載入失敗：${esc(e.message)}</div>`; });
+async function boot() {
+  try {
+    await import('./vendor/fsrs.js');
+    fsrsEngine = await window.CogneuroFSRS.createReviewEngine({ storage: localStorage, legacy: srs });
+    srs = fsrsEngine.summary();
+    const [c,q,w,es] = await Promise.all([...['concepts.json','quiz.json','weeks.json'].map(f=>fetch(f).then(r=>r.json())),fetch('essays.json').then(r=>r.json()).catch(()=>[])]);
+    CONCEPTS=c; QUIZ=q; WEEKS=w; ESSAYS=es; buildScopes(); go('home');
+  } catch(error) {
+    app.innerHTML=`<div class="card">啟動失敗：${esc(error.message)}<p>請保留此頁的瀏覽器資料，重新載入或請 AI 協助檢查。</p></div>`;
+  }
+}
+boot();
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 </script>

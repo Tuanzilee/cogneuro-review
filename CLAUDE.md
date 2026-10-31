@@ -70,3 +70,11 @@ audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 - W4 Ch5 的 H.M. 手術細節（講義只寫切除內側顳葉含海馬迴），沒補課本原文。
 - 賴姿伶老師 Talk（W5）是否納入期中範圍。
 - W5 逐字稿到了再補。
+
+## 2026-10-31 FSRS 本機試用副本
+
+- 這是由原 repo 複製的本機預覽，尚未推送或公開上線；公開發布仍須先取得 hai 同意。
+- 概念卡改用 ts-fsrs 6.0.0 / FSRS-7 排程；原題庫、概念 ID 與申論資料不變。
+- 排程與資料保存的程式在 src/fsrs-adapter.mjs；src/browser-entry.mjs 暴露給 index.html 使用。修改後執行 npm run build 產生 vendor 瀏覽器程式。vendor JS 全部必須列入 sw.js 的快取清單，變更時 bump CACHE。
+- cn_srs 保持舊資料；cn_srs_before_fsrs_v1 為首次儲存前備份；新排程、錯題旗標及歷程在 cn_fsrs_v1。不得虛構舊自評紀錄來反推模型狀態。
+- 檢查：npm test、python3 check.py；另外驗證翻面自評、到期顯示與重新載入的保存。
