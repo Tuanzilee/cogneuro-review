@@ -209,7 +209,7 @@ function renderHome() {
   const todo = Math.min(due + fresh, 20);
   const scopeLabel = (SCOPES.find(x => x.key === prefs.scope) || SCOPES[0]).label;
   app.innerHTML = `
-    <div class="muted" style="margin-top:12px">FSRS 本機試用版 · 進度只存在此瀏覽器</div><div style="text-align:center;padding:36px 0 24px">
+    <div class="muted" style="margin-top:12px">FSRS 間隔複習 · 進度只存在此瀏覽器</div><div style="text-align:center;padding:36px 0 24px">
       <div style="font-size:30px;font-weight:700;letter-spacing:.5px">今天複習什麼？</div>
       <div class="muted" style="margin-top:8px">範圍：${esc(scopeLabel)} · 長期複習 ${learned} / ${list.length} 張</div>
     </div>
