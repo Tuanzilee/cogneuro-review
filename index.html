@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>認知神經科學複習</title>
-<meta name="description" content="認知神經科學：每週重點、概念卡、情境題">
+<meta name="description" content="認知神經科學：各單元重點、概念卡、情境題">
 <meta property="og:title" content="認知神經科學複習">
-<meta property="og:description" content="認知神經科學：每週重點、概念卡、情境題">
+<meta property="og:description" content="認知神經科學：各單元重點、概念卡、情境題">
 <meta property="og:image" content="https://tuanzilee.github.io/cogneuro-review/icon-512.png">
 <meta property="og:type" content="website">
 <link rel="manifest" href="manifest.json">
@@ -112,7 +112,7 @@ ul.pts li { margin: 4px 0; }
 <main id="app"></main>
 <nav class="tabs"><div class="inner">
   <button data-tab="home"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg>首頁</button>
-  <button data-tab="weeks"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>每週重點</button>
+  <button data-tab="weeks"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>各單元重點</button>
   <button data-tab="cards"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="13" height="13" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>概念卡</button>
   <button data-tab="essay"><svg viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg>申論</button>
   <button data-tab="quiz"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 15h8"/></svg>情境題</button>
@@ -189,7 +189,7 @@ function buildScopes() {
     { key: 'post', label: '期中後新內容（Ch9 起）', group: 0, test: x => x.week > MID_WEEK },
     { key: 'mid', label: '期中前範圍（至聽覺）', group: 0, test: x => x.week <= MID_WEEK },
     { key: 'rev1', label: '複習測驗① Ch2–4', group: 0, test: x => REV1.includes(topicOf(x)) },
-    ...WEEKS.filter(w => w.concepts.length).map(w => ({ key: 'w' + w.week, label: 'W' + w.week, group: 0, test: x => x.week === w.week })),
+    ...WEEKS.filter(w => w.concepts.length).map(w => ({ key: 'w' + w.week, label: w.title, group: 2, test: x => x.week === w.week })),
     ...topics.map(t => ({ key: 't:' + t, label: t, group: 1, test: x => topicOf(x) === t })),
   ];
 }
@@ -210,7 +210,7 @@ function go(t, arg) {
   window.scrollTo(0, 0);
 }
 document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => go(b.dataset.tab));
-const scopeChips = () => `<div id="scopeChips">${['週次', '主題'].map((g, i) => `<div class="muted" style="margin:${i ? 14 : 0}px 0 6px;font-size:12px">${g}</div><div class="chips">${SCOPES.filter(s => s.group === i).map(s =>
+const scopeChips = () => `<div id="scopeChips">${['範圍', '主題'].map((g, i) => `<div class="muted" style="margin:${i ? 14 : 0}px 0 6px;font-size:12px">${g}</div><div class="chips">${SCOPES.filter(s => s.group === i).map(s =>
   `<button class="chip ${prefs.scope === s.key ? 'on' : ''}" data-k="${s.key}">${esc(s.label)}</button>`).join('')}</div>`).join('')}</div>`;
 const bindScope = onChange => document.querySelectorAll('#scopeChips .chip').forEach(c => c.onclick = () => { prefs.scope = c.dataset.k; savePrefs(); onChange(); });
 
@@ -237,7 +237,7 @@ function renderHome() {
     <a class="btn ghost" href="diagrams/" style="margin-top:14px;text-decoration:none">30 題圖解（結構在哪、訊號怎麼走）</a>
     <div class="row" style="margin-top:14px">
       <button class="btn ghost" id="goQuiz">情境題 10 題</button>
-      <button class="btn ghost" id="goWeeks">每週重點</button>
+      <button class="btn ghost" id="goWeeks">各單元重點</button>
     </div>
     ${weak ? `<button class="btn ghost" id="goWeak" style="margin-top:14px">錯題本（${weak}）</button>` : ''}
     <div style="margin-top:28px"><div class="muted" style="margin-bottom:8px">換範圍</div>${scopeChips()}</div>
@@ -251,22 +251,21 @@ function renderHome() {
   if (weak) $('#goWeak').onclick = () => go('weak');
 }
 
-// ---------- 每週重點 ----------
+// ---------- 各單元重點 ----------
 function renderWeeks() {
   app.innerHTML = WEEKS.slice().reverse().map(w => `
     <div class="card">
-      <div class="muted">W${w.week} · ${esc(w.date)}</div>
       <h2 style="margin-top:2px">${esc(w.title)}</h2>
-      <p>${esc(w.summary)}</p>
+      ${w.summary ? `<b>說明</b><ul class="pts">${w.summary.split('。').filter(Boolean).map(p => `<li>${esc(p)}。</li>`).join('')}</ul>` : ''}
       ${w.points.length ? `<b>重點</b><ul class="pts">${w.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}
       ${w.todo.length ? `<div style="margin-top:10px"><b>待辦</b><ul class="pts">${w.todo.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>` : ''}
-      ${w.concepts.length ? `<button class="btn ghost" style="margin-top:12px" data-w="${w.week}">練這週的概念卡</button>` : ''}
+      ${w.concepts.length ? `<button class="btn ghost" style="margin-top:12px" data-w="${w.week}">練這個單元的概念卡</button>` : ''}
       ${w.points.length ? `<button class="spk" data-say="${w.week}" style="margin-top:10px" aria-label="朗讀">朗讀</button>` : ''}
     </div>`).join('');
   document.querySelectorAll('[data-w]').forEach(b => b.onclick = () => { prefs.scope = 'w' + b.dataset.w; savePrefs(); go('cards'); });
   document.querySelectorAll('[data-say]').forEach(b => b.onclick = () => {
     const w = WEEKS.find(x => x.week === +b.dataset.say);
-    speak(`第${w.week}週，${w.title}。${w.points.join('。')}`, 'W' + w.week);
+    speak(`${w.title}。${w.points.join('。')}`, 'W' + w.week);
   });
 }
 
@@ -298,9 +297,9 @@ function renderCard() {
     return;
   }
   const c = deck[idx];
-  const front = `<span class="tag">W${c.week} · ${esc(c.topic)}</span><div class="term">${esc(c.term)}</div>
+  const front = `<span class="tag">${esc(c.topic)}</span><div class="term">${esc(c.term)}</div>
     <div class="hint">先想想它的意思，點卡片翻面</div>`;
-  const back = `<span class="tag">W${c.week} · ${esc(c.topic)}</span><div class="term">${esc(c.term)}</div><div class="en">${esc(c.en)}</div>
+  const back = `<span class="tag">${esc(c.topic)}</span><div class="term">${esc(c.term)}</div><div class="en">${esc(c.en)}</div>
     ${figHtml(c)}<div class="def">${esc(c.def)}</div><div class="example"><b>舉個例子：</b>${esc(c.example)}</div>`;
   app.innerHTML = `
     <div class="muted">${weakMode ? '錯題本' : '概念卡'} · ${idx + 1} / ${deck.length}</div>
@@ -359,7 +358,7 @@ function renderQuiz() {
   app.innerHTML = `
     <div class="muted">情境題 · ${qi + 1} / ${qz.length} · 答對 ${qScore}</div>
     <div class="progress"><div style="width:${qi / qz.length * 100}%"></div></div>
-    <div class="card"><span class="tag">W${q.week}</span><div class="prompt" style="margin-top:8px">${esc(q.q)}</div></div>
+    <div class="card"><span class="tag">${esc(c ? c.topic : '')}</span><div class="prompt" style="margin-top:8px">${esc(q.q)}</div></div>
     ${item.order.map((o, i) => `<button class="opt ${answered ? (o.ok ? 'right' : (item.pick === i ? 'wrong' : '')) : ''}" data-o="${i}">${esc(o.text)}</button>`).join('')}
     ${answered ? `<div class="why">${esc(q.why)}${c ? `<br><span class="muted">相關概念：${esc(c.term)}</span>` : ''}${c ? figHtml(c) : ''}</div>
       <div class="row" style="margin-top:10px"><button class="spk" id="say" style="flex:none" aria-label="朗讀">朗讀</button><button class="btn" id="next">下一題</button></div>` : ''}`;
