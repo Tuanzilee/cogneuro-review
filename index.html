@@ -185,8 +185,9 @@ let SCOPES = [];
 function buildScopes() {
   const topics = [...new Set(CONCEPTS.map(c => c.topic))];
   SCOPES = [
-    { key: 'all', label: '全部', group: 0, test: () => true },
-    { key: 'mid', label: '期中範圍（至聽覺）', group: 0, test: x => x.week <= MID_WEEK },
+    { key: 'all', label: '全部（期末累積）', group: 0, test: () => true },
+    { key: 'post', label: '期中後新內容（Ch9 起）', group: 0, test: x => x.week > MID_WEEK },
+    { key: 'mid', label: '期中前範圍（至聽覺）', group: 0, test: x => x.week <= MID_WEEK },
     { key: 'rev1', label: '複習測驗① Ch2–4', group: 0, test: x => REV1.includes(topicOf(x)) },
     ...WEEKS.filter(w => w.concepts.length).map(w => ({ key: 'w' + w.week, label: 'W' + w.week, group: 0, test: x => x.week === w.week })),
     ...topics.map(t => ({ key: 't:' + t, label: t, group: 1, test: x => topicOf(x) === t })),
@@ -381,18 +382,24 @@ const RATE_LABEL = ['還不行', '差不多', '可以'];
 const eStep = {}; // 每題這輪開到第幾步（不存檔）
 let eTimer = null;
 const fmtClock = n => `${String(Math.floor(n / 60)).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`;
+const ESCOPES = [['all', '全部'], ['post', '期中後（Ch9 起）'], ['pre', '期中前（Ch1–8）']];
+const inEScope = e => { const k = prefs.escope || 'all'; return k === 'all' || (k === 'post' ? e.ch >= 9 : e.ch <= 8); };
 function renderEssayList() {
   clearInterval(eTimer);
-  const done = ESSAYS.filter(e => essayState[e.id]?.rate === 2).length;
+  const shown = ESSAYS.filter(inEScope);
+  const done = shown.filter(e => essayState[e.id]?.rate === 2).length;
   const groups = [['最高', '最高優先'], ['高', '高優先'], ['中高', '中高優先'], ['中', '中優先'], ['中低', '中低優先']];
   app.innerHTML = `
     <div class="card"><h2 style="margin-top:0">申論題練習</h2>
       <p style="margin:0 0 8px">考試是申論題，要<b>自己從零寫出來</b>：先說清楚「是什麼」，再評估「能告訴我們什麼、有什麼問題」。</p>
       <ol class="pts"><li>先在<b>紙上手寫</b>（約 25 分鐘，不看資料）</li><li>對照骨架檢核表，有寫到的打勾</li><li>看詳答與音檔，把沒寫到的點在紙上補寫一次</li><li>自評，之後再回來重寫</li></ol>
-      <div class="muted" style="margin-top:10px">題目與優先度依你整理的《期中考考點》。已「可以」 ${done} / ${ESSAYS.length}</div></div>
-    ${groups.map(([k, label]) => { const list = ESSAYS.filter(e => e.pri === k); return list.length ? `<div class="muted" style="margin:16px 0 4px">${label}</div>` + list.map(e =>
+      <div class="muted" style="margin-top:10px">題目與優先度依你整理的《期中考考點》。已「可以」 ${done} / ${shown.length}</div></div>
+    <div class="chips" id="escope" style="margin-top:12px">${ESCOPES.map(([k, l]) => `<button class="chip ${(prefs.escope || 'all') === k ? 'on' : ''}" data-es="${k}">${l}</button>`).join('')}</div>
+    ${shown.length ? '' : '<div class="card muted">這個範圍還沒有申論題。新章節的詳答做好後會出現在這裡。</div>'}
+    ${groups.map(([k, label]) => { const list = shown.filter(e => e.pri === k); return list.length ? `<div class="muted" style="margin:16px 0 4px">${label}</div>` + list.map(e =>
       `<button class="opt" data-e="${e.id}"><span class="tag">${esc(e.no)}</span> ${esc(e.q)}${essayState[e.id]?.rate != null ? `<div class="muted" style="margin-top:6px">自評：${RATE_LABEL[essayState[e.id].rate]}</div>` : ''}</button>`).join('') : ''; }).join('')}`;
   document.querySelectorAll('[data-e]').forEach(b => b.onclick = () => go('essay', b.dataset.e));
+  document.querySelectorAll('[data-es]').forEach(b => b.onclick = () => { prefs.escope = b.dataset.es; savePrefs(); renderEssayList(); });
 }
 function renderEssay(id) {
   clearInterval(eTimer);
@@ -443,7 +450,7 @@ function renderEssay(id) {
   document.querySelectorAll('[data-r]').forEach(b => b.onclick = () => {
     const r = +b.dataset.r; st.rate = r; st.at = Date.now(); saveEssay();
     if (r === 0) (e.concepts || []).forEach(markWeak);
-    const next = ESSAYS.find(x => x.id !== id && essayState[x.id]?.rate == null) || null;
+    const next = ESSAYS.filter(inEScope).find(x => x.id !== id && essayState[x.id]?.rate == null) || null;
     toast(r === 2 ? '很好，這題過關' : r === 1 ? '再看一次會更穩' : '先記下來，過幾天回來重寫');
     go('essay', next ? next.id : undefined);
   });
