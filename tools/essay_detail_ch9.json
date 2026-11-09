@@ -1,0 +1,222 @@
+[
+ {
+  "id": "E_9_1",
+  "no": "9.1",
+  "ch": 9,
+  "tier": "B",
+  "title": "注意是什麼？非注意盲視與改變盲視如何說明注意的限制？",
+  "signal": "第 9 章開頭、隨堂測驗第 1 題（改變盲視）；Keywords_Ch09 的第一、二個詞。我的推論：期末或複習測驗可能考區分兩者。",
+  "answer1": "注意是<b>選出某些資訊做進一步處理、其他資訊被丟掉</b>的歷程，因為認知資源有限。<b>非注意盲視</b>（Simons 與 Chabris, 1999）是注意被導向別處，所以沒察覺眼前的刺激，例如數傳球時約一半的人沒看到猩猩。<b>改變盲視</b>是兩張圖交替出現時看不出物體的出現或消失。兩者都反映<b>注意容量的限制</b>，不是視覺本身的限制，也不是記憶力不足。",
+  "skeleton": [
+   "<b>定義</b>：注意＝選擇資訊進一步處理；容量有限（瓶頸、聚光燈）。",
+   "<b>非注意盲視</b>：注意在別處→沒察覺；猩猩實驗約一半沒看到。",
+   "<b>改變盲視</b>：兩張圖交替→看不出差異；至少兩個刺激比對。",
+   "<b>結論</b>：是注意容量，不是視覺或記憶力問題；聽覺也有類似現象。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>注意</b>：選出某些資訊做進一步處理、丟掉其他資訊；因為腦的容量有限，不可能完整處理全部輸入，常用「過濾器、瓶頸」（Broadbent）或「聚光燈」比喻。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>非注意盲視</b>：因為注意被導向別處而沒察覺視覺刺激。看人傳籃球並數傳球次數，穿猩猩裝的人走過，機率約 50% 沒注意到（Simons 與 Chabris, 1999）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>改變盲視</b>：兩張圖交替出現（中間有短暫空白），看不出物體的出現或消失；投影片引用 Simons 與 Levin（1997），課本引用 Rensink 等人（1997）與 Simons 與 Levin（1998，店員換人的例子）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>它們為什麼叫「盲視」</b>：課本說這些例子「反映的是注意容量的限制，而不是視覺本身的根本限制」；功能造影顯示頂葉（在主要視覺系統之外）參與改變偵測（Beck et al., 2001）。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>不限視覺</b>：專心聽另一段對話時，很多人沒發現有人連說 19 秒「我是猩猩」（Dalton 與 Fraenkel, 2012）。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>外界驅動 vs. 目標驅動</b>：注意可能是外界抓住（由下而上）或目標維持（由上而下），多數情況兩者同時作用。<span class=\"tag\">課本 Ch9</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 180\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"600\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"27\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">注意：選出一些資訊做深入處理，其他丟掉（認知資源有限）</text><rect x=\"10\" y=\"48\" width=\"290\" height=\"84\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"155.0\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">非注意盲視</text><text x=\"155.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">注意被導向別處</text><text x=\"155.0\" y=\"101\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">→ 沒察覺「在眼前」的東西</text><text x=\"155.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">猩猩實驗：約一半人沒看到</text><rect x=\"320\" y=\"48\" width=\"290\" height=\"84\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"465.0\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">改變盲視</text><text x=\"465.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">兩張圖交替（中間空白）</text><text x=\"465.0\" y=\"101\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">→ 看不出物體出現／消失</text><text x=\"465.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">不是記憶力不足</text><rect x=\"10\" y=\"142\" width=\"600\" height=\"28\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"310.0\" y=\"160\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">共同結論：這是注意容量的限制，不是視覺（或記憶）本身壞掉</text></svg><figcaption>圖：兩種「盲視」都反映注意有限（自繪，依 Dis_09、Ward Ch9）</figcaption></figure>"
+   },
+   {
+    "h": "常見混淆",
+    "html": "\n<ul>\n<li><b>隨堂測驗第 1 題</b>：「改變盲視是記憶力不足所導致的問題」是不正確的敘述；其他三項（注意力放在更重要的事物、服裝不連戲、至少兩個刺激比對卻沒發現差異）是正確的。答案由老師公布為準。</li>\n<li>非注意盲視是「注意在別處」；改變盲視需要「比較兩個畫面」。兩者都是注意問題，所以不要寫成「看不到＝眼睛的問題」。</li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "把改變盲視寫成記憶力不足，或視力／視覺缺陷。",
+   "只講猩猩實驗，沒有說明它反映的是注意容量有限。",
+   "忘記補充：這個現象不只在視覺，聽覺也有。"
+  ],
+  "oral": "注意是選出某些資訊做進一步處理，其他資訊丟掉，因為認知資源有限。非注意盲視是注意被導向別處，所以沒察覺眼前的刺激，猩猩實驗約一半的人沒看到。改變盲視是兩張圖交替時看不出差異。兩者都反映注意容量有限，不是視覺或記憶力的問題。",
+  "sources": [
+   "老師投影片 Dis_09 The attending brain（含隨堂測驗 01–04）——老師原件。 p.「Attention」「Inattentional blindness」「Change blindness」與隨堂測驗 01。",
+   "Ward《The Student's Guide to Cognitive Neuroscience》第 4 版第 9 章（The attending brain）——課程指定課本。 開頭與 Figure 9.1–9.2。",
+   "第 9 章還沒上課，沒有逐字稿可核對老師的強調點；優先度是我依投影片與隨堂測驗的推測。上課後請回來核對。標示「我的推論」的是把事實串成因果解釋，來源沒有逐字寫出。"
+  ],
+  "pri": "中高"
+ },
+ {
+  "id": "E_9_2",
+  "no": "9.2",
+  "ch": 9,
+  "tier": "B",
+  "title": "注意如何移動？Posner 空間線索作業、返回抑制與外源性、內源性定向",
+  "signal": "投影片有完整一節「Orienting」；Keywords 沒有列出，但屬於課本章末題「定向注意與眼動的關係」。我的推論：可能考 Posner 作業的結果與解釋。",
+  "answer1": "注意移動叫<b>定向</b>，分眼睛跟著動的<b>明顯定向</b>與眼睛不動的<b>隱性定向</b>。Posner 空間線索作業：線索在目標的同一位置（有效）反應較快，不同位置（無效）較慢，因為要先<b>脫離</b>再移動。線索與目標間隔很短（約 150 毫秒內）是<b>促進</b>，隔很久（約超過 300 毫秒）反而變慢，叫<b>返回抑制</b>。線索由外界突然變化引導是<b>外源性</b>（由下而上），由目標引導是<b>內源性</b>（由上而下）。",
+  "skeleton": [
+   "<b>定向</b>：明顯（眼睛動）vs. 隱性（眼睛不動）。",
+   "<b>Posner 作業</b>：有效／無效／中性；無效要脫離→慢。",
+   "<b>時間</b>：短間隔促進；長間隔返回抑制。",
+   "<b>引導</b>：外源性（外界）vs. 內源性（目標）；神經：LIP、FEF vs. TPJ、VFC。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>定向</b>：注意從一個位置移到另一個位置。<b>明顯定向</b>是眼睛或頭跟著注意移動；<b>隱性定向</b>是不動眼睛、只移動注意。注意的位置不一定等於眼睛的位置，但兩者常一起動，因為注視點的視力最好。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>Posner 空間線索作業</b>：受試者注視中央，左、中、右有三個框；目標出現在周邊框時按鍵。目標前先有線索（框變亮），線索不預測目標位置。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>試次類型</b>：有效（valid）線索與目標同位置；無效（invalid）不同位置；中性（neutral）。無效試次要多一個「脫離」（disengage），再移動、投入，所以較慢。<span class=\"tag\">投影片 p.「Spatial cuing task」圖</span></li>\n<li><b>促進與返回抑制</b>：線索領先目標約 150 毫秒內，線索位置的目標偵測較快；間隔超過約 300 毫秒，反而在線索位置較慢。課本的解釋：注意先移到線索處，目標沒出現就脫離，回到先前位置有處理代價。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>外源性 vs. 內源性</b>：外源性是外界刺激引導（周邊突然變亮），由下而上；內源性由觀察者目標引導（例如 LaBerge 要受試者注意單字中間的字母或整個單字），由上而下。大多數時候兩者同時作用。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>神經對應</b>：投影片圖把「移動／定向」對應 LIP 與額葉眼動區 FEF（背背側），「投入／脫離」對應 TPJ 與腹側額葉 VFC（腹背側）。課本：LIP 對顯著或與任務有關的刺激反應，也參與眼動；TPJ 像「斷路器」，把注意從目前焦點轉走，較偏右。<span class=\"tag\">投影片圖、課本 Ch9，細節以課本為主</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 196\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"120\" height=\"40\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"70.0\" y=\"25\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">中央線索</text><text x=\"70.0\" y=\"39\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（注視中央）</text><rect x=\"150\" y=\"8\" width=\"120\" height=\"40\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"210.0\" y=\"32\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">目標出現</text><line x1=\"130\" y1=\"28\" x2=\"150\" y2=\"28\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"300\" y=\"8\" width=\"310\" height=\"40\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"455.0\" y=\"25\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">有效（valid）：線索＝目標位置→快</text><text x=\"455.0\" y=\"39\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">無效（invalid）：不同位置→慢（要脫離）</text><rect x=\"10\" y=\"62\" width=\"295\" height=\"58\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"157.5\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">短間隔（約 150 毫秒內）</text><text x=\"157.5\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">線索位置較快：促進</text><rect x=\"315\" y=\"62\" width=\"295\" height=\"58\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"462.5\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">長間隔（約超過 300 毫秒）</text><text x=\"462.5\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">線索位置反而較慢：返回抑制</text><rect x=\"10\" y=\"130\" width=\"295\" height=\"56\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"157.5\" y=\"155\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">外源性：外界刺激引導（由下而上）</text><text x=\"157.5\" y=\"169\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">例：周邊突然閃一下</text><rect x=\"315\" y=\"130\" width=\"295\" height=\"56\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"462.5\" y=\"155\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">內源性：目標引導（由上而下）</text><text x=\"462.5\" y=\"169\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">例：依指示注意中間字母</text></svg><figcaption>圖：Posner 空間線索作業與定向的兩種引導（自繪，依 Dis_09、Ward Ch9）</figcaption></figure>"
+   },
+   {
+    "h": "常見混淆",
+    "html": "\n<ul>\n<li>返回抑制不是「抑制所有東西」，而是<b>回到剛才注意過的位置</b>較慢。</li>\n<li>促進與抑制的方向取決於線索與目標的時間間隔，不要寫反。</li>\n<li>隨堂測驗第 3 題：探討<b>空間位置</b>注意力的是 Cuing task，不是 Stroop、注意瞬脫、改變偵測。答案由老師公布為準。</li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "把有效與無效的結果寫反，或忘記無效試次要「脫離」。",
+   "把返回抑制寫成「對所有線索的抑制」，忽略它要在長間隔、回到原位置才出現。",
+   "把外源性與內源性寫成「眼睛動不動」，那是明顯與隱性定向。"
+  ],
+  "oral": "注意移動叫定向，分眼睛跟著動的明顯定向和眼睛不動的隱性定向。Posner 空間線索作業裡，有效線索讓目標偵測更快，無效線索較慢，因為要先脫離再移動。間隔短是促進，間隔很長反而變慢，叫返回抑制。外界突然變化引導是外源性，由目標引導是內源性。",
+  "sources": [
+   "老師投影片 Dis_09 The attending brain（含隨堂測驗 01–04）——老師原件。 「Orienting」「Spatial cuing task」「Inhibition of return」頁。",
+   "Ward《The Student's Guide to Cognitive Neuroscience》第 4 版第 9 章（The attending brain）——課程指定課本。 第 206–207 頁（Posner、LaBerge）、Corbetta 與 Shulman 段。",
+   "第 9 章還沒上課，沒有逐字稿可核對老師的強調點；優先度是我依投影片與隨堂測驗的推測。上課後請回來核對。標示「我的推論」的是把事實串成因果解釋，來源沒有逐字寫出。"
+  ],
+  "pri": "中高"
+ },
+ {
+  "id": "E_9_3",
+  "no": "9.3",
+  "ch": 9,
+  "tier": "B",
+  "title": "注意只能依空間位置運作嗎？物件為基礎與時間為基礎的注意",
+  "signal": "投影片以三欄分類表重複出現：Space-based、Object-based、Temporal-based；隨堂測驗第 3 題。我的推論：容易出成配對或比較題。",
+  "answer1": "不是。注意可以依<b>空間位置</b>、<b>物件</b>或<b>時間</b>來引導。空間用 Posner 空間線索作業；物件用兩個重疊在同一位置的物體（臉與房子），受試者仍可只注意其中一個，注意臉時 FFA 活動較強、注意房子時 PPA 較強；時間用<b>注意瞬脫</b>，T1 之後不久 T2 就報告不出來。",
+  "skeleton": [
+   "<b>空間</b>：Posner 作業，注意哪個位置。",
+   "<b>物件</b>：臉與房子重疊；FFA／PPA 活動不同。",
+   "<b>時間</b>：注意瞬脫，T1 後不久的 T2 報告不出。",
+   "<b>評估</b>：注意是可拆成多種機制，不只是聚光燈。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>空間為基礎</b>：注意是「哪個位置」，用空間線索作業；聚光燈比喻最符合這一類。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>物件為基礎</b>：兩個物體透明重疊在同一位置時，受試者仍可選擇只注意其中一個。fMRI：注意臉時梭狀回臉區（FFA）反應較強，注意房子時海馬旁回位置區（PPA）較強（O’Craven 等人, 1999）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>對認知的影響</b>：先前沒被注意的物體，之後變成與任務有關時，反應會比較慢（Tipper, 1985）；返回抑制部分和位置有關、部分和物體有關，物體移動時，抑制也可能跟著物體移動（Tipper et al., 1991）。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>時間為基礎：注意瞬脫</b>：快速連續呈現（約每秒 10 個）字母，要求報告兩個目標 T1 與 T2；T2 出現在 T1 之後約 2–3 個項目時最難報告。課本說這和注意有關，因為要求忽略 T1 時就沒有這個現象。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>神經</b>：課本提到注意瞬脫時，額頂區的活動可區分是否覺察到 T2；忽略症病人的「瞬脫期」特別長。<span class=\"tag\">課本 Ch9</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 144\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">空間為基礎</text><rect x=\"215\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">物件為基礎</text><rect x=\"420\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">時間為基礎</text><rect x=\"10\" y=\"44\" width=\"190\" height=\"90\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"78\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">空間線索作業</text><text x=\"105.0\" y=\"93\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（Posner）</text><text x=\"105.0\" y=\"107\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">注意「哪個位置」</text><rect x=\"215\" y=\"44\" width=\"190\" height=\"90\" rx=\"8\" fill=\"#f1faf3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"78\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">臉與房子疊在同位置</text><text x=\"310.0\" y=\"93\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">選一個注意</text><text x=\"310.0\" y=\"107\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">臉：FFA ↑　房子：PPA ↑</text><rect x=\"420\" y=\"44\" width=\"190\" height=\"90\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"78\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">注意瞬脫</text><text x=\"515.0\" y=\"93\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">T1 之後不久</text><text x=\"515.0\" y=\"107\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">T2 報告不出來</text></svg><figcaption>圖：注意的三種引導方式（自繪，依 Dis_09 分類表、Ward Ch9）</figcaption></figure>"
+   },
+   {
+    "h": "常見混淆",
+    "html": "\n<ul>\n<li>注意瞬脫的 temporal 是「時間」，不是顳葉（課本特別提醒）。</li>\n<li>物件為基礎的注意：兩個物體位置相同，所以<b>不能用位置解釋</b>，這才是它的重點。</li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "把 temporal attention 寫成顳葉。",
+   "只列三個名詞，沒說明各自的作業與結果。",
+   "物件為基礎的例子沒有說明兩個物體在同一位置。"
+  ],
+  "oral": "注意不只依空間位置運作。空間用 Posner 空間線索作業；物件用臉和房子重疊在同一位置，受試者仍可只注意其中一個，注意臉時臉區較強，注意房子時位置區較強；時間用注意瞬脫，第一個目標之後不久，第二個目標就報告不出來。",
+  "sources": [
+   "老師投影片 Dis_09 The attending brain（含隨堂測驗 01–04）——老師原件。 三欄分類表（多頁）、Object-based attention、Attentional blink、隨堂測驗 03。",
+   "Ward《The Student's Guide to Cognitive Neuroscience》第 4 版第 9 章（The attending brain）——課程指定課本。 第 207–208 頁。",
+   "第 9 章還沒上課，沒有逐字稿可核對老師的強調點；優先度是我依投影片與隨堂測驗的推測。上課後請回來核對。標示「我的推論」的是把事實串成因果解釋，來源沒有逐字寫出。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_9_4",
+  "no": "9.4",
+  "ch": 9,
+  "tier": "A",
+  "title": "忽略症（neglect）是什麼？為什麼它是注意問題，而不是低階知覺問題？",
+  "signal": "Keywords_Ch09 有 neglect、extinction 相關詞；隨堂測驗第 2 題；課本章末題「腦損傷研究對注意的貢獻」。我的推論：這是本章最可能出申論的主題。",
+  "answer1": "<b>忽略症</b>是病人對損傷<b>對側空間</b>的刺激不注意，多半是<b>右側頂葉</b>受損、忽略左邊。它不是低階知覺缺損：被忽略的刺激仍活化枕葉；提示注意到那一側就能偵測；<b>消失現象</b>顯示是注意競爭；它可跨感官；被忽略的物體仍被默默處理。所以它是<b>注意與覺察</b>的缺損。",
+  "skeleton": [
+   "<b>定義與部位</b>：對側空間不注意；右頂葉（投影片：右角迴）。",
+   "<b>怎麼測</b>：複製、憑記憶畫、線段二等分、劃消。",
+   "<b>證據 1</b>：枕葉仍活化；提示後能偵測。",
+   "<b>證據 2</b>：消失現象、跨感官、默默處理（房子、火）。",
+   "<b>結論</b>：是注意（與覺察）缺損，且有多種類型。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>定義</b>：忽略症（hemispatial neglect）是未能注意損傷對側空間的刺激，通常是右側損傷、忽略左側。投影片：右側下頂葉的<b>角迴</b>（angular gyrus）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>檢查</b>：複製圖形、憑記憶畫圖（漏掉左邊）、線段二等分（中點偏右，偏誤與線長成比例）、劃消作業（visual search 的變形）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>右半球較重要</b>：頂葉表徵整個視野，但右頂葉對左邊反應最強，左頂葉相反；右側受損對左邊的影響較嚴重，所以忽略症多在右損傷。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>為什麼不是低階知覺</b>：①功能造影顯示被忽略視野的物體仍活化枕葉視覺區（Rees et al., 2000）；②被忽略區的刺激先被提示（cue）注意就能偵測；③病人在需要自主定向與多個刺激競爭時更差。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>消失現象（extinction）</b>：單獨呈現時能看到；兩邊同時呈現，左邊的消失。可跨感官（例如觸覺與視覺）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>默默處理</b>：Vuilleumier 等人讓病人看兩張圖，左邊報告不出來、也說不記得，但之後辨認殘缺圖時成績較好；Marshall 與 Halligan 的兩棟房子，左邊有火，病人說看不出差異，卻選擇住沒有火的房子。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>類型</b>：空間忽略與物件忽略（投影片分別寫右角迴、右上顳回；課本說物件內忽略與腹側流損傷、白質有關）。也有知覺性與表徵性忽略（想像米蘭廣場，只說出一側的建築）。<span class=\"tag\">投影片、課本 Ch9；兩者對物件忽略部位的說法不同，以老師強調為準</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 180\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"600\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"27\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">忽略症：右側頂葉（投影片：右下頂葉角迴）受損 → 忽略左側空間</text><rect x=\"10\" y=\"48\" width=\"190\" height=\"84\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">怎麼測</text><text x=\"105.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">複製圖形、憑記憶畫圖</text><text x=\"105.0\" y=\"101\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">線段二等分（中點偏右）</text><text x=\"105.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">劃消作業</text><rect x=\"215\" y=\"48\" width=\"190\" height=\"84\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">不是低階知覺缺損</text><text x=\"310.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">・被忽略的刺激仍活化枕葉</text><text x=\"310.0\" y=\"101\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">・先提示注意就能偵測</text><text x=\"310.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">・消失現象（兩個同時才忽略）</text><rect x=\"420\" y=\"48\" width=\"190\" height=\"84\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">是注意與覺察的問題</text><text x=\"515.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">・可跨感官</text><text x=\"515.0\" y=\"101\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">・被忽略的物體默默處理</text><text x=\"515.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（偏好沒有火的房子）</text><rect x=\"10\" y=\"142\" width=\"600\" height=\"28\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"310.0\" y=\"160\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">兩類：空間忽略（投影片：右角迴）／物件忽略（投影片：右上顳回；課本：腹側流與白質）</text></svg><figcaption>圖：忽略症的檢查、性質與類型（自繪，依 Dis_09、Ward Ch9）</figcaption></figure>"
+   },
+   {
+    "h": "常見混淆",
+    "html": "\n<ul>\n<li><b>隨堂測驗第 2 題</b>：「患者會無法處理整體的訊息」是比較不正確的敘述，因為被忽略的物體仍被默默處理；其餘三項（與頂葉受傷有關、不注意特定空間、可透過外界訊息引導克服）是正確的。答案由老師公布為準。</li>\n<li>忽略症不是「看不到」：視覺區仍有活動，提示後可偵測。</li>\n<li>忽略症與盲視不同（見 9.5）。</li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "把忽略症寫成左半視野的失明，沒說明視覺區仍活化與提示後可偵測。",
+   "漏掉消失現象與默默處理的證據。",
+   "只說「右側頂葉」，沒說明忽略的是損傷的對側。"
+  ],
+  "oral": "忽略症是病人對損傷對側空間的刺激不注意，多半是右側頂葉受損，忽略左邊。它不是低階知覺問題：被忽略的刺激仍活化枕葉，提示注意過去就能偵測，兩個刺激同時出現時左邊的才會消失，而且被忽略的物體其實被默默處理，所以它是注意與覺察的缺損。",
+  "sources": [
+   "老師投影片 Dis_09 The attending brain（含隨堂測驗 01–04）——老師原件。 「Characteristics of neglect」「Space, attention and the parietal lobes」「Is neglect a problem in low-level perception or attention?」頁與隨堂測驗 02。",
+   "Ward《The Student's Guide to Cognitive Neuroscience》第 4 版第 9 章（The attending brain）——課程指定課本。 第 211–213、224–230 頁。",
+   "第 9 章還沒上課，沒有逐字稿可核對老師的強調點；優先度是我依投影片與隨堂測驗的推測。上課後請回來核對。標示「我的推論」的是把事實串成因果解釋，來源沒有逐字寫出。"
+  ],
+  "pri": "最高"
+ },
+ {
+  "id": "E_9_5",
+  "no": "9.5",
+  "ch": 9,
+  "tier": "A",
+  "title": "忽略症與盲視：兩種「沒有覺察」有什麼不同？",
+  "signal": "投影片與課本都有同一張比較表；盲視是 Ch7 的老主題（7.1 已有詳答），可串聯。我的推論：容易出成比較題或選擇題。",
+  "answer1": "兩者都有「缺乏覺察但仍有默默處理」，差別在：<b>範圍</b>（忽略症不限視覺；盲視只限視覺）、<b>默默處理的程度</b>（忽略症可到整個物體；盲視多為基本視覺辨別）、<b>注意導向的效果</b>（忽略症常可克服；盲視不行）、<b>眼動</b>（忽略症病人不自動移向被忽略區；盲視病人會移向盲區）、<b>座標</b>（忽略症是身體中心；盲視是視網膜中心）。",
+  "skeleton": [
+   "<b>相同點</b>：沒有覺察，但有默默處理。",
+   "<b>範圍</b>：忽略症跨感官；盲視只有視覺。",
+   "<b>處理程度與導向</b>：整個物體 vs. 基本辨別；可克服 vs. 不可克服。",
+   "<b>眼動與座標</b>：不移向 vs. 會移向；身體中心 vs. 視網膜中心。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>相同點</b>：兩者都有「無法覺察」，卻都有默默處理（implicit processing）的證據。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>覺察缺失的範圍</b>：忽略症不限於視覺，也可以在其他感官；盲視只限視覺。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>默默處理的內容</b>：忽略症整個物體都可能被默默處理；盲視只限基本視覺辨別（例如運動方向；課本附註「但參見 Marcel, 1998」）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>治療／注意導向</b>：忽略症把注意導向被忽略區域常可克服；盲視的缺乏覺察無法靠導向「盲區」克服。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>眼動</b>：忽略症病人常不會自動把眼睛移向被忽略區；盲視病人會把眼睛移向「盲區」。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>座標</b>：忽略的是以身體為中心（egocentric）的空間；盲區是以視網膜為中心（retinocentric）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>我的推論</b>：這些差異共同顯示，盲視比較像視覺傳入路徑（V1）損壞，忽略症比較像注意選擇出了問題。這是把兩組事實串成的解釋，不是投影片寫出的結論。</li>\n</ul>\n<figure><svg viewBox=\"0 0 620 186\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"210\" y=\"6\" width=\"200\" height=\"28\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"310.0\" y=\"24\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">比較項目</text><rect x=\"10\" y=\"6\" width=\"190\" height=\"28\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"24\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">忽略症 neglect</text><rect x=\"420\" y=\"6\" width=\"190\" height=\"28\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"24\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">盲視 blindsight</text><rect x=\"210\" y=\"40\" width=\"200\" height=\"24\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#999\"/><text x=\"310.0\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">覺察缺失的範圍</text><rect x=\"10\" y=\"40\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#f1f6fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">不限視覺，可跨感官</text><rect x=\"420\" y=\"40\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"56\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">只限視覺</text><rect x=\"210\" y=\"68\" width=\"200\" height=\"24\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#999\"/><text x=\"310.0\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">默默處理到哪</text><rect x=\"10\" y=\"68\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#f1f6fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">整個物體可能被處理</text><rect x=\"420\" y=\"68\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">只有基本視覺辨別</text><rect x=\"210\" y=\"96\" width=\"200\" height=\"24\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#999\"/><text x=\"310.0\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">注意導向有用嗎</text><rect x=\"10\" y=\"96\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#f1f6fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">常可克服</text><rect x=\"420\" y=\"96\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">無法克服</text><rect x=\"210\" y=\"124\" width=\"200\" height=\"24\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#999\"/><text x=\"310.0\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">眼睛移動</text><rect x=\"10\" y=\"124\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#f1f6fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">不自動移向被忽略區</text><rect x=\"420\" y=\"124\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">會移向盲區</text><rect x=\"210\" y=\"152\" width=\"200\" height=\"24\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#999\"/><text x=\"310.0\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">空間座標</text><rect x=\"10\" y=\"152\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#f1f6fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">以身體為中心</text><rect x=\"420\" y=\"152\" width=\"190\" height=\"24\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">以視網膜為中心</text></svg><figcaption>圖：忽略症與盲視的五項差異（Ward Ch9 比較表，投影片同表）</figcaption></figure>"
+   }
+  ],
+  "traps": [
+   "只寫「都沒有覺察」，沒有列出五項差異。",
+   "把盲視寫成可以靠注意導向克服（相反）。",
+   "把座標寫反：忽略症是身體（自我）中心，盲視是視網膜中心。"
+  ],
+  "oral": "忽略症和盲視都有沒有覺察、但仍有默默處理，差異有五項。忽略症不限視覺，盲視只限視覺；忽略症整個物體可能被處理，盲視只有基本辨別；忽略症把注意導向被忽略區常可克服，盲視不行；忽略症不自動移向被忽略區，盲視會移向盲區；忽略症是身體中心，盲視是視網膜中心。",
+  "sources": [
+   "老師投影片 Dis_09 The attending brain（含隨堂測驗 01–04）——老師原件。 比較表（兩頁，含眼動與區域座標）。",
+   "Ward《The Student's Guide to Cognitive Neuroscience》第 4 版第 9 章（The attending brain）——課程指定課本。 第 227 頁「How is a lack of awareness in neglect different from lack of awareness in blindsight?」。",
+   "第 9 章還沒上課，沒有逐字稿可核對老師的強調點；優先度是我依投影片與隨堂測驗的推測。上課後請回來核對。標示「我的推論」的是把事實串成因果解釋，來源沒有逐字寫出。"
+  ],
+  "pri": "高"
+ },
+ {
+  "id": "E_9_6",
+  "no": "9.6",
+  "ch": 9,
+  "tier": "B",
+  "title": "視覺失認症與巴林症候群：頂葉損傷如何讓人「一次只看到一個東西」？",
+  "signal": "Keywords_Ch09 有 agnosia、simultanagnosia；隨堂測驗第 4 題。我的推論：重點是區分兩類失認症，以及巴林症候群三個症狀。",
+  "answer1": "投影片分兩類<b>視覺失認症</b>：<b>知覺性</b>（頂葉、枕葉；形狀知覺差，物體知識完整）與<b>聯想性</b>（雙側下枕顳葉；能畫能複製，卻認不出）。<b>巴林症候群</b>是雙側頂葉受損，症狀是<b>同時失認症</b>（一次只看到一個物體）、<b>視覺性運動失調</b>與<b>視覺性眼動失用</b>。解釋：缺少空間表徵，使得物體之間的位置與特徵難以綁在一起。",
+  "skeleton": [
+   "<b>視覺失認症</b>：知覺性（形狀）vs. 聯想性（意義）。",
+   "<b>巴林症候群</b>：雙側頂葉；同時失認、運動失調、眼動失用。",
+   "<b>個案</b>：RM（基本視覺正常，無法定位）、GK（組合與熟悉度）。",
+   "<b>解釋</b>：空間表徵不足、錯誤組合；視覺忽略不是它的症狀。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>知覺性失認（apperceptive）</b>：頂葉、枕葉受損；物體的形狀知覺受損，但物體知識完整。<span class=\"tag\">投影片 p.「Visual agnosia」</span></li>\n<li><b>聯想性失認（associative）</b>：雙側下枕顳葉受損；能畫、能複製物體，卻無法認出自己畫的東西；臉認不出稱為臉盲（prosopagnosia）。<span class=\"tag\">投影片</span></li>\n<li><b>巴林症候群</b>：雙側頂葉損傷造成嚴重的空間處理困難，三個症狀：<b>同時失認症</b>（simultanagnosia，一次只能知覺一個物體）、<b>視覺性運動失調</b>（optic ataxia，無法依視覺準確伸手拿物）、<b>視覺性眼動失用</b>（optic apraxia，無法控制眼睛固定與移動）。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>症狀描述</b>：病人可能先看到窗戶，窗戶忽然消失，才看到項鍊，且不知道誰戴著它；課本說像是「沒有『那裡』」。<span class=\"tag\">課本 Ch9</span></li>\n<li><b>病人 RM</b>：雙側頂葉廣泛受損；基本視覺（視力 20/15、顏色、對比敏感度）正常，但無法以口頭、伸手或指向定位物體，連聲音也定位不好。<span class=\"tag\">投影片、課本 Ch9</span></li>\n<li><b>病人 GK</b>：投影片顯示，由下而上的組合（形狀、顏色、連在一起）可以做到，表示有些特徵的結合在注意之前就能完成；由上而下的熟悉度判斷（上下判斷），投影片列出「兩個圓 55%」與「眼睛 91%」兩個正確率。實驗的詳細設計，我沒有取得原始研究，無法再說明。<span class=\"tag\">投影片</span></li>\n<li><b>特徵與位置的綁定</b>：課本說，若短暫呈現藍色 H 與紅色 E，一般人也會報告錯誤組合（紅色 H）；巴林症候群病人即使想看多久都可以，仍會出現這種錯誤組合（Friedman-Hill et al., 1995）。投影片的結論：空間表徵不只是要理解物體之間的位置關係，也支持把個別特徵綁在一起的歷程。<span class=\"tag\">投影片、課本 Ch9</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 184\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"290\" height=\"30\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"155.0\" y=\"27\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">視覺失認症 visual agnosia</text><rect x=\"320\" y=\"8\" width=\"290\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"465.0\" y=\"27\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">巴林症候群 Balint's（雙側頂葉）</text><rect x=\"10\" y=\"46\" width=\"290\" height=\"92\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"155.0\" y=\"74\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">知覺性：頂葉、枕葉；形狀知覺差，</text><text x=\"155.0\" y=\"89\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">物體知識完整</text><text x=\"155.0\" y=\"103\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">聯想性：雙側下枕顳葉；能畫能複製，</text><text x=\"155.0\" y=\"118\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">但認不出（含臉盲）</text><rect x=\"320\" y=\"46\" width=\"290\" height=\"92\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"465.0\" y=\"74\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">同時失認症：一次只看到一個物體</text><text x=\"465.0\" y=\"89\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">視覺性運動失調：不能依視覺準確伸手</text><text x=\"465.0\" y=\"103\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">視覺性眼動失用：無法控制眼動</text><text x=\"465.0\" y=\"118\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（視覺忽略不在其中）</text><rect x=\"10\" y=\"146\" width=\"600\" height=\"28\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"310.0\" y=\"164\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">巴林症候群：基本視覺正常，但缺少「在哪裡」的空間表徵，特徵也難以綁在一起</text></svg><figcaption>圖：視覺失認症與巴林症候群（自繪，依 Dis_09、Ward Ch9）</figcaption></figure>"
+   },
+   {
+    "h": "常見混淆",
+    "html": "\n<ul>\n<li><b>隨堂測驗第 4 題</b>：不是巴林症候群症狀的是<b>視覺忽略（visual neglect）</b>。忽略症是單側頂葉；巴林症候群是雙側頂葉。答案由老師公布為準。</li>\n<li>知覺性與聯想性的分辨：<b>能複製但認不出＝聯想性</b>；形狀本身看不好＝知覺性。</li>\n<li>「視覺失認症」是總稱；同時失認症屬於巴林症候群，是空間／注意問題，不是物體意義的問題。</li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "把視覺忽略寫成巴林症候群的症狀。",
+   "把知覺性與聯想性失認的特徵寫反。",
+   "只寫症狀名稱，沒有說明它與空間表徵、特徵綁定的關係。"
+  ],
+  "oral": "投影片把視覺失認症分兩類：知覺性是頂葉與枕葉受損，形狀知覺差、物體知識完整；聯想性是雙側下枕顳葉受損，能畫能複製，卻認不出。巴林症候群是雙側頂葉受損，有同時失認症、視覺性運動失調和視覺性眼動失用。解釋是缺少空間表徵，特徵難以綁在一起。",
+  "sources": [
+   "老師投影片 Dis_09 The attending brain（含隨堂測驗 01–04）——老師原件。 「Visual agnosia」「Balint's syndrome」「Patient RM」「Patient GK」「Spatial attention vs. spatial representation」與隨堂測驗 04。",
+   "Ward《The Student's Guide to Cognitive Neuroscience》第 4 版第 9 章（The attending brain）——課程指定課本。 第 224 頁（巴林症候群、RM）。",
+   "GK 實驗的細節只有投影片的兩個數字，我沒有查原始論文。",
+   "第 9 章還沒上課，沒有逐字稿可核對老師的強調點；優先度是我依投影片與隨堂測驗的推測。上課後請回來核對。標示「我的推論」的是把事實串成因果解釋，來源沒有逐字寫出。"
+  ],
+  "pri": "中高"
+ }
+]

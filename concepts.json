@@ -1030,5 +1030,185 @@
   "tags": [],
   "img": "audstreams",
   "alt": "聽覺的 what 腹側路徑與 where／how 背側路徑"
+ },
+ {
+  "id": "C_W9_C01",
+  "week": 9,
+  "topic": "注意",
+  "term": "注意",
+  "en": "attention",
+  "def": "注意是「選出某些資訊做進一步處理、其他資訊就被丟掉」的歷程，原因是認知資源有限。課本常用「過濾器、瓶頸」或「聚光燈」來比喻。考場句：注意是選擇，不是把所有東西都處理一遍。",
+  "example": "看籃球賽數傳球次數時，你的注意被「傳球」佔住，其他東西就比較不容易被處理。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C02",
+  "week": 9,
+  "topic": "注意",
+  "term": "非注意盲視",
+  "en": "inattentional blindness",
+  "def": "注意力被引到別處，因此沒有察覺到一個視覺刺激（Simons 與 Chabris, 1999）。經典實驗：看人傳籃球並數傳球次數，穿猩猩裝的人走過畫面，約有一半的人沒注意到。考場句：這是注意容量有限，不是視力有問題。",
+  "example": "課本也提到聽覺版本：專心聽另一段對話時，常沒注意到有人重複說「我是猩猩」（Dalton 與 Fraenkel, 2012）。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C03",
+  "week": 9,
+  "topic": "注意",
+  "term": "改變盲視",
+  "en": "change blindness",
+  "def": "兩張圖交替出現（中間有短暫空白）時，看不出某個物體出現或消失（投影片寫 Simons 與 Levin, 1997）。課本說這反映注意容量的限制，不是視覺本身的限制，也不是記憶力不足。通常要拿兩個刺激比對才看得出差異。",
+  "example": "隨堂測驗第 1 題：「是記憶力不足所導致的問題」是不正確的敘述。電影裡服裝不連戲觀眾沒發現，就是這個現象的例子。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C04",
+  "week": 9,
+  "topic": "注意",
+  "term": "定向：明顯與隱性",
+  "en": "orienting (overt and covert)",
+  "def": "定向是注意從一個位置移到另一個位置。明顯定向（overt）是眼睛或頭跟著注意一起動；隱性定向（covert）是眼睛不動，只有注意移動。注意的位置不一定等於眼睛注視的位置。",
+  "example": "眼睛看前方，卻用「眼角餘光」留意左邊，就是隱性定向（covert orienting）。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C05",
+  "week": 9,
+  "topic": "注意",
+  "term": "外源性與內源性定向",
+  "en": "exogenous and endogenous orienting",
+  "def": "外源性：注意由外界刺激引導，由下而上（bottom-up）（例如突然閃一下）。內源性：注意由觀察者的目標引導，由上而下（top-down）（例如依指示去看某處）。大部分情況兩種力量同時作用。",
+  "example": "Posner 作業裡周邊突然變亮的線索是外源性；LaBerge 要受試者注意單字中間的字母或整個單字，是內源性。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C06",
+  "week": 9,
+  "topic": "注意",
+  "term": "空間線索作業",
+  "en": "Posner's spatial cuing task",
+  "def": "受試者注視中央，目標出現在左或右的框裡，目標前先有一個提示（線索）。線索位置與目標相同是有效試次（valid），不同是無效試次（invalid），沒有方向資訊是中性。無效時要多一個「脫離」（disengage）再移動、投入，所以反應較慢。課本版本：線索領先目標約 150 毫秒內，線索位置的偵測較快（促進）。",
+  "example": "隨堂測驗第 3 題：探討空間位置注意力的作業是 Cuing task，不是 Stroop、注意瞬脫（attentional blink）或改變偵測。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C07",
+  "week": 9,
+  "topic": "注意",
+  "term": "返回抑制",
+  "en": "inhibition of return",
+  "def": "注意離開一個位置、之後再回到原來位置時，反應時間（reaction time）變慢。在 Posner 作業中，線索與目標間隔拉長（課本：約超過 300 毫秒），線索位置反而比其他位置慢。課本解釋：注意先移到線索處，目標沒出現就脫離，要回去有處理代價。",
+  "example": "短間隔：有線索的位置較快（促進）；長間隔：同一個位置較慢（抑制）。兩個方向要分清楚。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C08",
+  "week": 9,
+  "topic": "注意",
+  "term": "空間、物件與時間的注意",
+  "en": "space-based, object-based and temporal attention",
+  "def": "注意可以依空間位置、物件或時間來引導。空間：Posner 空間線索作業。物件：兩個物體重疊在同一位置，仍可選擇只注意其中一個（臉或房子）。時間：注意瞬脫（attentional blink）。考場句：注意不只是「看哪裡」。",
+  "example": "投影片的分類表：Space-based = spatial cuing task；Object-based = 注意重疊的兩個物體之一；Temporal-based = attentional blink。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C09",
+  "week": 9,
+  "topic": "注意",
+  "term": "物件為基礎的注意",
+  "en": "object-based attention",
+  "def": "兩個物體透明地疊在同一位置（例如臉與房子），受試者仍可選擇注意其中一個。fMRI：注意臉時梭狀回臉區（FFA）反應較強，注意房子時海馬旁回位置區（PPA）反應較強（O’Craven 等人, 1999）。",
+  "example": "兩個東西在完全相同的空間位置，所以不能用「位置」解釋，只能用「物件」解釋。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C10",
+  "week": 9,
+  "topic": "注意",
+  "term": "注意瞬脫",
+  "en": "attentional blink",
+  "def": "刺激快速連續出現時，第一個目標（T1）出現後不久，第二個目標（T2）就報告不出來（課本：約隔 2 至 3 個項目，每秒約 10 個）。課本指出這和注意有關，受任務調節：要求注意 T1 時才出現，被要求忽略 T1 則沒有。",
+  "example": "隨堂測驗第 3 題的選項之一，但它是「時間」上的注意，不是空間位置。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C11",
+  "week": 9,
+  "topic": "注意",
+  "term": "忽略症",
+  "en": "neglect",
+  "def": "病人對損傷對側空間的刺激不注意，通常是右側頂葉（parietal lobe）（投影片：右側下頂葉（inferior parietal cortex）的角迴（angular gyrus））受損，因此忽略左邊。常見檢查：複製圖形、憑記憶畫圖、線段二等分（中點偏右）、劃消作業。投影片分兩種：空間忽略（右角迴）與物件忽略（右上顳回）。考場句：忽略症（neglect）是注意的問題，不是低階知覺的問題。",
+  "example": "隨堂測驗第 2 題：「患者會無法處理整體的訊息」是不正確的；被忽略的資訊其實有被默默處理，且可以靠外界引導克服。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C12",
+  "week": 9,
+  "topic": "注意",
+  "term": "消失現象",
+  "en": "extinction",
+  "def": "忽略症（neglect）的一種表現：單獨出現一個刺激時看得到；兩個刺激同時出現時，左邊那個消失，只報告右邊的。可以跨感官（例如右手被碰與左邊有視覺刺激同時出現）。這支持「忽略症是注意競爭的問題」。",
+  "example": "課本：Vuilleumier 等人讓病人看兩張圖，左邊那張報告不出來、也說不記得，但之後辨認殘缺圖時成績較好，表示它被無意識處理。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C13",
+  "week": 9,
+  "topic": "注意",
+  "term": "忽略症與盲視的比較",
+  "en": "neglect vs. blindsight",
+  "def": "忽略症（neglect）：缺乏覺察不限於視覺；整個物體可能被默默處理；把注意導向被忽略區域常可克服；病人常不會自動把眼睛移向被忽略區；被忽略的是以身體為中心的空間。盲視（blindsight）：缺乏覺察只限於視覺；默默處理只限於基本視覺辨別；注意導向「盲區」無法克服；病人會把眼睛移向盲區；盲區以視網膜（retina）為中心。",
+  "example": "這是投影片與課本共同的比較表，很適合出成「哪一個敘述屬於忽略症（neglect）」。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C14",
+  "week": 9,
+  "topic": "注意",
+  "term": "視覺失認症",
+  "en": "visual agnosia",
+  "def": "投影片分兩類。知覺性失認（apperceptive）：頂葉（parietal lobe）、枕葉（occipital lobe）受損，物體的形狀知覺受損，但物體知識完整。聯想性失認（associative）：雙側下枕顳葉（temporal lobe）受損，能畫、能複製物體，但對自己畫的東西無法認出；臉認不出稱為臉盲（prosopagnosia）。",
+  "example": "分辨方法：複製得出來卻認不出來＝聯想性；連形狀都看不好＝知覺性。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C15",
+  "week": 9,
+  "topic": "注意",
+  "term": "巴林症候群",
+  "en": "Balint's syndrome",
+  "def": "雙側頂葉（parietal lobe）受損，對空間處理有嚴重困難。三個症狀：同時失認症（simultanagnosia）（一次只看到一個物體）、視覺性運動失調（optic ataxia，無法依視覺準確伸手拿物）、視覺性眼動失用（optic apraxia，無法控制眼睛固定／移動）。視覺忽略（visual neglect）不是它的症狀。",
+  "example": "隨堂測驗第 4 題：不是巴林症候群（Balint's syndrome）症狀的是視覺忽略。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C16",
+  "week": 9,
+  "topic": "注意",
+  "term": "同時失認症",
+  "en": "simultanagnosia",
+  "def": "無法同時知覺一個以上的物體，病人可能先看到窗戶，窗戶消失後才看到項鍊。投影片的解釋：這是知覺競爭的極端形式，來自空間選擇容量有限。巴林症候群（Balint's syndrome）病人即使看多久，仍會出現錯誤組合（illusory conjunction）。",
+  "example": "病人 RM：基本視覺（視力、顏色）正常，但無法以口頭、伸手或指向來定位物體。病人 GK：由下而上（bottom-up）的組合（形狀、顏色相連）可以，由上而下（top-down）的熟悉度判斷受指示影響。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C17",
+  "week": 9,
+  "topic": "注意",
+  "term": "頂葉與跨感官整合",
+  "en": "parietal lobe and cross-modal integration",
+  "def": "頂葉（parietal lobe）整合視覺、體感、聽覺與姿勢訊號，共享一套注意／空間資源。例：視覺目標分心時，同一位置的聽覺干擾會影響表現；腹語術效應是視覺位置「抓住」聲音位置。課本補充：LIP 區有神經元（neuron）把聲音位置轉換到眼睛為中心的座標（remapping）。",
+  "example": "忽略症（neglect）可以跨感官出現，與頂葉（parietal lobe）具有多感官特性一致。",
+  "tags": []
+ },
+ {
+  "id": "C_W9_C18",
+  "week": 9,
+  "topic": "注意",
+  "term": "兩條額頂注意網路",
+  "en": "dorso-dorsal and ventro-dorsal attention networks",
+  "def": "Corbetta 與 Shulman（2002）：背側流可分兩條。背背側（LIP、額葉（frontal lobe）眼動區 FEF）負責在顯著圖（salience map）裡定向；腹背側（顳頂交界 TPJ、腹側額葉皮質（cortex） VFC）像「斷路器」，中斷目前的處理，把注意轉走（脫離），較偏右側。投影片的 Posner 圖把這兩組區域對應到「移動」與「投入／脫離」。",
+  "example": "課本：右側顳頂區在偵測不常出現、出現在未受注意位置的目標時活動增強。細節出自課本，投影片只放圖與縮寫，老師是否會細講上完課後再核對。",
+  "tags": []
  }
 ]

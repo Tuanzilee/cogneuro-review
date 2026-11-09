@@ -393,7 +393,7 @@ function renderEssayList() {
     <div class="card"><h2 style="margin-top:0">申論題練習</h2>
       <p style="margin:0 0 8px">考試是申論題，要<b>自己從零寫出來</b>：先說清楚「是什麼」，再評估「能告訴我們什麼、有什麼問題」。</p>
       <ol class="pts"><li>先在<b>紙上手寫</b>（約 25 分鐘，不看資料）</li><li>對照骨架檢核表，有寫到的打勾</li><li>看詳答與音檔，把沒寫到的點在紙上補寫一次</li><li>自評，之後再回來重寫</li></ol>
-      <div class="muted" style="margin-top:10px">題目與優先度依你整理的《期中考考點》。已「可以」 ${done} / ${shown.length}</div></div>
+      <div class="muted" style="margin-top:10px">${(prefs.escope||'all')==='post' ? '期中後題目依投影片與課本整理，優先度是推測，上課後會校正。' : '期中前題目與優先度依你整理的《期中考考點》。'}已「可以」 ${done} / ${shown.length}</div></div>
     <div class="chips" id="escope" style="margin-top:12px">${ESCOPES.map(([k, l]) => `<button class="chip ${(prefs.escope || 'all') === k ? 'on' : ''}" data-es="${k}">${l}</button>`).join('')}</div>
     ${shown.length ? '' : '<div class="card muted">這個範圍還沒有申論題。新章節的詳答做好後會出現在這裡。</div>'}
     ${groups.map(([k, label]) => { const list = shown.filter(e => e.pri === k); return list.length ? `<div class="muted" style="margin:16px 0 4px">${label}</div>` + list.map(e =>

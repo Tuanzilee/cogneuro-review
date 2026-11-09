@@ -1300,5 +1300,145 @@
   "answer": 2,
   "why": "單細胞記錄（single-cell recording）是細胞層次、時間解析度（temporal resolution）很好，但通常是侵入性的動物研究；人類研究則多用 fMRI 與 ERP 等非侵入方法來佐證。",
   "concept": "C_W7_C13"
+ },
+ {
+  "id": "C_W9_Q01",
+  "week": 9,
+  "q": "以下關於改變盲視（change blindness）的敘述，何者比較「不正確」？",
+  "options": [
+   "「觀眾很難注意到戲劇電影中服裝不連戲」可以反映此現象",
+   "是記憶力不足所導致的問題",
+   "通常至少有兩個刺激做比對，卻未能發現兩個刺激中的差異",
+   "是因為注意力關注在較重要的事物上所導致"
+  ],
+  "answer": 1,
+  "why": "改變盲視（change blindness）反映的是注意容量的限制，不是記憶力不足（投影片隨堂測驗第 1 題；答案待老師公布）。",
+  "concept": "C_W9_C03"
+ },
+ {
+  "id": "C_W9_Q02",
+  "week": 9,
+  "q": "有關忽略症（neglect），下列何者敘述比較「不正確」？",
+  "options": [
+   "患者會無法處理整體的訊息",
+   "患者的症狀可以透過外界訊息引導來克服",
+   "與大腦頂葉（parietal lobe）受傷有關",
+   "患者會不注意特定空間的訊息"
+  ],
+  "answer": 0,
+  "why": "被忽略的物體其實被默默處理（可到物體辨識層次），且常可靠外界提示克服。所以「無法處理整體訊息」不正確（隨堂測驗第 2 題；答案待老師公布）。",
+  "concept": "C_W9_C11"
+ },
+ {
+  "id": "C_W9_Q03",
+  "week": 9,
+  "q": "下列哪一個作業，比較是探討空間位置的注意力？",
+  "options": [
+   "Attentional blink task（注意瞬脫（attentional blink）作業）",
+   "Change detection task（改變偵測作業）",
+   "Cuing task（空間線索作業）",
+   "Stroop task"
+  ],
+  "answer": 2,
+  "why": "空間線索作業直接操弄線索與目標的位置；注意瞬脫（attentional blink）是時間上的注意（隨堂測驗第 3 題；答案待老師公布）。",
+  "concept": "C_W9_C06"
+ },
+ {
+  "id": "C_W9_Q04",
+  "week": 9,
+  "q": "下列哪一個症狀比較「不是」巴林症候群（Balint's syndrome）的症狀？",
+  "options": [
+   "視覺忽略某半側訊息",
+   "無法控制眼部的運動（optic apraxia）",
+   "無法同時知覺在相同地方的物品（simultanagnosia）",
+   "無法準確地拿取物品（optic ataxia）"
+  ],
+  "answer": 0,
+  "why": "巴林症候群（Balint's syndrome）是雙側頂葉（parietal lobe）受損，三個症狀是同時失認症（simultanagnosia）、視覺性運動失調、視覺性眼動失用。視覺忽略是另一個症候群（隨堂測驗第 4 題；答案待老師公布）。",
+  "concept": "C_W9_C15"
+ },
+ {
+  "id": "C_W9_Q05",
+  "week": 9,
+  "q": "在 Posner 空間線索作業中，線索與目標相隔夠久（課本：約超過 300 毫秒）時，目標出現在「線索同一位置」的反應變慢。這個現象叫做什麼？",
+  "options": [
+   "消失現象（extinction）",
+   "返回抑制（inhibition of return）",
+   "改變盲視（change blindness）",
+   "注意瞬脫（attentional blink）"
+  ],
+  "answer": 1,
+  "why": "返回抑制（inhibition of return）：注意先移到線索處，目標沒出現就脫離，再回到同一位置有處理代價。短間隔（約 150 毫秒內）則是促進。",
+  "concept": "C_W9_C07"
+ },
+ {
+  "id": "C_W9_Q06",
+  "week": 9,
+  "q": "看籃球賽數傳球次數時，沒有注意到穿猩猩裝的人走過畫面。這比較屬於哪個現象？",
+  "options": [
+   "注意瞬脫（attentional blink）",
+   "返回抑制（inhibition of return）",
+   "改變盲視（change blindness）",
+   "非注意盲視（inattentional blindness）"
+  ],
+  "answer": 3,
+  "why": "注意力被導向數傳球，而沒有察覺畫面中的猩猩，是非注意盲視（Simons 與 Chabris, 1999，約一半的人沒注意到）。",
+  "concept": "C_W9_C02"
+ },
+ {
+  "id": "C_W9_Q07",
+  "week": 9,
+  "q": "病人看到物體並且能把它畫出來，但看了自己畫的圖卻認不出是什麼。比較符合哪一種失認症？",
+  "options": [
+   "知覺性失認（apperceptive）",
+   "同時失認症（simultanagnosia）",
+   "忽略症（neglect）",
+   "聯想性失認（associative）"
+  ],
+  "answer": 3,
+  "why": "能複製、能畫，但無法認出，是聯想性失認（associative agnosia）（雙側下枕顳葉（temporal lobe））；知覺性失認（apperceptive agnosia）是形狀知覺本身受損（投影片）。",
+  "concept": "C_W9_C14"
+ },
+ {
+  "id": "C_W9_Q08",
+  "week": 9,
+  "q": "下列哪一個敘述比較符合「忽略症（neglect）」而不是「盲視（blindsight）」？",
+  "options": [
+   "默默處理只限於基本視覺辨別",
+   "把注意導向被忽略的區域，常可以克服症狀",
+   "病人會把眼睛移向「盲區」",
+   "缺乏覺察只限於視覺"
+  ],
+  "answer": 1,
+  "why": "忽略症（neglect）可以用注意導向克服，而盲視（blindsight）的盲區無法靠導向克服；忽略症不限於視覺，整個物體可能被默默處理。",
+  "concept": "C_W9_C13"
+ },
+ {
+  "id": "C_W9_Q09",
+  "week": 9,
+  "q": "兩個物體（臉與房子）重疊在同一位置，受試者可選擇只注意其中一個，且注意臉時梭狀回臉區活動較強。這個現象主要支持哪一類注意？",
+  "options": [
+   "返回抑制（inhibition of return）",
+   "外源性注意",
+   "空間為基礎的注意",
+   "物件為基礎的注意"
+  ],
+  "answer": 3,
+  "why": "兩個物體位置完全相同，不能用空間位置解釋，所以支持物件為基礎的注意（O’Craven 等人, 1999）。",
+  "concept": "C_W9_C09"
+ },
+ {
+  "id": "C_W9_Q10",
+  "week": 9,
+  "q": "快速連續呈現字母，受試者在報告第一個目標（T1）後，很難報告隨後不久出現的第二個目標（T2）。這個現象叫什麼？",
+  "options": [
+   "改變盲視（change blindness）",
+   "消失現象（extinction）",
+   "同時失認症（simultanagnosia）",
+   "注意瞬脫（attentional blink）"
+  ],
+  "answer": 3,
+  "why": "這是注意在時間上的限制：T1 佔用注意資源，T2 就像「眨眼」錯過了。",
+  "concept": "C_W9_C10"
  }
 ]

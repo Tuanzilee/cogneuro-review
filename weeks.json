@@ -255,5 +255,47 @@
    "複習方式：先用 App 的「期中範圍」刷卡與題目，再用自己的話口述每個高優先題"
   ],
   "concepts": []
+ },
+ {
+  "week": 9,
+  "date": "2026-11-12",
+  "title": "注意：選擇、定向與忽略症",
+  "summary": "期中考後第一個新章節。注意是「選擇資訊做進一步處理」的歷程。這週從非注意盲視（inattentional blindness）與改變盲視（change blindness）進入，接著看注意怎麼移動（定向、Posner 作業、返回抑制（inhibition of return））、注意的三種引導方式（空間、物件、時間），最後看頂葉（parietal lobe）受損的病人：忽略症（neglect）、視覺失認症（visual agnosia）與巴林症候群（Balint's syndrome）。這週的內容來自講義與課本，還沒有逐字稿。",
+  "points": [
+   "注意：選出一些資訊深入處理，因為認知資源有限",
+   "非注意盲視（inattentional blindness）：注意在別處就看不到（猩猩實驗）；改變盲視（change blindness）：看不出兩張圖的差異",
+   "定向：明顯（眼動）與隱性；外源性（外界）與內源性（目標）",
+   "Posner 作業：有效線索較快；返回抑制（inhibition of return）：長間隔回到原位置較慢",
+   "空間、物件、時間三種注意：線索作業、臉與房子、注意瞬脫（attentional blink）",
+   "忽略症（neglect）：右頂葉（parietal lobe）受損、忽略左邊；是注意不是知覺；可跨感官；有消失現象（extinction）",
+   "忽略症（neglect）與盲視（blindsight）不同：忽略症可靠注意導向克服",
+   "視覺失認症（visual agnosia）（知覺性、聯想性）與巴林症候群（Balint's syndrome）（同時失認症（simultanagnosia）、視覺性運動失調、視覺性眼動失用）"
+  ],
+  "todo": [
+   "這週是期中考後的新內容，在 App 選「期中後新內容」練習",
+   "11/17 有第 9 章討論，11/19 有複習測驗 3，先用申論題手寫練習",
+   "老師還沒上課，隨堂測驗答案待公布；上完課後回來核對老師強調的重點",
+   "課本的注意理論（特徵整合、偏向競爭、運動前理論）投影片沒有出現，先列為較低優先"
+  ],
+  "concepts": [
+   "C_W9_C01",
+   "C_W9_C02",
+   "C_W9_C03",
+   "C_W9_C04",
+   "C_W9_C05",
+   "C_W9_C06",
+   "C_W9_C07",
+   "C_W9_C08",
+   "C_W9_C09",
+   "C_W9_C10",
+   "C_W9_C11",
+   "C_W9_C12",
+   "C_W9_C13",
+   "C_W9_C14",
+   "C_W9_C15",
+   "C_W9_C16",
+   "C_W9_C17",
+   "C_W9_C18"
+  ]
  }
 ]

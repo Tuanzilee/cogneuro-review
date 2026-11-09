@@ -412,8 +412,9 @@ GLOSSARY = {
 }
 import data_w5_w6 as X
 import data_w7 as X7
+import data_w9 as X9
 import data_essays as XE
-GLOSSARY.update(X.GLOSS); GLOSSARY.update(X7.GLOSS)
+GLOSSARY.update(X.GLOSS); GLOSSARY.update(X7.GLOSS); GLOSSARY.update(X9.GLOSS)
 _GRE = re.compile('|'.join(map(re.escape, sorted(GLOSSARY, key=len, reverse=True))))
 
 def ann(text):
@@ -430,6 +431,7 @@ def ann(text):
 
 CARDS += X.CARDS; QUIZ += X.QUIZ; WEEKS += X.WEEKS; IMG.update(X.IMG); ALT.update(X.ALT)
 CARDS += X7.CARDS; QUIZ += X7.QUIZ; WEEKS += X7.WEEKS; IMG.update(X7.IMG); ALT.update(X7.ALT)
+CARDS += X9.CARDS; QUIZ += X9.QUIZ; WEEKS += X9.WEEKS; IMG.update(X9.IMG); ALT.update(X9.ALT)
 
 def build():
     cards, ids = [], {}
@@ -461,6 +463,13 @@ def build():
                        'concepts': [ids[k] for k in e['concepts']]})
     # 詳答（2026-11 從「期中申論詳解」併入）：tools/essay_detail.json 由詳解專案的 build/export_app.py 產生
     detail = json.load(open('tools/essay_detail.json', encoding='utf8'))
+    EC9 = {'E_9_1': ['attention', 'inattentional blindness', 'change blindness'],
+           'E_9_2': ['orienting (overt and covert)', 'exogenous and endogenous orienting', "Posner's spatial cuing task", 'inhibition of return', 'dorso-dorsal and ventro-dorsal attention networks'],
+           'E_9_3': ['space-based, object-based and temporal attention', 'object-based attention', 'attentional blink'],
+           'E_9_4': ['neglect', 'extinction', 'parietal lobe and cross-modal integration'],
+           'E_9_5': ['neglect vs. blindsight', 'neglect'],
+           'E_9_6': ['visual agnosia', "Balint's syndrome", 'simultanagnosia']}
+    detail += json.load(open('tools/essay_detail_ch9.json', encoding='utf8'))
     byid = {e['id']: e for e in essays}
     for d in detail:
         det = {k: d[k] for k in ('title', 'signal', 'answer1', 'skeleton', 'sections', 'traps', 'oral', 'sources')}
@@ -469,7 +478,7 @@ def build():
             byid[d['id']]['detail'] = det
         else:
             essays.append({'id': d['id'], 'no': d['no'], 'ch': d['ch'], 'pri': d['pri'], 'q': d['title'],
-                           'terms': [], 'pitfall': d['traps'][0] if d['traps'] else '', 'concepts': [], 'detail': det})
+                           'terms': [], 'pitfall': d['traps'][0] if d['traps'] else '', 'concepts': [ids[k] for k in EC9.get(d['id'], [])], 'detail': det})
     json.dump(essays, open('essays.json', 'w'), ensure_ascii=False, indent=1)
     for n, d in (('concepts', cards), ('quiz', quiz), ('weeks', weeks)):
         json.dump(d, open(f'{n}.json', 'w'), ensure_ascii=False, indent=1)
