@@ -31,10 +31,16 @@ if len(set(eids)) != len(eids): errors.append('申論題 id 重複')
 for e in essays:
     for cid in e['concepts']:
         if cid not in cids: errors.append(f"{e['id']}：概念 {cid} 不存在")
-    for k in ('q', 'a', 'b', 'terms', 'pitfall'):
-        if not e.get(k): errors.append(f"{e['id']}：缺 {k}")
-    for part in ('a', 'b'):
-        if not e[part]['prompts'] or not e[part]['points']: errors.append(f"{e['id']}：{part} 缺骨架或要點")
+    d = e.get('detail')
+    if d:
+        for k in ('title', 'answer1', 'skeleton', 'sections', 'traps', 'oral', 'sources'):
+            if not d.get(k): errors.append(f"{e['id']}：詳答缺 {k}")
+        if not os.path.exists(d['audio']): errors.append(f"{e['id']}：缺音檔 {d['audio']}")
+    else:
+        for k in ('q', 'a', 'b', 'terms', 'pitfall'):
+            if not e.get(k): errors.append(f"{e['id']}：缺 {k}")
+        for part in ('a', 'b'):
+            if not e[part]['prompts'] or not e[part]['points']: errors.append(f"{e['id']}：{part} 缺骨架或要點")
 print(f'申論題 {len(essays)}')
 print(f'概念卡 {len(concepts)}、情境題 {len(quiz)}、週次 {len(weeks)}')
 print('\n'.join(errors) if errors else '✅ 全部通過')

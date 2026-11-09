@@ -1,0 +1,1194 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{
+  --bg:#f5f2ea;--panel:#fffdf8;--ink:#25221c;--mute:#6d675a;--line:#e1dbcc;--accent:#c2410c;--brain:#f0e7d6;--brain2:#b98578;--bA:#f3d8cf;--bB:#cf9d90;--bS:#7a4a40;--stem:#d9b3a8;--cereb:#c9948a;
+  --vis:#2f6fe0;--aud:#e08a0b;--mot:#0f9d76;--cog:#7c4dd6;--lim:#d6453d;--sub:#64748b;--lang:#d6338a;--par:#0e9aa7;--ven:#16a34a;--dor:#dc2626;
+  --fore:#ef6c5b;--midb:#f2a93b;--hind:#4aa3df;--shadow:0 1px 2px rgba(60,50,30,.08),0 6px 20px rgba(60,50,30,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15130f;--panel:#1e1b16;--ink:#ece6d8;--mute:#a39b88;--line:#34302a;--accent:#fb923c;--brain:#2d2820;--brain2:#7a5a52;--bA:#6f524c;--bB:#3d2b28;--bS:#e8c9bf;--stem:#4f3a35;--cereb:#563f3a;
+  --vis:#6b9bff;--aud:#f5ad3d;--mot:#3ccb9f;--cog:#a98bf0;--lim:#f26b63;--sub:#94a3b8;--lang:#f06bb0;--par:#3cc4d1;--ven:#4ade80;--dor:#f87171;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.3);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15130f;--panel:#1e1b16;--ink:#ece6d8;--mute:#a39b88;--line:#34302a;--accent:#fb923c;--brain:#2d2820;--brain2:#7a5a52;--bA:#6f524c;--bB:#3d2b28;--bS:#e8c9bf;--stem:#4f3a35;--cereb:#563f3a;
+  --vis:#6b9bff;--aud:#f5ad3d;--mot:#3ccb9f;--cog:#a98bf0;--lim:#f26b63;--sub:#94a3b8;--lang:#f06bb0;--par:#3cc4d1;--ven:#4ade80;--dor:#f87171;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.3);color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6}
+button{font:inherit;color:inherit;cursor:pointer}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--panel);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px))}
+header h1{font-size:17px;margin:0;letter-spacing:.02em;white-space:nowrap}
+header h1 small{font-weight:400;color:var(--mute);margin-left:8px;font-size:12px}
+.tabs{display:flex;gap:4px;margin-left:auto}
+.tab{border:1px solid var(--line);background:transparent;padding:6px 14px;border-radius:999px;font-size:13px}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+#menuBtn{display:none;border:1px solid var(--line);background:transparent;border-radius:8px;padding:4px 10px}
+#app{display:grid;grid-template-columns:236px 1fr;min-height:calc(100vh - 53px)}
+nav{border-right:1px solid var(--line);padding:14px 12px 40px;position:sticky;top:calc(53px + env(safe-area-inset-top,0px));height:calc(100vh - 53px);overflow:auto;background:var(--panel)}
+nav input{width:100%;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:13px;margin-bottom:10px}
+nav h3{font-size:11px;letter-spacing:.12em;color:var(--mute);margin:16px 6px 6px;font-weight:600}
+nav a{display:flex;gap:8px;padding:6px 8px;border-radius:8px;color:var(--ink);text-decoration:none;font-size:13px;line-height:1.4;cursor:pointer}
+nav a:hover{background:var(--bg)}
+nav a.on{background:var(--ink);color:var(--bg)}
+nav a b{min-width:22px;font-variant-numeric:tabular-nums;color:var(--accent);font-weight:700}
+nav a.on b{color:var(--bg);opacity:.8}
+main{padding:20px max(16px,env(safe-area-inset-right,0px)) 60px max(16px,env(safe-area-inset-left,0px));min-width:0}
+.hidden{display:none!important}
+.qhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin-bottom:14px}
+.qhead h2{margin:0;font-size:22px}
+.qhead .num{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.08em}
+.qhead .orig{font-size:12px;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+.qbody{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(280px,1fr);gap:18px;align-items:start}
+.stagewrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:10px;position:sticky;top:68px}
+svg#stage,svg.fig{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--mute);padding:6px 6px 2px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.legend i.ln{height:3px;width:16px;border-radius:2px;vertical-align:3px}
+.ctrl{display:flex;align-items:center;gap:8px;margin:0 0 12px}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:6px 12px;font-size:13px}
+.btn:hover{border-color:var(--ink)}
+.btn.pri{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.prog{font-size:12px;color:var(--mute);margin-left:auto;font-variant-numeric:tabular-nums}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.pill{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--panel);font-size:13px;font-weight:600}
+.pill.txt{border-style:dashed;border-radius:10px;width:auto;padding:0 10px}
+.pill.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pill.done{border-color:var(--accent);color:var(--accent)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);margin-bottom:12px}
+.card h4{margin:0 0 6px;font-size:16px}
+.card p{margin:0;font-size:14.5px}
+.card .lbl{font-size:11px;letter-spacing:.1em;color:var(--mute);font-weight:700;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:12.5px;background:var(--bg);display:inline-flex;gap:6px;align-items:center}
+.chip .dot{width:8px;height:8px;border-radius:50%}
+button.chip:hover{border-color:var(--ink)}
+.pathl{font-size:13px;margin:4px 0 0;display:flex;gap:8px;align-items:center}
+.pathl i{width:18px;height:3px;border-radius:2px;flex:none}
+.reader{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:20px 24px}
+.reader h3{margin:0 0 4px;font-size:18px}.reader .sub{color:var(--mute);font-size:13px;margin-bottom:14px}
+.reader p{font-size:15.5px;line-height:1.95;margin:0 0 .9em;max-width:42em}
+.reader .ans{background:var(--ink);color:var(--bg);border-radius:12px;padding:12px 16px;font-size:15.5px;line-height:1.8;margin-bottom:14px}
+.reader ol{margin:0;padding-left:1.4em}.reader li{font-size:15px;line-height:1.85;margin-bottom:.55em;max-width:42em}
+.hidden{display:none!important}
+.one{background:var(--ink);color:var(--bg);border-radius:14px;padding:14px 16px;font-size:14px}
+.one .lbl{opacity:.65;font-size:11px;letter-spacing:.1em;font-weight:700;margin-bottom:4px}
+#rinfo{border-left:3px solid var(--accent)}
+#rinfo .rt,#aInfo .rt{font-weight:700;font-size:15px}
+#rinfo .rt small,#aInfo .rt small{color:var(--mute);font-weight:400;margin-left:6px}
+#rinfo dl,#aInfo dl{margin:6px 0 0;display:grid;grid-template-columns:48px 1fr;gap:3px 8px;font-size:13.5px}
+#rinfo dt,#aInfo dt{color:var(--mute)}#rinfo dd,#aInfo dd{margin:0}
+/* svg styling */
+.outline{fill:url(#bg1);stroke:var(--brain2);stroke-width:2;filter:url(#sh)}
+.sulc{fill:none;stroke:var(--bS);stroke-linecap:round}
+.lobe{opacity:.07}.lobe:hover{opacity:.22}
+.lobelbl{font-size:16px;fill:var(--mute);opacity:.7;font-weight:600;letter-spacing:.2em;pointer-events:none}
+.reg{cursor:pointer;transition:opacity .25s}
+.reg:hover{filter:brightness(1.1) drop-shadow(0 0 4px rgba(0,0,0,.35))}
+.rl{font-size:15px;font-weight:700;paint-order:stroke;stroke:var(--panel);stroke-width:3.5px;stroke-linejoin:round;fill:var(--ink);pointer-events:none;text-anchor:middle}
+.pbase{fill:none;stroke-width:5;opacity:.22;stroke-linecap:round}
+.pflow{fill:none;stroke-width:3;stroke-linecap:round;stroke-dasharray:7 9;animation:flow 1s linear infinite}
+.pblocked{stroke-dasharray:3 7!important;animation:none!important;opacity:.5}
+@keyframes flow{to{stroke-dashoffset:-32}}
+.plab{font-size:14px;font-weight:700;paint-order:stroke;stroke:var(--panel);stroke-width:3.5px;pointer-events:none}
+.note rect{fill:var(--panel);stroke:var(--ink);stroke-width:1;opacity:.96}
+.note text{font-size:14px;fill:var(--ink)}
+.lead{stroke:var(--ink);stroke-width:1.2}.leadc{fill:var(--ink)}
+.lesion{fill:url(#hatch);stroke:var(--lim);stroke-width:2;stroke-dasharray:5 3}
+.coil circle{fill:none;stroke:var(--ink);stroke-width:4}.coil line{stroke:var(--ink);stroke-width:4;stroke-linecap:round}
+.field{fill:none;stroke:var(--mot);stroke-width:2;stroke-dasharray:3 3}
+.sensor{fill:var(--panel);stroke:var(--ink);stroke-width:1.8}
+.dimmed{opacity:.28}
+.fnode rect{transition:all .25s}.fnode text{pointer-events:none}
+.ft{font-size:15px;font-weight:700;fill:var(--ink);text-anchor:middle}
+.fs{font-size:12.5px;fill:var(--mute);text-anchor:middle}
+.fe{fill:none;stroke:var(--mute);stroke-width:1.6}
+.fel{font-size:11px;fill:var(--mute);text-anchor:middle;paint-order:stroke;stroke:var(--panel);stroke-width:3px}
+.ax{stroke:var(--mute);stroke-width:1.3;fill:none}
+.axt{font-size:13px;fill:var(--mute)}
+.ct{font-size:14px;fill:var(--ink)}
+.fadein{animation:fi .45s ease both}@keyframes fi{from{opacity:0}to{opacity:1}}
+/* atlas / lines */
+.atlas{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:18px;align-items:start}
+.gf{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.gf button{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:3px 12px;font-size:12.5px}
+.gf button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.rlist{max-height:300px;overflow:auto;display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.lines .card h4{display:flex;gap:8px;align-items:center}
+.lines .card h4 b{background:var(--accent);color:#fff;border-radius:8px;padding:0 8px;font-size:13px}
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--bg);padding:3px 9px;border-radius:6px;font-size:12px;display:none}
+@media (max-width:980px){
+  #app{grid-template-columns:1fr}
+  nav{position:fixed;left:0;top:53px;width:290px;z-index:30;transform:translateX(-102%);transition:transform .25s;box-shadow:var(--shadow)}
+  nav.open{transform:none}
+  #menuBtn{display:block}
+  .qbody,.atlas{grid-template-columns:1fr}
+  .stagewrap{position:static}
+  main{padding-top:14px;padding-bottom:50px}
+  header h1 small{display:none}
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--panel)}
+.qaudio{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:4px 0 14px;padding:10px 12px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.qaudio .lbl{font-size:12px;color:var(--mute)}
+.qaudio audio{flex:1 1 220px;min-width:0;height:36px}
+.qaudio .rates{display:flex;gap:4px}
+.qaudio .rates button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:3px 10px;font-size:12px}
+.qaudio .rates button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+</style>
+
+<header>
+  <a href="../" style="font-size:13px;color:inherit;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;white-space:nowrap">← 複習 App</a>
+  <button id="menuBtn" aria-label="題目選單">☰ 題目</button>
+  <h1>認知神經科學 30 題圖解<small>結構在哪裡・訊號怎麼走</small></h1>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="q" aria-selected="true">30 題圖解</button>
+    <button class="tab" role="tab" data-tab="atlas" aria-selected="false">結構圖鑑</button>
+    <button class="tab" role="tab" data-tab="lines" aria-selected="false">五條主線</button>
+  </div>
+</header>
+<div id="app">
+  <nav id="nav"></nav>
+  <main>
+    <section id="v-q">
+      <div class="qhead"><span class="num" id="qnum"></span><h2 id="qtitle"></h2><span class="orig" id="qorig"></span></div>
+      <div id="qaudio" class="qaudio hidden"><span class="lbl">題目講解音檔</span><audio id="aud" controls preload="none"></audio><div class="rates"><button data-rate="1" class="on">1×</button><button data-rate="1.25">1.25×</button><button data-rate="1.5">1.5×</button></div></div>
+      <div class="qbody">
+        <div>
+          <div class="reader hidden" id="reader"></div>
+          <div class="stagewrap" id="stagewrap">
+            <svg id="stage" viewBox="0 0 800 520" role="img" aria-label="互動圖解"></svg>
+            <div class="legend" id="legend"></div>
+          </div>
+        </div>
+        <div>
+          <div class="ctrl">
+            <button class="btn" id="prev">← 上一步</button>
+            <button class="btn pri" id="next">下一步 →</button>
+            <button class="btn" id="play">▶ 自動播放</button>
+            <span class="prog" id="prog"></span>
+          </div>
+          <div class="pills" id="pills"></div>
+          <div class="card" id="stepcard"></div>
+          <div class="card" id="locate"></div>
+          <div class="card hidden" id="rinfo"></div>
+          <div class="one" id="one"></div>
+        </div>
+      </div>
+    </section>
+    <section id="v-atlas" class="hidden">
+      <div class="qhead"><span class="num">ATLAS</span><h2>結構圖鑑：點任何結構看位置、功能、出現在哪幾題</h2></div>
+      <div class="atlas">
+        <div class="stagewrap"><svg id="atlasSvg" viewBox="0 0 800 520"></svg>
+          <div class="legend"><span>虛線外框＝深層結構（透明腦示意）</span><span>左＝前（額葉端）　右＝後（枕葉端）</span></div></div>
+        <div>
+          <div class="gf" id="gf"></div>
+          <div class="card" id="aInfo"><div class="lbl">提示</div><p>點圖上的結構，或下方清單。篩選群組後會顯示該群組標籤與傳導路徑。</p></div>
+          <div class="rlist" id="rlist"></div>
+        </div>
+      </div>
+    </section>
+    <section id="v-lines" class="hidden">
+      <div class="qhead"><span class="num">SUMMARY</span><h2>三十題的五條共同主線</h2></div>
+      <div class="lines" id="linesBox"></div>
+      <div class="card" style="margin-top:16px"><h4>工具尺度比較（主線三）</h4>
+        <div class="gf" style="margin:8px 0"><button class="on" data-ax="time">時間尺度</button><button data-ax="space">空間尺度</button></div>
+        <svg class="fig" id="scaleFig" viewBox="0 0 800 400"></svg></div>
+    </section>
+  </main>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+"use strict";
+/* ============ 工具函式 ============ */
+const $=s=>document.querySelector(s);
+const tw=(s,fs)=>{let w=0;for(const ch of s)w+=/[⺀-鿿＀-￯　-〿]/.test(ch)?fs:fs*.58;return w};
+function wrap(text,max){ // max 以「中文字寬」為單位
+  if(!text) return [];
+  const out=[];
+  text.split('\n').forEach(par=>{let line='',w=0;for(const ch of par){const cw=/[⺀-鿿＀-￯　-〿]/.test(ch)?1:.55;if(w+cw>max){out.push(line);line='';w=0}line+=ch;w+=cw}out.push(line)});
+  return out;
+}
+function smooth(p){let d=`M${p[0][0]},${p[0][1]}`;for(let i=0;i<p.length-1;i++){const p0=p[i-1]||p[i],p1=p[i],p2=p[i+1],p3=p[i+2]||p2;
+  const c1=[p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6],c2=[p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6];
+  d+=`C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0]},${p2[1]}`}return d}
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+/* ============ 結構資料 ============ */
+const GN={vis:'視覺',aud:'聽覺',lang:'語言／多感官',mot:'動作',par:'背側／頂葉',cog:'高階認知',lim:'邊緣／情緒',sub:'皮質下',fore:'前腦',midb:'中腦',hind:'後腦'};
+// sh: ['e',cx,cy,rx,ry,rot] | ['s',pathD,strokeW] | ['p',points]
+const R=[
+ // —— 後景（腦幹、小腦）
+ {id:'cb',n:'小腦',en:'Cerebellum',g:'hind',back:1,sh:['e',615,368,85,38],loc:'位於後腦、枕葉下方，與腦幹後方相連',fn:'動作的精確時序、協調與誤差修正；也參與動作學習與節拍預測。受損時肌力仍在，但動作搖晃、不準。'},
+ {id:'pons',n:'橋腦',en:'Pons',g:'hind',back:1,sh:['e',505,347,32,24],loc:'腦幹中段，夾在中腦與延髓之間，前方隆起',fn:'連結大腦、小腦與腦幹各系統，參與睡眠與喚醒。'},
+ {id:'med',n:'延髓',en:'Medulla',g:'hind',back:1,sh:['e',510,408,24,30],loc:'腦幹最下段，接續脊髓',fn:'控制呼吸、心跳、吞嚥等維持生命的功能。'},
+ // —— 皮質（lobes 另外畫）
+ {id:'pfc',n:'前額葉',en:'Prefrontal cortex',g:'cog',sh:['e',215,150,50,55],loc:'額葉最前端',fn:'目標導向行為、工作記憶、決策、抑制與控制。'},
+ {id:'broca',n:'Broca 區（左下額回）',en:'Broca\'s area / IFG',g:'lang',sh:['e',215,243,15,14],loc:'左側額葉下部，緊鄰外側裂（Sylvian fissure）前上方',fn:'語言產出、發音規劃、語意選擇與控制；與 Wernicke 區以弓狀束相連。'},
+ {id:'pmc',n:'前運動皮質',en:'Premotor cortex',g:'mot',sh:['e',378,150,15,36,10],loc:'中央溝前方、初級運動皮質的前面',fn:'動作規劃與感覺—動作轉換；語音知覺困難時提供發音預測。'},
+ {id:'m1',n:'初級運動皮質 M1',en:'Primary motor cortex',g:'mot',sh:['s','M404,62 Q430,140 460,224',13],loc:'中央溝前壁（中央前回）',fn:'發出隨意動作命令；呈身體地圖。'},
+ {id:'s1',n:'初級體感覺皮質 S1',en:'Primary somatosensory cortex',g:'mot',sh:['s','M421,62 Q447,140 477,224',13],loc:'中央溝後壁（中央後回）',fn:'觸覺、本體感覺；呈身體地圖。早盲者讀點字時與枕葉共同活躍。'},
+ {id:'ppc',n:'後頂葉',en:'Posterior parietal cortex',g:'par',sh:['e',545,120,36,28],loc:'頂葉後部',fn:'空間位置、視覺引導的動作（背側 where/how 路徑終點）、注意力。'},
+ {id:'v1',n:'初級視覺皮質 V1',en:'Primary visual cortex',g:'vis',sh:['e',680,190,16,36],lbl:[6,2],loc:'枕葉最後端（沿距狀溝，側視圖示意於枕極）',fn:'視網膜拓樸地圖；分析邊緣、方向、明暗、波長；有意識精細視覺的主要入口。損傷→對應視野皮質盲。'},
+ {id:'v23',n:'V2 / V3（枕葉視覺皮質）',en:'V2/V3 (early extrastriate)',g:'vis',sh:['e',648,190,14,44],lbl:[-34,-22],loc:'緊鄰 V1 前方的枕葉',fn:'更複雜的輪廓、紋理與深度；點字研究中的「中枕葉」TMS 目標。'},
+ {id:'v4',n:'V4',en:'V4',g:'vis',sh:['e',628,292,13,13],loc:'腹側枕顳區（梭狀回後方）',fn:'顏色處理與顏色恆常；受損可致大腦性色盲。腹側 what 路徑的中繼站。'},
+ {id:'mt',n:'MT / V5',en:'Middle temporal area',g:'par',sh:['e',620,240,12,12],loc:'外側枕—顳交界',fn:'動作方向與速度；背側路徑的起點；也是盲視旁路的終點之一。'},
+ {id:'it',n:'下顳葉 IT',en:'Inferior temporal cortex',g:'vis',sh:['e',340,322,55,11],loc:'顳葉底部外側',fn:'物體與臉的辨認；大感受野，對位置與大小不敏感，建立物體身分。'},
+ {id:'ffa',n:'梭狀回臉區 FFA',en:'Fusiform face area',g:'lang',sh:['e',455,327,28,8],loc:'顳葉腹側（梭狀回），右側通常較強',fn:'對臉的反應大於一般物體；臉盲與其受損相關。特殊性可能來自領域特定、整體處理或專家經驗。',lbl:[0,12]},
+ {id:'atl',n:'前顳葉',en:'Anterior temporal lobe',g:'cog',sh:['e',210,310,18,12],loc:'顳葉前端（顳極）',fn:'語意與人物知識、熟悉旋律的音樂語意記憶；嚴重語意缺損病人主要受傷處。',lbl:[0,22]},
+ {id:'stg',n:'上顳回',en:'Superior temporal gyrus',g:'aud',nolabel:1,sh:['e',370,276,130,12,-8],loc:'顳葉上緣，外側裂下方',fn:'聽覺皮質所在帶狀區域，含核心區與帶區；語音與音樂的高階聽覺分析。'},
+ {id:'a1',n:'A1／Heschl 氏回',en:'Primary auditory cortex',g:'aud',sh:['e',395,258,12,10],loc:'上顳回上表面深處（外側裂內，Heschl 氏回；核心區 BA 41）',fn:'音調拓樸（頻率地圖）；窄頻調諧。聽覺核心區。'},
+ {id:'abelt',n:'前方帶區',en:'Anterior belt',g:'aud',sh:['e',345,271,10,9],loc:'核心區前方的外圍帶區（BA 42）',fn:'對猴子叫聲「是什麼」敏感，位置改變仍保留反應 → 腹側 what 路徑（課本圖 8.17：綠色，往中／前顳葉與 BA 45）。',lbl:[-6,20]},
+ {id:'pbelt',n:'後方帶區',en:'Posterior belt',g:'aud',sh:['e',440,251,10,9],loc:'核心區後方的外圍帶區（BA 42）',fn:'對聲音來自「哪個方向」敏感 → 背側路徑（課本圖 8.17：紅色 how，往前運動區 BA 6/8、下頂葉 BA 40）。',lbl:[0,-6]},
+ {id:'wern',n:'Wernicke 區',en:'Wernicke\'s area',g:'lang',sh:['e',487,246,10,9],loc:'左側後上顳回，近頂—顳交界',fn:'語言理解、語音—詞義轉換；經弓狀束連 Broca 區。',lbl:[6,-8]},
+ {id:'psts',n:'後上顳溝 pSTS',en:'Posterior superior temporal sulcus',g:'lang',sh:['e',545,255,10,10],loc:'上顳溝後段',fn:'整合看到的嘴型與聽到的聲音（McGurk）；也處理視線、表情與生物動作。',lbl:[10,18]},
+ // —— 深層（透明腦）
+ {id:'thal',n:'視丘',en:'Thalamus',g:'sub',deep:1,sh:['e',440,240,36,22],loc:'前腦深處、腦的正中央（間腦）',fn:'除嗅覺外感覺訊息的中繼站（視覺經 LGN、聽覺經 MGN）；受注意與皮質回饋調節。',lbl:[-26,-24]},
+ {id:'pulv',n:'視丘枕核',en:'Pulvinar',g:'sub',deep:1,sh:['e',462,238,8,7],loc:'視丘後部',fn:'視覺注意與整合；盲視的上丘→外紋狀皮質旁路中繼站。',lbl:[6,-12]},
+ {id:'lgn',n:'外側膝狀體 LGN',en:'Lateral geniculate nucleus',g:'vis',deep:1,sh:['e',470,265,7,7],loc:'視丘後下部',fn:'視網膜→V1 的主要中繼；部分細胞群可直接送到 MT/V5。',lbl:[26,12]},
+ {id:'mgn',n:'內側膝狀體 MGN',en:'Medial geniculate nucleus',g:'aud',deep:1,sh:['e',448,270,7,7],loc:'視丘後下部（LGN 內側）',fn:'聽覺通往 A1 的丘腦中繼站。',lbl:[-20,22]},
+ {id:'hypo',n:'下視丘',en:'Hypothalamus',g:'lim',deep:1,sh:['e',418,282,13,7],loc:'視丘下方',fn:'調節體溫、飢餓、口渴、性行為、自律神經與內分泌。',lbl:[-28,22]},
+ {id:'bg',n:'基底核',en:'Basal ganglia',g:'sub',deep:1,sh:['e',395,215,38,20],loc:'視丘外側的深層灰質',fn:'動作啟動、習慣與技能學習、獎賞學習；多巴胺系統受損→帕金森氏症。',lbl:[0,-4]},
+ {id:'nacc',n:'伏隔核／獎賞迴路',en:'Nucleus accumbens',g:'lim',deep:1,sh:['e',352,238,9,7],loc:'基底核腹側（紋狀體腹部）',fn:'獎賞與愉悅；音樂高潮期待時活躍，也回應其他有價值的刺激。',lbl:[-4,20]},
+ {id:'amy',n:'杏仁核',en:'Amygdala',g:'lim',deep:1,sh:['e',300,300,11,11],loc:'顳葉內側深處、海馬迴前端',fn:'威脅與情緒意義偵測。',lbl:[-26,4]},
+ {id:'hip',n:'海馬迴',en:'Hippocampus',g:'lim',deep:1,sh:['e',358,302,36,8,8],loc:'顳葉內側深處',fn:'形成新的情節記憶；內側顳葉神經元可對特定名人概念敏感。',lbl:[16,19]},
+ {id:'acc',n:'前扣帶皮質',en:'Anterior cingulate',g:'cog',deep:1,sh:['e',300,188,40,11],loc:'額葉內側面，胼胝體上方（此圖為透明腦示意）',fn:'衝突監控、動機與身體狀態整合。',lbl:[0,-1]},
+ {id:'sma',n:'輔助動作區',en:'Supplementary motor area',g:'mot',deep:1,sh:['e',385,62,26,9],loc:'額葉內側面，M1 前方',fn:'動作序列與節拍時序；聽規律節拍時也會活躍。',lbl:[0,-4]},
+ // —— 中腦
+ {id:'mid',n:'中腦',en:'Midbrain',g:'midb',deep:1,sh:['e',505,292,28,22],loc:'腦幹最上段，視丘下方',fn:'快速定向、部分感覺整合與動作調節；含上丘、下丘、黑質。'},
+ {id:'sc',n:'上丘',en:'Superior colliculus',g:'midb',deep:1,sh:['e',521,278,7,7],loc:'中腦頂蓋前部',fn:'整合視、聽、觸線索，快速控制眼與頭朝重要刺激定向；盲視旁路起點。',lbl:[26,-6]},
+ {id:'ic',n:'下丘',en:'Inferior colliculus',g:'midb',deep:1,sh:['e',521,301,7,7],loc:'中腦頂蓋後部（上丘下方）',fn:'聽覺中繼與整合站（耳蝸核→下丘→MGN）。',lbl:[26,14]},
+ {id:'sn',n:'黑質',en:'Substantia nigra',g:'midb',deep:1,sh:['e',491,302,6,5],loc:'中腦腹側',fn:'多巴胺神經元，與基底核迴路相連；流失→帕金森氏症。',lbl:[-24,8]},
+ {id:'son',n:'上橄欖核',en:'Superior olivary nucleus',g:'aud',deep:1,sh:['e',503,358,6,5],loc:'腦幹（橋腦下部），耳蝸核之後的第二站',fn:'最早整合雙耳訊息的核：比較兩耳的時間差與強度差，用於聲源定位；也使聽覺通路很早就雙側投射。',lbl:[-30,2]},
+ {id:'cn',n:'耳蝸核',en:'Cochlear nucleus',g:'aud',deep:1,sh:['e',487,380,6,6],loc:'腦幹（橋腦—延髓交界）',fn:'聽覺神經的第一站；之後訊息雙側投射至下丘。',lbl:[-30,4]},
+ // —— 感覺器官
+ {id:'eye',n:'眼／視網膜',en:'Retina',g:'vis',sh:['e',60,440,17,17],loc:'眼球後壁（圖中以圖示置於腦外）',fn:'視網膜保留外界的空間位置（視網膜拓樸）；鼻側纖維在視交叉交叉。',sense:'👁'},
+ {id:'ear',n:'耳／耳蝸',en:'Cochlea',g:'aud',sh:['e',160,472,17,17],loc:'內耳（圖中以圖示置於腦外）',fn:'耳蝸依頻率分離聲音（音調拓樸）；不直接編碼聲源位置。',sense:'👂'}
+];
+const LOBES=[
+ {id:'frontal',n:'額葉',en:'Frontal lobe',pts:'80,30 408,30 443,140 476,236 205,288 80,290',c:'--cog',loc:'腦的前部，位於中央溝之前、外側裂之上',fn:'動作計畫、執行功能、語言產出、決策與工作記憶。',lx:190,ly:100},
+ {id:'parietal',n:'頂葉',en:'Parietal lobe',pts:'408,30 598,30 640,232 520,228 476,236 443,140',c:'--par',loc:'腦頂部，中央溝之後、枕葉之前',fn:'體感覺、空間處理、注意與感覺—動作整合。',lx:470,ly:62},
+ {id:'temporal',n:'顳葉',en:'Temporal lobe',pts:'150,290 205,288 476,236 520,228 630,235 625,360 150,360',c:'--aud',loc:'外側裂之下，腦的側下方',fn:'聽覺、語言理解、物體辨認、記憶與語意。',lx:262,ly:305},
+ {id:'occipital',n:'枕葉',en:'Occipital lobe',pts:'598,30 780,30 780,360 625,360 630,235 640,232',c:'--vis',loc:'腦的最後部',fn:'視覺處理的主要區域，含 V1。',lx:712,ly:78}
+];
+const PATHS={
+ retina_lgn:{k:'vis',nm:'視網膜 → 視丘 LGN',pts:[[76,436],[220,418],[390,340],[470,266]]},
+ lgn_v1:{k:'vis',nm:'LGN → V1（視輻射）',pts:[[470,262],[560,235],[640,205],[678,196]]},
+ retina_sc:{k:'vis',nm:'視網膜 → 上丘',pts:[[76,442],[260,452],[420,402],[520,282]]},
+ sc_pulv:{k:'vis',nm:'上丘 → 視丘枕核',pts:[[521,278],[490,258],[463,241]]},
+ pulv_mt:{k:'vis',nm:'枕核 → MT/V5（外紋狀皮質）',pts:[[463,238],[540,222],[610,240]]},
+ lgn_mt:{k:'vis',nm:'LGN → MT/V5（繞過 V1）',pts:[[472,268],[545,270],[610,248]]},
+ v1_v4:{k:'ven',nm:'V1 → V4（腹側 what）',pts:[[680,216],[662,262],[634,288]],lab:[690,262,'腹側']},
+ v4_it:{k:'ven',nm:'V4 → 梭狀回 → 下顳葉 IT',pts:[[624,296],[560,328],[460,330],[345,324]]},
+ v1_mt:{k:'dor',nm:'V1 → MT/V5（背側）',pts:[[676,178],[650,208],[624,236]]},
+ mt_ppc:{k:'dor',nm:'MT/V5 → 後頂葉（背側 where/how）',pts:[[618,230],[590,172],[552,130]],lab:[606,170,'背側']},
+ ppc_pmc:{k:'dor',nm:'後頂葉 → 前運動皮質（how）',pts:[[545,120],[480,98],[410,108],[380,140]]},
+ ear_cn:{k:'aud',nm:'耳蝸 → 耳蝸核',pts:[[170,468],[300,446],[420,410],[484,384]]},
+ cn_son:{k:'aud',nm:'耳蝸核 → 上橄欖核（雙側）',pts:[[487,376],[496,366],[502,362]]},
+ son_ic:{k:'aud',nm:'上橄欖核 → 下丘',pts:[[503,354],[512,332],[521,305]]},
+ ic_mgn:{k:'aud',nm:'下丘 → 內側膝狀體 MGN',pts:[[521,298],[492,285],[452,272]]},
+ mgn_a1:{k:'aud',nm:'MGN → A1／Heschl 氏回',pts:[[448,268],[422,265],[399,260]]},
+ a1_abelt:{k:'ven',nm:'A1 → 前方帶區',pts:[[392,260],[370,268],[349,271]]},
+ abelt_ifg:{k:'ven',nm:'前方帶區 → 前顳／下額葉（腹側 what）',pts:[[342,270],[290,266],[246,256],[224,246]],lab:[268,252,'what']},
+ a1_pbelt:{k:'dor',nm:'A1 → 後方帶區',pts:[[400,257],[420,252],[437,251]]},
+ pbelt_ppc:{k:'dor',nm:'後方帶區 → 後頂葉（背側 where）',pts:[[441,248],[478,205],[515,162],[545,130]],lab:[500,196,'where']},
+ v1_psts:{k:'vis',nm:'V1 → pSTS（看嘴型）',pts:[[680,216],[632,268],[554,260]]},
+ a1_psts:{k:'aud',nm:'A1 → pSTS（聽聲音）',pts:[[402,262],[470,272],[536,264]]},
+ psts_pmc:{k:'mot',nm:'pSTS → 前運動皮質（發音動作）',pts:[[545,245],[505,200],[440,165],[392,152]]},
+ arcuate:{k:'lang',nm:'Wernicke 區 → Broca 區（弓狀束）',pts:[[487,238],[420,206],[300,203],[228,238]]}
+};
+const PK={vis:'--vis',aud:'--aud',mot:'--mot',lang:'--lang',par:'--par',ven:'--ven',dor:'--dor'};
+const colOf=g=>`var(--${g})`;
+
+/* ============ 腦圖底圖與渲染 ============ */
+const OUTLINE='M130,215 C118,150 185,72 310,52 C430,38 560,42 652,92 C724,132 740,214 712,262 C700,282 684,296 668,306 C648,318 626,322 604,330 C570,338 520,336 480,340 C410,354 310,362 240,342 C208,332 180,324 178,312 C176,302 200,296 224,290 C206,288 176,278 152,260 C136,248 130,232 130,215 Z';
+function defs(){
+  let m='';Object.keys(PK).forEach(k=>{m+=`<marker id="m-${k}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" style="fill:var(${PK[k]})"/></marker>`});
+  return `<defs>${m}
+  <marker id="m-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" style="fill:var(--mute)"/></marker>
+  <marker id="m-flowon" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" style="fill:var(--accent)"/></marker>
+  <clipPath id="bc"><path d="${OUTLINE}"/></clipPath><clipPath id="cbc"><path d="${CB}"/></clipPath>
+  <radialGradient id="bg1" cx="36%" cy="28%" r="85%"><stop offset="0" style="stop-color:var(--bA)"/><stop offset="1" style="stop-color:var(--bB)"/></radialGradient>
+  <radialGradient id="bg2" cx="50%" cy="30%" r="80%"><stop offset="0" style="stop-color:var(--cereb)"/><stop offset="1" style="stop-color:var(--bB)"/></radialGradient>
+  <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000" flood-opacity=".25"/></filter>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.2"/></filter>
+  <filter id="blur2" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.4"/></filter>
+  <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" style="fill:var(--lim);fill-opacity:.18"/><line x1="0" y1="0" x2="0" y2="7" style="stroke:var(--lim);stroke-width:2.4"/></pattern>
+  <linearGradient id="tono" x1="0" x2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>`;
+}
+function shapeEl(r,fillCol,op,extra=''){
+  const s=r.sh;
+  if(s[0]==='e'){const rot=s[5]?` transform="rotate(${s[5]} ${s[1]} ${s[2]})"`:'';
+    return `<ellipse cx="${s[1]}" cy="${s[2]}" rx="${s[3]}" ry="${s[4]}"${rot} style="fill:${fillCol};fill-opacity:${op};stroke:${fillCol};stroke-opacity:${op>.5?1:.55};stroke-width:${r.deep?1.6:1.4};${r.deep?'stroke-dasharray:4 3;':'filter:url(#soft);'}" ${extra}/>`}
+  if(s[0]==='s')return `<path d="${s[1]}" fill="none" stroke-linecap="round" style="stroke:${fillCol};stroke-opacity:${Math.min(1,op+.15)};stroke-width:${s[2]}" ${extra}/>`;
+}
+function regionG(r,state,color){
+  const col=color||colOf(r.g);
+  const op=state==='on'?.82:state==='dim'?.09:.2;
+  let inner=shapeEl(r,col,op);
+  if(r.sense){inner=`<circle cx="${r.sh[1]}" cy="${r.sh[2]}" r="${r.sh[3]}" style="fill:var(--panel);stroke:${col};stroke-width:${state==='on'?3:1.6};opacity:${state==='dim'?.4:1}"/><text x="${r.sh[1]}" y="${r.sh[2]+6}" text-anchor="middle" font-size="17" style="opacity:${state==='dim'?.4:1}">${r.sense}</text>`}
+  return `<g class="reg" data-id="${r.id}">${inner}</g>`;
+}
+function regionLabel(r){
+  const s=r.sh;let x,y;
+  if(s[0]==='s'){x=s[1].match(/M(\d+),(\d+)/);x=+x[1]+(r.id==='m1'?-18:30);y=r.id==='m1'?52:52}
+  else{const off=r.lbl||[0,0];x=s[1]+off[0];y=s[2]-s[4]-5+off[1]}
+  if(r.sense)y=s[2]+s[4]+16;
+  const name=r.n.split('（')[0].split('／')[0];
+  return `<text class="rl" x="${x}" y="${y}">${name}</text>`;
+}
+const CB='M538,338 C560,324 620,318 672,322 C708,326 726,346 716,370 C700,398 652,412 600,410 C560,406 534,388 538,362 Z';
+const STEM='M476,284 C466,308 462,332 472,352 C478,372 484,396 492,432 L494,480 L530,480 L528,432 C534,402 540,372 544,350 C550,326 548,300 542,284 Z';
+function wig(base,amp,lam,seed){const r=rng(seed),ph=r()*6.28,ph2=r()*6.28,pts=[];let acc=0;
+  for(let i=0;i<base.length-1;i++){const [x0,y0]=base[i],[x1,y1]=base[i+1],dx=x1-x0,dy=y1-y0,len=Math.hypot(dx,dy),n=Math.max(1,Math.round(len/7)),nx=-dy/len,ny=dx/len;
+    for(let k=0;k<n;k++){const t=k/n,o=amp*(.7*Math.sin(6.283*(acc+len*t)/lam+ph)+.3*Math.sin(6.283*(acc+len*t)/(lam*.43)+ph2));pts.push([+(x0+dx*t+nx*o).toFixed(1),+(y0+dy*t+ny*o).toFixed(1)])}
+    acc+=len}
+  pts.push(base[base.length-1]);return smooth(pts)}
+const GYRI=(()=>{
+  const major=[ // 前額（上/中/下額溝）、中央前/後溝、頂內溝、顳上/中溝、枕葉放射
+   [[150,112],[210,96],[290,86],[380,78]],[[142,160],[210,146],[300,132],[392,118]],[[150,208],[220,196],[300,182],[372,170]],
+   [[372,58],[384,120],[394,190],[404,252]],[[448,60],[468,130],[498,200],[528,226]],
+   [[486,168],[540,150],[600,142],[640,148]],[[470,100],[530,92],[590,98],[640,110]],
+   [[200,302],[300,300],[400,286],[470,268],[540,250]],[[236,326],[340,326],[450,312],[540,292],[610,276]],[[280,344],[380,346],[470,334],[560,318]],
+   [[612,92],[672,112],[722,130]],[[618,150],[684,160],[728,176]],[[620,208],[684,222],[722,238]],[[626,262],[676,276],[704,284]]];
+  let soft='',line='',i=0;
+  major.forEach(b=>{const d=wig(b,7,70,100+i++);soft+=`<path d="${d}" stroke-width="5" opacity=".16"/>`;line+=`<path d="${d}" stroke-width="1.7" opacity=".5"/>`});
+  const r=rng(42);
+  for(let k=0;k<120;k++){const x=135+r()*590,y=55+r()*280;if(y>300&&x<200)continue;const ang=(y>262&&x<640?0:(x<410?0.15:(r()-.5)*3))+(r()-.5)*1.2,L=24+r()*40;
+    const d=wig([[x,y],[x+Math.cos(ang)*L/2,y+Math.sin(ang)*L/2],[x+Math.cos(ang)*L,y+Math.sin(ang)*L]],3,34,200+k);
+    soft+=`<path d="${d}" stroke-width="3.5" opacity=".07"/>`;line+=`<path d="${d}" stroke-width="1.1" opacity=".3"/>`}
+  return `<g class="sulc" style="stroke:var(--bS)">${soft}</g><g class="sulc" style="stroke:var(--bS)">${line}</g>`})();
+const FOLIA=(()=>{let o='';for(let i=0;i<11;i++){const y=326+i*8;o+=`<path d="${wig([[532,y],[600,y-6+i*.9],[670,y+2+i*1.2],[722,y+16]],1.3,70,300+i)}" fill="none" stroke-width="1.5" opacity=".4"/>`}return `<g class="sulc" style="stroke:var(--bS)">${o}</g>`})();
+function baseBrain(){
+  let s=`<path d="${STEM}" style="fill:var(--stem);stroke:var(--brain2);stroke-width:1.6"/><rect x="494" y="470" width="36" height="30" rx="6" style="fill:var(--stem);opacity:.6"/>`;
+  s+=`<path d="M474,336 C484,338 494,342 500,350" class="sulc" style="stroke:var(--bS);stroke-width:1.4;opacity:.5"/><path d="M542,336 C534,340 528,346 524,352" class="sulc" style="stroke:var(--bS);stroke-width:1.4;opacity:.4"/>`;
+  s+=`<path d="${CB}" style="fill:url(#bg2);stroke:var(--brain2);stroke-width:2"/><g clip-path="url(#cbc)">${FOLIA}</g>`;
+  s+=`<path class="outline" d="${OUTLINE}"/>`;
+  s+=`<g clip-path="url(#bc)">`+LOBES.map(l=>`<polygon class="lobe reg" data-id="${l.id}" points="${l.pts}" style="fill:var(${l.c})"/>`).join('')+GYRI;
+  s+=`<path class="sulc" d="${wig([[200,292],[260,284],[340,270],[420,254],[490,240],[545,232]],4,110,7)}" stroke-width="4.5" opacity=".7"/>`;
+  s+=`<path class="sulc" d="${wig([[408,46],[424,110],[446,170],[478,238]],3,90,9)}" stroke-width="3.6" opacity=".6"/>`;
+  s+=`<path class="sulc" d="${wig([[596,40],[612,110],[630,180],[640,232]],2.5,80,11)}" stroke-width="2.6" opacity=".45"/>`;
+  s+=`<ellipse cx="300" cy="110" rx="150" ry="46" transform="rotate(-12 300 110)" style="fill:#fff;opacity:.22;filter:url(#blur2)"/></g>`;
+  s+=LOBES.map(l=>`<text class="lobelbl" x="${l.lx}" y="${l.ly}" text-anchor="middle">${l.n}</text>`).join('');
+  s+=`<text class="axt" x="24" y="28">← 前（額葉端）</text><text class="axt" x="776" y="28" text-anchor="end">後（枕葉端）→</text>`;
+  return s;
+}
+function noteSVG(n){
+  const lines=n.t.split('\n'),fs=14,w=Math.max(...lines.map(l=>tw(l,fs)))+14,h=lines.length*19+8,a=n.a||'middle';
+  const x=n.x-(a==='middle'?w/2:a==='end'?w:0),y=n.y-h/2;
+  let s='';if(n.to)s+=`<line class="lead" x1="${n.x}" y1="${n.y}" x2="${n.to[0]}" y2="${n.to[1]}"/><circle class="leadc" cx="${n.to[0]}" cy="${n.to[1]}" r="3"/>`;
+  s+=`<g class="note"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>`+lines.map((l,i)=>`<text x="${x+7}" y="${y+17+i*19-2}">${esc(l)}</text>`).join('')+`</g>`;
+  return s;
+}
+const L=(cx,cy,rx,ry,rot=0)=>`<ellipse class="lesion" cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" transform="rotate(${rot} ${cx} ${cy})"/>`;
+function brainScene(sc,opts={}){
+  const hl=new Set(sc.hl||[]),colors=sc.colors||{},any=hl.size>0;
+  let s=defs()+baseBrain();
+  R.forEach(r=>{const st=hl.has(r.id)?'on':(any?'dim':'norm');s+=regionG(r,st,colors[r.id])});
+  R.forEach(r=>{if(hl.has(r.id)&&!r.nolabel)s+=regionLabel(r)});
+  hl.forEach(id=>{const l=LOBES.find(x=>x.id===id)});
+  (sc.paths||[]).forEach(pid=>{const p=PATHS[pid];if(!p)return;const c=`var(${PK[p.k]})`,d=smooth(p.pts),bl=(sc.blocked||[]).includes(pid);
+    s+=`<g class="fadein"><path class="pbase" d="${d}" style="stroke:${c}"/><path class="pflow ${bl?'pblocked':''}" d="${d}" style="stroke:${bl?'var(--lim)':c}" ${bl?'':`marker-end="url(#m-${p.k})"`}/>`;
+    if(p.lab&&!sc.nolab)s+=`<text class="plab" x="${p.lab[0]}" y="${p.lab[1]}" style="fill:${c}">${p.lab[2]}</text>`;
+    if(bl){const m=p.pts[Math.floor(p.pts.length/2)];s+=`<text x="${m[0]}" y="${m[1]+6}" text-anchor="middle" font-size="22" font-weight="800" style="fill:var(--lim);paint-order:stroke;stroke:var(--panel);stroke-width:4px">✕</text>`}
+    s+=`</g>`});
+  if(sc.extra)s+=sc.extra;
+  (sc.notes||[]).forEach(n=>s+=noteSVG(n));
+  return s;
+}
+
+/* ============ 流程圖 ============ */
+const FC={info:'--vis',warn:'--aud',ok:'--mot',bad:'--lim',pur:'--cog',pink:'--lang',gray:'--sub'};
+function flowScene(sc,q){
+  const F=q.flow,hl=new Set(sc.hl||[]),any=hl.size>0,N={};
+  F.nodes.forEach(n=>{const w=n.w||180,tl=wrap(n.t,(w-14)/14),sl=wrap(n.s||'',(w-14)/11.5);N[n.id]={...n,w,tl,sl,h:16+tl.length*18+(sl.length?sl.length*15+4:0)+4}});
+  let s=defs();
+  F.edges.forEach(([a,b,lab,dash])=>{
+    const A=N[a],B=N[b],on=!any||(hl.has(a)&&hl.has(b)),dx=B.x-A.x,dy=B.y-A.y;let x1,y1,x2,y2,d;
+    if(Math.abs(dy)>=Math.abs(dx)*.35){const sg=dy>0?1:-1;x1=A.x;y1=A.y+sg*A.h/2;x2=B.x;y2=B.y-sg*B.h/2;const m=(y1+y2)/2;d=`M${x1},${y1} C${x1},${m} ${x2},${m} ${x2},${y2}`}
+    else{const sg=dx>0?1:-1;x1=A.x+sg*A.w/2;y1=A.y;x2=B.x-sg*B.w/2;y2=B.y;const m=(x1+x2)/2;d=`M${x1},${y1} C${m},${y1} ${m},${y2} ${x2},${y2}`}
+    s+=`<path class="fe" d="${d}" marker-end="url(#m-${on&&any?'flowon':'flow'})" style="${on&&any?'stroke:var(--accent);stroke-width:2.4;':''}${dash?'stroke-dasharray:5 5;':''}opacity:${on?1:.18}"/>`;
+    if(lab)s+=`<text class="fel" x="${(x1+x2)/2}" y="${(y1+y2)/2+4}" style="opacity:${on?1:.2}">${esc(lab)}</text>`;
+  });
+  Object.values(N).forEach(n=>{
+    const on=hl.has(n.id),c=`var(${FC[n.c||'info']})`,op=!any||on?1:.28;
+    s+=`<g class="fnode ${on?'fadein':''}" style="opacity:${op}"><rect x="${n.x-n.w/2}" y="${n.y-n.h/2}" width="${n.w}" height="${n.h}" rx="12" style="fill:${on?`color-mix(in srgb, ${c} 16%, var(--panel))`:'var(--panel)'};stroke:${c};stroke-width:${on?3:1.6}"/>`;
+    let y=n.y-n.h/2+22;n.tl.forEach(l=>{s+=`<text class="ft" x="${n.x}" y="${y}">${esc(l)}</text>`;y+=18});
+    y-=2;n.sl.forEach(l=>{s+=`<text class="fs" x="${n.x}" y="${y+14}">${esc(l)}</text>`;y+=15});
+    s+=`</g>`;
+  });
+  if(sc.notes)sc.notes.forEach(n=>s+=noteSVG(n));
+  return s;
+}
+
+/* ============ HRF / 尺度 ============ */
+function hrfScene(sc){
+  const hl=new Set(sc.hl||[]),mk=new Set(sc.mark||[]);
+  let s=defs();
+  const chain=[['n','神經活動↑'],['o','耗氧↑'],['d','去氧血紅素↑\n順磁→訊號略降'],['f','血流過度補償\n神經血管耦合'],['b','去氧比例↓\nBOLD 訊號↑']];
+  chain.forEach(([id,t],i)=>{const x=14+i*156,on=hl.has(id),c=i===4?'var(--mot)':i===2?'var(--aud)':'var(--vis)';
+    s+=`<g style="opacity:${hl.size&&!on?.3:1}"><rect x="${x}" y="14" width="138" height="60" rx="11" style="fill:${on?`color-mix(in srgb, ${c} 16%, var(--panel))`:'var(--panel)'};stroke:${c};stroke-width:${on?3:1.5}"/>`+
+    t.split('\n').map((l,j,a)=>`<text class="ft" x="${x+69}" y="${(a.length>1?36:48)+j*17}" style="font-size:${j?11.5:13.5}px;${j?'font-weight:400;':''}">${l}</text>`).join('')+`</g>`;
+    if(i<4)s+=`<path d="M${x+140},44 L${x+154},44" class="fe" marker-end="url(#m-flow)"/>`});
+  const X=t=>70+t*29.1,gam=(t,k)=>Math.exp(k*Math.log(Math.max(t,1e-9))-t-lgam(k+1));
+  function lgam(n){let r=0;for(let i=2;i<=n;i++)r+=Math.log(i);return r}
+  const raw=t=>gam(t,5)-gam(t,15)/6-0.12*Math.exp(-Math.pow((t-1.3)/.9,2))*gam(5,5)*1.2;
+  const pk=Math.max(...Array.from({length:200},(_,i)=>raw(i*.12)));
+  const h=t=>raw(t)/pk,Y=t=>400-h(t)*190;
+  s+=`<line class="ax" x1="70" y1="470" x2="780" y2="470"/><line class="ax" x1="70" y1="130" x2="70" y2="470"/>`;
+  for(let t=0;t<=24;t+=4)s+=`<line class="ax" x1="${X(t)}" y1="470" x2="${X(t)}" y2="475"/><text class="axt" x="${X(t)}" y="490" text-anchor="middle">${t}</text>`;
+  s+=`<text class="axt" x="775" y="508" text-anchor="end">刺激後經過的時間（秒）</text><text class="axt" x="14" y="300" transform="rotate(-90 14 300)">BOLD 訊號變化</text>`;
+  s+=`<line x1="70" y1="400" x2="780" y2="400" class="ax" style="stroke-dasharray:4 4"/><text class="axt" x="780" y="394" text-anchor="end">基線</text>`;
+  s+=`<line x1="${X(0)}" y1="130" x2="${X(0)}" y2="470" style="stroke:var(--accent);stroke-width:1.6;stroke-dasharray:5 4"/><text class="axt" x="${X(0)+5}" y="146" style="fill:var(--accent)">神經活動（毫秒級，瞬間發生）</text>`;
+  let d='';for(let t=0;t<=24;t+=.2)d+=(t?'L':'M')+X(t).toFixed(1)+','+Y(t).toFixed(1);
+  s+=`<path d="${d}" fill="none" style="stroke:var(--mot);stroke-width:4;stroke-linecap:round;opacity:${sc.mark?1:.9}"/>`;
+  const mark=(id,t,txt,dx,dy)=>{if(!mk.has(id))return '';return `<circle cx="${X(t)}" cy="${Y(t)}" r="7" style="fill:var(--accent)"/>`+noteSVG({x:X(t)+dx,y:Y(t)+dy,t:txt,to:[X(t),Y(t)]})};
+  s+=mark('dip',1.3,'初始小下降\n（去氧血紅素先增加）',60,-0+55);
+  s+=mark('peak',5.2,'高峰（約 4–6 秒）\n過度補償→BOLD↑',110,-16);
+  s+=mark('under',15.5,'回落後短暫低於基線\n再慢慢恢復',10,52);
+  if(mk.has('tr')){for(let t=0;t<=24;t+=2){s+=`<circle cx="${X(t)}" cy="${Y(t)}" r="4.5" style="fill:var(--cog)"/>`}
+    s+=noteSVG({x:600,y:300,t:'TR＝取樣間隔（如每 2 秒一張）\n掃得再快，血流本身仍是秒級',a:'middle'})}
+  if(mk.has('overlap')){let d2='';for(let t=0;t<=24;t+=.2){const y=Y(t)-400+(Y(t-4)>0&&t>4?Y(t-4)-400:0)+(t>8?Y(t-8)-400:0);d2+=(t?'L':'M')+X(t).toFixed(1)+','+(400+y).toFixed(1)}
+    s+=`<path d="${d2}" fill="none" style="stroke:var(--cog);stroke-width:3;stroke-dasharray:6 4"/>`+noteSVG({x:590,y:176,t:'相鄰事件的血流曲線會重疊（紫虛線）\n用已知 HRF 形狀＋統計模型估計各事件貢獻',a:'middle'})}
+  return s;
+}
+const TOOLS={
+ time:[{id:'sc',n:'單一細胞記錄',lo:.5,hi:2,c:'#7c4dd6'},{id:'eeg',n:'EEG / ERP',lo:1,hi:5,c:'#2f6fe0'},{id:'meg',n:'MEG',lo:1,hi:5,c:'#0e9aa7'},{id:'tms',n:'TMS（可選擇干擾時間點）',lo:20,hi:200,c:'#d6453d'},{id:'fmri',n:'f M R I（血流反應，秒級）',lo:1500,hi:8000,c:'#0f9d76'}],
+ space:[{id:'sc',n:'單一細胞記錄',lo:.01,hi:.05,c:'#7c4dd6'},{id:'fmri',n:'f M R I（體素，毫米級）',lo:1,hi:3,c:'#0f9d76'},{id:'tms',n:'TMS（表淺皮質）',lo:5,hi:20,c:'#d6453d'},{id:'meg',n:'MEG',lo:5,hi:15,c:'#0e9aa7'},{id:'eeg',n:'EEG / ERP（頭皮）',lo:10,hi:30,c:'#2f6fe0'},{id:'les',n:'自然腦傷（常大而不規則）',lo:5,hi:60,c:'#64748b'}]
+};
+function scaleSVG(axis,hl=[],H=400){
+  const T=TOOLS[axis],lo=axis==='time'?.3:.005,hi=axis==='time'?20000:100,L0=Math.log10(lo),L1=Math.log10(hi);
+  const X=v=>60+(Math.log10(v)-L0)/(L1-L0)*700,any=hl.length>0;let s='';
+  const ticks=axis==='time'?[[1,'1 毫秒'],[10,'10 ms'],[100,'100 ms'],[1000,'1 秒'],[10000,'10 秒']]:[[.01,'10 μm'],[.1,'0.1 mm'],[1,'1 mm'],[10,'1 cm'],[100,'10 cm']];
+  ticks.forEach(([v,t])=>{s+=`<line x1="${X(v)}" y1="30" x2="${X(v)}" y2="${H-40}" style="stroke:var(--line);stroke-width:1.2"/><text class="axt" x="${X(v)}" y="${H-22}" text-anchor="middle">${t}</text>`});
+  s+=`<text class="axt" x="60" y="18">${axis==='time'?'時間解析度（愈靠左愈快）':'空間解析度（愈靠左愈細）'}　對數刻度</text>`;
+  T.forEach((t,i)=>{const y=48+i*((H-100)/T.length),on=!any||hl.includes(t.id),x1=X(t.lo),x2=X(t.hi);
+    s+=`<g style="opacity:${on?1:.25}"><rect x="${x1}" y="${y}" width="${Math.max(x2-x1,8)}" height="26" rx="8" style="fill:${t.c};opacity:.85"/><text class="ct" x="${x1}" y="${y-5}" style="font-weight:700">${t.n}</text></g>`});
+  return s;
+}
+function scaleScene(sc){return `<g>${scaleSVG(sc.axis||'time',sc.hl||[],520)}</g>`}
+
+/* ============ ERP ============ */
+const ERPC={
+ obj:{n:'一般物體',c:'#64748b',comp:[[100,4,22],[170,-3,18],[230,2,32],[350,3.5,60]]},
+ face:{n:'臉',c:'#d6338a',comp:[[100,4,22],[170,-7,18],[230,2,32],[255,-2,22],[350,3.5,60]]},
+ fam:{n:'熟悉臉',c:'#7c4dd6',comp:[[100,4,22],[170,-7,18],[230,2,32],[255,-5.5,22],[400,5.5,70]]},
+ cari:{n:'漫畫化臉',c:'#e08a0b',comp:[[100,4,22],[170,-9.5,18],[230,2,32],[255,-2,22],[350,3.5,60]]}
+};
+const erpV=(k,t)=>ERPC[k].comp.reduce((a,[m,v,w])=>a+v*Math.exp(-Math.pow((t-m)/w,2)),0);
+function erpScene(sc){
+  const X=t=>70+(t+100),Y=v=>250-v*19;let s=defs();
+  (sc.wins||[]).forEach(([a,b,txt,c],i)=>{s+=`<rect x="${X(a)}" y="40" width="${X(b)-X(a)}" height="420" style="fill:${c||'var(--accent)'};opacity:.13"/><text class="ct" x="${(X(a)+X(b))/2}" y="${56+i*0}" text-anchor="middle" style="font-weight:700;fill:${c||'var(--accent)'}">${txt}</text>`});
+  s+=`<line class="ax" x1="70" y1="${Y(0)}" x2="780" y2="${Y(0)}"/><line class="ax" x1="${X(0)}" y1="40" x2="${X(0)}" y2="470"/>`;
+  for(let t=0;t<=600;t+=100)s+=`<line class="ax" x1="${X(t)}" y1="${Y(0)-4}" x2="${X(t)}" y2="${Y(0)+4}"/><text class="axt" x="${X(t)}" y="${Y(0)+20}" text-anchor="middle">${t}</text>`;
+  s+=`<text class="axt" x="${X(0)+6}" y="478" >刺激出現（0 ms）</text><text class="axt" x="778" y="${Y(0)+36}" text-anchor="end">刺激後毫秒 (ms)</text><text class="axt" x="76" y="${Y(7)-2}">正向 P ↑</text><text class="axt" x="76" y="${Y(-9)+2}">負向 N ↓</text>`;
+  (sc.show||['obj','face']).forEach((k,i)=>{let d='';for(let t=-100;t<=600;t+=4)d+=(t>-100?'L':'M')+X(t).toFixed(1)+','+Y(erpV(k,t)).toFixed(1);
+    s+=`<path d="${d}" fill="none" style="stroke:${ERPC[k].c};stroke-width:3.4;stroke-linejoin:round"/><rect x="${590}" y="${72+i*20}" width="14" height="4" style="fill:${ERPC[k].c}"/><text class="ct" x="610" y="${79+i*20}">${ERPC[k].n}</text>`});
+  (sc.pk||[]).forEach(([t,v,txt,dx,dy])=>{s+=`<circle cx="${X(t)}" cy="${Y(v)}" r="5" style="fill:var(--accent)"/>`+noteSVG({x:X(t)+dx,y:Y(v)+dy,t:txt,to:[X(t),Y(v)]})});
+  return s;
+}
+function erpAvgScene(sc){
+  const n=sc.n||30,R0=rng(7);let s=defs();
+  const sig=t=>erpV('face',t),X=t=>110+(t+100)*.9,N=()=>{let v=0;for(let k=0;k<4;k++){const f=.02+R0()*.05,ph=R0()*6.28,a=2+R0()*3;v+=a*Math.sin(f*0+0)} return v};
+  const trials=[];for(let i=0;i<n;i++){const ph=[1,2,3,4,5,6].map(()=>[.01+R0()*.06,R0()*6.28,1+R0()*2.6]);trials.push(t=>ph.reduce((a,[f,p,A])=>a+A*Math.sin(f*t+p),0))}
+  const single=i=>t=>sig(t)*.5+trials[i](t);
+  const avg=t=>{let a=0;for(let i=0;i<n;i++)a+=trials[i](t);return sig(t)*.5+a/n};
+  s+=`<text class="ct" x="14" y="24" style="font-weight:700">單次試驗（刺激鎖定 0 ms 對齊）</text>`;
+  const show=Math.min(n,4);
+  for(let r=0;r<show;r++){const y0=70+r*50;let d='';for(let t=-100;t<=600;t+=5)d+=(t>-100?'L':'M')+X(t).toFixed(1)+','+(y0-single(r)(t)*3.2).toFixed(1);
+    s+=`<path d="${d}" fill="none" style="stroke:var(--mute);stroke-width:1.4;opacity:.8"/><text class="axt" x="14" y="${y0+4}">試次 ${r+1}</text>`}
+  s+=`<line class="ax" x1="${X(0)}" y1="38" x2="${X(0)}" y2="${70+show*50-20}" style="stroke-dasharray:4 3"/>`;
+  const yb=400;s+=`<text class="ct" x="14" y="${yb-96}" style="font-weight:700">平均（N = ${n} 次）</text><line class="ax" x1="70" y1="${yb}" x2="780" y2="${yb}"/>`;
+  let d='';for(let t=-100;t<=600;t+=4)d+=(t>-100?'L':'M')+X(t).toFixed(1)+','+(yb-avg(t)*13).toFixed(1);
+  s+=`<path d="${d}" fill="none" style="stroke:var(--accent);stroke-width:3.6"/>`;
+  s+=noteSVG({x:600,y:yb-80,t:n>1?'與刺激時間鎖定的反應每次相近→保留\n無關的背景活動有正有負→抵銷':'單次試驗幾乎被背景 EEG 淹沒',a:'middle'});
+  for(let t=0;t<=600;t+=100)s+=`<text class="axt" x="${X(t)}" y="${yb+18}" text-anchor="middle">${t}</text>`;
+  s+=`<text class="axt" x="780" y="${yb+36}" text-anchor="end">刺激後毫秒 (ms)</text>`;
+  return s;
+}
+
+/* ============ 尖峰編碼 ============ */
+function spikeScene(sc){
+  const m=sc.mode,r=rng(11);let s=defs();
+  const ticks=(y,rate,seed,xa=110,xb=740,hh=30,col='var(--cog)',times)=>{const rr=rng(seed);let o='';
+    (times||Array.from({length:rate},()=>rr())).forEach(u=>{const x=xa+u*(xb-xa);o+=`<line x1="${x}" y1="${y-hh/2}" x2="${x}" y2="${y+hh/2}" style="stroke:${col};stroke-width:2.2"/>`});return o};
+  if(m==='rate'){
+    s+=`<rect x="110" y="40" width="630" height="440" style="fill:var(--accent);opacity:.05"/><text class="axt" x="110" y="32">刺激出現後 1 秒</text>`;
+    [['弱刺激（不太符合偏好）',5,150],['強刺激（很符合偏好）',40,300]].forEach(([t,rt,y],i)=>{
+      s+=`<text class="ct" x="110" y="${y-34}" style="font-weight:700">${t}　→　${rt} 次／秒</text><line class="ax" x1="110" y1="${y+16}" x2="740" y2="${y+16}"/>`+ticks(y,rt,i+3);});
+    s+=noteSVG({x:425,y:420,t:'每一發的高度／波形大致相同（全有全無）\n刺激強度＝放電「頻率」，不是單發的大小'});
+  }else if(m==='tuning'){
+    const faces=['A','B','C','D','E'],cells=[[.2,.9,.5,.1,.15],[.7,.15,.3,.85,.2],[.1,.2,.95,.3,.6],[.05,.1,.1,.08,.12]];
+    s+=`<text class="ct" x="14" y="24" style="font-weight:700">四顆下顳葉神經元，對五張臉的放電率</text>`;
+    faces.forEach((f,i)=>{const x=250+i*105;s+=`<circle cx="${x}" cy="62" r="20" style="fill:var(--panel);stroke:var(--lang);stroke-width:2"/><text class="ft" x="${x}" y="68">${f}</text>`});
+    cells.forEach((row,j)=>{const y0=150+j*90;s+=`<text class="ct" x="30" y="${y0+16}">神經元 ${j+1}</text><line class="ax" x1="230" y1="${y0+40}" x2="780" y2="${y0+40}"/>`;
+      row.forEach((v,i)=>{const x=250+i*105,h=v*60;s+=`<rect x="${x-18}" y="${y0+40-h}" width="36" height="${h}" rx="4" style="fill:${v>.8?'var(--lang)':'var(--cog)'};opacity:${v>.8?1:.6}"/>`})});
+    s+=noteSVG({x:400,y:500,t:'多數細胞不是只對一張臉放電，而是對「一組」臉有不同程度反應'});
+  }else if(m==='sync'){
+    const yA=[110,170],yB=[330,390];
+    s+=`<text class="ct" x="30" y="60" style="font-weight:700">同一根光棒跨越兩個感受野</text><text class="ct" x="30" y="280" style="font-weight:700">兩根分開的光棒</text>`;
+    const base=[.08,.2,.31,.44,.52,.66,.78,.9];
+    yA.forEach((y,i)=>{s+=`<text class="axt" x="30" y="${y+4}">神經元 ${i?'B':'A'}</text><line class="ax" x1="110" y1="${y+16}" x2="740" y2="${y+16}"/>`+ticks(y,0,1,110,740,30,'var(--accent)',base)});
+    base.forEach(u=>{const x=110+u*630;s+=`<line x1="${x}" y1="${yA[0]-18}" x2="${x}" y2="${yA[1]+18}" style="stroke:var(--accent);stroke-width:1;stroke-dasharray:3 3;opacity:.5"/>`});
+    yB.forEach((y,i)=>{s+=`<text class="axt" x="30" y="${y+4}">神經元 ${i?'B':'A'}</text><line class="ax" x1="110" y1="${y+16}" x2="740" y2="${y+16}"/>`+ticks(y,0,1,110,740,30,'var(--cog)',i?[.03,.17,.27,.4,.58,.7,.83,.95]:base)});
+    s+=noteSVG({x:600,y:230,t:'放電次數相同；差別在「是否同步」→ 大腦可能據此綁定為同一來源'});
+  }else if(m==='pop'){
+    const grids=[['祖母細胞（局部表徵）','一顆細胞＝一個概念\n有效率但脆弱，也難以證明',[12]],['完全分散','幾乎所有細胞都參與\n不夠節能',[0,1,2,3,5,6,8,9,11,12,13,15,16,18,19,21,22,23,24]],['稀疏分散式（較符合證據）','一小群細胞共同代表概念\n每顆也參與相關概念',[2,7,12,13,17]]];
+    grids.forEach(([t,sub,on],g)=>{const ox=24+g*262;s+=`<g style="opacity:${!sc.hl||sc.hl.includes(g)?1:.3}"><text class="ct" x="${ox+110}" y="40" text-anchor="middle" style="font-weight:700">${t}</text>`;
+      for(let i=0;i<25;i++){const cx=ox+30+(i%5)*40,cy=100+Math.floor(i/5)*40,a=on.includes(i);s+=`<circle cx="${cx}" cy="${cy}" r="13" style="fill:${a?'var(--accent)':'var(--panel)'};stroke:${a?'var(--accent)':'var(--mute)'};stroke-width:1.6"/>`}
+      sub.split('\n').forEach((l,i)=>s+=`<text class="fs" x="${ox+110}" y="${330+i*16}" style="font-size:12.5px">${l}</text>`);s+=`</g>`});
+    s+=noteSVG({x:400,y:440,t:'所謂「對某名人反應的細胞」，較可能只是這個概念網路中的一員'});
+  }
+  return s;
+}
+
+/* ============ 神經元 ============ */
+function neuronScene(sc){
+  const hl=new Set(sc.hl||[]),any=hl.size>0;
+  const g=(id,inner,sw=2.6)=>{const on=hl.has(id);return `<g style="opacity:${any&&!on?.35:1}${on?';filter:drop-shadow(0 0 5px var(--accent))':''}" data-part="${id}">${inner.replace(/__S__/g,on?'var(--accent)':'var(--ink)')}</g>`};
+  let s=defs();
+  s+=g('inputs',`<circle cx="36" cy="140" r="11" style="fill:var(--mot);opacity:.85"/><text x="36" y="145" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">+</text><circle cx="20" cy="205" r="11" style="fill:var(--mot);opacity:.85"/><text x="20" y="210" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">+</text><circle cx="40" cy="266" r="11" style="fill:var(--lim);opacity:.85"/><text x="40" y="271" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">−</text>
+   <text class="axt" x="6" y="110">興奮性／抑制性輸入</text>`);
+  s+=g('dendrite',`<path d="M104,196 L62,150 L48,150 M62,150 L56,132 M104,201 L36,205 M104,206 L64,256 L52,262 M64,256 L74,278" fill="none" style="stroke:__S__" stroke-width="3" stroke-linecap="round"/><text class="axt" x="60" y="305">樹突</text>`);
+  s+=g('soma',`<circle cx="130" cy="200" r="28" style="fill:var(--panel);stroke:__S__;stroke-width:3"/><circle cx="130" cy="200" r="9" style="fill:__S__;opacity:.3"/><text class="axt" x="96" y="252" text-anchor="middle">細胞體</text>`);
+  s+=g('hillock',`<path d="M154,188 L192,196 L192,204 L154,212 Z" style="fill:__S__;opacity:.55"/><text class="axt" x="190" y="232" text-anchor="middle">軸突起始處</text><text class="axt" x="190" y="248" text-anchor="middle" style="font-size:11px">（閾值判定）</text>`);
+  s+=g('axon',`<line x1="192" y1="200" x2="468" y2="200" style="stroke:__S__;stroke-width:3.2"/><text class="axt" x="330" y="236" text-anchor="middle">軸突</text>`);
+  s+=g('myelin',[205,277,349].map(x=>`<rect x="${x}" y="190" width="60" height="20" rx="9" style="fill:var(--aud);opacity:.75;stroke:__S__;stroke-width:1.6"/>`).join('')+`<text class="axt" x="300" y="180" text-anchor="middle">髓鞘</text>`);
+  s+=g('node',[271,343,415].map(x=>`<circle cx="${x}" cy="200" r="6.5" style="fill:__S__"/>`).join('')+`<text class="axt" x="343" y="170" text-anchor="middle">郎飛氏結</text>`);
+  s+=g('terminal',`<ellipse cx="490" cy="200" rx="26" ry="23" style="fill:var(--panel);stroke:__S__;stroke-width:3"/><text class="axt" x="466" y="246" text-anchor="middle">軸突終端</text>`);
+  s+=g('vesicle',[[480,192],[487,206],[497,196],[478,208],[498,210],[490,185]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="4.4" style="fill:var(--lang);opacity:.9"/>`).join(''));
+  s+=g('ca',`<rect x="510" y="184" width="6" height="12" rx="2" style="fill:#ef4444"/><rect x="510" y="206" width="6" height="12" rx="2" style="fill:#ef4444"/><text x="506" y="174" class="axt" text-anchor="middle" style="fill:#ef4444;font-weight:700">Ca²⁺</text>`);
+  s+=g('cleft',`<rect x="517" y="168" width="18" height="64" style="fill:var(--accent);opacity:.12"/><text class="axt" x="510" y="290" text-anchor="middle">突觸間隙</text>`);
+  s+=g('nt',[[524,186],[527,200],[522,212],[528,222],[525,176]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3" style="fill:var(--lang)"/>`).join(''));
+  s+=g('receptor',[184,200,216].map(y=>`<path d="M535,${y-6} q-8,6 0,12" fill="none" style="stroke:__S__;stroke-width:3.6"/>`).join('')+`<text class="axt" x="560" y="160">受體</text>`);
+  s+=g('post',`<path d="M535,150 Q600,118 700,138 Q782,170 770,240 Q740,292 620,282 Q552,272 535,252 Z" style="fill:var(--panel);stroke:__S__;stroke-width:3"/><text class="ft" x="660" y="212" style="font-size:13px">突觸後神經元</text><text class="fs" x="660" y="230">漸進電位 → 加總 → 閾值</text>`);
+  // AP inset
+  const X=t=>80+t*110,Y=v=>490-(v+90)*1.2;
+  const pts=[[0,-70],[1,-70],[1.25,-62],[1.45,-55],[1.7,0],[1.9,40],[2.1,22],[2.4,-40],[2.8,-80],[3.6,-76],[4.5,-70],[6,-70]].map(([t,v])=>[X(t),Y(v)]);
+  const ph={rest:[.5,-70,'靜息 −70 mV\n鈉鉀幫浦＋選擇性通透'],graded:[1.2,-64,'漸進電位\n（未達閾值）'],threshold:[1.45,-55,'達閾值 −55 mV\n→ 觸發'],spike:[1.9,40,'去極化 Na⁺流入\n→ 再極化 K⁺流出'],depol:[1.75,10,'去極化\nNa⁺ 通道開、鈉流入'],repol:[2.4,-40,'再極化\nK⁺ 外流'],hyper:[2.8,-80,'超極化＋不應期']}[sc.ap];
+  s+=`<line class="ax" x1="70" y1="${Y(-90)}" x2="780" y2="${Y(-90)}"/><line class="ax" x1="70" y1="${Y(50)}" x2="70" y2="${Y(-90)}"/>`;
+  s+=`<line x1="70" y1="${Y(-55)}" x2="780" y2="${Y(-55)}" style="stroke:var(--lim);stroke-dasharray:5 4"/><text class="axt" x="776" y="${Y(-55)-4}" text-anchor="end" style="fill:var(--lim)">閾值 −55 mV</text>`;
+  s+=`<line x1="70" y1="${Y(-70)}" x2="780" y2="${Y(-70)}" style="stroke:var(--mute);stroke-dasharray:2 5"/><text class="axt" x="776" y="${Y(-70)+14}" text-anchor="end">靜息 −70 mV</text>`;
+  s+=`<text class="axt" x="76" y="${Y(50)-4}">膜電位 mV</text><text class="axt" x="780" y="${Y(-90)+16}" text-anchor="end">時間（毫秒）</text>`;
+  s+=`<path d="${smooth(pts)}" fill="none" style="stroke:var(--aud);stroke-width:4;stroke-linecap:round;opacity:${sc.ap?1:.35}"/>`;
+  if(ph)s+=`<circle cx="${X(ph[0])}" cy="${Y(ph[1])}" r="8" style="fill:var(--accent);stroke:var(--panel);stroke-width:2"/>`+noteSVG({x:X(ph[0])+(ph[0]>3?-90:ph[0]>1.5?90:80),y:Y(ph[1])+(ph[1]>0?10:-4),t:ph[2],to:[X(ph[0]),Y(ph[1])]});
+  if(sc.notes)sc.notes.forEach(n=>s+=noteSVG(n));
+  return s;
+}
+
+/* ============ 三十題資料 ============ */
+const S=(t,d,o={})=>({t,d,...o});
+const EEG_EXTRA=`<g>${[[180,80],[240,58],[310,46],[390,40],[470,40],[550,46],[620,64],[680,98]].map(p=>`<circle class="sensor" cx="${p[0]}" cy="${p[1]}" r="6"/>`).join('')}
+ ${[330,350,370,390,410,430].map(x=>`<g><line x1="${x}" y1="${64}" x2="${x}" y2="${88}" style="stroke:var(--mot);stroke-width:2.6"/><circle cx="${x}" cy="${64}" r="3.4" style="fill:var(--mot)"/></g>`).join('')}</g>`;
+const COIL=(x,y)=>`<g class="coil"><circle cx="${x}" cy="${y-19}" r="19"/><circle cx="${x}" cy="${y+19}" r="19"/><line x1="${x+19}" y1="${y}" x2="${x+40}" y2="${y}"/></g><path class="field" d="M${x-20},${y-8} L${x-52},${y-4}"/><path class="field" d="M${x-20},${y+8} L${x-52},${y+4}"/><path class="field" d="M${x-20},${y} L${x-52},${y}"/>`;
+const TDCS=`<rect x="300" y="34" width="62" height="12" rx="3" style="fill:var(--lim)"/><text x="331" y="30" text-anchor="middle" class="axt" style="fill:var(--lim);font-weight:700">＋陽極（傾向↑興奮）</text><rect x="520" y="38" width="62" height="12" rx="3" style="fill:var(--vis)"/><text x="551" y="30" text-anchor="middle" class="axt" style="fill:var(--vis);font-weight:700">－陰極（傾向↓興奮）</text><path d="M331,48 Q440,150 551,52" fill="none" style="stroke:var(--ink);stroke-width:1.6;stroke-dasharray:5 4"/>`;
+const FACE=(x,y,inv)=>`<g transform="translate(${x},${y})${inv?' rotate(180)':''}"><circle r="20" style="fill:var(--panel);stroke:var(--ink);stroke-width:2"/><circle cx="-7" cy="-5" r="2.6" style="fill:var(--ink)"/><circle cx="7" cy="-5" r="2.6" style="fill:var(--ink)"/><path d="M-8,8 Q0,15 8,8" fill="none" style="stroke:var(--ink);stroke-width:2"/></g>`;
+
+const QS=[];
+const add=o=>QS.push(o);
+
+add({n:1,orig:'8.1',g:'sense',title:'視覺與聽覺面臨的共同挑戰與差異',view:'brain',
+ legend:['vis','aud'],
+ scenes:[
+  S('共同難題：混在一起、不斷變動的能量','感覺器官收到的不是分好的物體：眼睛收到各物體反射的光，耳朵收到各聲源疊加的振動。大腦要①把來源分開 ②維持恆常性（輸入一直變、知覺要穩定）。',{hl:['eye','ear'],notes:[{x:60,y:405,t:'光 → 混合多個物體'},{x:160,y:505,t:'空氣振動 → 混合多個聲源'}]}),
+  S('視覺路徑：視網膜 → LGN → V1','視丘中繼站是外側膝狀體 LGN，初級皮質 V1 在枕葉。鼻側纖維在視交叉交叉，所以右側視野主要送到左半球（不是右眼全部送左腦）。',{hl:['eye','lgn','v1'],paths:['retina_lgn','lgn_v1'],notes:[{x:660,y:92,t:'視網膜拓樸＝空間地圖',a:'middle',to:[680,160]}]}),
+  S('聽覺路徑：耳蝸 → 耳蝸核 → 上橄欖核 → 下丘 → MGN → A1','聽覺上行路徑多一站上橄欖核（比較兩耳時間差、強度差）；視丘中繼站是內側膝狀體 MGN；核心區 A1（BA 41）在上顳回的 Heschl 氏回。很早就雙側投射，所以單側聽覺皮質受損不像單側 V1 受損那樣造成乾淨的半邊感覺消失。',{hl:['ear','cn','son','ic','mgn','a1'],paths:['ear_cn','cn_son','son_ic','ic_mgn','mgn_a1'],notes:[{x:300,y:215,t:'音調拓樸＝頻率地圖',to:[393,254]}]}),
+  S('高階都分成腹側 what 與背側 where／how','腹側回答「這是什麼」，背側回答「在哪裡／怎麼採取行動」。視覺：V1→V4→下顳葉（what）與 V1→MT→後頂葉（where）；聽覺：前方帶區往前（what）與後方帶區往頂葉（where）。',{hl:['v4','it','mt','ppc','abelt','pbelt'],paths:['v1_v4','v4_it','v1_mt','mt_ppc','a1_abelt','abelt_ifg','a1_pbelt','pbelt_ppc']}),
+  S('功能專門化：視覺證據充分，聽覺記載較少','視覺：V4 與顏色（受損→大腦性色覺缺失）、MT/V5 與動作，已有清楚證據。聽覺也有分工（核心區→帶區、what／where），但特徵層級的專門化記載較少，也不像視覺那樣容易用空間圖像呈現。',{hl:['v4','mt','a1','abelt','pbelt'],notes:[{x:690,y:340,t:'V4：顏色（證據充分）',to:[631,296]},{x:700,y:90,t:'MT/V5：動作（證據充分）',to:[622,230]},{x:290,y:215,t:'聽覺：專門化較少記載',to:[393,254]}]}),
+  S('核心差異：視覺空間強、聽覺時間強','視網膜本身保留空間位置，所以視覺定位直接；耳蝸排的是頻率，位置要靠兩耳時間差、強度差與耳廓頻譜反推。反過來，語音與旋律沿時間展開，聽覺擅長處理快速時間變化。',{hl:['v1','a1','eye','ear'],notes:[{x:640,y:80,t:'視覺：感覺表面＝空間'},{x:270,y:215,t:'聽覺：感覺表面＝頻率＋時間'}]})
+ ],
+ one:'兩者都要從變動的能量中分出來源並建立穩定知覺，所以都有視丘中繼、拓樸地圖和 what／where 路徑；差別在於視覺的感覺表面直接保存空間，聽覺的則主要保存頻率與時間。'});
+
+add({n:2,orig:'8.3',g:'sense',title:'聽覺與視覺的 what／where／how 分流',view:'brain',legend:['aud','vis','mot'],
+ scenes:[
+  S('一個聲音要回答兩個問題','「是誰、說什麼」是 what；「從哪來、我要怎麼回應」是 where／how。兩種計算需求不同，大腦把它們放進部分分開的路徑。',{hl:['a1'],paths:['mgn_a1'],hl_:0,notes:[{x:300,y:215,t:'喊你名字的聲音 → 先到 A1',to:[393,254]}]}),
+  S('what：前方帶區 → 腹側（顳葉前部、下額葉）','獼猴單細胞記錄：前方帶區神經元對叫聲「種類」敏感，聲音位置改變仍保留反應。人類造影也看到相似分工。',{hl:['a1','abelt','atl','broca'],paths:['a1_abelt','abelt_ifg']}),
+  S('where：後方帶區 → 背側（頂葉）','後方帶區神經元對聲音「方向」更敏感，訊息往後頂葉走，負責位置與空間。',{hl:['a1','pbelt','ppc'],paths:['a1_pbelt','pbelt_ppc']}),
+  S('how：背側路徑連到發音與動作','pSTS 整合看到的嘴型與聽到的聲音（McGurk）；背側網路與前運動皮質／Broca 區連線，支援複誦、學新音素、輪流對話。',{hl:['psts','ppc','pmc','broca','v1'],paths:['v1_psts','a1_psts','psts_pmc','ppc_pmc','arcuate']}),
+  S('視覺對照：腹側受損 vs 背側受損＝雙重分離','腹側 V1→V4→IT 受損：看得到但認不出物體或臉；背側 V1→MT→後頂葉受損：認得物體卻抓不準、定位失敗。相反的缺損支持兩條路徑不是同一能力的難易版本。',{hl:['v1','v4','it','mt','ppc'],paths:['v1_v4','v4_it','v1_mt','mt_ppc'],notes:[{x:300,y:370,t:'腹側受損：視覺失認（what 失敗）'},{x:560,y:60,t:'背側受損：定位／抓取失敗（where／how 失敗）'}]})
+ ],
+ one:'前帶區偏 what、後帶區偏 where；當聲音需要和發音、複誦或互動連接時，背側路徑延伸成 how。真正要懂的是：辨認內容與定位＋行動是不同的計算問題。'});
+
+add({n:3,orig:'4.1',g:'method',title:'f M R I 的生理原理與時空解析度',view:'hrf',legend:[],
+ scenes:[
+  S('f M R I 不是直接看神經元放電','神經元工作需要能量並耗氧；帶氧血紅素被用掉後，順磁性的去氧血紅素增加，磁場變不均勻，訊號先略降。',{hl:['n','o','d'],mark:['dip']}),
+  S('身體過度補償 → BOLD 上升','神經血管耦合送來比用掉的還多的含氧血。去氧血紅素的相對比例下降，磁場變均勻，訊號反而上升。這就是 BOLD。',{hl:['f','b'],mark:['peak']}),
+  S('整條曲線＝血流動力反應函數 HRF','初始小下降 → 幾秒內到高峰 → 回落並短暫低於基線 → 慢慢恢復。它比神經元的毫秒變化慢很多。',{hl:['n','o','d','f','b'],mark:['dip','peak','under']}),
+  S('時間解析度：被血流限制，不是被掃描速度限制','TR 決定多久拿到一張影像，但就算掃得再快，血流自己不會變成毫秒反應。事件相關設計靠已知的 HRF＋統計模型，把重疊的慢訊號分開估計。',{hl:['b'],mark:['tr','overlap']}),
+  S('時間尺度比較：想問「何時」用 EEG／ERP','f M R I 秒級；E E G、M E G 毫秒級；TMS 可操弄毫秒級的干擾時間點。',{view:'scale',axis:'time',hl:['fmri','eeg','meg','sc','tms']}),
+  S('空間解析度：體素與取捨','體素是三維像素，通常達毫米級，遠優於頭皮 E E G。但體素縮小時每格訊號變少、雜訊相對變大；磁場強度、頭動與血管分布也影響實際精確度。',{view:'scale',axis:'space',hl:['fmri','eeg','meg','sc']})
+ ],
+ one:'神經活動先改變耗氧與血流，再形成 BOLD；體素與掃描條件決定空間細緻度，緩慢的血流反應決定時間不可能像電生理那麼快。問「哪裡」用 f M R I，問「何時」用 E E G／E R P。'});
+
+add({n:4,orig:'4.4',g:'method',title:'腦區活躍不等於腦區必要',view:'flow',
+ flow:{nodes:[
+  {id:'fmri',x:140,y:70,t:'f M R I 看到 B O L D ↑',s:'某區在作業中活動變大',c:'info'},
+  {id:'corr',x:400,y:70,t:'只證明「相關」',s:'活動與作業一起變化，不是移除後的因果',c:'warn',w:200},
+  {id:'r1',x:100,y:190,w:150,t:'核心運算',c:'ok'},{id:'r2',x:290,y:190,w:150,t:'注意／喚醒',c:'gray'},{id:'r3',x:480,y:190,w:150,t:'抑制／監控',c:'gray'},{id:'r4',x:690,y:190,w:170,t:'非必要的策略',c:'gray'},
+  {id:'les',x:140,y:320,t:'自然損傷 / T M S',s:'讓該區失效',c:'pur'},
+  {id:'nec',x:400,y:320,t:'作業選擇性變差？',s:'是 → 才支持「必要」',c:'ok',w:200},
+  {id:'mis1',x:240,y:450,w:230,t:'造影有活動、損傷無影響',s:'策略不同／代償／一般性注意',c:'bad'},
+  {id:'mis2',x:570,y:450,w:230,t:'造影無差異、損傷有缺損',s:'共同基線被相減／傷到白質連線',c:'bad'}],
+  edges:[['fmri','corr'],['corr','r1','可能是'],['corr','r2'],['corr','r3'],['corr','r4'],['les','nec'],['corr','nec','✕ 不能直接推',1],['nec','mis1','不一致時'],['nec','mis2']]},
+ scenes:[
+  S('造影看到的是「一起活動」','B O L D 上升只表示活動與作業條件一起變化。就像看到後廚的廚師、洗碗員、警報器都在運作，不能只憑它們在運作就說少了誰都做不出那道菜。',{hl:['fmri','corr']}),
+  S('活躍的原因可能有很多種','可能是核心運算，也可能是注意力、抑制、監控，甚至是受試者採用的非必要策略。難的作業還會帶動一般性注意與工作記憶網路。',{hl:['corr','r1','r2','r3','r4']}),
+  S('要證明必要：看失效後作業是否選擇性變差','「必要」＝沒有它就做不到；「充分」＝有它就足以造成。單靠活化兩者都不能直接證明；要用自然損傷或 T M S 這類因果操弄。',{hl:['les','nec','corr']}),
+  S('不一致時最有價值','造影有活動但損傷後功能仍在 → 查策略與代償；造影沒差異但損傷有缺損 → 查基線相減、區域太小、或白質連線被破壞。不是誰錯，而是追問作業、控制條件、策略與網路連結哪裡不同。',{hl:['nec','mis1','mis2']})
+ ],
+ one:'活躍只表示相關；要證明某腦區對功能是必要的，必須用自然損傷、T M S 或其他因果操弄，看讓它失效後功能是否下降。'});
+
+add({n:5,orig:'5.1',g:'method',title:'從腦傷成人推論正常認知的三個假設',view:'flow',
+ flow:{nodes:[
+  {id:'pat',x:400,y:50,w:300,t:'從腦傷病人的缺損型態，逆推正常認知的零件',c:'info'},
+  {id:'a1',x:130,y:170,w:220,t:'① 區分性假設',s:'認知成分可被選擇性破壞（成分＝運算，不一定是整齊小腦區）',c:'pur'},
+  {id:'a2',x:400,y:170,w:220,t:'② 透明性假設',s:'受損後仍是「正常系統少一塊」，沒有重新發明新架構',c:'pur'},
+  {id:'a3',x:670,y:170,w:220,t:'③ 普遍性假設',s:'人與人的核心架構足夠相似',c:'pur'},
+  {id:'ss',x:200,y:320,w:260,t:'單一分離：A 差、B 正常',s:'陷阱：可能只是 A 比較難（作業資源假象）或附帶要求較多',c:'warn'},
+  {id:'ds',x:600,y:320,w:260,t:'雙重分離：病人 1 A差B好；病人 2 A好B差',s:'難以再用難度解釋 → 至少部分依賴不同機制',c:'ok'},
+  {id:'ctl',x:400,y:450,w:380,t:'仍須檢查：作業純度、錯誤型態、病灶範圍、多項作業與群體證據',c:'gray'}],
+  edges:[['pat','a1'],['pat','a2'],['pat','a3'],['a1','ss'],['ss','ds','加強'],['ds','ctl'],['a2','ctl'],['a3','ctl']]},
+ scenes:[
+  S('① 區分性：缺損可以是選擇性的','若所有功能永遠一起壞，就無法從缺損型態推論有哪些零件。臨床上確實看得到選擇性缺損，所以大致合理；但真實病灶很少像拔掉一顆積木那麼乾淨。',{hl:['pat','a1']}),
+  S('② 透明性：最有爭議','大腦有可塑性，也會發展代償策略。成人後天腦傷、表現穩定、恢復歷程清楚時，比兒童早期腦傷更安全。',{hl:['pat','a2']}),
+  S('③ 普遍性：個案能提出強反例，但不能自動代表所有人','不是說每個人大腦一樣，而是核心處理架構可比較。個別差異確實存在。',{hl:['pat','a3']}),
+  S('單一分離 vs 雙重分離','單一分離可能只是難度差；雙重分離（如母音 vs 子音處理的互補個案）更難用難度解釋。',{hl:['a1','ss','ds']}),
+  S('最後仍要多方交叉','雙重分離也不等於兩個完全獨立的盒子。需要多作業、錯誤分析、病灶資料和群體證據一起加強結論。',{hl:['ds','ctl','a2','a3']})
+ ],
+ one:'腦傷推論依賴區分性、透明性與普遍性；三者都有一定合理性，也都有現實限制，因此要用雙重分離、多項作業和群體證據一起加強結論。'});
+
+add({n:6,orig:'5.3',g:'method',title:'單一個案推論正常認知的優點與缺點',view:'flow',
+ flow:{nodes:[
+  {id:'h1',x:200,y:40,w:240,t:'單一個案',c:'info'},{id:'h2',x:600,y:40,w:240,t:'團體研究',c:'ok'},
+  {id:'p1',x:200,y:120,w:260,t:'保留完整缺損型態',c:'info'},
+  {id:'p2',x:200,y:190,w:260,t:'細緻錯誤分析',s:'錯的是母音還是子音？熟悉臉還是陌生臉？',c:'info'},
+  {id:'p3',x:200,y:275,w:260,t:'可與互補個案形成雙重分離',c:'info'},
+  {id:'c1',x:200,y:365,w:260,t:'缺點',s:'普遍性有限、依賴透明性與普遍性、單一分離可能是難度、病灶不規則',c:'bad'},
+  {id:'avg',x:400,y:235,w:130,t:'平均陷阱',s:'5人聽懂說不出＋5人說得出聽不懂＝平均「都中度受損」',c:'warn'},
+  {id:'g1',x:600,y:140,w:260,t:'統計穩定、可找共同病灶',c:'ok'},
+  {id:'g2',x:600,y:230,w:260,t:'估計病灶與缺損的關聯',c:'ok'},
+  {id:'c2',x:600,y:340,w:260,t:'缺點',s:'平均掉個別差異；互補分離消失',c:'bad'},
+  {id:'mix',x:400,y:455,w:420,t:'互補：個案提出精細模型 → 群體與其他方法檢驗',c:'pur'}],
+  edges:[['h1','p1'],['p1','p2'],['p2','p3'],['p3','c1'],['h2','g1'],['g1','g2'],['g2','c2'],['c2','avg'],['c1','mix'],['c2','mix']]},
+ scenes:[
+  S('個案優點：保留一個人的完整型態與細緻錯誤','平均會把互補的分離抹掉；深入個案才能看出功能不是平均變弱，而是某些零件壞、某些保留。',{hl:['h1','p1','p2','p3']}),
+  S('個案缺點：普遍性與假設','一人的病前能力、病灶、恢復與策略都獨特；也依賴上一題的三個假設；自然腦傷常同時傷灰質、白質和遠端網路。',{hl:['h1','c1']}),
+  S('團體研究：統計穩定性與共同病灶','很多具相同缺損的人若有共同損傷位置，對病灶—功能關聯更有信心。',{hl:['h2','g1','g2']}),
+  S('平均陷阱','10 位病人中 5 位聽得懂說不出、5 位說得出聽不懂；直接平均會變成「說和聽都中度受損」，互補分離消失。',{hl:['avg','c2','h2']}),
+  S('兩者不是競爭，而是互補','單一個案最擅長問「功能如何拆分」，團體研究最擅長問「缺損與哪些病灶穩定相關」。',{hl:['mix','c1','c2']})
+ ],
+ one:'單一個案最擅長問功能如何拆分，團體研究最擅長問缺損與哪些病灶穩定相關；最好的結論是讓個案提出精細模型，再用更多個案、團體與其他方法檢驗。'});
+
+add({n:7,orig:'5.5',g:'method',title:'自然腦傷與 T M S／t E S 的比較',view:'brain',legend:[],
+ scenes:[
+  S('共同邏輯：讓某區不能工作，再看作業是否變差','造影是看「一起活動」，損傷法才能回答「必要」與因果。三種方法差在損傷是永久的、暫時干擾，還是改變興奮性。',{hl:['v1','v23']}),
+  S('自然腦傷：大、真實，但不可控','病灶常跨多區、形狀不規則、可能破壞白質連線；病人病前能力、恢復時間、代償程度不同，且長期損傷會重組（透明性問題）。',{extra:L(520,200,70,48,-10),hl:['ppc','psts','wern','pbelt'],notes:[{x:300,y:100,t:'不規則、跨區、傷到白質\n長期會重組',to:[470,185]}]}),
+  S('T M S：磁場在皮質誘發電流，暫時干擾','可逆、可控；同一個人可比較刺激 vs 控制；還能改變刺激時點，問某區在 80 ms 或 200 ms 是否必要（空間＋時間因果）。限制：主要影響表淺皮質、聚焦有限、效應通常小於真實腦傷。',{extra:COIL(752,190),hl:['v1','v23'],notes:[{x:700,y:340,t:'「虛擬損傷」＝暫時干擾\n不是完全關掉',a:'middle'}]}),
+  S('盲人點字：TMS 把「亮起來」變成「必要」','造影看到早盲者讀點字時枕葉活躍（可能只是伴隨）；用 TMS 干擾盲人中枕葉後點字真的變差，戴眼罩明眼人則影響不大 → 視覺皮質已被徵用為觸覺辨識所必要。',{extra:COIL(752,190),hl:['v23','v1','s1'],notes:[{x:300,y:60,t:'早盲者：枕葉＋體感覺區一起工作',to:[430,130]}]}),
+  S('t E S（如 t D C S）：弱電流偏壓興奮性','陽極傾向提高、陰極傾向降低興奮性（簡化口訣；實際依腦區、任務、方向與當下狀態而變）。空間較粗、不適合當短暫損傷，但可用較長時間刺激來研究學習與刺激結束後的後效。',{extra:TDCS,hl:['pfc','ppc']})
+ ],
+ one:'自然腦傷效應大、真實但不可控且會重組；T M S 短暫、可控，適合檢驗某區在何時必要；t E S 更像調高或調低網路的興奮傾向。三者互補，沒有一種能完整取代其他方法。'});
+
+add({n:8,orig:'4.2',g:'method',title:'功能造影的認知減法與問題',view:'flow',
+ flow:{nodes:[
+  {id:'ea',x:130,y:60,w:200,t:'實驗作業',s:'基本視覺＋詞形／詞彙處理（看字）',c:'info'},
+  {id:'cb',x:130,y:165,w:200,t:'控制作業',s:'只有基本視覺（看簡單符號）',c:'gray'},
+  {id:'sub',x:400,y:110,w:150,t:'相減',s:'共同部分抵銷',c:'warn'},
+  {id:'res',x:660,y:110,w:210,t:'剩下的差異',s:'解讀為「額外成分」的活動',c:'ok'},
+  {id:'pi',x:130,y:290,w:210,t:'問題 1：純插入假設',s:'加入新成分時其他歷程真的完全不變嗎？',c:'bad'},
+  {id:'bl',x:400,y:290,w:210,t:'問題 2：基線選擇',s:'太簡單→多出難度；太相似→相減後消失',c:'bad'},
+  {id:'ex',x:660,y:290,w:210,t:'例：朗讀 − 看字',s:'＝發音＋動作規劃＋聽自己＋錯誤監控，非單一功能',c:'warn'},
+  {id:'f1',x:130,y:430,w:200,t:'因子設計',s:'看交互作用，不必假設成分互不影響',c:'pur'},
+  {id:'f2',x:400,y:430,w:200,t:'認知聯集',s:'多個對比共同出現的區域',c:'pur'},
+  {id:'f3',x:660,y:430,w:200,t:'參數設計',s:'連續改變負荷，看活動是否規律變化',c:'pur'}],
+  edges:[['ea','sub'],['cb','sub'],['sub','res'],['res','pi'],['res','bl'],['bl','ex'],['pi','f1'],['bl','f2'],['bl','f3']]},
+ scenes:[
+  S('為什麼一定要比較條件','即使只看一個字，腦中同時有視覺、注意、辨字、理解、準備反應。只看單一條件無法知道某片活動對應哪一環。',{hl:['ea']}),
+  S('認知減法：實驗作業 − 控制作業','兩個作業盡量相似、只差一個想研究的成分；共有部分抵銷，剩下差異被解讀為該成分。像兩份食譜只差辣椒。源自 Donders 的反應時間減法。',{hl:['ea','cb','sub','res']}),
+  S('問題一：純插入假設','假定新成分放入時其他歷程完全照舊。但看字時的注意方式、眼動與視覺分析，可能一開始就和看符號不同。',{hl:['res','pi']}),
+  S('問題二：基線選擇','控制太簡單會混進難度、注意與反應差異；太相似又可能把想研究的成分也消掉。',{hl:['res','bl','ex']}),
+  S('補救：因子、聯集、參數設計','交互作用可直接檢驗一因素是否改變另一因素的效果；聯集降低單一基線的偶然；參數設計讓自變項連續變化。',{hl:['pi','bl','f1','f2','f3']})
+ ],
+ one:'認知減法把實驗作業減去控制作業，想留下額外認知成分；弱點是純插入常不成立、結果高度依賴基線，因此需要因子、聯集與參數設計補強。'});
+
+add({n:9,orig:'4.3',g:'method',title:'功能造影不會完全取代損傷法',view:'flow',
+ flow:{nodes:[
+  {id:'fm',x:140,y:60,w:220,t:'功能造影',s:'正常人・全腦・「相關」',c:'info'},
+  {id:'ls',x:660,y:60,w:220,t:'損傷法（病灶／T M S）',s:'選擇性失敗・「必要性」因果',c:'pur'},
+  {id:'fl',x:140,y:170,w:240,t:'限制',s:'活躍≠必要；沒亮也可能被基線相減、訊號弱、個體對不齊',c:'bad'},
+  {id:'ll',x:660,y:170,w:240,t:'限制',s:'病灶大而不規則、破壞連線、遠距效應、長期重組、策略不同',c:'bad'},
+  {id:'mm',x:400,y:170,w:150,t:'兩者不一致',s:'最有價值',c:'warn'},
+  {id:'c1',x:140,y:310,w:220,t:'造影提出候選區／網路',c:'info'},
+  {id:'c2',x:400,y:310,w:210,t:'損傷／T M S 檢驗必要性',c:'pur'},
+  {id:'c3',x:660,y:310,w:230,t:'病人的選擇性缺損 → 告訴造影該比較哪些成分',c:'pur'},
+  {id:'ch',x:400,y:440,w:420,t:'證據鏈：交叉驗證，建立可靠的認知神經科學理論',c:'ok'}],
+  edges:[['fm','fl'],['ls','ll'],['fl','mm'],['ll','mm'],['c1','c2'],['c2','c3'],['c3','c1',''],['c2','ch'],['mm','ch']]},
+ scenes:[
+  S('兩種方法回答不同的問題','造影：正常人在作業中哪些區域一起活動；損傷法：系統不能工作後功能是否選擇性失敗。',{hl:['fm','ls']}),
+  S('各有各的限制','造影多是相關；損傷法的雜訊來自大而不規則的病灶、連線破壞、重組與策略。',{hl:['fm','fl','ls','ll']}),
+  S('不一致反而最有價值','迫使理論把任務拆更細：是非必要策略、代償、基線相減，還是連線被破壞？',{hl:['fl','ll','mm']}),
+  S('互相幫忙形成證據鏈','造影提候選區 → 損傷／T M S 驗證必要性 → 結構影像描病灶 → 病人缺損告訴造影該比較什麼。',{hl:['c1','c2','c3','ch']})
+ ],
+ one:'結論不是誰比較高級，而是證據鏈：造影告訴你正常系統在哪些地方一起活動，損傷法告訴你失去哪些部分會讓功能失敗；兩者必須交叉驗證。'});
+
+add({n:10,orig:'7.1',g:'sense',title:'盲視與它對正常視覺的啟示',view:'brain',legend:['vis'],
+ scenes:[
+  S('皮質盲：V1 受損 → 對應視野沒有有意識的視覺','V1 受損可造成半邊、四分之一或一小塊視野缺損；主要路徑「視網膜→LGN→V1」中斷。',{extra:L(680,190,24,46),hl:['eye','lgn','v1'],paths:['retina_lgn','lgn_v1'],blocked:['lgn_v1'],notes:[{x:560,y:80,t:'V1 損傷（皮質盲）',to:[672,170]}]}),
+  S('盲視：說「什麼都沒看到」，但被迫猜時高於機率','刺激在盲區閃一條斜線，病人說「左邊是黑的」；被迫二選一（方向、位置、動作）卻長期高於 50%，眼或手也會朝刺激移動。重點是大量試次後可靠高於機率，同時缺乏主觀看見。',{extra:L(680,190,24,46),hl:['v1'],notes:[{x:300,y:110,t:'病人：「我什麼都沒看到」'},{x:300,y:150,t:'被迫猜 → 表現 > 50%（可靠、重複）'}]}),
+  S('旁路一：視網膜 → 上丘 → 視丘枕核 → MT／外紋狀皮質','V1 之外還有舊的皮質下視覺路徑，支援快速定向、定位與動作偵測。',{extra:L(680,190,24,46),hl:['eye','sc','pulv','mt'],paths:['retina_sc','sc_pulv','pulv_mt']}),
+  S('旁路二：LGN 部分細胞群 → MT／V5','特別有助於快速定位與動作偵測，不經過 V1。',{extra:L(680,190,24,46),hl:['lgn','mt'],paths:['lgn_mt']}),
+  S('啟示（以及不要過度簡化）','①視覺是多條平行路徑 ②處理資訊與意識到資訊可分離 ③V1 對有意識、精細、可報告的視覺非常重要。盲視辨別通常粗糙、受限、不穩定，不是「正常視覺只少了意識」。研究者還要排除 V1 殘存與光散射。',{hl:['v1','sc','mt','ppc'],paths:['retina_sc','pulv_mt','lgn_mt']})
+ ],
+ one:'盲視顯示受損而無意識的視覺處理仍可能存在，因此視覺辨別與主觀視覺意識不是完全相同的東西。'});
+
+add({n:11,orig:'7.2',g:'sense',title:'V1 對視知覺在多大程度上是必要的',view:'brain',legend:['vis'],
+ scenes:[
+  S('先問：是哪一種視覺？','視知覺不是單一能力：有意識地看見、精細辨認，或只是粗略定位與動作反應，答案不同。',{hl:['v1']}),
+  S('對有意識、精細的視覺：V1 幾乎是必要條件','V1 保留視網膜拓樸並分析邊緣、方向、明暗與波長；顏色、形狀、動作、物體都建立在這些早期分析上。V1 與高階區的迴返互動也與意識經驗密切相關。',{hl:['eye','lgn','v1','v23','v4','mt','it'],paths:['retina_lgn','lgn_v1','v1_v4','v1_mt']}),
+  S('對粗略定位／定向：V1 不是唯一入口','經上丘、枕核或 LGN 旁路到外紋狀皮質，可支援快速定向、眼動與粗略動作偵測，但精細度與意識感較差。',{hl:['sc','pulv','mt','lgn'],paths:['retina_sc','sc_pulv','pulv_mt','lgn_mt']}),
+  S('必要 ≠ 充分','V1 完好只完成早期分析；認顏色要 V4、看動作要 MT、認物體臉要下顳葉，還需要注意與記憶系統。',{hl:['v1','v4','mt','it','ppc','pfc'],paths:['v1_v4','v4_it','v1_mt','mt_ppc']})
+ ],
+ one:'對有意識的視覺經驗與精細辨認，V1 幾乎是必要條件；對粗略定位、定向與部分動作處理，V1 不是唯一必要路徑；對完整視知覺，V1 又不是充分條件。'});
+
+add({n:12,orig:'7.3',g:'sense',title:'顏色恆常與物體恆常',view:'brain',legend:['vis','par'],
+ scenes:[
+  S('為什麼恆常性是問題','光源變 → 反射波長變；走近走遠 → 影像大小變；換角度 → 視網膜形狀變。大腦要從變動影像推論相對穩定的物體。',{hl:['v1'],notes:[{x:560,y:90,t:'光源／距離／視角一直變',a:'middle'}]}),
+  S('顏色恆常：V1 看局部波長，V4 看場景脈絡','V1 對局部波長與明暗敏感，光源變它也變；V4 與腹側系統整合較大範圍脈絡，像相機自動白平衡，先估計光源再修正表面顏色。V4 受損可致大腦性色盲（看世界近灰階，形狀、深度仍保留）。',{hl:['v1','v4'],paths:['v1_v4'],notes:[{x:560,y:372,t:'V4：顏色相對不受照明改變'},{x:560,y:340,t:'V1：隨光源改變'}]}),
+  S('物體恆常：腹側路徑往下顳葉','V4 → 梭狀回 → IT。IT 神經元感受野大，不太在意位置與大小，更在意「是什麼」，適合建立跨位置、跨大小的物體身分。',{hl:['v4','ffa','it'],paths:['v1_v4','v4_it']}),
+  S('兩套表徵：身分 vs 視角','左側下顳葉／梭狀回常把不同大小與角度視為同一物體；右半球與頂葉網路對視角、空間方向更敏感。病人可能認得物體卻判斷不出方向，或只在熟悉視角認得。',{hl:['it','ffa','ppc'],paths:['v4_it','mt_ppc'],notes:[{x:300,y:370,t:'跨視角：「同一個物體」'},{x:560,y:60,t:'保留視角、方向資訊'}]}),
+  S('f M R I 適應：用「降低」檢驗相同表徵','重複同一表徵 → 反應降低。物體換角度後某區仍降低＝該區把不同視角當成同一身分；反應恢復＝該區仍區分視角。',{hl:['it','ffa'],notes:[{x:300,y:370,t:'換角度後仍降低 → 同一身分\n換角度後恢復 → 區分視角'}]})
+ ],
+ one:'顏色恆常靠比較局部與場景脈絡來估計表面顏色；物體恆常靠把變動影像轉成較穩定的結構與身分表徵，同時由另一部分系統保留視角和方向資訊。'});
+
+add({n:13,orig:'8.6',g:'sense',title:'語音知覺中的動作成分',view:'brain',legend:['aud','vis','mot'],
+ scenes:[
+  S('語音為什麼難：協同發音','說話時嘴巴在發前一個音就已準備下一個音，同一音素在不同前後文聲學訊號會變，不同訊號也可能被聽成同一音素。',{hl:['a1','stg'],paths:['mgn_a1'],notes:[{x:300,y:215,t:'聲學訊號高度變動',to:[393,254]}]}),
+  S('動作理論：聽者反推「說話者做了什麼發音動作」','自己的大腦知道舌、唇、聲帶怎麼產生聲音，可用運動表徵反推別人的發音。不等於你真的動嘴複誦，而是發音系統提供預測。',{hl:['a1','wern','broca','pmc'],paths:['arcuate','psts_pmc']}),
+  S('McGurk：看到的嘴型改變聽到的音','看 ga、聽 ba → 常聽成 da；閉眼錯覺消失。pSTS 是重要多感官整合區。但這直接證明的是視聽整合，不單獨證明語音一定要靠運動系統。',{hl:['v1','psts','a1','pmc'],paths:['v1_psts','a1_psts','psts_pmc'],notes:[{x:640,y:340,t:'看 ga ＋ 聽 ba → 知覺 da'}]}),
+  S('類別知覺＋TMS：訊號模糊時運動區才派上用場','da/ta 的聲帶振動時間連續變化，知覺卻在界線前後切成兩類。TMS 干擾前運動／發音區，語音清楚時影響小，介於兩音之間或有雜訊時辨別變差。',{extra:`<g><rect x="640" y="6" width="150" height="84" rx="8" style="fill:var(--panel);stroke:var(--line)"/><path d="M652,80 C700,80 700,24 780,24" fill="none" style="stroke:var(--aud);stroke-width:3"/><text x="715" y="100" class="axt" text-anchor="middle">VOT 連續變化 →</text><text x="660" y="22" class="axt">ta</text><text x="752" y="76" class="axt">da</text></g>`,hl:['a1','pmc','broca'],paths:['psts_pmc']}),
+  S('強版本不成立','若發音運動區是語音知覺唯一基礎，這些區域受損者應幾乎聽不懂語音；實際上多半只在困難條件出現輕微障礙。運動表徵是輔助預測器。',{hl:['a1','stg','pmc','psts']})
+ ],
+ one:'語音知覺主要依賴聽覺與多感官系統，運動表徵在訊號模糊或需要學習時提供預測與輔助，但不是唯一必要機制。'});
+
+add({n:14,orig:'3.1',g:'method',title:'大腦電訊號與電生理技術',view:'neuron',legend:[],
+ scenes:[
+  S('漸進電位（突觸後電位）：樹突與細胞體','可興奮也可抑制；強度可變、隨距離衰減；神經元把不同位置、不同時間的輸入加總。',{hl:['inputs','dendrite','soma'],ap:'graded'}),
+  S('動作電位：軸突起始處過閾值才觸發','全有全無，沿軸突靠電壓閘控離子通道再生，不衰減。刺激強時不是波形變大，而是頻率變高。',{hl:['hillock','axon','node'],ap:'spike'}),
+  S('E E G／E R P：大量、同步、方向平行的突觸後電位','單顆細胞電場太小且方向雜亂會互相抵銷；只有許多平行的錐體細胞同時活動，電場才傳到頭皮。時間解析度毫秒級，但來源定位差（逆問題）。',{view:'brain',extra:EEG_EXTRA,notes:[{x:260,y:140,t:'頭皮電極：量到的是\n大量同步的突觸後電位',to:[335,76]}]}),
+  S('單一細胞記錄：直接數動作電位','細電極放在神經元內或附近，以每秒放電次數分析；能精確問某顆細胞偏好什麼，但具侵入性，多用於動物或少數手術情境。',{view:'brain',extra:`<line x1="338" y1="0" x2="340" y2="318" style="stroke:var(--ink);stroke-width:2.4"/><circle cx="340" cy="320" r="4" style="fill:var(--accent)"/>`,hl:['it'],notes:[{x:200,y:70,t:'微電極 → 單一神經元',to:[339,200]}]}),
+  S('MEG：量神經電流造成的磁場','磁場較不受頭皮與顱骨扭曲，定位通常優於 E E G，毫秒級；設備昂貴需磁屏蔽，對方向與深度有條件。',{view:'brain',extra:`<path d="M95,180 C95,20 760,10 760,200" fill="none" style="stroke:var(--par);stroke-width:3;stroke-dasharray:8 6"/><circle cx="130" cy="86" r="7" class="sensor"/><circle cx="270" cy="30" r="7" class="sensor"/><circle cx="440" cy="16" r="7" class="sensor"/><circle cx="610" cy="40" r="7" class="sensor"/>`,notes:[{x:420,y:130,t:'磁感測器環繞頭部（不貼頭皮）'}]}),
+  S('依問題配工具','動作電位→單細胞；大量同步突觸後電位→E E G／E R P；伴隨磁場→M E G。電生理擅長「何時」，f M R I 擅長「哪裡」。',{view:'scale',axis:'time',hl:['sc','eeg','meg','fmri']})
+ ],
+ one:'先分訊號，再配工具：動作電位適合單一細胞記錄；大量同步突觸後電位形成 E E G 與 E R P；相同神經電流伴隨的磁場形成 M E G。'});
+
+add({n:15,orig:'3.3',g:'method',title:'E R P 與認知理論的檢驗',view:'erp',legend:[],
+ scenes:[
+  S('單次試驗幾乎被背景 EEG 淹沒','E E G 同時混有感覺、注意、思考、眨眼與許多與刺激無關的活動。',{view:'erpavg',n:1}),
+  S('刺激鎖定＋平均 → E R P','把每次刺激時刻設為零點，切出前後一小段，多次對齊平均：與刺激鎖定的反應保留，隨機背景正負抵銷。',{view:'erpavg',n:40}),
+  S('怎麼讀波形','橫軸＝刺激後毫秒，縱軸＝電位。P＝正向峰、N＝負向峰，數字約是出現時間（N170、P300）。正負只是頭皮電位方向，不等於興奮／抑制或好壞。',{show:['obj','face'],pk:[[100,4,'P1',-30,-30],[170,-7,'N170（臉更大）',-90,34],[350,3.5,'P300',60,-34]]}),
+  S('用時間窗檢驗理論：早 vs 晚','操弄一個因素，看哪個時間窗的振幅、潛時或頭皮分布改變。<150 ms 多半是知覺處理；>300 ms 較可能是辨認、記憶、決策。',{show:['obj','face'],wins:[[130,200,'N170：早期臉結構編碼','#d6338a'],[300,500,'晚期：辨認／記憶／決策','#7c4dd6']]}),
+  S('例：聯想促發的歸屬','只看反應時間，促發與刺激清晰度的交互作用會讓人以為促發改變早期知覺。若清晰度在 150 ms 內影響波形、促發卻到 300 ms 後才出現，就能把兩個歷程分開並修正理論。',{show:['obj','face','fam'],wins:[[100,200,'刺激清晰度（早）','#2f6fe0'],[300,500,'促發（晚）','#7c4dd6']]}),
+  S('限制','①峰是許多神經來源相加，一個峰≠一個純粹心理模組 ②空間定位差（逆問題）③需要許多試次，眼動眨眼說話會造成雜訊。',{show:['obj','face','fam','cari']})
+ ],
+ one:'E R P 透過刺激鎖定平均，從 E E G 抽出毫秒級反應；用成分出現的時間與對操弄的敏感度檢驗認知歷程，但成分不是心理功能的直接標籤，來源仍需其他方法確認。'});
+
+add({n:16,orig:'3.4',g:'sense',title:'電生理對臉的表徵與處理的貢獻',view:'brain',legend:['vis','lim','lang'],
+ scenes:[
+  S('臉辨識的三層','知覺編碼（眼鼻口配置）→ 臉身分辨識（跨光線、表情、角度）→ 人物身分與知識（也可由名字、聲音觸發）。',{hl:['v23','ffa','it','atl'],paths:['v1_v4','v4_it']}),
+  S('單一細胞：臉細胞多半不是祖母細胞','猴子下顳葉有對臉比物體反應強的神經元，但多數是對「一組」臉有不同程度反應。',{view:'spike',mode:'tuning'}),
+  S('人類手術記錄與稀疏編碼','內側顳葉某些神經元對特定名人（不論照片或名字）高度敏感，但不可能測遍所有刺激；較穩妥解釋是稀疏編碼——一小群細胞共同代表一個概念。上顳溝細胞還對視線、表情敏感。',{hl:['hip','amy','psts','it'],notes:[{x:300,y:360,t:'內側顳葉：名人／概念細胞',to:[330,306]},{x:600,y:330,t:'STS：視線、表情',to:[545,265]}]}),
+  S('E R P：N170 早期臉結構編碼','約 170 ms，對臉與臉狀結構大於物體，右後顳區較大；不太在意是不是名人，較像回答「這是臉」。',{view:'erp',show:['obj','face'],wins:[[130,200,'N170','#d6338a']]}),
+  S('N250：熟悉臉／身分；晚期：人物知識','N250 對熟悉臉及同一人物不同照片較敏感；300 ms 後的成分可同時被臉和名字影響，較接近跨感官的人物知識。',{view:'erp',show:['face','fam'],wins:[[230,300,'N250 身分','#7c4dd6'],[300,500,'人物知識（臉＋名字）','#e08a0b']]}),
+  S('時間資訊能裁決理論：漫畫臉','漫畫臉若在 N170 就增強，表示效果出現在知覺編碼階段，較支持「放大了視覺上有辨識力的特徵」，而不是記憶裡本來就存著一張漫畫版。',{view:'erp',show:['face','cari'],wins:[[130,200,'N170 已增強','#e08a0b']]})
+ ],
+ one:'單一細胞告訴我們臉與人物概念可能如何被選擇性且稀疏地編碼；E R P 告訴我們知覺編碼、臉身分和人物知識大致在什麼時間依序出現。'});
+
+add({n:17,orig:'5.4',g:'method',title:'T M S 與 t D C S 對大腦可塑性的貢獻',view:'brain',legend:[],
+ scenes:[
+  S('可塑性：功能、連線與興奮性會隨經驗改變','經驗、練習、感覺缺失或損傷，會改變哪些區域參與哪些功能。造影只能看到重組後哪裡活躍，不能單獨證明新活躍區真的有功能。',{hl:['s1','v1','v23']}),
+  S('早盲者讀點字：枕葉也亮了','一般人用指尖辨認凸字主要靠體感覺皮質；早盲者的視覺皮質也活躍。但這可能只是想像或伴隨現象。',{hl:['s1','v23','v1'],notes:[{x:580,y:70,t:'點字觸覺 → 體感覺區',to:[477,150]},{x:600,y:340,t:'枕葉視覺皮質也活躍？',to:[655,230]}]}),
+  S('TMS 提供因果證據','干擾早盲者中枕葉 → 點字／凸字辨識下降；對戴眼罩明眼人影響較小 → 原本處理視覺的皮質已被徵用為精細觸覺所必要。',{extra:COIL(752,190),hl:['v23','v1']}),
+  S('地圖會隨使用與輸入競爭而改變','長期使用某身體部位 → 對應體感覺／動作代表區擴大；截肢或缺乏輸入 → 縮小或被鄰近功能侵入。重組也受原有連線與計算特性限制（如點字與視覺都需高精度空間模式）。',{hl:['s1','m1'],notes:[{x:560,y:100,t:'代表區可擴大／縮小／被侵入',to:[455,140]}]}),
+  S('t D C S：偏壓興奮性，研究後效與學習','刺激視覺皮質若使早期視覺 E R P 或微弱刺激偵測系統性改變 → 改變皮質狀態會改變知覺。停止刺激後仍持續的後效可能與突觸可塑性有關。',{extra:TDCS,hl:['v1','v23']}),
+  S('限制','T M S 主要刺激表淺皮質、網路效應難完全確定；t D C S 更不聚焦，陽／陰極效果依情境改變；效應通常小於自然腦傷。',{hl:[]})
+ ],
+ one:'造影指出可塑性可能發生在哪裡，T M S 檢驗重組區是否已成為必要節點，t D C S 則用興奮性與後效研究可塑性如何被調整。'});
+
+add({n:18,orig:'1.1',g:'theory',title:'心身問題與三種解決框架',view:'flow',
+ flow:{nodes:[
+  {id:'pr',x:400,y:50,w:360,t:'心身（心腦）問題',s:'疼痛、顏色、思想、自我感 vs 由神經元、離子、血流組成的物質大腦',c:'warn'},
+  {id:'du',x:130,y:180,w:230,t:'二元論（笛卡兒）',s:'心與身是兩種實體；交會點在松果體',c:'pur'},
+  {id:'as',x:400,y:180,w:230,t:'雙重面向論（斯賓諾莎）',s:'同一實在的兩種描述角度',c:'info'},
+  {id:'mo',x:670,y:180,w:230,t:'一元論（物理一元論）',s:'心智由大腦產生，沒有獨立的非物質心靈',c:'ok'},
+  {id:'dp',x:130,y:310,w:230,t:'難題',s:'非物質心靈如何推動神經元？又如何被實驗測量？',c:'bad'},
+  {id:'ex',x:400,y:310,w:230,t:'例：同一首歌',s:'聲波頻譜與旋律情緒，兩種描述都指向同一事件',c:'info'},
+  {id:'re',x:670,y:310,w:230,t:'化約論（較強版本）',s:'心理概念可能被神經生物概念取代，如燃素被氧化理論淘汰',c:'ok'},
+  {id:'no',x:400,y:440,w:480,t:'現階段立場：偏一元論，但心理層次的說明仍不可少',s:'不懂什麼叫工作記憶或抑制，就無法設計有意義的神經實驗',c:'gray'}],
+  edges:[['pr','du'],['pr','as'],['pr','mo'],['du','dp'],['as','ex'],['mo','re'],['dp','no'],['ex','no'],['re','no']]},
+ scenes:[
+  S('問題是什麼','主觀心智與物質大腦到底是兩種東西，還是同一件事的不同描述。因為現代討論集中在大腦，稱「心腦問題」更精確。',{hl:['pr']}),
+  S('二元論：兩種實體','符合直覺，但給認知神經科學一個大難題：非物質心靈如何影響且被測量？所以認知神經科學通常不採取。',{hl:['pr','du','dp']}),
+  S('雙重面向論：同一實在，兩種描述','外部描述神經元放電、第一人稱描述「我在害怕」，指向同一事件。就像頻譜沒有否定旋律，旋律也不是另一個漂浮的實體。',{hl:['pr','as','ex']}),
+  S('一元論與化約論','物理一元論認為心智活動由物質大腦產生；化約論更強，預期心理概念終將被生物概念取代。',{hl:['pr','mo','re']}),
+  S('這門課的立場','基本偏一元論：研究大腦能幫助理解心智；但一元論不等於現在就能把心理概念刪掉。',{hl:['re','ex','no']})
+ ],
+ one:'二元論視心身為兩種實體；雙重面向論視為同一實在的兩種描述；一元論認為心智來自大腦，化約論更預測心理概念終將被生物概念取代，而目前認知神經科學仍需要心理層次的理論。'});
+
+add({n:19,orig:'1.2',g:'theory',title:'認知神經科學是不是新的顱相學',view:'flow',
+ flow:{nodes:[
+  {id:'ph',x:140,y:50,w:230,t:'顱相學（19 世紀初）',s:'①不同腦區負責不同能力 ②能力越強腦區越大、頂出頭骨',c:'gray'},
+  {id:'ok',x:140,y:170,w:230,t:'✔ 含合理直覺',s:'功能可能有區域差異（Broca、Penfield 地圖）',c:'ok'},
+  {id:'no',x:140,y:290,w:230,t:'✘ 真正失敗處',s:'頭骨不能量腦區；先發明含糊能力清單再貼位置，缺乏可檢驗理論',c:'bad'},
+  {id:'cn',x:660,y:50,w:230,t:'現代認知神經科學',c:'info'},
+  {id:'me',x:660,y:170,w:230,t:'多方法交叉驗證',s:'損傷、T M S、電生理、單細胞、造影＋控制條件與統計',c:'info'},
+  {id:'th',x:660,y:290,w:230,t:'先有認知理論',s:'把能力拆成語音辨識、詞彙提取、動作規劃等歷程，再問網路如何實現',c:'info'},
+  {id:'md',x:400,y:170,w:150,t:'定位 vs 分散',s:'感覺動作地圖清楚；語言記憶靠網路',c:'warn'},
+  {id:'rk',x:400,y:430,w:560,t:'風險仍在：看到杏仁核活躍就說「恐懼中心」、前扣帶活躍就說「在說謊」',s:'活躍≠必要；一個腦區常參與多種功能 → 變成新顱相學',c:'bad'}],
+  edges:[['ph','ok'],['ph','no'],['cn','me'],['cn','th'],['ok','md'],['me','md'],['no','rk'],['th','rk'],['md','rk']]},
+ scenes:[
+  S('顱相學的兩個主張','①不同腦區負責不同能力 ②能力越發達腦區越大，會頂出頭骨形狀，所以摸頭可判斷人格。',{hl:['ph']}),
+  S('哪個對、哪個錯','第一個含有功能專門化的早期直覺（後來的損傷、電刺激與造影確實支持區域差異）；第二個沒有可靠根據，且能力清單是憑空貼標籤。',{hl:['ph','ok','no']}),
+  S('現代方法的差別','交叉驗證、控制條件、統計與重複性；更重要的是先有認知理論，把能力拆成可操作歷程。',{hl:['cn','me','th']}),
+  S('定位論 vs 分散論不必二選一','基本感覺與動作有相對清楚的地圖與專門化；語言、記憶、推理、情緒依賴跨區網路。',{hl:['ok','me','md']}),
+  S('風險仍在','若只問「哪裡亮」，不問作業中的計算、網路互動與替代解釋，就會變成新的顱相學。',{hl:['md','th','no','rk']})
+ ],
+ one:'認知神經科學保留了功能分工的可檢驗部分，推翻頭骨測人格與天真的功能清單；它和顱相學的真正分界，是有沒有認知理論、嚴謹方法與多重證據，而不是有沒有畫出腦區。'});
+
+add({n:20,orig:'2.2',g:'neuron',title:'神經元如何產生電訊號與化學訊號',view:'neuron',legend:[],
+ scenes:[
+  S('靜息：膜內約 −70 mV','膜內外離子分布不均、細胞膜選擇性通透，加上鈉鉀幫浦長期維持濃度差。整體流程：電 → 化學 → 再電。',{hl:['soma'],ap:'rest'}),
+  S('漸進電位：樹突與細胞體','上游釋放傳導物質 → 受體開啟離子通道 → 局部漸進電位（EPSP 靠近閾值、IPSP 遠離）。強弱可變、隨距離衰減。',{hl:['inputs','dendrite','soma'],ap:'graded'}),
+  S('加總與閾值','空間加總（不同突觸同時）＋時間加總（同突觸連續）；只有在軸突起始處總和超過閾值才觸發動作電位。',{hl:['soma','hillock'],ap:'threshold'}),
+  S('動作電位：去極化 → 再極化 → 超極化','電壓閘控鈉通道開，Na⁺ 流入（去極化）；鈉通道失活、鉀通道開，K⁺ 外流（再極化）；可能短暫低於靜息值（超極化＋不應期，使訊號向終端單向傳播）。',{hl:['axon'],ap:'depol'}),
+  S('全有全無；強度靠頻率與數量','過閾值後單次波形不再因刺激更強而變大；強度以放電頻率與參與神經元數量表達。',{hl:['axon'],ap:'repol'}),
+  S('髓鞘讓動作電位在郎飛氏結之間「跳躍」','有髓鞘軸突傳導更快、更節能。',{hl:['myelin','node'],ap:'hyper'}),
+  S('終端：鈣進入 → 囊泡融合 → 釋放傳導物質','動作電位抵達終端 → 鈣通道開 → Ca²⁺ 進入 → 囊泡與膜融合 → 傳導物質進入突觸間隙。',{vb:'420 100 360 200',hl:['terminal','ca','vesicle','nt','cleft']}),
+  S('突觸後：受體 → 新的漸進電位 → 清除','傳導物質結合受體，開啟離子通道或啟動細胞內訊號；之後被再吸收、酵素分解或擴散清除。乙醯膽鹼常作興奮例、GABA 作抑制例，實際效果仍依受體種類而定。',{vb:'420 100 360 200',hl:['nt','cleft','receptor','post']})
+ ],
+ one:'漸進電位在樹突和細胞體，強弱可變、可興奮也可抑制、會衰減；動作電位在軸突，全有全無、主動再生、不隨距離變小。突觸後電位先被整合，超過閾值才發出動作電位，終端再用化學物質把訊息交給下一個細胞。'});
+
+add({n:21,orig:'2.1',g:'neuron',title:'神經元之間如何溝通',view:'neuron',legend:[],
+ scenes:[
+  S('突觸：前後兩個細胞之間有間隙','突觸前神經元的軸突終端，對著突觸後神經元的樹突或細胞體。動作電位不能像電線直接跳過去，必須先轉成化學訊號。',{vb:'420 100 360 200',hl:['terminal','cleft','post']}),
+  S('五步驟：動作電位→鈣→囊泡→受體→突觸後電位','①動作電位抵達終端 ②鈣通道開、Ca²⁺ 進入 ③囊泡融合，釋放傳導物質 ④結合突觸後受體 ⑤形成興奮或抑制性漸進電位。',{vb:'420 100 360 200',hl:['terminal','ca','vesicle','nt','receptor']}),
+  S('下游神經元像即時投票','它同時收到成千上萬個輸入，有的催它往前、有的踩煞車；做空間與時間加總，超過閾值才發出自己的動作電位。',{hl:['inputs','dendrite','soma','hillock'],ap:'threshold'}),
+  S('學習＝突觸權重改變','同一個輸入未來能造成多大的突觸後效果，是網路學習常發生的地方。',{vb:'420 100 360 200',hl:['receptor','post']}),
+  S('少數用電突觸（gap junction）','兩個細胞透過通道直接交換離子，快速、容易同步，但可調節性通常不如化學突觸；大腦多數長距離與複雜計算仍靠化學突觸。',{hl:[]})
+ ],
+ one:'動作電位到達終端，促使傳導物質釋放；傳導物質結合受體形成突觸後電位；下一個神經元把興奮和抑制加總，超過閾值後才發出自己的動作電位。'});
+
+add({n:22,orig:'3.2',g:'neuron',title:'神經元如何編碼資訊',view:'spike',legend:[],
+ scenes:[
+  S('率編碼：放電頻率，不是波形大小','動作電位全有全無，單發高度不能表示刺激強度。刺激更符合偏好 → 每秒放電更多次。',{mode:'rate'}),
+  S('調諧：刺激與放電率之間的系統關係','一顆下顳葉神經元可能對多張臉有反應、其中幾張特別高；聽覺神經元偏好某段頻率；上顳溝神經元偏好特定視線方向。',{mode:'tuning'}),
+  S('時間編碼：同步可能就是「綁定」','兩群神經元都增加放電不一定代表同一物體；若它們同步放電，大腦可能把它們綁定成同一來源（視覺特徵綁定的一種可能機制）。',{mode:'sync'}),
+  S('一個概念用多少神經元？','祖母細胞太脆弱也難證明；完全分散不夠節能；較符合證據的是稀疏分散式編碼。',{mode:'pop',hl:[0,1,2]}),
+  S('重點：稀疏分散式','一小群神經元共同表示一個概念，每顆也參與一組相關概念；既比祖母細胞耐損，又比全腦一起編碼節能。',{mode:'pop',hl:[2]})
+ ],
+ one:'神經元主要用放電頻率、放電時序與群體型樣編碼資訊；訊息不在單次動作電位的大小，也通常不在一顆孤立的祖母細胞。'});
+
+add({n:23,orig:'8.5',g:'sense',title:'語音知覺為什麼不同於音樂知覺',view:'brain',legend:['aud','lang','mot','lim'],
+ scenes:[
+  S('早期處理大量共用','耳朵 → 耳蝸核 → 上橄欖核 → 下丘 → MGN → A1：頻率、強度與時間變化的基本分析同時是語音和音樂的材料。不能說一開始就「語言送左腦、音樂送右腦」。',{hl:['ear','cn','son','ic','mgn','a1'],paths:['ear_cn','cn_son','son_ic','ic_mgn','mgn_a1']}),
+  S('語音網路：左顳葉聽覺語言網路','類別知覺、McGurk、困難條件下發音運動表徵輔助。純詞聾（左顳葉）：能說話、可能認得環境音與音樂，但很難把語音辨認成詞。',{extra:L(430,270,34,17,-8),hl:['a1','abelt','wern','psts','broca'],paths:['a1_abelt','abelt_ifg','arcuate'],notes:[{x:300,y:350,t:'純詞聾：聽不懂語音\n音樂、環境音相對保留',to:[420,276]}]}),
+  S('音樂網路：旋律、節奏、動作與記憶','經典個案 C N：雙側顳葉受損後認不出熟悉旋律，卻能理解歌詞、辨認人聲與環境音。熟悉旋律的語意記憶可能涉及前顳葉；節拍連到動作系統。',{extra:L(395,275,60,20,-6),hl:['a1','atl','sma','pmc','bg','cb'],paths:['mgn_a1'],notes:[{x:520,y:380,t:'失樂症：認不出旋律\n歌詞與人聲仍可理解',to:[420,285]}]}),
+  S('音樂內部也能拆：音高 vs 時間','有人能跟上節拍卻分不出錯音，也有人音高相對保留但節奏受損；先天性失樂症常以細微音高困難為核心。',{hl:['a1','abelt','sma','bg','cb'],notes:[{x:290,y:370,t:'音高／旋律輪廓',to:[345,278]},{x:600,y:430,t:'節拍／節奏 → 動作時序系統',to:[615,368]}]}),
+  S('不要簡化成「左腦語言、右腦音樂」','右半球常在音高與旋律輪廓較有優勢，左半球在快速時間變化與語言類別較突出，但兩者都依賴雙側、跨區網路。',{hl:['stg','a1']})
+ ],
+ one:'語音與音樂共用早期聲學分析，之後因處理目標不同而部分分流；純詞聾與失樂的雙重分離，以及音樂內部音高與節奏的分離，證明它們不是同一能力，但也不是兩套沒有交集的系統。'});
+
+add({n:24,orig:'4.5',g:'method',title:'功能造影能不能測謊或讀心',view:'flow',
+ flow:{nodes:[
+  {id:'po',x:130,y:60,w:210,t:'傳統測謊機',s:'心跳、呼吸、皮膚導電',c:'gray'},
+  {id:'pp',x:130,y:180,w:210,t:'測的是「一般喚起」',s:'無辜者緊張、熟練者平靜',c:'bad'},
+  {id:'fm',x:400,y:60,w:210,t:'f M R I 測謊',s:'直接測大腦，聽起來更接近源頭',c:'info'},
+  {id:'fp',x:400,y:180,w:230,t:'但謊言不是單一心理動作',s:'記真相＋抑制＋編造＋監控＋心智理論 → 無單一腦區',c:'bad'},
+  {id:'lb',x:400,y:310,w:260,t:'實驗室 ≠ 真實世界',s:'無後果、無動機與反制；基準率讓偽陽性造成大量誤判',c:'bad'},
+  {id:'mv',x:670,y:60,w:210,t:'M V P A「讀心」',s:'多體素型樣分析',c:'ok'},
+  {id:'mh',x:670,y:180,w:210,t:'有限選項分類',s:'先用已知刺激訓練分類器，再判斷新試次屬於哪一類',c:'ok'},
+  {id:'ml',x:670,y:310,w:210,t:'做不到',s:'讀開放式、具體而私密的想法',c:'bad'},
+  {id:'cc',x:400,y:440,w:560,t:'結論：封閉選項中可高於機率分類；真實測謊不可靠，也無法任意讀心',c:'gray'}],
+  edges:[['po','pp'],['fm','fp'],['fp','lb'],['mv','mh'],['mh','ml'],['pp','cc'],['lb','cc'],['ml','cc']]},
+ scenes:[
+  S('傳統測謊機：測的是喚起','指標反映一般喚起，不是謊言本身。',{hl:['po','pp']}),
+  S('f M R I 測謊：沒有單一「說謊腦區」','說謊牽涉前額葉、前扣帶、記憶與心智理論網路；臨時編造與事先背好的說法策略也不同。',{hl:['fm','fp']}),
+  S('實驗室準確率不能直接搬到真實','真實說謊有動機、恐懼、利害與反制；基準率低時，少量偽陽性也造成許多誤判。',{hl:['fp','lb']}),
+  S('M V P A：在封閉選項中解碼','不是找「哪裡最亮」，而是看一群體素的細微圖樣；可在非常受控的視覺刺激中分類或粗略重建，或讓無法行動的病人建立簡單溝通。',{hl:['mv','mh']}),
+  S('但它不是打開大腦字幕','分類器已知可能答案；個人的概念表徵與腦部對齊差異大，開放式想法沒有字典可查。',{hl:['mh','ml','cc']})
+ ],
+ one:'核心是分清「分類」和「讀心」：功能造影能在封閉選項中解碼某些粗略類別；目前不能可靠測出真實世界的謊言，也不能讀出任意、具體而私密的思想。'});
+
+add({n:25,orig:'7.4',g:'sense',title:'臉是不是特殊的，為什麼',view:'brain',legend:['lang','vis'],
+ scenes:[
+  S('支持「特殊」的證據','F F A 對臉反應大於許多物體；E R P 的 N170 對臉特別敏感；臉盲者看得到五官、認得一般物體，卻無法從臉認人，只能靠聲音、髮型或情境補償。',{hl:['ffa','v23','it'],paths:['v4_it'],notes:[{x:450,y:376,t:'FFA：顳葉腹側梭狀回（右側通常較強）',to:[455,331]}]}),
+  S('解釋一：任務難度','臉彼此很像、需辨認細微差異，或許任何高難度辨別都會啟動臉區。但把難度調成相近後，某些臉盲病人的臉辨認仍特別差，難度不能完整解釋。',{hl:['ffa']}),
+  S('解釋二：整體（構形）處理','臉的眼鼻口之間的配置特別重要；倒置臉嚴重破壞這種整體關係（臉孔倒置效應）。',{extra:FACE(50,50,0)+FACE(110,50,1),hl:['ffa'],notes:[{x:80,y:92,t:'正立 vs 倒置'}]}),
+  S('解釋三：視覺專家說','我們從小看無數張臉並做個體層次辨認；F F A 也許處理的是極度熟練的細緻辨別。受試者被訓練成 Greebles 專家後相關區與 N170 可能增加；汽車、鳥類專家也有類似效應。',{hl:['ffa','it']}),
+  S('解釋四：領域特定說','臉有社會與生存重要性而演化出先天偏好的專門系統：嬰兒偏好臉狀配置、臉盲選擇性。但臉區也會回應其他物體，強版本不易成立。',{hl:['ffa','psts','atl'],notes:[{x:600,y:330,t:'STS：視線／表情（社會訊息）',to:[545,265]}]}),
+  S('綜合','先天偏好＋長期經驗調校＋臉辨認本身依賴整體處理＋任務需求，四種解釋不必互斥。',{hl:['ffa','it','v23','psts']})
+ ],
+ one:'臉有 F F A、N170 和臉盲等特殊性證據；但特殊性可能來自領域特定、整體處理、專家經驗與任務需求的組合，不能只用一個原因下結論。'});
+
+add({n:26,orig:'8.2',g:'sense',title:'單一細胞記錄與聽覺表徵',view:'brain',legend:['aud'],
+ scenes:[
+  S('直接看一顆神經元如何回應不同聲音','不只知道一大片聽覺皮質有活動，而能問這顆細胞偏好哪個頻率、音量、位置或複雜聲音。',{extra:`<line x1="395" y1="0" x2="395" y2="254" style="stroke:var(--ink);stroke-width:2.4"/><circle cx="395" cy="256" r="4" style="fill:var(--accent)"/>`,hl:['a1'],notes:[{x:260,y:150,t:'微電極記錄\n聽覺皮質的單一神經元',to:[394,200]}]}),
+  S('音調拓樸：頻率地圖','耳蝸先按頻率分離聲音，聽覺皮質仍保留有秩序的頻率地圖；頻率相近的聲音由位置相近的神經元表示。就像視覺皮質保存視網膜位置，聽覺保存頻率。',{extra:`<rect x="366" y="300" width="60" height="8" rx="4" fill="url(#tono)"/><text class="axt" x="364" y="324" text-anchor="end">低頻</text><text class="axt" x="428" y="324">高頻</text>`,hl:['a1'],paths:['mgn_a1']}),
+  S('階層處理：核心 → 帶區','核心區細胞對很窄頻率敏感；帶區整合多個核心輸入，對寬頻組合、頻率變化方向或猴子叫聲更強。越往高階，偏好刺激越複雜。',{hl:['a1','abelt','pbelt','stg'],paths:['a1_abelt','a1_pbelt'],notes:[{x:270,y:215,t:'帶區：複雜叫聲',to:[343,265]},{x:480,y:300,t:'核心：窄頻',to:[400,262]}]}),
+  S('多維調諧：音量與位置常同時編碼','有些神經元只在特定聲強反應，有些對特定方向敏感，許多細胞同時受兩者影響。神經元不一定各代表一個純特徵。',{hl:['a1','pbelt'],notes:[{x:300,y:215,t:'音量 × 方向 同時調諧',to:[435,246]}]}),
+  S('what／where 的起點證據','前方帶區對叫聲身分敏感，位置改變仍反應（what）；後方帶區對位置最敏感（where）。',{hl:['abelt','pbelt','broca','ppc'],paths:['abelt_ifg','pbelt_ppc']})
+ ],
+ one:'單細胞記錄揭露聽覺皮質的音調地圖、由核心到帶區的階層、音量與位置調諧，以及前方 what、後方 where 的分流；限制是侵入性、多數資料來自動物。'});
+
+add({n:27,orig:'8.4',g:'sense',title:'音樂知覺是否依賴不同的腦機制',view:'brain',legend:['aud','mot','lim'],
+ scenes:[
+  S('與語音的雙重分離','純詞聾可聽不懂口語卻欣賞音樂；失樂症則認不出熟悉旋律而語音理解保留。高階語音與音樂處理不是同一套系統的難易差別。',{extra:L(430,270,34,17,-8),hl:['a1','stg','wern','atl'],notes:[{x:300,y:370,t:'語音 ↔ 音樂 互補缺損'}]}),
+  S('音樂內部：音高路徑 vs 時間路徑（Peretz & Coltheart）','旋律輪廓、音程、調性偏音高；節拍與節奏偏時間。個案可能只在音高或只在節奏受損。',{hl:['a1','abelt','pbelt','sma','bg','cb'],notes:[{x:290,y:370,t:'音高組織',to:[345,278]},{x:560,y:430,t:'時間組織',to:[615,368]}]}),
+  S('強烈連結動作系統','即使坐著不動，聽規律節拍也會啟動前運動皮質、輔助動作區、小腦與基底核——預測節拍就像準備下一個動作時間點。',{hl:['pmc','sma','cb','bg','m1']}),
+  S('情緒與獎賞：借用一般系統','熟悉段落帶來期待與高潮時獎賞迴路參與；這些區域也回應其他有獎賞價值的刺激，不是音樂專屬的快樂中心。',{hl:['nacc','amy','hypo','bg']}),
+  S('結論：部分專門化，不是右腦音樂','右半球常較擅長細緻音高與旋律，左半球可能較擅長快速時間分析，但音樂各成分分布在雙側網路。',{hl:['a1','stg','sma','cb','nacc']})
+ ],
+ one:'音樂與其他聲音共用早期聽覺分析，之後在音高、節奏與熟悉旋律記憶上出現部分專門化，同時又連結動作與一般獎賞系統。'});
+
+add({n:28,orig:'5.2',g:'method',title:'團體研究在神經心理學中的角色',view:'flow',
+ flow:{nodes:[
+  {id:'g1',x:130,y:50,w:220,t:'依臨床症候群分組',s:'好連結疾病分類；內部異質',c:'info'},
+  {id:'g2',x:400,y:50,w:220,t:'依認知症狀分組',s:'貼近理論；成因可能不同',c:'info'},
+  {id:'g3',x:670,y:50,w:220,t:'依解剖位置分組',s:'檢驗造影預測；可能漏掉其他路徑',c:'info'},
+  {id:'vl',x:400,y:175,w:340,t:'病灶症狀映射（逐體素）',s:'病灶對齊 → 每個體素受損與否 vs 行為分數 → 統計熱點',c:'ok'},
+  {id:'l1',x:130,y:310,w:220,t:'限制：病灶共變',s:'血管分布使鄰近區一起受損',c:'bad'},
+  {id:'l2',x:400,y:310,w:220,t:'限制：遠距效應',s:'diaschisis：連線相依的遠處暫時低下',c:'bad'},
+  {id:'l3',x:670,y:310,w:220,t:'限制：解釋過度',s:'X 對 F 重要 ≠ F 存放在 X',c:'bad'},
+  {id:'co',x:400,y:440,w:520,t:'與單一個案互補：團體提供位置關聯與統計；個案保留精細分離與錯誤型態',c:'pur'}],
+  edges:[['g1','vl'],['g2','vl'],['g3','vl'],['vl','l1'],['vl','l2'],['vl','l3'],['l1','co'],['l2','co'],['l3','co']]},
+ scenes:[
+  S('目標：從多位病人找共同病灶','單一病人的病灶太特殊；很多具相同缺損的人若有共同損傷，就能統計估計關聯。',{hl:['vl']}),
+  S('三種分組方式','症候群、認知症狀、解剖位置，各有優缺點。',{hl:['g1','g2','g3']}),
+  S('現代做法：病灶症狀映射','把許多病人病灶對齊，逐體素檢查受損是否與行為分數系統性相關，比只看病灶重疊圖精細，且能納入連續行為分數。',{hl:['g1','g2','g3','vl']}),
+  S('三個陷阱','①自然病灶非隨機，鄰近區一起壞 ②結構影像不一定顯示功能失效範圍 ③局部損傷讓遠處連線區暫時低下 ④過度解釋成「F 存放在 X」→ 新顱相學。',{hl:['vl','l1','l2','l3']}),
+  S('與單一個案互補','團體：位置關聯、變異範圍、統計穩定；個案：精細功能分離與錯誤型態。',{hl:['co','l1','l2','l3']})
+ ],
+ one:'團體研究能從多位病人中找必要節點與病灶熱點，但必須控制分組異質性、病灶共變、遠距效應與過度定位，並用個案和其他方法檢驗。'});
+
+add({n:29,orig:'2.3',g:'neuron',title:'前腦、中腦與後腦的功能比較',view:'brain',legend:['fore','midb','hind'],
+ scenes:[
+  S('由下往上：生命維持 → 高階整合','越接近脊髓與腦幹下方，功能越偏維持生命與基本動作；越往前腦與皮質，越能整合感覺、記憶、目標與複雜行為。三者互相連接，不是三個孤島。',{hl:['pfc','thal','bg','mid','sc','ic','cb','pons','med','hip','amy','hypo'],colors:{pfc:'var(--fore)',thal:'var(--fore)',bg:'var(--fore)',hip:'var(--fore)',amy:'var(--fore)',hypo:'var(--fore)',mid:'var(--midb)',sc:'var(--midb)',ic:'var(--midb)',cb:'var(--hind)',pons:'var(--hind)',med:'var(--hind)'}}),
+  S('前腦：皮質、基底核、邊緣系統','皮質：知覺、語言、記憶、決策。基底核：動作啟動、習慣、獎賞學習。杏仁核：威脅與情緒；海馬迴：新情節記憶；扣帶皮質：衝突、動機與身體狀態。',{hl:['pfc','bg','amy','hip','acc','nacc'],colors:{pfc:'var(--fore)',bg:'var(--fore)',amy:'var(--fore)',hip:'var(--fore)',acc:'var(--fore)',nacc:'var(--fore)'}}),
+  S('間腦：視丘與下視丘','視丘：多數感覺的中繼與調節站（視覺經 LGN、聽覺經 MGN）。下視丘：體溫、飢餓、口渴、性行為、自律神經與內分泌。',{hl:['thal','lgn','mgn','pulv','hypo'],paths:['retina_lgn','lgn_v1','ic_mgn','mgn_a1'],colors:{thal:'var(--fore)',hypo:'var(--fore)'}}),
+  S('中腦：上丘、下丘、黑質','上丘：整合視、聽、觸線索，快速定向眼與頭；下丘：聽覺中繼；黑質：多巴胺神經元，流失 → 帕金森氏症。可在完整意識辨認之前就讓身體先反應。',{hl:['mid','sc','ic','sn'],paths:['retina_sc','cn_son','son_ic','ic_mgn'],colors:{mid:'var(--midb)',sc:'var(--midb)',ic:'var(--midb)',sn:'var(--midb)'}}),
+  S('後腦：延髓、橋腦、小腦','延髓：呼吸、心跳、吞嚥。橋腦：連結大腦、小腦與腦幹，參與睡眠與喚醒。小腦：動作時序、協調與誤差修正；受損時肌力在、動作搖晃不準。',{hl:['med','pons','cb','cn'],colors:{med:'var(--hind)',pons:'var(--hind)',cb:'var(--hind)',cn:'var(--hind)'}})
+ ],
+ one:'前腦負責高階整合、感覺中繼、動機與目標行為；中腦負責快速定向、部分感覺整合與動作調節；後腦維持基本生命功能，並讓動作平衡、流暢和精確。'});
+
+add({n:30,orig:'1.3',g:'theory',title:'認知心理學需要大腦嗎？神經科學需要認知心理學嗎？',view:'flow',
+ flow:{nodes:[
+  {id:'cp',x:140,y:50,w:230,t:'認知心理學',s:'反應時間、錯誤率、促發、記憶表現 → 資訊處理模型',c:'info'},
+  {id:'ns',x:660,y:50,w:230,t:'神經科學',s:'位置、時序、連線、因果',c:'ok'},
+  {id:'c1',x:140,y:170,w:230,t:'給神經科學：定義作業、控制與歷程',s:'掃描器只看到血氧、電位、細胞，不會自己標示「記憶提取」',c:'info'},
+  {id:'c2',x:660,y:170,w:230,t:'給認知心理學：新依變項與限制',s:'兩模型行為預測相同時，腦資料可區分',c:'ok'},
+  {id:'ex',x:400,y:170,w:200,t:'例：重複抑制',s:'大小寫改變仍出現 → 已轉成抽象詞形表徵',c:'warn'},
+  {id:'an',x:400,y:300,w:260,t:'硬體／軟體比喻不完整',s:'人腦的演化、發展、連線速度與可塑性會限制認知',c:'gray'},
+  {id:'r1',x:140,y:310,w:230,t:'只問「哪裡亮」',s:'→ 新顱相學',c:'bad'},
+  {id:'r2',x:660,y:310,w:230,t:'完全不讓腦證據限制',s:'→ 忽略人類系統的生物條件',c:'bad'},
+  {id:'en',x:400,y:440,w:420,t:'互相校正：兩種語言現在都不可少',c:'pur'}],
+  edges:[['cp','c1'],['ns','c2'],['c1','ex'],['c2','ex'],['ex','an'],['c1','r1'],['c2','r2'],['r1','en'],['an','en'],['r2','en']]},
+ scenes:[
+  S('認知心理學不一定要有腦圖','沒有直接量腦的年代，它已靠行為資料建立成功的模型；心理理論不會因沒畫腦圖就失去價值。',{hl:['cp']}),
+  S('腦資料如何幫認知心理學','成為新的依變項，也能區分行為預測相同的模型。例：重複文字即使大小寫改變，左梭狀回仍出現重複抑制，支持某階段已轉成較抽象的詞形表徵。',{hl:['ns','c2','ex']}),
+  S('神經科學為什麼需要認知心理學','先用認知理論定義作業、控制條件與可能歷程，才知道腦訊號差異代表什麼。',{hl:['cp','c1','ex']}),
+  S('兩種偏廢的風險','純定位沒有好概念 → 新顱相學；只談心理歷程卻不讓腦證據限制 → 忽略生物條件。',{hl:['c1','c2','r1','r2','an']}),
+  S('互相校正','未來心理概念會不會被完全化約仍無定論，但現在兩種語言都不可少。',{hl:['r1','r2','an','en']})
+ ],
+ one:'認知心理學告訴神經科學要區分哪些處理與表徵，神經科學則用大腦的時間、位置、連線與因果證據限制認知模型；兩者不是互相取代，而是互相校正。'});
+
+const GROUPS=[
+ ['視覺・聽覺・臉・音樂',[1,2,10,11,12,13,16,23,25,26,27]],
+ ['研究方法與推論',[3,4,5,6,7,8,9,14,15,17,24,28]],
+ ['神經元與腦結構',[20,21,22,29]],
+ ['理論與心智',[18,19,30]]
+];
+const LINES=[
+ ['相關不等於因果','f M R I 看活動；損傷與 T M S 檢驗必要性。',[3,4,7,9,17,19,24,28]],
+ ['大腦把不同計算問題分成部分獨立的路徑','what 與 where、語音與音樂、臉身分與人物知識——用單一分離與雙重分離判斷。',[2,5,6,10,12,16,23,25,27]],
+ ['不同工具看不同尺度','單一細胞看放電，E E G／E R P 看毫秒時序，f M R I 看毫米空間，病灶看功能失去後的因果。',[3,7,14,15,16,22,26]],
+ ['知覺不是被動複製輸入','大腦利用脈絡、記憶、動作與多感官資訊，從變動的光與聲音建立穩定表徵。',[1,10,11,12,13]],
+ ['腦區標籤要回到認知理論','目標是解釋資訊如何被表徵、轉換、分流與整合，不是替每個心理名詞找一個亮點。',[8,18,19,24,28,30]]
+];
+
+/* ============ 使用量索引 ============ */
+const USE={};
+QS.forEach(q=>q.scenes.forEach(sc=>(sc.hl||[]).forEach(id=>{(USE[id]=USE[id]||new Set()).add(q.n)})));
+const qByN=n=>QS.find(q=>q.n===n);
+const regOf=id=>R.find(r=>r.id===id)||LOBES.find(l=>l.id===id);
+const qTitle=n=>{const q=qByN(n);return q?q.title:''};
+
+/* ============ 場景渲染分派 ============ */
+function renderScene(sc,q){
+  const v=sc.view||q.view;
+  if(v==='brain')return brainScene(sc);
+  if(v==='flow')return flowScene(sc,q);
+  if(v==='hrf')return hrfScene(sc);
+  if(v==='scale')return defs()+scaleScene(sc);
+  if(v==='erp')return erpScene(sc);
+  if(v==='erpavg')return erpAvgScene(sc);
+  if(v==='spike')return spikeScene(sc);
+  if(v==='neuron')return neuronScene(sc);
+  return '';
+}
+
+/* ============ 詳答與濃縮申論 ============ */
+const FULL={"1": ["先想像你坐在咖啡店裡。你的眼睛同時收到桌子、窗戶、路人和燈光反射出來的光；你的耳朵同時收到音樂、咖啡機、談話和車聲。感覺器官收到的不是一個個已經分好的物體，而是一大團混在一起、持續變動的物理能量。視覺收到光，聽覺收到空氣振動。大腦真正要做的，是從這些變動的輸入裡，推論外界有哪些穩定的東西。", "所以，兩個系統有兩個共同難題。第一，要把混在一起的來源分開。視覺要知道哪些邊緣屬於同一個物體，聽覺要把咖啡機和朋友的聲音分成不同聲源。第二，要做到恆常性。番茄從室內拿到陽光下，反射的光已經改變，你仍然把它看成紅色；同一首歌換了樂器或移調，你仍然知道它是同一首歌。也就是說，感覺輸入一直變，知覺卻要盡量穩定。", "因為任務相似，兩套系統的整體架構也相似。它們都會先經過視丘的中繼站，再到初級感覺皮質。視覺的視丘中繼站是外側膝狀體，也就是 LG N；聽覺的是內側膝狀體，也就是 MG N。早期皮質也都有一張有秩序的地圖。視覺依視網膜上的空間位置排列，叫視網膜拓樸；聽覺依聲音頻率排列，叫音調拓樸。再往高階處理走，兩者都大致分成腹側的 what 路徑和背側的 where 或 how 路徑。腹側回答這是什麼，背側回答它在哪裡，或我要怎麼對它採取行動。", "真正的差異，來自兩個感覺表面原本記錄的東西不同。視網膜本身就像一張空間地圖。物體落在視網膜哪裡，已經保留了它大概位於視野哪裡，所以視覺特別擅長空間定位。耳蝸不是在排外界位置，而是在排頻率。聲音從哪裡來，大腦必須比較兩耳收到聲音的時間差、強度差，以及耳廓造成的頻譜變化，才能反推出位置。因此，聽覺的空間定位通常不如視覺直接。", "反過來，聽覺很擅長處理快速的時間變化。語音裡，幾十毫秒的差異就可能讓你聽成不同音；旋律和節奏也必須沿著時間展開。視覺比較像一次攤開一張空間圖，聽覺比較像沿時間接收一條訊息流。這就是為什麼視覺偏空間優勢，聽覺偏時間優勢。", "兩者的傳導路徑也不同。視覺有上丘和 LG N，視網膜靠鼻側的纖維會在視交叉交叉，靠顳側的纖維留在同側，所以正確說法是右側視野主要送到左半球，不是右眼全部送到左腦。聽覺則從耳蝸核、下丘到 MG N，而且很早就有雙側投射，所以單側聽覺皮質受損通常不會像單側 V1 受損那樣，造成乾淨的半邊感覺消失。", "初級皮質的位置也不同。視覺的 V1 在枕葉；聽覺核心區位於上顳回的 Heschl 氏回。後續專門化方面，視覺已有相對清楚的例子，例如 V4 與顏色、V5 或 MT 與動作；聽覺也有分工，但不像視覺那樣容易用空間圖像呈現，研究設計也更依賴時間安排，因為兩段聲音不能完全占用同一時間來比較。", "最後把這題收成一句話。視覺與聽覺都要從變動的能量中分出來源並建立穩定知覺，因此都有視丘中繼、拓樸地圖和 what 與 where 路徑；核心差異是視覺的感覺表面直接保存空間，聽覺的感覺表面主要保存頻率與時間，因此視覺空間強，聽覺時間強。"], "2": ["先想像你在人群中聽到有人喊你的名字。大腦至少要解決兩件不同的事。第一，這是誰的聲音，他說了什麼。這是 what，也就是內容與身分。第二，聲音從哪裡來，我要往哪裡轉頭或怎麼回應。這是 where，進一步連到 how，也就是如何用動作和這個聲音互動。因為這兩種計算需求不同，大腦把它們放進部分分開的路徑。", "聽覺最經典的證據來自獼猴的單一細胞記錄。研究者在初級聽覺皮質周圍的帶區，也就是 belt，記錄單一神經元。前方帶區的神經元，對猴子叫聲的種類特別敏感。只要叫聲身分相同，即使位置改變，這些神經元仍保留反應，所以比較像是在回答這是什麼。後方帶區的神經元，對聲音從哪個方向來更敏感，所以比較像是在回答它在哪裡。由此可以推論，前方帶區沿顳葉往前形成腹側 what 路徑，後方帶區往頂葉形成背側 where 路徑。人類功能造影也大致看見相同分工，因此動物單細胞與人類造影互相支持。", "但聽覺背側路徑不只定位。對語音這種我們自己也能發出的聲音，大腦常常需要把聽到的聲音轉成發音動作、短期複誦或對話反應，所以研究者把其中一部分稱為 how 路徑。你可以把它想成，where 告訴你聲音在外界哪裡，how 告訴你身體要如何接住這個聲音。", "how 路徑的證據包括後上顳溝，也就是 pS TS，會把看到的嘴型和聽到的聲音整合。McGurk 效應就是例子：眼睛看到一種嘴型，耳朵聽到另一個音，大腦最後產生第三種知覺。這表示語音知覺不是耳朵單獨完成，而是視覺與聽覺資訊一起送進和發音、動作有關的系統。背側網路也會參與新音素學習、把聲音暫時放在心中複誦，以及判斷對話何時輪到自己接話。這些工作共同的地方，是把聲音轉成可以操作、維持或回應的形式。", "視覺的雙路徑可以用來對照。腹側路徑大致從 V1 經 V4 到下顳葉，負責辨認顏色、形狀、物體與臉，也就是 what。背側路徑大致從 V1 經 V5 或 MT 到後頂葉，負責位置、動作與視覺引導的行動，也就是 where 或 how。病人若腹側系統受損，可能看得到卻認不出物體或臉；背側系統受損，可能認得物體，卻無法正確定位、抓取或注意空間。兩種相反的缺損形成雙重分離，支持兩條路徑不是同一套能力的難易版本。", "所以這題不是只背前面是 what、後面是 where。真正要懂的是，大腦把「辨認內容」和「定位及採取行動」當成不同計算問題。聽覺的前帶區偏 what，後帶區偏 where；當聲音需要和發音、複誦或互動連接時，背側路徑又延伸成 how。"], "3": ["先記住最重要的一句話。fM RI 沒有直接看見神經元放電，它看見的是神經活動之後，血液供氧發生了什麼變化。也就是說，它是一個間接指標。", "想像某一小群神經元突然開始工作。工作需要能量，也會消耗氧。血液中的血紅素如果帶著氧，叫帶氧血紅素；氧被用掉後，會增加去氧血紅素。去氧血紅素具有順磁性，會讓附近磁場變得比較不均勻，使磁振訊號下降。到這裡，你可能會以為神經活動越高，訊號應該越低。", "但身體接著會啟動神經血管耦合，把更多血送到這個區域，而且送來的氧通常超過剛才用掉的量。這是一種過度補償。大量新鮮含氧血液進來後，去氧血紅素的相對比例下降，局部磁場變得比較均勻，磁振訊號反而上升。這個依賴血氧狀態的訊號，就叫 BO LD，血氧濃度相依訊號。因此，常見的 BO LD 上升不是神經元本身亮起來，而是血流在神經活動後留下的間接痕跡。", "這個血流反應不會立刻出現。神經活動發生後，訊號可能先有很小的初始下降，接著在幾秒內上升到高峰，最後回落，甚至短暫低於基線，再慢慢恢復。整條隨時間變化的曲線叫血流動力反應函數，也就是 HR F。因為它比神經元的毫秒變化慢很多，所以 fM RI 的時間解析度受到生理血流反應限制。掃描的取樣速度，也就是 TR，也會影響你多久拿到一張腦影像，但就算掃描再快，也不能讓血流自己變成毫秒反應。", "空間解析度則與體素大小有關。體素可以想成三維像素。體素越小，理論上越能分辨相鄰位置；但體素縮小後，每格收到的訊號也變少，雜訊相對變大，所以不是無限縮小就一定更好。磁場強度、掃描參數、頭部移動和血管分布也會影響實際空間精確度。考試時可以說，fM RI 通常達到毫米等級的空間解析度，遠優於頭皮 EE G 的定位，但時間解析度主要是秒等級。", "事件相關設計為什麼仍然可行。因為相鄰刺激產生的血流曲線雖然會重疊，研究者可以利用已知的 HR F 形狀和統計模型，把不同事件對訊號的貢獻估計出來。這不代表血流真的變快，而是分析方法能把疊在一起的慢訊號分開估計。", "最後比較工具。若問題是某個作業主要牽涉哪裡，fM RI 很合適；若問題是某個認知歷程在一百毫秒還是三百毫秒發生，EE G 或 ER P 更合適。把這題收好就是：神經活動先改變耗氧與血流，再形成 BO LD；體素與掃描條件決定空間細緻度，緩慢的血流反應決定時間不可能像電生理那麼快。"], "4": ["答案先說，不代表。功能造影看到的是相關，不是把那個區域拿掉之後的因果結果。", "想像你走進一間餐廳後廚，看見廚師、洗碗員、監視器和煙霧警報器都在運作。你可以說這些東西和晚餐時段有關，卻不能只憑它們正在運作，就說少了任何一個都做不出那道菜。腦造影也是一樣。某區在作業時 BO LD 上升，只表示它的活動與這個條件一起變化。它可能參與主要運算，也可能在監控、抑制、分配注意力，甚至只是因為受試者採取某種不必要的策略。", "這裡要分清必要與充分。必要是，沒有它就完成不了。充分是，只要它出現，就足以造成結果。單靠 fM RI 活化，其實兩者都不能直接證明。這題最常用的是必要性：要知道某區是不是關鍵，就要看它受損或被 TM S 暫時干擾後，作業是否選擇性變差。", "為什麼造影有活動，損傷後卻可能沒有明顯影響。第一，受試者在掃描器裡用了某個策略，例如刻意默念或預測，但那個策略不是完成作業的唯一方式。第二，作業比較困難，帶動一般性的注意力、喚醒或工作記憶網路，這些活動不等於該作業的專屬核心。第三，fM RI 對神經活動造成的血流需求敏感，卻不能只靠 BO LD 判斷這些神經元是在興奮下游，還是在進行抑制。第四，病人研究本身也可能沒有足夠樣本，病灶沒精確覆蓋目標區，或病人做的作業和造影研究根本不同。", "反過來也會發生。某區在造影中沒有顯著差異，病灶卻會讓功能受損。可能是實驗條件和控制條件都需要這個區域，相減以後共同活動被消掉；可能是區域太小、位置個別差異太大或訊號太弱；也可能病灶破壞的是經過該處的白質纖維，真正出問題的是網路連線，不是局部灰質是否亮起來。", "例如一個語意作業在造影中突出左下額回，某些嚴重語意缺損的病人卻主要傷在前顳葉。這不是叫我們選一邊相信，而是提醒我們，任務可能同時需要選擇、提取、儲存和控制，兩種方法剛好看見不同環節。", "所以，造影與損傷結果不一致時，最好的反應不是說某種方法錯了，而是追問作業、控制條件、策略和網路連結哪裡不同。最後一句話是：活躍只表示相關；要證明某腦區對功能是必要的，必須用自然損傷、TM S 或其他因果操弄，看讓它失效後功能是否下降。"], "5": ["先把腦傷研究想成拆機器。你不知道一台機器裡每個零件做什麼，於是觀察某個零件壞掉後，哪些功能消失、哪些還在。這種逆向工程很有用，但要從一台受損機器推回正常設計，必須先接受幾個前提。", "第一是區分性假設，也可理解為認知系統能被選擇性破壞。它主張，腦傷有可能只破壞某個認知成分，而讓另一個成分相對保留。如果所有功能永遠一起壞，我們就無法從缺損型態推論系統有哪些零件。要注意，這裡的成分是認知運算，不一定等於一個整齊的小腦區。這個假設大致合理，因為臨床上確實看得到選擇性缺損，但真實病灶通常不會像拔掉一顆積木那麼乾淨。", "第二是透明性假設。它主張，腦傷後看到的系統，仍是正常系統少掉或減弱某些成分，而不是大腦重新發明了一套完全不同的認知架構。若病人已經用全新方法完成作業，我們就不能直接把他的表現當成正常系統被減去一部分。這是最有爭議的假設，因為大腦有可塑性，也會發展代償策略。一般來說，用成人後天腦傷推論，比用兒童早期腦傷更安全；表現穩定、恢復歷程清楚時，也較容易評估是否有大幅重組。", "第三是普遍性假設。它主張不同人的基本認知架構足夠相似，所以一位病人的選擇性缺損，能提供一般人認知系統的線索。這不是說每個人大腦完全一樣，而是說核心處理架構有可比性。問題在於個別差異確實存在，因此單一個案能提出強而有意思的反例，卻不能自動代表所有人。", "接著要懂單一分離的陷阱。假設病人做作業 A 很差，作業 B 正常，你可能說 A 和 B 是兩個系統。但也可能兩個作業使用同一套資源，只是 A 比 B 難。腦傷讓整體資源下降後，較難的 A 先壞，較容易的 B 還撐得住。這叫作業資源假象。也可能 A 的指示、反應方式或感覺需求比較複雜，缺損來自附帶要求，不是你想測的核心能力。", "雙重分離可以加強推論。若病人一是 A 差、B 好，病人二恰好 A 好、B 差，就很難再用單純難度解釋，因為同一個 B 不可能在所有人身上都比較容易。母音與子音處理的互補個案，就是用這種邏輯支持兩者至少部分依賴不同機制。", "但雙重分離也不是自動證明兩個完全獨立的盒子。研究者仍要確認作業純度、錯誤類型、病灶範圍和其他替代解釋。這題最後可以這樣收：腦傷推論依賴區分性、透明性與普遍性；三者都有一定合理性，也都有現實限制，因此要用雙重分離、多項作業和群體證據一起加強結論。"], "6": ["這題先分清兩個研究問題。若你想知道某種缺損通常和哪裡的病灶有關，常會把許多病人放在一起做團體研究。若你想知道一個看似完整的能力，其實可以拆成哪些部分，單一個案往往更有力量。", "單一個案的第一個優點，是保留一個人的完整缺損型態。假設十位病人裡，五位聽得懂但說不出，另外五位說得出卻聽不懂。若把兩組直接平均，結果可能像是大家的說和聽都中度受損，真正的互補分離反而消失。深入研究個案，才能看見功能不是平均地變弱，而是某些零件受損、某些零件保留。", "第二個優點，是能做細緻的錯誤分析。只看總分，你只知道病人答錯多少；看他錯的是母音還是子音、熟悉臉還是陌生臉、常見視角還是不常見視角，才有機會推論處理歷程卡在哪一層。第三，若找到兩個表現相反的個案，就能形成雙重分離，對認知架構提出很強的限制。第四，罕見而純粹的個案本來就不容易湊成大樣本，若堅持只做群體，重要現象可能永遠無法研究。", "缺點也很明確。第一，普遍性有限。一個人的病前能力、病灶、恢復和策略都很特殊，不能只憑一人估計一般人出現某現象的比例。第二，它依賴上一題的三個假設，特別是透明性與普遍性。第三，一個單一分離可能只是作業難度或附帶要求造成，所以需要更多作業和互補個案。第四，自然腦傷通常範圍不規則，可能同時傷到灰質、白質和遠端網路，不能把一位病人的症狀簡單釘在一個小點上。", "團體研究可以補上統計穩定性和病灶位置的共同關聯，但也可能把個別差異平均掉。因此，兩種方法不是競爭關係。單一個案最擅長問認知功能如何拆分，團體研究最擅長問某種缺損在一群人中和哪些病灶穩定相關。最好的結論，是讓個案提出精細模型，再用更多個案、團體與其他方法檢驗。"], "7": ["共同邏輯先講。功能造影是在看某區和作業一起活動；損傷法則是讓某區不能照常工作，再看作業是否變差。因此，損傷法比較能回答必要性和因果問題。自然腦傷是現實中已經發生的長期損傷；TM S 和 tE S 是研究者在安全範圍內，暫時改變正常大腦的活動。", "自然腦傷的優點，是效應真實而且可能很大。研究者能看見某套系統嚴重受損後，人的知覺、語言或記憶會變成什麼樣子。但自然腦傷不是研究者設計的。病灶常跨越多個區域，形狀不規則，也可能破壞白質連線；病人之間病前能力、恢復時間和代償程度不同。它是永久或長期的，大腦有時間重組，所以因果解釋會受到透明性問題影響。", "TM S 是經顱磁刺激。線圈中的快速電流產生磁場，磁場穿過顱骨，在下方皮質誘發電流。若在某個作業的關鍵時間點刺激相關區域，會打亂原本正在進行的神經活動，使表現暫時下降。把它叫虛擬損傷可以幫助記憶，但更精確的理解是暫時干擾，而不是把腦區完全關掉。", "TM S 的優勢是可逆、可控制，而且能在同一個人身上比較刺激與控制條件，減少個別差異。研究者也能改變刺激時點，問一個區域是在刺激後八十毫秒、兩百毫秒還是更晚才必要，因此它同時提供空間與時間上的因果線索。缺點是主要影響靠近頭皮的皮質，聚焦範圍有限卻不是一個精確小點，效應通常比真實腦傷小，也有安全與舒適度限制。", "盲人點字研究很能說明它的價值。造影發現早盲者讀點字時枕葉視覺皮質活躍，但活躍可能只是伴隨現象。當 TM S 干擾盲人的中枕葉後，點字或凸字辨識真的變差；同樣刺激對戴眼罩的明眼人影響不大。這表示盲人的視覺皮質不只亮起來，而是已被重組成觸覺辨識所必要的部分。", "tE S 是經顱電刺激，常見形式是 tD CS。它以很弱的直流電改變神經元接近放電閾值的程度。課堂常用簡化口訣：陽極傾向提高興奮性，陰極傾向降低興奮性。更精確地說，它是偏壓整個網路的可興奮性，效果會受腦區、任務、刺激方向與當下狀態影響，因此不像 TM S 那樣適合把某區當成短暫損傷。它的空間定位也較粗，但可以用較長時間刺激，研究學習與刺激結束後的後效。", "所以，自然腦傷效應大、真實，但不可控且會重組；TM S 短暫、可控，適合檢驗某區在何時必要；tE S 更像調高或調低網路的興奮傾向。三者互補，沒有一種能完整取代其他方法。"], "8": ["先想為什麼一定要比較條件。即使你躺著什麼都不做，大腦也一直在活動。當你看到一個字時，腦中同時有視覺、注意、辨字、理解、準備反應等歷程。只看這一個條件，無法知道某片活動到底對應哪一環。", "認知減法的做法，是準備兩個盡量相似的作業。實驗作業比控制作業多一個你想研究的認知成分。把兩個條件的腦活動相減，共有部分會被抵銷，剩下的差異就被解讀為那個額外成分的活動。像做料理時，比較兩份幾乎相同的食譜，唯一差別是其中一份加了辣椒；若味道差異真的只來自辣椒，你就能把兩份的差別歸因於辣椒。", "經典例子是看一個字，和看一個外形簡單的符號相比。兩者都有基本視覺輸入，但只有字需要詞形或詞彙處理。相減後留下的活動，被用來找文字處理相關區域。這個邏輯源自 Donders 的反應時間減法，後來被移到功能造影。", "最大問題叫純插入假設。它假定，把一個新認知成分放進作業時，其他原有成分完全照舊。現實中，歷程會互相影響。你看字時的注意方式、眼動與視覺分析，可能從一開始就和看符號不同，不是先完成一套相同視覺處理，再額外插入詞彙模組。因此，相減留下來的差異未必只屬於一個乾淨成分。", "第二個問題是基線選擇。控制作業太簡單，會同時多出難度、注意和反應差異；控制作業太相似，又可能也包含你想研究的成分，結果在相減時一起消失。例如朗讀減掉看字，留下的差異不只包含發音，還可能包含動作規劃、執行、聽到自己的聲音與錯誤監控，很難說是一個單一功能。", "研究者如何改善。第一是因子設計，同時操弄兩個因素，不只看每個因素的主效果，也看交互作用。交互作用能直接檢驗一個因素是否改變另一個因素的效果，不必假設各成分互不影響。第二是認知聯集，找多個不同對比都共同出現的區域，降低單一基線造成的偶然性。第三是參數設計，讓自變項連續改變，例如工作記憶負荷逐步增加，看腦活動是否跟著有規律地變化。", "最後一句話是：認知減法把實驗作業減去控制作業，想留下額外認知成分；它的弱點是純插入常不成立，而且結果高度依賴基線，因此需要因子、聯集與參數設計補強。"], "9": ["答案是不會，因為兩種方法回答的問題不同。", "功能造影擅長告訴我們，正常人在某個作業中，哪些區域或網路的活動跟著改變。它可以同時觀察全腦，空間定位也比早期只靠病人症狀猜測精確。但它主要提供相關性。某區亮起來，可能是在做核心運算，也可能只是提供注意、策略、抑制或監控。沒有亮起來，也可能只是被基線相減、訊號太弱或個體位置不一致。", "損傷法則從另一個方向問：這個系統不能正常運作後，功能是否會選擇性失敗。若病灶或 TM S 干擾某區後，某作業穩定變差，才比較能支持該區或該網路對這個功能是必要的。這是造影本身無法取代的因果資訊。", "損傷法當然也有自己的問題。自然病灶通常很大而且不規則，會破壞連線，還可能引發遠端效應與長期重組。病人使用的策略和正常人不同，樣本也難以完全配對。因此，不能把損傷結果當成毫無雜訊的真相。", "兩種方法不一致時，反而最有價值。若造影有活動、損傷後功能仍在，我們要檢查那個活動是否只是非必要策略，或病人是否已由其他網路代償。若造影沒有差異、損傷卻造成缺損，我們要檢查共同基線是否把必要活動消掉，或病灶是否破壞了穿過該處的連線。這些矛盾會迫使理論把任務拆得更細。", "而且，兩者會互相幫忙。造影可以提出候選腦區與網路，再用損傷或 TM S 檢驗必要性；結構影像可以更準確描出病灶；病人的選擇性缺損又能告訴造影研究，應該比較哪些認知成分。", "所以結論不是誰比較高級，而是證據鏈。造影告訴你正常系統在哪些地方一起活動，損傷法告訴你失去哪些部分會讓功能失敗。要建立可靠的認知神經科學理論，兩者必須交叉驗證。"], "10": ["先分清皮質盲和盲視。初級視覺皮質 V1 受損後，對應視野中的刺激無法形成正常的有意識視覺，這叫皮質盲。病人可能缺半邊視野、四分之一視野，或一小塊視野。盲視則是其中一種令人驚訝的表現：病人主觀上真誠地說自己什麼都沒看見，可是在被迫二選一時，對位置、方向或動作的判斷卻高於隨機猜測。", "想像螢幕左邊閃了一條斜線。病人說，我不知道，左邊是黑的。研究者不接受不知道，要求他猜斜線往左還是往右。若只是亂猜，長期應接近百分之五十；但病人可能穩定高於百分之五十，而且手指或眼球也會朝刺激位置移動。重點不是他偶爾猜中，而是大量試次後表現可靠地高於機率，同時仍缺乏看見的主觀經驗。", "這表示視覺訊息不只走一條路。主要路徑是視網膜到 LG N，再到 V1，之後進入更高階視覺皮質。V1 受損後，這條支撐精細而有意識視覺的主路被破壞。但部分訊息仍可能經上丘、丘腦枕核或其他旁路到達外紋狀視覺區；也有從 LG N 某些細胞群繞到 MT 或 V5 的路徑，特別有助於快速定位與動作偵測。", "研究者還必須排除其他解釋。例如是不是 V1 沒有完全破壞，只剩一點組織；是不是光散射到完好的視野。結構影像、精細視野測量和控制條件可以降低這些疑慮。當表現只在特定刺激與路徑上出現，也更支持替代視覺通路，而不是病人偷看或裝盲。", "盲視對正常視覺有三個啟示。第一，視覺系統是多條平行路徑，不是只有眼睛到 V1 的單線流程。第二，處理資訊和意識到資訊可以分離。大腦可能已經算出刺激在哪裡、是否在動，卻沒有產生我看到了的經驗。第三，V1 對有意識、精細而可報告的視覺非常重要，但某些快速、粗略、無意識的視覺行為可以部分繞過它。", "最後避免一個過度簡化。盲視不是正常視覺完整保留，只少了意識。病人的辨別通常粗糙、受限而且不穩定，視覺處理本身也已受損。最準確的說法是：盲視顯示受損而無意識的視覺處理仍可能存在，因此視覺辨別和主觀視覺意識不是完全相同的東西。"], "11": ["這題不能只答必要或不必要，因為視知覺不是單一能力。你必須先問，是哪一種視覺。是有意識地看見，是精細辨認，還是只做出粗略的定位與動作反應。", "先看支持 V1 很重要的證據。V1 受損後，對應視野會出現皮質盲，病人無法像正常人一樣報告那裡有什麼。V1 也保留視網膜拓樸，並分析邊緣、方向、明暗與波長等基本特徵。後面的顏色、形狀、物體和動作處理，都需要建立在這些早期分析上。因此，V1 不是一塊只負責讓畫面出現的螢幕，而是把視網膜輸入整理成高階系統可使用格式的重要入口。", "V1 也和視覺意識密切相關。盲視病人可能對刺激作出高於機率的判斷，卻沒有我看到了的主觀感受。這讓我們推論，V1 以及它和高階視覺區之間的迴返互動，對正常、有意識、可報告的視覺經驗非常重要。", "但盲視同時證明，V1 不是所有視覺行為的唯一入口。部分視覺訊息可以經上丘、丘腦枕核或從 LG N 到外紋狀皮質的旁路，支持快速定向、眼球移動和粗略動作偵測。這些能力通常沒有正常視覺那麼精細，也缺乏清楚意識，卻表示 V1 受損不等於大腦完全收不到任何視覺資訊。", "必要和充分也要分開。即使我們說 V1 對正常有意識視覺近乎必要，也不表示 V1 自己就充分。V1 完好，只能完成早期分析；要認顏色還需要 V4 等區域，要看動作需要 MT 或 V5，要認物體與臉需要下顳葉網路，還要有注意與記憶系統共同參與。", "所以考場上可以分層作答。對有意識的視覺經驗與精細辨認，V1 幾乎是必要條件；對粗略定位、定向與部分動作處理，V1 不是唯一必要路徑；而對完整視知覺，V1 又不是充分條件。這樣就不會把它答成全有或全無。"], "12": ["先理解恆常性為什麼是問題。眼睛收到的影像其實非常不穩定。光源一變，物體反射到眼睛的波長會變；你走近或走遠，影像大小會變；換個角度，物體投在視網膜上的形狀也會變。如果大腦只是照單全收，你每走一步，世界都會像換了一批東西。恆常性就是大腦利用脈絡與記憶，從變動影像中推論那個相對穩定的物體。", "先講顏色恆常。同一顆紅番茄在日光、黃燈和陰影下，送進眼睛的波長比例不相同，但你仍傾向把它看成紅色。大腦不能只問這一小塊反射了什麼波長，還要比較它和周圍表面的關係，估計整個場景的光源。就像相機自動白平衡，不是把每個像素當成孤立訊號，而是先猜目前照明偏黃還是偏藍，再修正對物體表面顏色的判斷。", "V1 對局部波長與明暗很敏感，因此光源一變，它的反應也會跟著改。V4 與更高階腹側視覺系統會整合較大範圍的脈絡，讓顏色知覺相對不受照明改變。V4 受損可能造成大腦性色覺缺失，病人看世界接近灰階，卻仍可保留形狀、深度和質地。這顯示顏色不是物體直接送進大腦的固定標籤，而是視覺系統比較與推論後的結果。", "物體恆常的問題更大。同一個咖啡壺從正面、側面或斜上方看，視網膜影像都不同。大腦會從當下影像抽出相對穩定的特徵、部件關係或主軸，再和記憶中儲存的物體表徵比對。下顳葉的神經元感受野很大，常不太在意物體落在哪個小位置，而更在意它是什麼，因此適合建立跨位置與大小的物體身分。", "但物體恆常不是只有一條處理。研究發現，有些系統偏向判斷物體身分是否相同，有些系統保留視角與方向資訊。左側下顳葉或梭狀回的表徵，常較能跨不同大小和角度把它視為同一物體；右半球與頂葉網路對視角、空間方向更敏感。病人也可能能認出物體是什麼，卻無法判斷它朝哪個方向；也可能只在熟悉視角能認出，換成不尋常角度就失敗。", "功能磁振的適應現象可以檢驗這件事。若同一神經表徵被重複使用，第二次反應通常會降低。若物體換了角度，某區仍出現反應降低，表示那區把不同視角當成同一身分；若換角度後反應恢復，表示那區仍區分視角。要記得，適應研究的邏輯是重複同一表徵會降低，不是提高。", "最後一句話是：顏色恆常靠比較局部與場景脈絡，估計物體表面顏色；物體恆常靠把變動影像轉成較穩定的結構與身分表徵，同時由另一部分系統保留視角和方向資訊。"], "13": ["先理解語音為什麼難。你以為每個音都有一個固定聲音，其實沒有。說話時，嘴巴正在發前一個音，就已經開始準備下一個音，這叫協同發音。因此，同一個音素在不同前後文中，實際聲學訊號會變；反過來，不同聲學訊號也可能被聽成同一音素。大腦必須在高度變動的聲音中，找出說話者想表達的穩定類別。", "動作理論提出一個答案。聽者辨認的不是聲波本身，而是推論說話者打算做哪一種發音動作。因為自己的大腦知道舌頭、嘴唇和聲帶怎麼產生聲音，所以可以利用這套運動表徵，反推別人剛才做了什麼。這裡的動作表徵不等於你一定真的動嘴複誦，而是發音系統能為聽覺判斷提供預測。", "McGurk 效應是第一個直覺證據。若眼睛看到一種嘴型，耳朵同時聽到另一個音，人常會知覺成第三個音。閉上眼睛後，錯覺可能消失。這表示大腦在判斷語音時，會把可見的發音動作和聲音合併。後上顳溝是重要的多感官整合區；下額葉與前運動皮質等發音動作區，也可能隨最後知覺到的音而改變活動。", "但要精確說，McGurk 效應直接證明的是視聽整合，不能單獨證明語音一定要靠運動系統。更直接的支持來自 TM S 與造影。當語音清楚時，干擾前運動皮質可能影響不大；當聲音有雜訊、介於兩個音素之間或很難判斷時，干擾發音相關運動區會讓辨別變差。這表示動作系統像一個輔助預測器，在聽覺證據不夠清楚時特別有用。", "鏡像神經元常被放進這個理論。這些神經元在自己做動作，以及看到或聽到別人做類似動作時都可能反應，提供感知和動作可以共享表徵的可能機制。學習外語音素時，只被動聽通常不如同時練習發音有效，也支持知覺和動作互相校準。", "類別知覺則解釋大腦如何把連續聲音切成離散音素。以 da 和 ta 為例，聲帶開始振動的時間可以一點一點連續改變，但主觀知覺通常不是聽見無限多個中間音，而是在某個界線前聽成一類，界線後聽成另一類。大腦把連續物理差異壓縮成語言需要的類別，發音系統可能參與這個分類，但類別知覺本身也不只存在於語音。", "最重要的限制是，動作理論的強版本不成立。如果發音運動區是語音知覺唯一基礎，那些區域受損的人應該幾乎聽不懂語音；實際上，許多人只在困難條件下出現輕微障礙。因此最穩的結論是：語音知覺主要依賴聽覺與多感官系統，運動表徵會提供預測和輔助，尤其在訊號模糊或需要學習時，但它不是唯一必要機制。"], "14": ["先把神經元想成一個會收訊、決定和傳送的細胞。樹突和細胞體接收很多上游訊號，軸突起始處決定是否送出訊息，軸突再把訊息傳到下一群細胞。這個過程主要有兩種電位：漸進電位和動作電位。", "漸進電位也叫突觸後電位。神經傳導物質結合受體後，讓膜電位局部變得比較容易或比較不容易達到放電閾值。它可以興奮，也可以抑制；強度有大有小，而且沿樹突和細胞體被動傳遞時會逐漸衰減。神經元會把同一時間、不同位置傳來的許多漸進電位加總。", "若總和在軸突起始處超過閾值，就產生動作電位。動作電位是全有全無，單次波形大小大致固定，沿軸突傳遞時會靠電壓閘控離子通道不斷再生，所以不會像漸進電位那樣一路變小。刺激較強時，不是每個動作電位變得更大，而是單位時間內出現得更頻繁。", "不同電生理技術利用不同尺度的訊號。單一細胞記錄把非常細的電極放在神經元裡或附近，直接記錄動作電位，通常以每秒放電次數分析。它能精細回答某個神經元偏好哪種臉、聲音、位置或動作，但具侵入性，因此多用於動物，少數在人類手術時使用。", "EE G 是在頭皮放電極。頭皮離單一神經元太遠，無法穩定看見單顆細胞的動作電位。EE G 主要反映大量皮質錐體神經元同步產生的突觸後電位。為什麼要大量、同步而且排列方向相近。因為每顆細胞的電場很小，方向雜亂會互相抵銷；只有許多平行細胞同時活動，電場才足以傳到頭皮。", "EE G 可以看不同頻帶，也能把每次刺激後的訊號對齊並平均，得到 ER P。它的最大優點是毫秒等級時間解析度，價格與操作也相對容易。缺點是空間定位差，因為頭皮上的一組電位分布，可能由腦內許多不同來源組合造成，這叫逆問題。", "ME G 測的是神經電流造成的磁場。磁場較不受頭皮與顱骨扭曲，定位通常優於 EE G，時間解析度同樣是毫秒等級，但設備昂貴，需要磁屏蔽與高度敏感的感測器。它對來源方向與深度也有條件，不是所有深部活動都能清楚測到。", "所以這題的核心是先分訊號，再配工具。動作電位適合單一細胞記錄；大量同步突觸後電位形成 EE G 與 ER P；相同神經電流伴隨的磁場形成 ME G。電生理擅長回答何時發生，fM RI 則較擅長回答哪裡發生。"], "15": ["EE G 是頭皮上持續記錄的腦電，裡面同時混有感覺、注意、思考、眨眼和許多與當下刺激無關的背景活動。若你只看一次刺激後的波形，真正和刺激有關的訊號很容易被淹沒。ER P 的做法，是把每一次刺激出現的時刻設為零點，切出刺激前後的一小段 EE G，再把許多試次對齊平均。", "為什麼平均有用。與刺激時間鎖定的反應，每次大致在相近時間出現，所以平均後會保留下來；與刺激無關的背景活動，有時正、有時負，平均後會彼此抵銷。你可以把它想成反覆拍攝同一個微弱圖案，固定圖案會越疊越清楚，隨機雜點則會淡掉。這就是 ER P，也就是事件相關電位。", "讀波形時，橫軸是刺激後經過的毫秒，縱軸是電位。P 表示正向峰，N 表示負向峰，後面的數字常指大約出現的時間，例如 N170 或 P300。正負只是頭皮電位方向，不等於興奮和抑制，也不代表好或壞。", "ER P 如何檢驗理論。研究者系統性改變一個認知因素，觀察哪個時間窗的振幅、潛時或頭皮分布跟著改變。若操弄在一百多毫秒就產生差異，表示它影響較早的知覺處理；若差異到三百毫秒後才出現，較可能涉及辨認、記憶或決策。兩個因素若改變不同成分，也支持它們至少部分依賴不同處理階段。", "臉處理是清楚例子。N170 約在刺激後一百七十毫秒出現，對臉通常比一般物體大，和臉的早期結構編碼有關。N250 對熟悉或特定身分的臉較敏感，較接近臉身分表徵。三百毫秒後的晚期成分可能跨越臉和名字，反映人物知識。這讓研究者不只說有一個臉區，而是提出一條時間序列。", "另一個例子是聯想促發。只看反應時間，促發與刺激清晰度可能出現交互作用，容易讓人以為促發改變早期知覺。但 ER P 若顯示清晰度在一百五十毫秒內影響波形，促發卻到三百毫秒後才出現，就能把兩個歷程分開，修正原本理論。", "限制一定要講。第一，一個觀察到的峰是許多神經來源相加後的結果，不是一個峰就等於一個純粹心理模組。成分和認知歷程的對應是根據操弄、時序與其他證據做的推論。第二，ER P 空間定位差，有逆問題。第三，它需要許多試次，眼動、眨眼和說話肌肉都會造成大雜訊。", "最後一句話是：ER P 透過刺激鎖定平均，從 EE G 中抽出毫秒級反應；它能用成分出現的時間和對操弄的敏感度檢驗認知歷程，但成分不是心理功能的直接標籤，來源仍需其他方法確認。"], "16": ["這題可以先把臉辨識拆成三層。第一層是知覺編碼，大腦分析眼睛、鼻子、嘴巴及彼此配置。第二層是臉身分辨識，把不同光線、表情和角度下的影像認成同一張臉。第三層是人物身分與知識，知道這個人是誰、和自己有什麼關係；這一層不只可由臉觸發，也可由名字或聲音觸發。", "單一細胞記錄貢獻的是表徵方式。猴子下顳葉可找到對臉比對一般物體反應更強的神經元，但多數不是只對唯一一張臉放電，而是對一組臉有不同程度反應。這不支持極端祖母細胞，也就是每個人物各有一顆專屬細胞。", "人類手術中的記錄曾發現，內側顳葉某些神經元對特定名人高度敏感，不只看到不同照片會反應，看到名字也可能反應。這聽起來像祖母細胞，但研究者不可能測遍世界上所有刺激，因此不能證明它只代表那一個人。較穩妥的解釋是稀疏編碼：一個概念由相對少量但不只一顆的神經元共同代表，每顆神經元也可能參與不只一個相關概念。", "單一細胞還告訴我們，臉系統不只辨認身分。上顳溝有神經元對視線方向、表情或頭部動作敏感，這些資訊有助於判斷別人正在注意哪裡、想做什麼，因此臉也是社會訊息來源。", "ER P 的主要貢獻是時間順序。N170 約在一百七十毫秒出現，對臉與臉狀結構特別敏感，通常在右後顳區較大。它不太在意這是不是名人，因此較像早期臉結構編碼，不是回答這是誰。N250 對熟悉臉、同一人物的不同照片較敏感，較接近特定臉身分表徵。三百毫秒以後的成分可以同時被臉和名字影響，較接近跨感官的人物知識。", "這些時間資訊也能裁決理論。例如漫畫化的臉有時更容易辨認。如果漫畫臉先增強 N170，表示效果已出現在知覺編碼階段，較支持漫畫放大了視覺上有辨識力的特徵，而不是記憶裡本來就儲存一張漫畫版臉。聯想促發若只影響晚期成分，也表示它較可能作用於知覺之後的人物知識，而非早期臉結構分析。", "限制是，ER P 難以精確定位來源，單一細胞結果又只抽樣極少數神經元，而且常來自動物或特殊手術個案。因此最好的結論是：單一細胞告訴我們臉與人物概念可能如何被選擇性和稀疏地編碼，ER P 告訴我們知覺編碼、臉身分和人物知識大致在什麼時間依序出現。"], "17": ["大腦可塑性是，神經系統會因經驗、練習、感覺缺失或損傷，改變哪些區域參與哪些功能，以及連線與興奮性如何分配。功能造影可以看到重組後哪裡活躍，但不能單獨證明新活躍區真的有功能。TM S 的貢獻，就是暫時干擾那個區域，檢驗它是否已成為新任務的必要部分。", "最經典的是早盲者讀點字。正常明眼人用指尖辨認凸字，主要依靠體感覺皮質；早盲者除了體感覺區，枕葉的視覺皮質也會活躍。若這只是盲人在腦中想像，干擾枕葉不應影響表現。實驗卻發現，TM S 干擾早盲者中枕葉後，點字或凸起字母辨認下降；同樣干擾對戴眼罩的明眼人影響較小。這提供因果證據，顯示原本處理視覺的皮質，已被徵用來支援精細觸覺與空間辨認。", "可塑性不只跨感官。長期使用某個身體部位，對應的體感覺或動作代表區可能擴大；缺乏輸入或截肢後，原本代表區可能縮小或被鄰近功能侵入。這表示皮質地圖不是出生後就永遠固定，而會受使用量、學習和輸入競爭影響。", "但重組也不是大腦任意把任何區塊拿來做任何事。早盲者的視覺皮質接手點字辨認，仍有功能相似性：視覺與點字都需要高精度空間模式分析。後來研究也發現枕葉可參與語言等較高階作業，表示限制不是絕對，但網路原有連線與計算特性會影響它最容易接手什麼。", "tD CS 則讓研究者以弱電流偏壓皮質興奮性。課堂上的簡化是陽極傾向提高、陰極傾向降低。若刺激視覺皮質後，早期視覺 ER P 或微弱刺激偵測系統性改變，就表示改變皮質狀態會改變知覺。刺激停止後仍持續的後效，可能與突觸可塑性和神經傳導物質調節有關，因此 tD CS 常被用來研究學習，而不只瞬間干擾。", "限制是，TM S 主要刺激表淺皮質，實際影響範圍與網路效應不易完全確定；tD CS 更不聚焦，陽極和陰極的效果也會依情境改變。兩者的效應通常比自然腦傷小。因此最穩的結論是：造影指出可塑性可能發生在哪裡，TM S 檢驗重組區是否已成為必要節點，tD CS 則用興奮性與後效研究可塑性如何被調整。"], "18": ["心身問題其實在問一個很難的問題。大腦是由神經元、離子、化學物質和血流組成的物質系統，可是我們卻有疼痛、顏色、思想、選擇和自我感。這些主觀心智，和物質大腦到底是兩種東西，還是同一件事的不同描述。因為現代討論主要集中在大腦，稱為心腦問題會更精確。", "第一種框架是二元論。笛卡兒認為心與身是兩種不同實體。身體有空間、可被物理法則描述；心是非物質的思想實體。兩者能互相影響，他推測交會點在松果體。二元論符合很多人的直覺：我好像不只是肉體。但它給認知神經科學一個巨大難題。若非物質心靈不屬於物理世界，它如何推動神經元，又如何被實驗工具測量。認知神經科學通常不採取這個立場。", "第二種框架是雙重面向論。斯賓諾莎式的想法是，心和腦不是兩個實體，而是同一個實在的兩種描述角度。你可以從外部描述神經元如何放電，也可以從第一人稱描述自己正在害怕；兩個描述都指向同一事件，只是使用不同概念。就像同一首歌可以用聲波頻譜描述，也可以用旋律與情緒描述。頻譜沒有否定旋律，旋律也不是另一個漂浮的實體。", "第三種框架是一元論，特別是物理一元論。它主張心智活動由物質大腦產生，沒有另一個獨立的非物質心靈。化約論是其中較強的版本，認為未來神經科學足夠成熟後，記憶、注意或情緒等心理概念，可能被神經生物概念取代。歷史上燃素被氧化理論淘汰，化約論者認為某些心理概念也可能有相似命運。", "但現階段，知道一個腦區或神經傳導物質改變，仍不足以取代心理層次的說明。研究者若不知道什麼叫工作記憶、抑制、辨認或意識，就無法設計有意義的神經實驗。這使雙重面向或較溫和的一元論很有吸引力：心智依賴大腦，但心理與神經描述可能在不同問題上各有用途。", "這門課的基本立場偏向一元論，也就是研究大腦能幫助理解心智，神經科學不需要假設一個無法測量的非物質心靈。可是，一元論不等於現在就能把所有心理概念刪掉。最後可以答：二元論把心身視為兩種實體；雙重面向論把它們視為同一實在的兩種描述；一元論認為心智來自大腦，化約論更預測心理概念終將被生物概念取代，而目前認知神經科學仍需要心理層次的理論。"], "19": ["答案是，不是，但如果研究只剩下把功能貼到腦區上，就有重蹈顱相學的風險。", "顱相學在十九世紀初提出兩個主張。第一，不同腦區負責不同能力。第二，一個能力越發達，對應腦區越大，會把頭骨頂出不同形狀，所以摸頭骨就能判斷人格與能力。第一個主張含有功能專門化的早期直覺，第二個主張則沒有可靠根據。", "後來的損傷、電刺激、單一細胞與造影研究確實顯示，大腦不是每一區都做完全相同的事。Broca 的病人支持語言產出與特定左額葉網路有關；Wernicke 等研究又顯示語言不是一個單一能力，理解、產出與概念可以部分分離。Penfield 的皮質刺激與現代感覺動作地圖，也支持局部功能差異。因此，顱相學關於功能可能有區域差異的直覺，並非全部錯誤。", "它真正失敗的地方有兩個。第一，頭骨外形不能可靠反映下面腦區大小，更不能據此量人格。第二，它先發明一串像母愛、破壞性或堅定等含糊能力，再替每個能力找一塊位置，缺乏可檢驗的認知理論與嚴謹實驗。它是在貼標籤，不是在說明資訊如何被處理。", "現代認知神經科學有比較強的方法。它用損傷、TM S、電生理、單細胞與造影交叉驗證，也用控制條件、統計與可重複研究限制解釋。更重要的是，認知心理學先把能力拆成可操作的歷程，例如語音辨識、詞彙提取、動作規劃，再問這些歷程如何由腦網路實現。", "但風險仍然存在。看到杏仁核活躍就說這是恐懼中心，看到前扣帶活躍就說這個人在說謊，都是把複雜心理功能直接釘在一個亮點上。活躍不等於必要，一個腦區也常參與多種功能。若只問哪裡亮，卻不問作業中的計算、網路互動與替代解釋，就會變成新的顱相學。", "定位論與分散論也不必二選一。基本感覺與動作有相對清楚的地圖和專門化；語言、記憶、推理與情緒通常依賴跨區網路。現代較合理的觀點是，有些區域在某種計算中較關鍵，但它們透過高度互聯的網路工作。", "所以一句話收束：認知神經科學保留了功能分工的可檢驗部分，推翻頭骨測人格與天真的功能清單；它和顱相學的真正分界，是是否有認知理論、嚴謹方法與多重證據，而不是有沒有畫出腦區。"], "20": ["先抓全流程。神經元內部長距離傳遞主要靠電，兩個神經元之間多數靠化學，下一個神經元收到後又轉回電。因此可以記成：電、化學、再電。", "神經元安靜時，細胞膜內側相對外側帶負電，大約負七十毫伏。這個靜息膜電位來自膜內外離子分布不均、細胞膜選擇性通透，以及鈉鉀幫浦長期維持濃度差。上游神經元釋放傳導物質後，受體讓特定離子通道開啟，於是在樹突和細胞體形成局部的漸進電位。", "興奮性突觸後電位讓膜電位往閾值靠近，抑制性突觸後電位讓它遠離閾值或穩定在較難放電的狀態。神經元會進行空間加總，也就是不同突觸同時相加；也會進行時間加總，也就是同一突觸短時間內連續輸入相加。只有總和在軸突起始處達到閾值，才觸發動作電位。", "動作電位開始時，電壓閘控鈉離子通道打開，鈉離子快速流入，膜內變得較正，叫去極化。接著鈉通道失活，鉀離子通道打開，鉀離子外流，膜電位回到較負，叫再極化。鉀通道關得稍慢，可能短暫低於靜息值，形成超極化與不應期。不應期讓神經元不會立刻無限連續放電，也使動作電位主要向軸突終端傳播。", "動作電位是全有全無。過閾值後，單次波形不會因原始刺激更強而無限變大。刺激強度主要由放電頻率和參與神經元數量表達。有髓鞘的軸突，動作電位會在郎飛氏結之間進行跳躍式傳導，因此更快、更節能。", "動作電位抵達軸突終端後，會開啟鈣離子通道。鈣離子進入終端，使裝有神經傳導物質的囊泡與細胞膜融合，把傳導物質釋放到突觸間隙。傳導物質擴散並結合突觸後受體，開啟離子通道或啟動細胞內訊號，形成下一輪漸進電位。之後傳導物質會被再吸收、酵素分解或擴散清除，避免訊號一直持續。", "課堂常以乙醯膽鹼作興奮例子、GA BA 作抑制例子。更精確地說，效果也取決於受體種類與所在細胞；同一傳導物質在不同受體上可能有不同作用。考試時若依講義作答，可以先抓興奮讓膜電位靠近閾值、抑制讓它更難到閾值這個機制。", "最後比較兩種電位。漸進電位在樹突和細胞體，強弱可變、可興奮也可抑制、會隨距離衰減；動作電位在軸突，全有全無、主動再生、不隨距離變小。整個神經溝通就是，突觸後電位先被整合，超過閾值產生動作電位，終端再用化學物質把訊息交給下一個細胞。"], "21": ["上一題講完整的電與化學循環，這一題把焦點縮到兩個神經元交接訊息的地方，也就是突觸。", "上游神經元叫突觸前神經元，下游神經元叫突觸後神經元。多數情況下，訊息從突觸前神經元的軸突終端，傳給突觸後神經元的樹突或細胞體。兩個細胞通常沒有直接碰在一起，中間有極小的突觸間隙，所以動作電位不能像電線一樣直接跳過去，必須先轉成化學訊號。", "流程可以一口氣串起來。第一，動作電位沿軸突抵達終端。第二，終端的電壓閘控鈣通道開啟，鈣離子進入。第三，含有神經傳導物質的囊泡和膜融合，把傳導物質釋放到突觸間隙。第四，傳導物質結合突觸後受體，改變離子通道或細胞內訊息。第五，突觸後膜形成興奮性或抑制性漸進電位。", "重點是，下游神經元不會收到一個興奮訊號就立刻放電。它同時收到成千上萬個突觸輸入，有些催它往前，有些踩煞車。它會把不同位置的輸入做空間加總，也把短時間連續輸入做時間加總。只有在軸突起始處的總和超過閾值，才產生自己的動作電位，繼續把訊息送下去。", "因此，神經元的溝通不是電話線一對一傳話，而比較像一場即時投票。每個突觸投出一點支持或反對，神經元根據總和決定是否發出全有全無的動作電位。網路中的學習，也常發生在這些突觸權重改變上，也就是同一個輸入未來能造成多大的突觸後效果。", "少數地方使用電突觸，例如 gap junction。兩個細胞透過通道直接交換離子，速度快，也容易同步，但可調節性通常不如化學突觸。大腦多數長距離與複雜計算仍仰賴化學突觸。", "一句話收好：動作電位到達終端，促使傳導物質釋放；傳導物質結合受體，形成突觸後電位；下一個神經元把興奮和抑制加總，超過閾值後才發出自己的動作電位。"], "22": ["動作電位是全有全無。這代表一個很重要的限制：神經元不能用單次動作電位的高度，表示刺激有多強或看到了什麼。每一發的大小大致相同，資訊必須放在別的地方。", "最基本的是率編碼，也就是放電頻率。刺激出現後，某顆神經元每秒從五次變成四十次，表示這個刺激更符合它偏好的特徵。刺激更強時，神經元可能不是放出更大的動作電位，而是在同一時間內放得更密。單一細胞記錄就是數這些尖峰，畫出神經元對不同刺激的調諧曲線。", "例如一顆下顳葉神經元可能對多張臉都有反應，但對其中幾張放電特別高；一顆聽覺神經元可能對某段頻率最敏感；一顆上顳溝神經元可能對特定視線方向反應較強。這些例子說明，資訊不是用文字寫在神經元上，而是由刺激和放電率之間的系統關係表示。", "第二種是時間編碼。資訊可能放在神經元何時放電，以及不同神經元是否同步。兩群神經元都增加放電，仍不一定代表同一物體；若它們以相同節奏同步放電，大腦可能把它們綁定成同一來源。視覺研究中，同一條光棒跨越兩個感受野時，兩區活動較同步；若是兩條分開的光棒，雖然兩區都放電，同步性較低。這提供特徵綁定的一種可能機制。", "第三個問題是，一個概念由多少神經元代表。極端局部表徵是假設一個概念對應一顆祖母細胞。它有效率，卻非常脆弱，而且實驗幾乎無法證明一顆細胞只對唯一刺激反應。另一個極端是完全分散，所有神經元都平均參與所有概念，這又可能不夠有效率。", "較符合證據的是稀疏分散式編碼。一個概念由一小群神經元共同表示，每顆神經元也參與一組相關概念。這既比祖母細胞更耐損，又比全腦一起編碼更節能。所謂對某名人反應的細胞，較可能是這個概念網路中的一員，不是整個人的記憶只存放在那一顆細胞裡。", "最後一句話是：神經元主要用放電頻率、放電時序與群體型樣編碼資訊；訊息不在單次動作電位的大小，也通常不在一顆孤立的祖母細胞。"], "23": ["最安全的答案不是兩者完全不同，也不是兩者完全一樣，而是早期處理大量共用，高階分析與記憶部分分開。", "兩者都從耳朵和早期聽覺皮質開始。大腦先分析頻率、強度與時間變化，這些基本聲學特徵同時是語音和音樂的材料。因此，不能說耳朵一開始就把語言送左腦、音樂送右腦。分化是在後續系統如何把聲音組織成音素、詞、旋律、節拍與意義。", "最有力的證據是雙重分離。一類病人有純詞聾，常涉及左顳葉聽覺語言網路。他們能說話，也可能認得環境音與音樂，卻很難把聽到的語音辨認成詞。另一類病人，例如經典個案 CN，雙側顳葉受損後無法認出熟悉旋律，卻仍能理解口說歌詞、辨認人聲或環境音。若語音和音樂只是同一能力的難易差別，不容易出現兩種相反缺損。", "語音還有一些特殊處理。它把連續聲學差異切成音素類別，叫類別知覺；它會把看到的嘴型和聽到的聲音整合，出現 McGurk 效應；在困難條件下，發音運動表徵也會輔助判斷。這些機制特別適合高速、具有語言類別和溝通目的的聲音。", "音樂內部也不是單一能力。音高與節奏可以分離。有人能跟上節拍卻分不出旋律中的錯音，也有人音高相對保留但節奏處理受損。先天性失樂症常對細微音高差異特別困難，但節奏與語音功能未必同等受損。熟悉旋律的辨認還涉及音樂語意記憶，可能和前顳葉網路有關。", "因此，簡化成左腦語言、右腦音樂會誤導。右半球常在音高與旋律輪廓上較有優勢，左半球常在快速時間變化與語言類別上較突出，但語音和音樂都依賴雙側、跨區網路。", "這題最後可以說：語音與音樂共用早期聲學分析，之後因處理目標不同而部分分流；純詞聾和失樂的雙重分離，以及音樂內部音高與節奏的分離，證明它們不是同一能力，但也不是兩套完全沒有交集的系統。"], "24": ["先講結論。它可以在高度受控、選項有限的實驗中，對某些腦活動型樣做高於機率的分類；但這和在真實世界可靠測謊，或直接讀出一個人的具體內心，差得非常遠。", "傳統測謊機測心跳、呼吸、皮膚導電等自律神經反應。問題是，這些指標反映一般喚起。無辜的人因害怕也可能很緊張，熟練說謊者卻可能平靜。它沒有直接測量謊言，只是在測某些常伴隨謊言的身體反應。", "fM RI 直接測大腦，聽起來更接近源頭。但說謊不是一個單一心理動作。你可能要記住真相、抑制真話、編造替代答案、監控自己是否前後一致，還要推測對方知道什麼。這些歷程牽涉前額葉、前扣帶、記憶與心智理論網路。不同類型的謊言又不一樣：臨時編造和事先背好的說法，可能使用不同策略。因此，不存在一個看到它亮就能判定說謊的單一腦區。", "更大的問題是，實驗室通常要求受試者在沒有真正後果的情況下，照指示說真話或假話；真實說謊有動機、恐懼、利害、練習與反制策略。從受控樣本得到的準確率，不能直接搬到法庭或個人判斷。基準率也很重要。即使測驗在實驗中看似準確，若實際受測者大多沒有說謊，少量偽陽性也會造成許多誤判。", "讀心常使用 MV PA，也就是多體素型樣分析。它不是只找哪裡最亮，而是觀察一群體素的細微活動圖樣。研究者先讓分類器學習受試者看到臉、房子、鞋子等已知刺激時的型樣，再測試它能否判斷新的試次屬於哪一類。也可以在非常受控的視覺刺激中，從 V1 活動重建粗略圖案，或在兩個預先指定的心像任務間分類。", "這種方法做的是有限選項辨識，不是打開大腦字幕。分類器通常已經知道可能答案，並在同一任務、相近情境和足夠訓練資料下判斷。它較可能分出你在想運動還是空間移動，卻不能自然地知道你想起哪一年、哪一個人、對他有什麼複雜感受。每個人的學習經驗、腦部對齊和概念表徵都不同，開放式想法沒有固定字典可查。", "所以這題的核心是分清分類和讀心。功能造影能在封閉選項中解碼某些粗略類別，也可能為無法行動的病人建立簡單溝通；它目前不能可靠測出真實世界的謊言，也不能讀出任意、具體而私密的思想。腦區活躍仍只是需要謹慎解釋的模式，不是心理狀態的直接印章。"], "25": ["答案是，臉確實有相對專門的神經與認知證據，但它為什麼特殊，仍有多種可能解釋。", "先看支持特殊性的證據。功能造影常發現梭狀回臉區，也就是 FF A，對臉比許多一般物體有更強反應。ER P 中的 N170 也對臉與臉狀結構特別敏感。臨床上，臉盲患者可能看得到眼睛、鼻子和嘴巴，也能辨認一般物體，卻無法從臉認出家人，只能靠聲音、髮型或情境補償。選擇性缺損表示臉處理至少有部分獨立機制。", "但特殊的原因有四種解釋。", "第一是任務難度。臉彼此很像，我們卻要辨認細微差異，也許臉區只是被任何高難度辨別啟動。問題是，研究把臉和其他物體作業調成相近難度後，某些臉盲病人的臉辨認仍特別差，因此難度不能完整解釋。", "第二是整體處理。辨認一般物體時，我們常可依賴局部零件；辨認臉時，眼睛、鼻子和嘴巴之間的配置關係特別重要。把臉倒過來會嚴重破壞這種整體關係，造成著名的臉孔倒置效應。這支持臉的特殊性可能來自高度依賴整體與構形處理。", "第三是視覺專家說。每個人從小看過無數張臉，而且必須在同一類別內做個體層次辨認。也許 FF A 不是天生只處理臉，而是處理我們極度熟練的細緻辨別。受試者被訓練成 Greebles 等新奇物體的專家後，臉相關區與 N170 可能增加；汽車或鳥類專家看專長物件時也有類似效應。", "第四是領域特定說。它認為臉因社會與生存重要性，演化出先天偏好的專門系統。嬰兒對臉狀配置的偏好、臉盲的選擇性與穩定臉區，都能支持這個方向。但所謂臉區通常仍會回應其他物體，專家效應也存在，所以強版本的只處理臉並不容易成立。", "這四種解釋不必互斥。大腦可能帶有臉的先天偏好，長期經驗又把相關網路調得更精細，而臉辨認確實高度仰賴整體處理。最後可以答：臉有 FF A、N170 和臉盲等特殊性證據；但特殊性可能來自領域特定、整體處理、專家經驗與任務需求的組合，不能只用一個原因下結論。"], "26": ["單一細胞記錄的價值，是直接觀察某一顆神經元在不同聲音下如何改變放電。它讓研究者不只知道一大片聽覺皮質有活動，而能問這顆細胞偏好哪個頻率、音量、位置或複雜聲音。", "第一個重要發現是音調拓樸。耳蝸先把不同頻率分開，聽覺皮質仍保留有秩序的頻率地圖。頻率相近的聲音，傾向由位置相近的神經元表示。依課堂圖示，核心區可看到低頻與高頻沿空間規律排列。這就像視覺皮質保存視網膜位置，只是聽覺地圖保存的是頻率，不是外界位置。", "第二個發現是階層處理。核心區神經元可能只對很窄的頻率範圍敏感；外圍帶區整合多個核心輸入，對較寬頻率組合、頻率變化方向或猴子叫聲等複雜聲音反應更強。這和視覺系統從局部邊緣逐步組合成複雜形狀相似：越往高階，偏好的刺激通常越複雜，對簡單物理特徵的依賴越少。", "第三，單一細胞顯示聽覺神經元可以同時編碼音量與位置。有些神經元只在特定聲強下反應，有些對某個方向特別敏感，許多細胞會同時受兩者影響。這提醒我們，神經元不一定各自只代表一個純特徵，實際編碼常是多維的。", "第四，單細胞證據幫助建立 what 和 where 路徑。獼猴前方帶區神經元對叫聲身分有較高選擇性，即使聲音位置改變仍保留反應，像是在辨認這是什麼；後方帶區神經元對聲音位置最敏感，像是在判斷它在哪裡。這成為前方腹側 what 與後方背側 where 路徑的重要起點證據。", "限制是，單一細胞記錄具侵入性，多數資料來自動物；記錄到的少數細胞也不等於整個人類聽覺系統。研究者需要再和人類造影、病灶與行為互相驗證。最後一句話是：單細胞記錄揭露聽覺皮質的音調地圖、由核心到帶區的階層、音量與位置調諧，以及前方 what、後方 where 的分流。"], "27": ["答案是部分不同。音樂不是從耳朵開始就走一條完全獨立的專線，而是在共用早期聲學分析之後，發展出部分專門的旋律、節奏、動作和獎賞網路。", "第一個證據是與語音的雙重分離。純詞聾患者可能聽不懂口語，卻仍能欣賞或辨認音樂；失樂患者則可能無法辨認熟悉旋律，語音理解相對保留。經典個案 CN 就無法認出旋律，卻能辨認口說歌詞與其他聲音。這表示高階語音和音樂處理不是同一套系統的單純難易差別。", "第二，音樂內部也能分解。Peretz 與 Coltheart 的模型把音樂處理區分為音高相關與時間相關路徑。旋律輪廓、音程和調性偏向音高組織；節拍與節奏偏向時間組織。個案可能只在音高或只在節奏上受損，先天性失樂症也常以細微音高辨識困難為核心。這表示音樂不是一個不可再分的模組。", "第三，音樂會強烈連結動作系統。即使坐著不動，聽規律節拍也可能啟動前運動皮質、輔助動作區、小腦與基底核。原因是預測節拍本身就像準備下一個動作時間點；演奏、拍手和舞蹈更需要聽覺與動作回饋持續校準。", "第四，音樂的情緒與愉悅會使用一般獎賞與情緒網路，而不是音樂專屬的快樂中心。當熟悉段落帶來期待與高潮，獎賞迴路可能參與；這些區域也會回應其他有獎賞價值的刺激。因此，音樂有獨特結構處理，也會借用領域通用的情緒和獎賞系統。", "最後不要寫成右腦音樂、左腦語言。右半球常較擅長細緻音高與旋律，左半球可能較擅長快速時間分析，但音樂的不同成分分布在雙側網路。最穩的結論是：音樂與其他聲音共用早期聽覺分析，之後在音高、節奏與熟悉旋律記憶上出現部分專門化，同時又連結動作與一般獎賞系統。"], "28": ["團體研究想解決的核心問題是，單一病人的病灶太特殊。若很多具有相同缺損的人，都在某些位置有共同損傷，我們對病灶和功能的關聯會更有信心，也能進行統計估計。", "分組可以從三個方向開始。第一，依臨床症候群分組，例如某類失語症。這方便連結疾病分類，但同一症候群內的認知缺損和病灶可能仍很不同。第二，依特定認知症狀分組，例如都出現語意理解缺損，再回頭尋找共同病灶。這更貼近認知理論，但症狀可能由不同原因造成。第三，依解剖位置先選病人，例如都有左前顳葉損傷，再檢驗哪些功能共同受影響。這適合測試造影提出的預測，但若同一功能可由多個節點受損造成，只選一個區域會漏掉其他路徑。", "現代病灶症狀映射可以逐體素比較。研究者把許多病人的病灶對齊，檢查某個體素受損是否與行為分數系統性相關，畫出統計熱點。這比只看幾張病灶重疊圖精細，也能把連續行為表現納入。", "但團體研究有幾個限制。第一，自然病灶不是隨機發生。血管分布使某些區域常一起受損，研究者可能誤把鄰近區當成真正關鍵點。第二，結構影像不一定完整顯示功能失效範圍，腫瘤、水腫、出血或外傷尤其複雜。第三，局部損傷會讓遠處但連線相依的區域暫時低下，叫遠距效應或 diaschisis。症狀可能來自整個網路失衡，不是病灶點單獨負責那個功能。", "第四是解釋過度。若 X 區受損後 F 功能變差，合理結論是 X 或經過 X 的網路對 F 的某些面向很重要。不能直接說 F 就存放在 X，更不能說 X 的唯一目的就是 F。前者把網路功能縮成位置，後者把腦區人格化，都容易走向新顱相學。", "團體研究和單一個案仍要互補。團體研究提供位置關聯、變異範圍與統計穩定性；單一個案保留精細的功能分離與錯誤型態。最後一句話是：團體研究能從多位病人中找必要節點與病灶熱點，但必須控制分組異質性、病灶共變、遠距效應與過度定位，並用個案和其他方法檢驗。"], "29": ["先建立一張由下往上的地圖。越接近脊髓與腦幹下方，功能越偏向維持生命和基本動作；越往前腦與大腦皮質，越能整合感覺、記憶、目標與複雜行為。這只是整體趨勢，不表示低處不重要或高處能獨立工作。", "前腦包括終腦和間腦。終腦包含大腦皮質、基底核與邊緣系統。大腦皮質支援知覺、語言、記憶、決策與有意識行為。基底核不只是控制動作，也參與習慣、技能與獎賞學習；多巴胺系統受損會影響動作啟動，例如帕金森氏症，另一些基底核病變則可能造成過多不自主動作。邊緣相關結構中，杏仁核對威脅與情緒意義敏感，海馬迴對形成新的情節記憶重要，扣帶皮質參與衝突、動機與身體狀態整合。", "間腦的視丘是主要中繼與調節站。除了嗅覺外，多數感覺訊息會經視丘再到皮質；視覺經 LG N，聽覺經 MG N。視丘不只是被動轉接，也會受到注意與皮質回饋調節。下視丘維持體內平衡，調節體溫、飢餓、口渴、性行為、自律神經與內分泌。", "中腦包含上丘、下丘與黑質等結構。上丘整合視覺、聽覺和觸覺線索，快速控制眼睛與頭部朝重要刺激定向；下丘是重要聽覺中繼與整合站。這些路徑可在完整有意識辨認之前，先讓身體對突然出現的光或聲音作出反應。黑質與基底核迴路相連，黑質多巴胺神經元流失是帕金森氏症的重要機制。", "後腦包括延髓、橋腦與小腦。延髓控制呼吸、心跳、吞嚥等維持生命的功能；橋腦連結大腦、小腦與腦幹多個系統，也參與睡眠與喚醒；小腦負責動作的精確時序、協調和誤差修正，也參與動作學習。小腦受損時，肌力可能還在，動作卻變得搖晃、不準、說話不流暢或眼球控制異常。", "所以可以用一句話串起來：前腦負責高階整合、感覺中繼、動機與目標行為；中腦負責快速定向、部分感覺整合與動作調節；後腦維持基本生命功能，並讓動作平衡、流暢和精確。三者不是三個孤島，而是從生命維持到高階認知持續互相連接的系統。"], "30": ["答案是，兩者目前互相需要，因為它們提供不同層次的限制。", "認知心理學在沒有直接量腦的年代，已經靠反應時間、錯誤率、促發和記憶表現，建立許多成功的資訊處理模型。這表示一個心理理論不會只因沒有畫腦圖就失去價值。可是腦資料可以成為新的依變項。除了問受試者答得多快、答對多少，也能問不同條件改變哪些腦區、何時出現 ER P 差異，以及兩個看似相同的行為結果是否依賴不同神經路徑。", "腦資料也能限制心理理論。兩個模型若都能預測相同反應時間，卻對處理階段或神經適應提出不同預測，造影與電生理可能把它們區分開。重複文字即使大小寫改變，左梭狀回仍出現重複抑制，就支持某個階段已把表面大小寫差異轉成較抽象的詞形表徵。這不只告訴我們在哪裡，也告訴我們表徵可能具有什麼性質。", "常見的硬體與軟體比喻有幫助，但不完整。電腦程式可以由設計者任意放到不同硬體；人類認知則由大腦的演化、發展、連線速度與可塑性共同形成。大腦的物理限制會影響資訊是平行還是串列處理、哪些功能容易共享資源，以及受損後能如何代償。因此，認知模型不能永遠把實現它的生物系統當成完全無關。", "反過來，神經科學更需要認知心理學提供可研究的問題。掃描器看到的是血氧型樣，電極看到的是電位，顯微鏡看到的是細胞；它們不會自己標示這是記憶提取、語意選擇或衝突監控。研究者必須先用認知理論定義作業、控制條件與可能歷程，才能知道腦訊號差異代表什麼。沒有這一層，研究很容易退化成看哪裡亮，再隨意貼上一個心理標籤。", "這也連回顱相學與心身問題。純粹定位而沒有好的心理概念，會變成新顱相學；只談心理歷程而完全不讓腦證據限制，又可能忽略人類系統真正的生物條件。未來心理概念會不會被完全化約，仍沒有定論，但現在兩種語言都不可少。", "最後一句話是：認知心理學告訴神經科學要區分哪些處理與表徵，神經科學則用大腦的時間、位置、連線與因果證據限制認知模型；兩者不是互相取代，而是互相校正。"]};
+const BRIEF={"1": {"a": "兩者都要從混雜、不斷變動的能量中分出來源並建立穩定知覺，所以架構相似；差別在感覺表面保存的資訊——視網膜存空間，耳蝸存頻率。", "pts": ["**共同難題**：①來源分離（哪些邊緣屬同一物體／哪個聲音屬哪個聲源）②**恆常性**（紅番茄換光源仍是紅；同一首歌換調仍是同一首）。", "**共同架構**：視丘中繼（視覺 **LGN**、聽覺 **MGN**；聽覺上行：耳蝸核→**上橄欖核**→下丘→MGN）→ 初級皮質有序地圖（**視網膜拓樸**／**音調拓樸**）→ 高階分 **腹側 what**、**背側 where／how**。", "**差異一**：視覺空間強（視網膜直接保留位置）；聽覺時間強（幾十毫秒決定語音差異），位置要靠兩耳時間差、強度差、耳廓頻譜反推。", "**差異二**：視覺鼻側纖維在視交叉交叉，右視野→左半球；聽覺很早就雙側投射，單側聽覺皮質受損不會像單側 V1 那樣整片半邊消失。", "**專門化**：視覺 V4（顏色）、MT/V5（動作）證據充分；聽覺的特徵專門化記載較少（課本比較表）。", "**位置**：V1 在枕葉（BA17）；聽覺核心區 A1 在上顳回的 Heschl 氏回（BA 41，帶區 BA 42）。"]}, "2": {"a": "辨認內容與定位＋行動是不同的計算問題，聽覺與視覺都把它們分進部分分開的路徑。", "pts": ["**what（腹側）**：A1→前方帶區→顳葉前部／下額葉；獼猴前帶區神經元對叫聲「種類」敏感，聲音位置改變仍保留反應。", "**where（背側）**：A1→後方帶區→後頂葉；對聲音「方向」敏感，負責位置與空間。", "**how**：背側路徑連前運動皮質／Broca 區，支援複誦、學新音素、輪流對話；pSTS 整合嘴型與聲音（McGurk）。", "**視覺對照＝雙重分離**：腹側 V1→V4→IT 受損，看得到卻認不出；背側 V1→MT→後頂葉受損，認得卻抓不準。", "分流是**部分**而非絕對，兩條路徑持續互動。"]}, "3": {"a": "fMRI 量的是神經活動後的血氧變化（BOLD），是間接指標；空間約毫米，時間約秒。", "pts": ["**生理歷程**：神經活動耗氧 → 去氧血紅素增加（順磁性，磁場不均勻，訊號先略降）→ **神經血管耦合**送來過量含氧血 → 去氧血紅素比例下降、磁場變均勻 → **BOLD 上升**。", "**HRF**：初始小下降 → 數秒內到高峰 → 回落並短暫低於基線 → 慢慢恢復。", "**時間解析度**受血流限制（秒級），不是掃描速度；TR 只決定多久取樣一次，掃再快血流也不會變毫秒。事件相關設計靠已知 HRF＋統計模型分離重疊的訊號。", "**空間解析度**由體素大小、磁場強度、雜訊、頭動與血管分布決定；體素越小訊號越弱，不是無限縮小越好。", "**取捨**：問「哪裡」用 fMRI；問「幾百毫秒時發生」用 EEG／ERP。"]}, "4": {"a": "不代表。造影的活躍是相關，不是必要性；要證明必要要看「拿掉之後功能是否選擇性下降」。", "pts": ["**必要 vs 充分**：fMRI 活化兩者都不能直接證明；必要性要靠自然損傷或 **TMS** 干擾。", "**活躍但損傷無影響**：①受試者用了非唯一的策略 ②作業難度帶動一般注意／喚醒網路 ③BOLD 分不出興奮或抑制 ④病人研究樣本少、病灶沒涵蓋目標區或作業不同。", "**不活躍卻有缺損**：條件與控制都需要該區，相減後被抵銷；區域太小或個別差異大；病灶破壞的是經過的**白質纖維**（網路問題）。", "**例**：語意作業活化左下額回，嚴重語意缺損病人卻傷在前顳葉——任務含選擇、提取、儲存、控制，兩種方法看到不同環節。", "**結論**：不一致時應追問作業、控制條件、策略與網路連結，而非判定哪個方法錯。"]}, "5": {"a": "從腦傷成人推論正常認知要接受三個假設：區分性、透明性、普遍性，三者大致合理但各有限制。", "pts": ["**區分性**：認知成分能被選擇性破壞（臨床確有選擇性缺損，但病灶很少像拔積木般乾淨；成分是運算，不一定等於小腦區）。", "**透明性**：腦傷後看到的是「正常系統少掉某些成分」，而非重新發明的架構——最有爭議，因可塑性與代償；成人後天腦傷比兒童早期腦傷安全。", "**普遍性**：不同人的核心認知架構足夠相似，個案才能推及一般人（個別差異使單一個案不能代表全體）。", "**單一分離陷阱**：A 差 B 好，可能只是 A 較難（作業資源假象）或附帶要求較多。", "**雙重分離**（病人一 A 差 B 好、病人二相反，如母音／子音互補個案）加強推論，但仍須檢查作業純度與替代解釋。"]}, "6": {"a": "單一個案最擅長問「能力如何拆分」；團體研究最擅長問「缺損與病灶如何穩定相關」，兩者互補。", "pts": ["**優點**：①保留完整缺損型態（十人平均會把互補分離抹掉）②可做細緻**錯誤分析**（母音／子音、熟悉／陌生臉）③兩個相反個案形成**雙重分離**④罕見而純粹的個案無法湊大樣本。", "**缺點**：①普遍性有限，無法估計現象比例 ②依賴透明性與普遍性假設 ③單一分離可能只是作業難度 ④自然病灶不規則，涉及灰質、白質與遠端網路。", "**團體研究**補統計穩定性與病灶位置共同性，但會平均掉個別差異。", "**結論**：個案提出精細模型，團體與其他方法再檢驗。"]}, "7": {"a": "損傷法比造影更能回答必要性與因果；自然腦傷效應大但不可控，TMS 暫時可控，tES 則偏壓興奮性。", "pts": ["**自然腦傷**：效應真實且大；但病灶不規則、常破壞白質、病人間差異大，且長期存在會重組（透明性問題）。", "**TMS**：線圈快速電流→磁場穿顱→誘發皮質電流，**暫時干擾**（虛擬損傷）。優點：可逆、受試者自身對照、可操弄**刺激時點**（八十毫秒 vs 兩百毫秒），給空間＋時間因果線索；缺點：多影響表淺皮質、聚焦有限、效應較小。", "**例（點字）**：造影見早盲者枕葉活躍；TMS 干擾中枕葉後點字辨識變差、明眼人不受影響 → 視覺皮質已重組為觸覺必要部分。", "**tES／tDCS**：弱電流改變放電閾值，陽極傾向提高、陰極傾向降低興奮性；空間較粗，適合研究學習與刺激後的後效。", "三者互補，無一能完整取代其他。"]}, "8": {"a": "認知減法：用「多一個成分」的實驗作業減去控制作業，剩下的差異歸給該成分；弱點是純插入假設與基線選擇。", "pts": ["**做法**：兩個盡量相似的作業，唯一差別是要研究的成分；相減後共有活動抵銷。例：看字 − 看符號 → 詞形處理。源自 **Donders** 反應時間減法。", "**問題一：純插入假設**——假定加入一個成分不改變其他成分；實際上歷程會互相影響（看字的注意與眼動可能從頭就不同）。", "**問題二：基線選擇**——太簡單則混入難度／注意差異，太相似則把想研究的成分也減掉；例：朗讀 − 看字混有動作規劃、聽自己聲音、錯誤監控。", "**改善**：**因子設計**（看交互作用，不需假設互不影響）、**認知聯集**（多個對比共同出現的區域）、**參數設計**（連續改變負荷，看活動是否規律跟著變）。"]}, "9": {"a": "不會。兩者回答不同問題：造影給正常系統的相關活動，損傷法給必要性的因果證據。", "pts": ["**造影**：全腦觀察、定位精確，但是**相關**——活躍可能是核心運算，也可能是注意、策略、抑制或監控；不活躍可能被基線相減掉。", "**損傷法**：病灶或 TMS 後功能選擇性變差，才支持該區／網路是**必要**的——造影無法取代。", "**損傷法的問題**：病灶大且不規則、破壞連線、遠端效應、長期重組與代償策略、樣本難配對。", "**不一致更有價值**：有活動但損傷後功能在 → 查非必要策略或代償；無差異卻有缺損 → 查基線相減或白質連線被破壞。", "**互補**：造影提候選區 → 損傷／TMS 檢驗必要性；結構影像精確描病灶；病人缺損指引造影比較什麼。"]}, "10": {"a": "盲視＝V1 受損後主觀上看不見，被迫二選一時對位置、方向或動作的判斷卻高於機率；顯示視覺是多條平行路徑，且處理與意識可分離。", "pts": ["**定義**：V1 受損造成皮質盲；盲視病人否認看見，但強迫選擇（斜線方向、位置）穩定高於 50%，手或眼球也朝向刺激。", "**旁路**：視網膜→**上丘**／丘腦枕核→外紋狀視覺區；或 LGN 某些細胞群→**MT/V5**（快速定位、動作偵測）。", "**需排除**：V1 殘留組織、光散射到好的視野——用結構影像、精細視野測量、控制條件；表現只在特定刺激出現更支持替代通路。", "**啟示**：①視覺是平行多路徑 ②處理資訊與**意識**到資訊可分離 ③V1 對有意識、精細、可報告的視覺很重要，但粗略、無意識的視覺行為可繞過它。", "**限制**：盲視辨別粗糙、不穩定，不是「正常視覺只少了意識」。"]}, "11": {"a": "視知覺不是單一能力：對有意識、精細的視覺 V1 幾乎必要；對粗略定位與動作則非唯一路徑；對完整視知覺 V1 又不充分。", "pts": ["**支持重要**：V1 受損→對應視野皮質盲；V1 保留視網膜拓樸，分析邊緣、方向、明暗、波長，是高階顏色／形狀／物體／動作處理的入口。", "**與意識相關**：盲視無「看見」感，推論 V1 及其與高階視覺區的**迴返互動**對有意識視覺很重要。", "**非唯一入口**：上丘、丘腦枕核、LGN→外紋狀皮質的旁路支持定向、眼動、粗略動作偵測。", "**必要 ≠ 充分**：V1 完好只完成早期分析，還需 V4（顏色）、MT/V5（動作）、下顳葉（物體／臉）、注意與記憶。", "分層作答：有意識精細辨認 → 幾乎必要；粗略定位／動作 → 非唯一；完整視知覺 → 不充分。"]}, "12": {"a": "恆常性＝從變動影像推論相對穩定的物體；顏色靠場景脈絡估光源，物體靠抽取穩定結構與身分。", "pts": ["**問題**：光源、距離、視角一變，視網膜影像就變；不修正則每走一步世界都換了一批東西。", "**顏色恆常**：比較表面與周圍、估計整體照明（像相機自動白平衡）。V1 對局部波長敏感，隨光源改變；**V4**／腹側整合大範圍脈絡，使顏色相對穩定；V4 受損→大腦性色覺缺失（近灰階，形狀、深度保留）。", "**物體恆常**：抽出穩定特徵／部件關係，與記憶表徵比對；**下顳葉**感受野大、不在意位置，建立跨位置／大小的身分。", "**兩套處理**：左側下顳／梭狀回偏跨大小視角的身分；右半球與頂葉保留視角、方向。病人可認得是什麼卻說不出朝向，或只認得熟悉視角。", "**適應（fMRI）**：重複同一表徵 → 反應**降低**；換視角仍降低＝該區視為同一身分，恢復＝區分視角。"]}, "13": {"a": "語音知覺有動作成分，但強版本動作理論不成立：運動表徵是輔助預測器，在訊號模糊或學習時最有用。", "pts": ["**問題**：協同發音使同一音素聲學變動，不同聲學也可被聽成同一音素。", "**動作理論**：聽者辨認的是推論出的發音動作，利用自己的運動表徵反推別人做了什麼。", "**McGurk 效應**：看到的嘴型與聽到的音整合成第三個音 → 視聽整合（**pSTS**）；但它直接證明的是整合，不單獨證明運動系統必要。", "**TMS／造影**：語音清楚時干擾前運動皮質影響小；雜訊或介於兩音素間時，干擾發音運動區會讓辨別變差。鏡像神經元＝知覺與動作共享表徵的可能機制；外語音素「聽＋說」優於只聽。", "**類別知覺**：連續的聲學差異（如 VOT，da↔ta）被切成離散音素，界線前後聽成不同類別。", "**限制**：若運動區是唯一基礎，受損者應聽不懂，但實際只在困難條件下輕微障礙。"]}, "14": {"a": "動作電位是全有全無、沿軸突再生；漸進電位會加總、衰減；EEG／MEG 測的是大量同步的突觸後電位。", "pts": ["**漸進電位**：突觸後電位，可興奮或抑制、強度可變、被動傳遞會衰減，神經元對其做空間與時間加總。", "**動作電位**：軸突起始處超過閾值才產生；全有全無、電壓閘控通道使其再生不衰減；刺激越強，**頻率**越高而非振幅越大。", "**單細胞記錄**：電極在細胞內或附近直接記錄尖峰；精細但侵入性，多用於動物。", "**EEG**：頭皮電極測大量**錐體神經元同步、方向平行**的突觸後電位（方向雜亂會抵銷）；可取 ERP；毫秒時間解析度、便宜，但空間差（**逆問題**）。", "**MEG**：測神經電流的磁場，較不受顱骨扭曲、定位較好，但設備昂貴、需磁屏蔽，對來源方向與深度有條件。", "電生理擅長「何時」，fMRI 擅長「哪裡」。"]}, "15": {"a": "ERP＝把許多試次對齊刺激時間後平均，從 EEG 抽出與刺激鎖定的毫秒級反應；用成分的時間與對操弄的敏感度檢驗認知歷程。", "pts": ["**為何平均**：刺激鎖定的反應每次在相近時間出現會保留，無關背景活動時正時負而抵銷。", "**讀波形**：橫軸毫秒、縱軸電位；P／N 表正負向峰、數字是約略時間（N170、P300）；正負不等於興奮／抑制或好壞。", "**檢驗理論**：操弄一因素，看哪個**時間窗**的振幅、潛時、頭皮分布改變——一百多毫秒＝早期知覺；三百毫秒後＝辨認、記憶、決策；兩因素影響不同成分＝至少部分不同階段。", "**例（臉）**：N170＝臉結構編碼；N250＝熟悉／特定身分；300 ms 後＝人物知識。**例（促發）**：清晰度影響約 150 ms 內、促發要到 300 ms 後 → 兩歷程分開。", "**限制**：峰是多來源相加，不是單一心理模組；空間定位差（逆問題）；需大量試次，眨眼、眼動、肌肉雜訊大。"]}, "16": {"a": "電生理把臉處理拆成知覺編碼、臉身分、人物知識，並顯示單一細胞傾向稀疏編碼。", "pts": ["**三層**：知覺編碼（五官配置）→ 臉身分（跨光線表情角度）→ 人物知識（可由名字、聲音觸發）。", "**單一細胞（猴下顳葉）**：多數細胞對一組臉有不同程度反應，非專屬某一張 → 反對極端**祖母細胞**。", "**人類手術記錄**：內側顳葉有對特定名人（含名字）高度敏感的神經元，但不可能測遍所有刺激 → 較合理是**稀疏編碼**。上顳溝細胞對視線、表情、頭部動作敏感 → 臉也是社會訊息。", "**ERP 時序**：N170（右後顳，臉結構，不管是不是名人）→ N250（熟悉臉身分）→ 晚期成分（臉與名字都影響，人物知識）。", "**裁決理論**：漫畫臉若增強 N170 → 效果在知覺編碼（誇大辨識特徵）而非記憶；促發只影響晚期 → 作用於人物知識。", "**限制**：ERP 難定位來源；單細胞抽樣少且多來自動物或特殊個案。"]}, "17": {"a": "TMS 檢驗重組區是否已成為「必要」；tDCS 以興奮性與後效研究可塑性如何被調整。", "pts": ["**可塑性**：經驗、感覺缺失或損傷後，功能分配、連線與興奮性改變；造影能看到重組後的活躍，卻不能證明有功能。", "**早盲者點字**：明眼人靠體感覺皮質；早盲者枕葉也活躍。TMS 干擾中枕葉 → 點字辨認下降，明眼人影響小 → 視覺皮質被徵用於精細觸覺與空間辨認。", "**其他例**：長期使用的身體部位代表區擴大；截肢／缺乏輸入的代表區縮小或被鄰區侵入 → 皮質地圖會隨使用與輸入競爭而變。", "**限制性**：接手的功能與原計算相近（視覺與點字都要高精度空間模式）；枕葉也可參與語言，非絕對但受原有連線約束。", "**tDCS**：陽極↑、陰極↓興奮性；刺激停止後的後效與突觸可塑性有關，適合研究學習。", "**限制**：TMS 影響範圍不易確定；tDCS 更不聚焦、效果依情境；效應小於自然腦傷。"]}, "18": {"a": "心身問題＝主觀心智與物質大腦是兩種東西還是同一件事；三種框架：二元論、雙重面向論、一元論。", "pts": ["**二元論（笛卡兒）**：心與身是兩種實體，交會在松果體；符合直覺，但非物質心靈如何推動神經元、如何被測量？認知神經科學通常不採用。", "**雙重面向論（斯賓諾莎式）**：心與腦是同一實在的兩種描述角度（第三人稱放電 vs 第一人稱害怕），像同一首歌的頻譜與旋律。", "**一元論／物理一元論**：心智由物質大腦產生，無獨立心靈；**化約論**較強版本預測心理概念終被神經概念取代（如燃素被氧化理論淘汰）。", "**現況**：不知道「工作記憶」「抑制」是什麼就無法設計神經實驗 → 現階段仍需心理層次理論；課程偏向一元論，但不等於可刪掉心理概念。"]}, "19": {"a": "不是；顱相學的錯在方法與理論，不在「功能有區域差異」這個直覺。", "pts": ["**顱相學主張**：①不同腦區負責不同能力 ②能力越強腦區越大、頂出頭骨，摸頭可測人格。①含專門化直覺，②無根據。", "**認神的支持**：Broca／Wernicke 病人、Penfield 皮質刺激與感覺動作地圖支持局部功能差異。", "**顱相學失敗處**：頭骨外形不反映腦區大小；先發明含糊能力（母愛、破壞性）再貼位置，缺乏可檢驗的認知理論與嚴謹實驗。", "**現代做法**：損傷、TMS、電生理、單細胞、造影**交叉驗證**；認知心理學先把能力拆成可操作歷程，再問腦網路如何實現。", "**風險**：「杏仁核＝恐懼中心」「前扣帶亮＝說謊」→ 新顱相學。基本感覺動作較專門化，語言記憶推理依賴跨區網路。"]}, "20": {"a": "神經元內部靠電、細胞之間靠化學、下游再轉回電：電→化學→電。", "pts": ["**靜息膜電位**：約 −70 mV，由離子分布不均、膜選擇性通透、鈉鉀幫浦維持。", "**漸進電位**：傳導物質→受體→離子通道開啟→EPSP（近閾值）／IPSP（遠離閾值）；做**空間加總**與**時間加總**。", "**動作電位**：軸突起始處過閾值 → 鈉通道開、鈉流入（**去極化**）→ 鈉通道失活、鉀外流（**再極化**）→ 可能超極化與**不應期**；**全有全無**，強度靠頻率；髓鞘＋**郎飛氏結**跳躍式傳導。", "**化學傳遞**：抵達終端 → 鈣通道開、鈣進入 → 囊泡融合釋放傳導物質 → 結合突觸後受體 → 再吸收／酶解／擴散清除。", "**比較**：漸進電位在樹突／細胞體、強弱可變、可興奮或抑制、會衰減；動作電位在軸突、全有全無、主動再生、不衰減。"]}, "21": {"a": "突觸傳遞：動作電位轉成化學訊號，下游神經元把興奮與抑制加總，過閾值才再放電——像即時投票。", "pts": ["**流程**：動作電位抵達終端 → 鈣通道開、鈣流入 → 囊泡與膜融合釋放傳導物質進**突觸間隙** → 結合突觸後受體 → 形成 EPSP／IPSP。", "**整合**：下游同時收成千上萬個輸入，做空間與時間加總；軸突起始處超過閾值才發出全有全無的動作電位。", "**學習**：常發生在突觸權重改變（同一輸入能造成多大的突觸後效果）。", "**電突觸**：gap junction 直接交換離子，快且易同步，但可調節性較差；大腦多數長距離與複雜計算仰賴化學突觸。"]}, "22": {"a": "神經元用放電頻率、放電時序與群體型樣編碼，資訊不在單發動作電位的大小，也通常不在孤立的祖母細胞。", "pts": ["**限制**：動作電位全有全無，不能靠高度表示強度。", "**率編碼**：每秒放電數＝刺激與偏好的符合程度；單細胞記錄畫**調諧曲線**（如下顳葉對特定臉、聽覺神經元對特定頻率、上顳溝對視線方向）。", "**時間編碼**：看何時放電與是否**同步**；同一光棒跨兩個感受野時兩區同步較高，兩條分開的光棒則否 → 特徵綁定的可能機制。", "**多少神經元代表一概念**：祖母細胞（高效但脆弱、無法證明）vs 完全分散（耗能）→ 證據較支持**稀疏分散式編碼**：少量神經元共同表示，每顆也參與相關概念。"]}, "23": {"a": "語音與音樂共用早期聲學分析，之後因目標不同而部分分流——不是「左腦語言、右腦音樂」。", "pts": ["**共用**：耳朵與早期聽覺皮質分析頻率、強度、時間變化；分化發生在後續如何組織成音素、詞或旋律、節拍。", "**雙重分離**：**純詞聾**（左顳葉聽覺語言網路）能說話、認得音樂與環境音，卻聽不懂詞；**CN**（雙側顳葉受損）認不出熟悉旋律，卻懂歌詞與人聲。", "**語音特殊機制**：類別知覺、McGurk 視聽整合、困難條件下運動表徵輔助。", "**音樂內部分離**：音高 vs 節奏（跟得上拍卻分不出錯音，或相反）；先天性失樂症偏音高；熟悉旋律辨認涉及音樂語意記憶（前顳葉）。", "**偏側化**：右半球偏音高與旋律輪廓、左半球偏快速時間與語言類別，但兩者皆依賴雙側網路。"]}, "24": {"a": "fMRI 可在高度受控、選項有限時分類腦活動型樣，但無法可靠測謊或讀出任意具體想法。", "pts": ["**傳統測謊機**：測心跳、呼吸、皮膚導電＝一般喚起；無辜者緊張、熟練者平靜 → 並未直接測謊。", "**fMRI 測謊**：說謊不是單一歷程（記真相、抑制、編造、監控、推測對方）涉及前額葉、前扣帶、記憶與心智理論網路 → 沒有「說謊區」；實驗無真實後果與動機；**基準率**低時偽陽性導致大量誤判。", "**讀心＝MVPA**：看一群體素的活動型樣；分類器先學已知刺激（臉／房子／鞋）的型樣，再判斷新試次。", "**限制**：是封閉選項分類，不是開放字幕；需同任務、同個人、足夠訓練資料；個別差異與概念表徵使開放想法無「字典」。", "**結論**：可粗略解碼類別、為無法行動的病人建立簡單溝通；不能可靠測真實謊言或讀具體私密思想。"]}, "25": {"a": "臉確實有相對專門的證據，但「為什麼特殊」有四種解釋，可能共同作用。", "pts": ["**特殊性證據**：梭狀回臉區 **FFA**；ERP **N170** 對臉特別敏感；**臉盲**者看得到五官與一般物體卻認不出家人。", "**①任務難度**：臉彼此相似、需細微辨別——但調成相近難度後臉盲者仍特別差，難度不足以解釋。", "**②整體處理**：臉重配置關係；臉**倒置效應**破壞整體處理。", "**③視覺專家說**：FFA 處理熟練的個體層次辨別；**Greebles** 專家訓練、汽車／鳥類專家可增加臉區與 N170 反應。", "**④領域特定說**：演化與社會重要性，先天偏好（嬰兒偏好臉狀配置）；但臉區仍回應其他物體，強版本不易成立。", "**結論**：先天偏好＋經驗調整＋整體處理＋任務需求的組合，不宜只用單一原因。"]}, "26": {"a": "單細胞記錄揭露聽覺皮質的音調地圖、核心→帶區階層、音量與位置調諧，以及前 what／後 where 分流。", "pts": ["**音調拓樸**：耳蝸分頻率，聽覺皮質保留有序頻率地圖——相近頻率由相近神經元表示（視覺存位置、聽覺存頻率）。", "**階層處理**：核心區神經元頻率窄；外圍帶區整合多個輸入，對寬頻組合、頻率變化方向、猴子叫聲等複雜聲音更強 → 如視覺從邊緣到複雜形狀。", "**多維編碼**：神經元可同時受音量與位置影響，非單純代表一個特徵。", "**what／where**：獼猴前方帶區對叫聲身分選擇性高、不受位置影響；後方帶區對位置最敏感。", "**限制**：侵入性、多為動物、細胞抽樣少 → 需與人類造影、病灶、行為驗證。"]}, "27": {"a": "部分不同：音樂與其他聲音共用早期聽覺分析，之後在音高、節奏、熟悉旋律記憶部分專門化，並連動動作與一般獎賞系統。", "pts": ["**與語音雙重分離**：純詞聾聽不懂口語仍可辨音樂；失樂症（CN）認不出旋律但理解口語歌詞。", "**音樂內部可分解**（Peretz & Coltheart）：音高路徑（旋律輪廓、音程、調性）vs 時間路徑（節拍、節奏）；可只損其一；先天性失樂症以音高辨識困難為核心。", "**動作系統**：聽規律節拍即使不動也啟動前運動皮質、輔助動作區、小腦、基底核（預測節拍≈準備動作時點）。", "**情緒獎賞**：熟悉段落的期待與高潮使用一般獎賞與情緒網路，非音樂專屬快樂中心。", "**偏側化**：右半球偏細緻音高與旋律、左半球偏快速時間，但音樂成分分布在雙側網路。"]}, "28": {"a": "團體研究能找病灶熱點與必要節點，但須控制分組異質性、病灶共變、遠距效應與過度定位。", "pts": ["**分組三法**：①依臨床症候群（方便但同組內異質）②依認知症狀（貼近理論但成因不同）③依解剖位置（可檢驗造影預測，但漏掉其他節點）。", "**病灶症狀映射**：逐體素比較，看某體素受損是否與行為分數系統相關，畫出統計熱點。", "**限制**：①血管分布使鄰區一起受損，易誤認關鍵點 ②結構影像不一定顯示功能失效範圍 ③**遠距效應（diaschisis）**使遠處區域暫時低下 ④過度解釋（X 受損使 F 變差≠F 存放於 X）→ 新顱相學。", "**互補**：團體提供位置關聯、變異與統計穩定；個案提供精細分離與錯誤型態。"]}, "29": {"a": "由下往上：後腦維持生命與動作精確、中腦快速定向與動作調節、前腦高階整合與動機目標行為；三者持續互相連接。", "pts": ["**前腦**：大腦皮質（知覺、語言、記憶、決策）；基底核（動作、習慣、技能、獎賞學習；帕金森氏症）；邊緣系統（杏仁核＝威脅情緒、海馬迴＝新情節記憶、扣帶皮質＝衝突動機）；**視丘**（感覺中繼，LGN／MGN，受注意調節）；**下視丘**（體內平衡、自律神經、內分泌）。", "**中腦**：**上丘**（視聽觸整合，快速定向眼頭）、**下丘**（聽覺中繼）、**黑質**（多巴胺，與基底核相連，流失→帕金森氏症）。", "**後腦**：**延髓**（呼吸、心跳、吞嚥）、**橋腦**（連結大腦、小腦與腦幹，參與睡眠喚醒）、**小腦**（動作時序、協調、誤差修正與學習；受損→搖晃、不準）。"]}, "30": {"a": "兩者互相需要：不同層次的限制彼此校正，互相取代都不成立。", "pts": ["**認知心理學不依賴腦也成功**（反應時間、錯誤率、促發建立資訊處理模型）；但腦資料可成新的依變項，並**區分預測相同行為的不同模型**。", "**例**：改變大小寫，左梭狀回仍出現重複抑制 → 該階段已轉成抽象詞形表徵（不只告訴「哪裡」，也告訴表徵性質）。", "**硬體／軟體比喻不完整**：大腦的演化、發展、連線速度與可塑性限制資訊如何處理與受損後如何代償。", "**神經科學需要認知心理學**：掃描器、電極不會自己標示「記憶提取」「衝突監控」；需認知理論定義作業與控制條件，否則退化為看哪裡亮再貼標籤（新顱相學）。", "**結論**：心理概念是否終被化約仍無定論，但現階段兩種語言都不可少。"]}};
+/* ============ UI ============ */
+const AUDIO={};
+let audRate=1;
+let curQ=1,curS=0,timer=null,tab='q';
+const nSteps=q=>q.scenes.length+2;
+const bold=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+function buildNav(filter=''){
+  let h=`<input id="qsearch" placeholder="搜尋題目…" value="${filter}">`;
+  GROUPS.forEach(([name,list])=>{
+    const items=list.filter(n=>!filter||qTitle(n).includes(filter)||String(n)===filter||('第'+n+'題').includes(filter));
+    if(!items.length)return;
+    h+=`<h3>${name}</h3>`+items.map(n=>`<a data-q="${n}" class="${tab==='q'&&n===curQ?'on':''}"><b>${String(n).padStart(2,'0')}</b><span>${qTitle(n)}</span></a>`).join('');
+  });
+  $('#nav').innerHTML=h;
+  const inp=$('#qsearch');inp.oninput=()=>{buildNav(inp.value.trim());const i=$('#qsearch');i.focus();i.setSelectionRange(i.value.length,i.value.length)};
+}
+function legendHTML(q){
+  const L=[...(q.legend||[])];{const used=new Set();q.scenes.forEach(s=>(s.paths||[]).forEach(p=>PATHS[p]&&used.add(PATHS[p].k)));['ven','dor'].forEach(k=>used.has(k)&&!L.includes(k)&&L.push(k))}
+  const names={vis:'視覺',aud:'聽覺',mot:'動作／運動輸出',lang:'語言／多感官',par:'背側(MT/頂葉)',ven:'腹側 what 路徑（綠）',dor:'背側 where／how 路徑（紅）',lim:'邊緣／情緒',fore:'前腦',midb:'中腦',hind:'後腦'};
+  let h=L.map(k=>`<span><i class="ln" style="background:var(--${k})"></i>${names[k]||k}</span>`).join('');
+  if((q.view==='brain'||q.scenes.some(s=>s.view==='brain'))) h+=`<span><i style="background:var(--sub);opacity:.5"></i>虛線＝深層結構（透明腦）</span><span>實線動畫箭頭＝傳導路徑</span>`;
+  return h;
+}
+function selectQ(n,s=0){
+  stopPlay();curQ=n;curS=s;tab='q';setTab('q');
+  const q=qByN(n);
+  $('#qnum').textContent='第 '+String(n).padStart(2,'0')+' 題';$('#qtitle').textContent=q.title;$('#qorig').textContent='原題 '+q.orig;
+  $('#legend').innerHTML=legendHTML(q);
+  $('#one').innerHTML=`<div class="lbl">一句話收束</div>${q.one}`;
+  {const box=$('#qaudio'),au=$('#aud'),u=AUDIO[n];au.pause();if(u){box.classList.remove('hidden');if(au.dataset.n!=String(n)){au.src=u;au.dataset.n=n}au.defaultPlaybackRate=audRate;au.playbackRate=audRate}else{box.classList.add('hidden');au.removeAttribute('src')}}
+  $('#pills').innerHTML=Array.from({length:nSteps(q)},(_,i)=>`<button class="pill${i>=q.scenes.length?' txt':''}" data-s="${i}" title="${i===q.scenes.length?'詳答總覽':i>q.scenes.length?'濃縮申論':''}">${i+1}</button>`).join('');
+  $('#rinfo').classList.add('hidden');
+  buildNav($('#qsearch')?$('#qsearch').value.trim():'');
+  history.replaceState(null,'','#q'+n+(s?'.'+s:''));
+  drawStep();
+  document.title=`第${n}題 ${q.title}｜認知神經科學圖解`;
+}
+function drawStep(){
+  const q=qByN(curQ),n=q.scenes.length,tot=nSteps(q),st=$('#stage'),rd=$('#reader');
+  const txt=curS>=n;
+  rd.classList.toggle('hidden',!txt);$('#stagewrap').classList.toggle('hidden',txt);
+  document.querySelectorAll('.pill').forEach((b,i)=>{b.classList.toggle('on',i===curS);b.classList.toggle('done',i<curS)});
+  $('#prog').textContent=`${curS+1} / ${tot}`;
+  $('#prev').disabled=curS===0&&curQ===1;$('#next').textContent=curS===tot-1?(curQ<30?'下一題 →':'完成'):'下一步 →';
+  if(txt){
+    const b=BRIEF[curQ],f=FULL[curQ];
+    if(curS===n){
+      rd.innerHTML=`<h3>詳答總覽</h3><div class="sub">第 ${curQ} 題・原題 ${q.orig}・完整作答（${f.join('').length} 字）</div>`+f.map(p=>`<p>${esc(p)}</p>`).join('');
+      $('#stepcard').innerHTML=`<div class="lbl">步驟 ${curS+1} / ${tot}</div><h4>詳答總覽</h4><p>前面的圖解是在「看位置與路徑」；這一步把完整答案從頭讀一遍，把圖上的結構放回論證裡。</p>`;
+    }else{
+      rd.innerHTML=`<h3>濃縮申論回答</h3><div class="sub">第 ${curQ} 題・原題 ${q.orig}・考場可直接展開的骨架</div><div class="ans">${bold(b.a)}</div><ol>${b.pts.map(x=>`<li>${bold(x)}</li>`).join('')}</ol>`;
+      $('#stepcard').innerHTML=`<div class="lbl">步驟 ${curS+1} / ${tot}</div><h4>濃縮申論回答</h4><p>先寫粗體結論，再依序展開要點。要點順序就是建議的作答順序。</p>`;
+    }
+    $('#locate').innerHTML='';$('#locate').classList.add('hidden');
+    history.replaceState(null,'','#q'+curQ+(curS?'.'+curS:''));
+    return;
+  }
+  $('#locate').classList.remove('hidden');
+  const sc=q.scenes[curS];
+  st.setAttribute('viewBox',sc.vb||'0 0 800 520');
+  st.innerHTML=renderScene(sc,q);
+  $('#stepcard').innerHTML=`<div class="lbl">步驟 ${curS+1} / ${tot}</div><h4>${esc(sc.t)}</h4><p>${esc(sc.d)}</p>`;
+  // 位置速查
+  const v=sc.view||q.view,ids=(sc.hl||[]).filter(id=>regOf(id)&&v==='brain');
+  const ps=(sc.paths||[]).filter(p=>PATHS[p]);
+  let h='';
+  if(v==='brain'&&(ids.length||ps.length)){
+    h+=`<div class="lbl">本步驟涉及的結構（點擊看位置與功能）</div><div class="chips">`+ids.map(id=>{const r=regOf(id);const c=r.g?colOf(r.g):'var(--sub)';return `<button class="chip" data-reg="${id}"><span class="dot" style="background:${c}"></span>${r.n.split('（')[0]}</button>`}).join('')+`</div>`;
+    if(ps.length)h+=`<div class="lbl" style="margin-top:10px">傳導路徑</div>`+ps.map(p=>`<div class="pathl"><i style="background:var(${PK[PATHS[p].k]})"></i>${PATHS[p].nm}${(sc.blocked||[]).includes(p)?'　<b style="color:var(--lim)">（被阻斷）</b>':''}</div>`).join('');
+  }else if(v==='brain'){h+=`<div class="lbl">位置速查</div><p style="font-size:13.5px;color:var(--mute)">此步驟為概念說明；仍可點圖上任何結構看位置與功能。</p>`}
+  else if(v==='flow'){h+=`<div class="lbl">提示</div><p style="font-size:13.5px;color:var(--mute)">高亮的方塊與箭頭是目前這一步的重點，其餘淡化。</p>`}
+  else h+=`<div class="lbl">提示</div><p style="font-size:13.5px;color:var(--mute)">${v==='hrf'?'曲線上橘色圓點為本步驟標記。':v==='erp'||v==='erpavg'?'時間窗與標記的峰值對應本步驟。':v==='neuron'?'橘色發光處為本步驟的結構／電位階段。':'點選或切換步驟查看。'}</p>`;
+  $('#locate').innerHTML=h;
+  history.replaceState(null,'','#q'+curQ+(curS?'.'+curS:''));
+}
+function go(d){
+  const q=qByN(curQ);
+  if(d>0){if(curS<nSteps(q)-1){curS++;drawStep()}else if(curQ<30){selectQ(curQ+1)}else stopPlay()}
+  else{if(curS>0){curS--;drawStep()}else if(curQ>1){const p=qByN(curQ-1);selectQ(curQ-1,nSteps(p)-1)}}
+}
+function stopPlay(){if(timer){clearInterval(timer);timer=null}$('#play').textContent='▶ 自動播放'}
+function togglePlay(){if(timer){stopPlay();return}$('#play').textContent='⏸ 暫停';timer=setInterval(()=>{const q=qByN(curQ);if(curS>=q.scenes.length-1){stopPlay();return}go(1)},5200)}
+function showReg(id,box){
+  const r=regOf(id);if(!r)return;
+  const used=[...(USE[id]||[])].sort((a,b)=>a-b);
+  const c=r.g?colOf(r.g):'var(--sub)';
+  const el=$(box||'#rinfo');el.classList.remove('hidden');el.style.borderLeftColor=c;
+  el.innerHTML=`<div class="rt">${r.n}<small>${r.en}</small></div><dl><dt>位置</dt><dd>${r.loc}</dd><dt>功能</dt><dd>${r.fn}</dd><dt>出現於</dt><dd>${used.length?used.map(n=>`<button class="chip" data-goq="${n}">第${n}題</button>`).join(' '):'—'}</dd></dl>`;
+}
+function setTab(t){
+  tab=t;['q','atlas','lines'].forEach(k=>$('#v-'+k).classList.toggle('hidden',k!==t));
+  document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));
+  $('#nav').style.display=t==='q'?'':'none';$('#app').style.gridTemplateColumns=t==='q'&&innerWidth>980?'':'1fr';
+  if(t==='atlas')drawAtlas();if(t==='lines')drawLines();
+}
+/* —— 圖鑑 —— */
+let aSel=null,aGroup='all';
+function drawAtlas(){
+  const gs=['all','vis','aud','lang','mot','par','cog','lim','sub','midb','hind'];
+  const gname={all:'全部',vis:'視覺',aud:'聽覺',lang:'語言／多感官',mot:'動作',par:'背側／頂葉',cog:'高階認知',lim:'邊緣／情緒',sub:'皮質下',midb:'中腦',hind:'後腦'};
+  $('#gf').innerHTML=gs.map(g=>`<button class="${g===aGroup?'on':''}" data-ag="${g}">${gname[g]}</button>`).join('');
+  const inG=r=>aGroup==='all'||r.g===aGroup;
+  let s=defs()+baseBrain();
+  R.forEach(r=>{s+=regionG(r,aSel===r.id?'on':(inG(r)&&aGroup!=='all'?'on':(aGroup!=='all'?'dim':'norm')))});
+  R.forEach(r=>{if((aGroup!=='all'&&inG(r)&&!r.nolabel)||aSel===r.id)s+=regionLabel(r)});
+  if(aGroup!=='all'){const ks=new Set();R.filter(inG).forEach(r=>{(({vis:['vis','ven'],aud:['aud','ven','dor'],lang:['lang'],mot:['mot','dor'],par:['par','dor']})[r.g]||[]).forEach(k=>ks.add(k))});
+    Object.entries(PATHS).forEach(([id,p])=>{if(ks.has(p.k)){const d=smooth(p.pts);s+=`<path class="pbase" d="${d}" style="stroke:var(${PK[p.k]})"/><path class="pflow" d="${d}" style="stroke:var(${PK[p.k]})" marker-end="url(#m-${p.k})"/>`}})}
+  $('#atlasSvg').innerHTML=s.replace(/id="([^"]+)"/g,'id="$1A"').replace(/url\(#([^)]+)\)/g,'url(#$1A)');
+  $('#rlist').innerHTML=[...LOBES,...R].filter(r=>!r.lx!==undefined).filter(r=>aGroup==='all'||r.g===aGroup).map(r=>`<button class="chip" data-reg="${r.id}"><span class="dot" style="background:${r.g?colOf(r.g):'var(--sub)'}"></span>${r.n.split('（')[0]}</button>`).join('');
+  if(aSel)showReg(aSel,'#aInfo');
+}
+function drawLines(){
+  $('#linesBox').innerHTML=LINES.map((l,i)=>`<div class="card"><h4><b>${i+1}</b>${l[0]}</h4><p>${l[1]}</p><div class="chips" style="margin-top:10px">${l[2].map(n=>`<button class="chip" data-goq="${n}" title="${qTitle(n)}">${String(n).padStart(2,'0')} ${qTitle(n).slice(0,10)}${qTitle(n).length>10?'…':''}</button>`).join('')}</div></div>`).join('');
+  $('#scaleFig').innerHTML=scaleSVG(document.querySelector('[data-ax].on').dataset.ax,[]);
+}
+
+/* —— 事件 —— */
+document.addEventListener('click',e=>{
+  const rb=e.target.closest('[data-rate]');if(rb){audRate=+rb.dataset.rate;$('#aud').defaultPlaybackRate=audRate;$('#aud').playbackRate=audRate;document.querySelectorAll('[data-rate]').forEach(x=>x.classList.toggle('on',x===rb));return}
+  const t=e.target.closest('[data-q],[data-s],[data-reg],[data-goq],[data-ag],[data-ax],[data-tab],#prev,#next,#play,#menuBtn,.reg');if(!t)return;
+  if(t.dataset.q){selectQ(+t.dataset.q);$('#nav').classList.remove('open')}
+  else if(t.dataset.s!==undefined){stopPlay();curS=+t.dataset.s;drawStep()}
+  else if(t.dataset.goq){selectQ(+t.dataset.goq);scrollTo(0,0)}
+  else if(t.dataset.ag){aGroup=t.dataset.ag;aSel=null;drawAtlas()}
+  else if(t.dataset.ax){document.querySelectorAll('[data-ax]').forEach(b=>b.classList.toggle('on',b===t));drawLines()}
+  else if(t.dataset.tab){stopPlay();if(t.dataset.tab==='q')selectQ(curQ,curS);else setTab(t.dataset.tab)}
+  else if(t.id==='prev'){stopPlay();go(-1)}
+  else if(t.id==='next'){stopPlay();go(1)}
+  else if(t.id==='play')togglePlay();
+  else if(t.id==='menuBtn')$('#nav').classList.toggle('open');
+  else if(t.dataset.reg||t.classList.contains('reg')){
+    const id=t.dataset.reg||t.dataset.id;
+    if(tab==='atlas'){aSel=id;drawAtlas()}else showReg(id);
+  }
+});
+document.addEventListener('mousemove',e=>{
+  const g=e.target.closest&&e.target.closest('.reg'),tip=$('#tip');
+  if(g){const r=regOf(g.dataset.id);if(r){tip.textContent=r.n;tip.style.display='block';tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY+14)+'px';return}}
+  tip.style.display='none';
+});
+document.addEventListener('keydown',e=>{
+  if(tab!=='q'||e.target.tagName==='INPUT')return;
+  if(e.key==='ArrowRight'){stopPlay();go(1)}else if(e.key==='ArrowLeft'){stopPlay();go(-1)}
+  else if(e.key==='ArrowDown'&&curQ<30){e.preventDefault();selectQ(curQ+1)}else if(e.key==='ArrowUp'&&curQ>1){e.preventDefault();selectQ(curQ-1)}
+});
+window.addEventListener('resize',()=>setTab(tab));
+
+const m=location.hash.match(/#q(\d+)(?:\.(\d+))?/);
+buildNav();selectQ(m?Math.min(30,Math.max(1,+m[1])):1,m&&m[2]?Math.min(+m[2],nSteps(qByN(Math.min(30,Math.max(1,+m[1]))))-1):0);
+</script>
+
+</body></html>

@@ -1,0 +1,1352 @@
+[
+ {
+  "id": "E_8_1",
+  "no": "8.1",
+  "ch": 8,
+  "tier": "A",
+  "title": "聽覺系統與視覺系統面臨的挑戰有何異同？（比較視覺與聽覺）",
+  "signal": "W7 00:02「期中考我一定會考你很多這兩者之間的比較，特性的差異異同」；40:55「請不要只給我個表格，你需要仔細去說明」「這樣只是關鍵字，不是說明」。同與異都要寫。",
+  "answer1": "兩者要解決的<b>共同挑戰</b>是把連續變動的物理能量，變成穩定的物件／聲音事件，所以<b>架構很像</b>（視丘中繼 → 初級皮質 → 拓樸地圖 → what／where 雙路徑）；<b>不同</b>在於視覺以「空間」為基礎、空間強而時間弱，聽覺以「頻率與時間」為基礎、時間強而空間弱，這一個差別連帶造成傳導站、左右投射、皮質組織與研究方法的差異。",
+  "skeleton": [
+   "<b>共同挑戰</b>：從不斷變化的輸入中取出『恆常』（物體顏色、旋律換調仍認得）＋把混在一起的來源分開（物件／聲音串流）。",
+   "<b>相同的架構</b>：視丘中繼站 → 初級皮質、早期皮質都有拓樸地圖、高階都有 what 與 where／how 雙路徑。",
+   "<b>相異①傳導站與左右投射</b>：視覺 上丘＋LGN、依視域交叉；聽覺 耳蝸核→下丘→MGN、雙側投射。",
+   "<b>相異②皮質位置與組織原則</b>：V1（枕葉）視網膜拓樸 vs. 上顳回 Heschl 回（core）音調拓樸（外側高頻、中間低頻）。",
+   "<b>相異③時間與空間特性（要說明為什麼）</b>：視覺空間 > 時間；聽覺時間 > 空間。",
+   "<b>相異④專門化程度與研究設計</b>：視覺 V4 顏色、V5 動作研究清楚，聽覺較少；聽覺刺激不能同時放、視覺可控制視域。",
+   "<b>結論</b>一句話收束：差異來自感官表面編碼的東西不同（空間 vs 頻率）。"
+  ],
+  "sections": [
+   {
+    "h": "1. 先看全貌：兩條感覺路徑長得很像",
+    "html": "\n<p>先用一張圖把兩個系統並排放，看出它們的「骨架」其實相同：<b>受器 → 腦幹／中腦 → 視丘 → 初級皮質 → 分成兩條高階路徑</b>。<span class=\"tag\">投影片 Dis08 p.41–45</span></p>\n<figure><svg viewBox=\"0 0 700 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><text x=\"10\" y=\"22\" font-size=\"15\" font-weight=\"700\" fill=\"#1f4e79\">視覺</text><rect x=\"10\" y=\"34\" width=\"86\" height=\"50\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"53.0\" y=\"63\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">視網膜</text><line x1=\"96\" y1=\"59\" x2=\"118\" y2=\"59\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"118\" y=\"34\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"168.0\" y=\"49\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">視交叉</text><text x=\"168.0\" y=\"63\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">鼻側→對側</text><text x=\"168.0\" y=\"77\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">顳側→同側</text><line x1=\"218\" y1=\"59\" x2=\"240\" y2=\"59\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"240\" y=\"34\" width=\"96\" height=\"50\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"288.0\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">上丘</text><text x=\"288.0\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">+ LGN(視丘)</text><line x1=\"336\" y1=\"59\" x2=\"358\" y2=\"59\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"358\" y=\"34\" width=\"112\" height=\"50\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"414.0\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">V1 枕葉</text><text x=\"414.0\" y=\"70\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">(視網膜拓樸)</text><line x1=\"470\" y1=\"59\" x2=\"492\" y2=\"59\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"492\" y=\"20\" width=\"196\" height=\"28\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"590.0\" y=\"38\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">腹側 what：V4→IT</text><rect x=\"492\" y=\"56\" width=\"196\" height=\"28\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"590.0\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">背側 where/how：MT→頂葉</text><text x=\"10\" y=\"132\" font-size=\"15\" font-weight=\"700\" fill=\"#b8561f\">聽覺</text><rect x=\"10\" y=\"144\" width=\"86\" height=\"50\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"53.0\" y=\"173\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">耳蝸</text><line x1=\"96\" y1=\"169\" x2=\"118\" y2=\"169\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"118\" y=\"144\" width=\"100\" height=\"50\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"168.0\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">耳蝸核</text><text x=\"168.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">(雙側投射)</text><line x1=\"218\" y1=\"169\" x2=\"240\" y2=\"169\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"240\" y=\"144\" width=\"96\" height=\"50\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"288.0\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">下丘</text><text x=\"288.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">→ MGN(視丘)</text><line x1=\"336\" y1=\"169\" x2=\"358\" y2=\"169\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"358\" y=\"144\" width=\"112\" height=\"50\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"414.0\" y=\"166\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">Heschl 回(上顳回)</text><text x=\"414.0\" y=\"180\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">(音調拓樸)</text><line x1=\"470\" y1=\"169\" x2=\"492\" y2=\"169\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"492\" y=\"130\" width=\"196\" height=\"28\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"590.0\" y=\"148\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">腹側 what：前帶→額葉</text><rect x=\"492\" y=\"166\" width=\"196\" height=\"28\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"590.0\" y=\"184\" text-anchor=\"middle\" font-size=\"11\" fill=\"#1b1b1b\">背側 where/how：後帶→頂葉</text><text x=\"240\" y=\"108\" font-size=\"12\" fill=\"#777\">視覺＝「上」丘；聽覺＝「下」丘（視覺上核、聽覺下核）</text></svg><figcaption>圖：視覺與聽覺的傳導站與皮質後的雙路徑（自繪，內容依投影片 Dis08 p.14、Dis07 p.13、老師 W7 09:08–10:35）</figcaption></figure>\n\n<p class=\"note\">記法：<b>視覺「上」核（上丘）、聽覺「下」核（下丘）</b>——老師 09:08–10:19 的口訣。</p>"
+   },
+   {
+    "h": "2. 共同挑戰（為什麼兩者要放在一起比）",
+    "html": "\n<p>Ward 在聽覺章開頭點出：聽覺和視覺一樣，目標都<b>不是</b>複製外界，而是<b>建構一個內在模型</b>，這個模型來自「當下的感覺訊息＋過去的經驗」。<span class=\"tag\">課本 Ward Ch10 開頭（第 4 版 Ch8）</span></p>\n<ul>\n<li><b>要取出「恆常」</b>：番茄從室內拿到室外，反射的波長變了，但你看到的顏色不變（顏色恆常）；同一首歌換了調、同一個人的聲音在電話裡或擴音器裡，你還是認得（聲音恆常）。</li>\n<li><b>要把混在一起的來源分開</b>：視覺要把連續的光分成不同物件與表面；聽覺的耳朵常同時收到好幾種聲音，是<b>大腦（不是耳朵）</b>在判斷有幾條聲音串流、各自是什麼。</li>\n<li><b>都會用舊知識補洞</b>：熟悉歌曲中間靜音 2–5 秒，聽覺皮質在空白處反而更活躍（Kraemer et al., 2005）。<span class=\"tag\">課本</span></li>\n</ul>"
+   },
+   {
+    "h": "3. 相同之處：三個「同」",
+    "html": "\n<ol>\n<li><b>丘腦中繼再進初級皮質</b>：視覺 LGN（外側膝狀體）→ 初級視覺皮質；聽覺 MGN（內側膝狀體）→ 初級聽覺皮質。<span class=\"tag\">投影片 Dis08 p.41</span></li>\n<li><b>早期皮質都用「拓樸地圖」組織</b>：視覺依<b>視網膜位置</b>（retinotopic）；聽覺依<b>聲音頻率</b>（tonotopic）。老師 04:19：「說穿了大概只有兩個，視覺跟聽覺」。<span class=\"tag\">投影片 Dis08 p.41 / 逐字稿 W7 04:19</span></li>\n<li><b>高階都分兩條路徑</b>：what（是什麼，腹側）vs. where／how（在哪／怎麼用，背側）；而且兩者的背側路徑最後都到後（下）頂葉。<span class=\"tag\">投影片 Dis08 p.41；逐字稿 W7 41:11</span></li>\n</ol>\n"
+   },
+   {
+    "h": "4. 相異之處：逐項說明（不是只有表格）",
+    "html": "\n<p><b>① 傳導站與左右投射</b>——視覺的早期中繼有<b>上丘</b>（掌管定向與眼動）和<b>LGN</b>；聽覺有<b>耳蝸核 → 下丘 → MGN</b>。<span class=\"tag\">投影片 Dis07 p.13/17；Dis08 p.14</span>\n視覺的交叉有規則（<b>題目很狡詐</b>）：不是「左眼到右腦」，而是<b>視網膜內側（鼻側）交叉到對側、外側（顳側）傳同側</b>，結果是<b>右視域 → 左腦</b>。聽覺則是<b>雙側投射</b>（對側稍多），所以聽覺沒有那麼清楚的大腦側化，也不容易做單側研究；視覺可以控制視域，比較乾淨。<span class=\"tag\">逐字稿 W7 07:01、08:33</span></p>\n<p><b>② 初級皮質的位置</b>——視覺是枕葉的 V1；聽覺是<b>上顳回（Heschl 回／core region）</b>。老師 W7 00:10:35：「聽覺主要皮質在哪裡？不要給我寫 A1……我要問的是哪一個大腦皮質」。<span class=\"tag\">逐字稿 W7 已核對原檔；投影片 Dis08 p.14</span></p>\n<p><b>③ 組織原則的細節</b>——聽覺 A1（core）是有秩序的頻率地圖：<b>中間低頻、外側高頻</b>（像笑臉 高-低-高）；A2（belt／parabelt）處理較複雜的聲音。視覺 V1 是視網膜位置的地圖。<span class=\"tag\">投影片 Dis08 p.21–25；逐字稿 W7 28:38–30:36</span></p>\n<p><b>④ 時間與空間特性（老師要的「說明」）</b>——視覺空間定位佳、時序較不精準；聽覺時序精準、空間較模糊。<b>為什麼？</b></p>\n<ul>\n<li><b>視覺的感覺表面本身就是空間地圖</b>：視網膜上每個位置對應外界一個方向，所以位置直接「寫在」感覺表面上，定位自然準。<span class=\"tag inf\">我的推論（連結 retinotopic 與空間優勢）</span></li>\n<li><b>聽覺的耳蝸排的是頻率、不是空間</b>，所以聲音位置必須靠大腦<b>運算</b>：雙耳時間差（先到一耳）、強度差（遠耳在頭的陰影裡較弱），以及頭和耳廓扭曲聲波的特性（HRTF，頭相關傳遞函數，可分辨上下），因此較模糊。<span class=\"tag\">投影片 Dis08 p.36–37；課本 Ch10</span></li>\n<li><b>聽覺擅長追蹤時間上的快速變化</b>：語音裡快速的頻率變化、從聲音串中抽出旋律；例如摩斯電碼的長短間隔「聽」比「看」更容易處理。<span class=\"tag\">課本 Ch10 開頭</span></li>\n</ul>\n<p><b>⑤ 特徵專門化</b>——視覺：V4（顏色）、V5／MT（動作）文獻很清楚；聽覺主要皮質之外的特徵專門化研究較少。<span class=\"tag\">投影片 Dis08 p.41；逐字稿 W7 41:11</span></p>\n<p><b>⑥ 研究設計</b>——聽覺刺激<b>不能同時放、必須有先後</b>；視覺彈性較大，也可以操弄視域。聽覺還有「辨認 identification（給一個問是什麼）vs 區別 discrimination（給兩個問一不一樣）」的差別。<span class=\"tag\">逐字稿 W7 50:41–51:22</span></p>"
+   },
+   {
+    "h": "5. 一眼對照（只當複習用，作答要配文字）",
+    "html": "\n<div class=\"tw\"><table><tr><th>項目</th><th>視覺</th><th>聽覺</th></tr>\n<tr><td>傳導站</td><td>上丘、LGN（視丘）</td><td>耳蝸核→下丘→MGN（視丘）</td></tr>\n<tr><td>左右投射</td><td>依視域交叉（鼻側交叉、顳側同側）</td><td>雙側（對側稍多）</td></tr>\n<tr><td>初級皮質</td><td>枕葉 V1</td><td>上顳回 Heschl 回（core）</td></tr>\n<tr><td>拓樸組織</td><td>視網膜拓樸（空間）</td><td>音調拓樸（頻率；中間低、外側高）</td></tr>\n<tr><td>時空特性</td><td>空間佳、時間較差</td><td>時間佳、空間較模糊</td></tr>\n<tr><td>專門化</td><td>V4 顏色、V5 動作，很清楚</td><td>較少被記錄</td></tr>\n<tr><td>高階路徑</td><td>腹側 what／背側 where-how</td><td>腹側 what／背側 where、how</td></tr></table></div>"
+   }
+  ],
+  "traps": [
+   "只畫表格、只寫關鍵字——老師明說「這樣只是關鍵字，不是說明」。表格後面每一格都要補一句「為什麼」。",
+   "只寫相異、沒寫相同（或反過來）——題目是「異同」。",
+   "寫「右眼傳左腦、左眼傳右腦」——這是老師故意設的陷阱，要用視域＋鼻側／顳側說。",
+   "初級聽覺皮質只寫「A1」——要寫上顳回（Heschl 回／core region）。",
+   "把題目跑成「聽覺如何運作」的大雜燴——多寫字不會多給分，只寫跟比較有關的。"
+  ],
+  "oral": "兩者的共同挑戰是從變動的輸入中取出恆常、並把來源分開，所以架構相似：視丘中繼（LGN／MGN）進初級皮質、早期皮質用拓樸地圖（視網膜拓樸 vs. 音調拓樸，外側高頻中間低頻）、高階都分腹側 what 與背側 where／how，背側都到後頂葉。差異：視覺有上丘＋LGN、依視域交叉（鼻側交叉、顳側同側），聽覺走耳蝸核→下丘→MGN、雙側投射；初級皮質分別在枕葉 V1 與上顳回 Heschl 回；視覺空間強、時間弱，因為感覺表面本身就是空間地圖，聽覺時間強、空間弱，因為耳蝸排頻率，位置要靠雙耳時間差、強度差與 HRTF 運算；視覺的 V4 與 V5 專門化清楚，聽覺較少；研究上聽覺刺激要有先後，視覺可控制視域。",
+  "sources": [
+   "老師投影片 Dis08（聽覺）p.14、p.21–25、p.29–37、p.41–45；Dis07（視覺）p.13/17 —— 來源可信（老師原件）。",
+   "Ward《The Student's Guide to Cognitive Neuroscience》聽覺章開頭與 where 段落 —— 資料夾內為<b>第 3 版</b>（第 10 章），課程用第 4 版（第 8 章），內容對應但頁碼不同。",
+   "老師逐字稿 W7（10/23）：已核對原檔：00:02 比較題、03:14 大問題、07:01 狡詐題、08:33 聽覺同側對側、10:35 初級聽覺皮質位置、19:02、40:55 說明要求、45:51 CN。",
+   "標示「我的推論」的是把投影片事實串成因果解釋，來源沒有逐字寫出。"
+  ],
+  "pri": "最高"
+ },
+ {
+  "id": "E_8_3",
+  "no": "8.3",
+  "ch": 8,
+  "tier": "A",
+  "title": "聽覺 what／where／how 分流的證據是什麼？（視覺與聽覺都要會）",
+  "signal": "W7 03:14「你有沒有注意到我們期中考一定會考的那個大問題？」＝視覺與聽覺都有的 what 與 where（how）雙路徑。06:37 不要只背 McGurk 一個例子；19:02 用「一個大問題」把例子和佐證放進去，佐證要清楚各自是什麼。",
+  "answer1": "大腦用「一個大問題」同時處理兩件事：<b>這是什麼</b>（腹側路徑 what）與<b>在哪裡／要怎麼對它動作</b>（背側路徑 where／how）。聽覺的證據：獼猴單細胞記錄顯示<b>前帶區</b>偏好聲音內容（what，往前額葉）、<b>後帶區</b>偏好空間位置（where，往後頂葉）；人類造影大致一致，且背側路徑可再分出與動作／語音相連的 how。視覺有同構的腹側（V4→下顳葉）與背側（V5/MT→後頂葉），並有病人的雙重分離證據。",
+  "skeleton": [
+   "<b>先立「一個大問題」</b>：感覺系統要同時回答「是什麼」與「在哪／怎麼用」→ 兩條路徑。",
+   "<b>聽覺證據1（單細胞）</b>：Rauschecker & Tian (2000)：前帶 what、後帶 where。",
+   "<b>聽覺證據2（造影）</b>：人類造影大致支持；Isenberg et al. (2012)：背側可分 where 與 how。",
+   "<b>how 路徑做什麼</b>：pSTS 多感官整合（McGurk）、新音素學習與短期複誦、對話輪替。",
+   "<b>視覺對照</b>：腹側 V4→IT（顏色、物體）；背側 V5/MT→後頂葉（動作、位置）；病人雙重分離、TMS。",
+   "<b>為什麼聽覺的 where 變成 how</b>：要和動作整合（老師說法）。"
+  ],
+  "sections": [
+   {
+    "h": "1. 這個「大問題」是什麼",
+    "html": "\n<p>想像你在街上聽到有人喊你名字：大腦要同時回答兩題：<b>這是誰的聲音、說了什麼（what）</b>，以及<b>聲音從哪裡來、我要不要轉頭或回話（where／how）</b>。兩個問題用的是不同的神經路徑，視覺和聽覺都是這樣設計的。這就是老師說「期中一定會考的大問題」。<span class=\"tag\">逐字稿 W7 03:14</span></p>\n<figure><svg viewBox=\"0 0 620 262\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"210\" y=\"8\" width=\"200\" height=\"40\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"310.0\" y=\"32\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">初級皮質（V1／Heschl 回）</text><line x1=\"260\" y1=\"48\" x2=\"130\" y2=\"92\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"360\" y1=\"48\" x2=\"490\" y2=\"92\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"20\" y=\"92\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"135.0\" y=\"119\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">腹側路徑 → WHAT（是什麼）</text><rect x=\"370\" y=\"92\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"485.0\" y=\"119\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">背側路徑 → WHERE / HOW（在哪／怎麼用）</text><rect x=\"20\" y=\"148\" width=\"230\" height=\"60\" rx=\"8\" fill=\"#f4faf5\" stroke=\"#2f7d4f\"/><text x=\"135.0\" y=\"167\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">視覺：V1→V4→下顳葉(IT)</text><text x=\"135.0\" y=\"182\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">聽覺：前帶→顳葉前方→前額葉</text><text x=\"135.0\" y=\"196\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">病變：臉失認、視覺失認</text><rect x=\"370\" y=\"148\" width=\"230\" height=\"60\" rx=\"8\" fill=\"#fdf3f1\" stroke=\"#a33a2a\"/><text x=\"485.0\" y=\"167\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">視覺：V1→V5/MT→後頂葉</text><text x=\"485.0\" y=\"182\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">聽覺：後帶→後頂葉(+額葉運動表徵)</text><text x=\"485.0\" y=\"196\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">病變：忽略症(視覺)</text><rect x=\"20\" y=\"218\" width=\"230\" height=\"34\" rx=\"8\" fill=\"#fff\" stroke=\"#2f7d4f\"/><text x=\"135.0\" y=\"239\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">聽覺 what＝頻率／聲音內容</text><rect x=\"370\" y=\"218\" width=\"230\" height=\"34\" rx=\"8\" fill=\"#fff\" stroke=\"#a33a2a\"/><text x=\"485.0\" y=\"239\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">聽覺 where＝空間位置；how＝與動作整合</text></svg><figcaption>圖：視覺與聽覺共有的「一個大問題」＝兩條路徑（自繪，依 Dis07 p.28/38、Dis08 p.29–35）</figcaption></figure>"
+   },
+   {
+    "h": "2. 聽覺的證據（一項一項講清楚）",
+    "html": "\n<p><b>證據① 單細胞記錄：前帶＝what，後帶＝where</b>——Rauschecker & Tian (2000) 在獼猴聽覺皮質的 belt 區記錄單一神經元：<b>前帶（anterior belt）</b>的神經元對猴叫聲（聲音的內容）特別有選擇性，而且不管聲音從哪裡來；<b>後帶（posterior belt）</b>的神經元對<b>空間位置</b>最敏感。他們推測這是兩條路徑的起點：<b>腹側（沿顳葉，辨認聲音，往前額葉）</b>與<b>背側（經頂葉，定位聲音）</b>。<span class=\"tag\">投影片 Dis08 p.29–33；課本 Ch10「What versus where」</span></p>\n<p><b>證據② 人類造影大致一致</b>——Ward 說人類功能造影證據「大致符合」這個看法（Barrett & Hall, 2006）。<span class=\"tag\">課本 Ch10</span></p>\n<p><b>證據③ 背側路徑再分成 where 與 how</b>——對於人可以自己發出的聲音（例如語音），背側路徑除了位置，還會和<b>運動表徵（額葉、頂葉）</b>接起來，變成「how」。Isenberg et al. (2012) 的結構與功能造影顯示，背側路徑可能<b>分成兩條</b>：where 與 how，而不是一條同時負責兩件事。<span class=\"tag\">投影片 Dis08 p.29–33；課本 Ch10</span></p>\n<p><b>how 路徑實際做什麼</b>（投影片列了兩大功能）：<span class=\"tag\">投影片 Dis08 p.34–40</span></p>\n<ul>\n<li><b>功能1：多感官整合</b>——<b>後上顳溝（posterior STS）</b>同時處理「看到說話的嘴型」與「聽到說話聲」，相當於語音動作的感知版本；McGurk 效應受它影響（看到 ba 的嘴型＋聽到 da 的聲音 → 聽成 tha）。</li>\n<li><b>功能2：記憶與學習</b>——長期學習新音素（左角回、左下額葉區）；短期保持／內在複誦（後上顳溝、左下額回）；調節對話中的輪替（Scott et al., 2009）。</li>\n</ul>\n<p class=\"note\">老師 06:37 提醒：不要只背 McGurk 一個例子。題目換成「how 路徑和動作有什麼關係」或「舉例說明背側聽覺路徑功能」時，你可以改用<b>新音素學習、短期複誦、輪替</b>當例子。</p>"
+   },
+   {
+    "h": "3. 視覺的對照（同一個大問題）",
+    "html": "\n<p><b>腹側（what）</b>：V1 → V4 → 下顳葉（IT）。V4 是顏色中心，受損會造成<b>色盲（achromatopsia）</b>：色相辨別嚴重受損，但亮度、深度、質地知覺仍保留（Heywood et al., 1987）。<span class=\"tag\">投影片 Dis07 p.28–32</span></p>\n<p><b>背側（where／how）</b>：V1 → V5/MT → 後頂葉，還有 STS（生物動作）。V5/MT 是動作中心，受損造成<b>動作失認（akinetopsia）</b>，如病人 M.P.：雙側顳頂皮質（MT）受損，動作知覺受損但顏色與形狀知覺保留；Beckers & Zeki (1995) 用 TMS 干擾 MT，動作作業變差，且到 MT 至少有兩條路（V1→MT；視網膜→上丘→MT）。<span class=\"tag\">投影片 Dis07 p.35–37</span></p>\n\n<p><b>病人的雙重分離</b>：what 系統受損 → 面孔失認症（prosopagnosia）、視覺失認症；where 系統受損 → 忽略症（neglect）。這是「what 與 where 是兩套系統」的雙重分離證據。<span class=\"tag\">投影片 Dis07 p.38</span></p>"
+   },
+   {
+    "h": "4. 為什麼聽覺的 where 後來叫 where／how？",
+    "html": "\n<p>老師的說法：<b>聽覺的背側路徑最後要和動作整合</b>，所以不只是「在哪」，還包含「怎麼用這個聲音去行動」（轉頭、回話、模仿發音）。<span class=\"tag\">你的猜題檔註記（W7 03:14 段落）；投影片 Dis08 p.29–33</span></p>\n"
+   },
+   {
+    "h": "5. 一句話比較（視覺 vs. 聽覺 雙路徑）",
+    "html": "\n<div class=\"tw\"><table><tr><th></th><th>視覺</th><th>聽覺</th></tr>\n<tr><td>腹側 what</td><td>V1→V4→下顳葉（顏色、物體、臉）</td><td>前帶→顳葉前方→前額葉（聲音內容、頻率）</td></tr>\n<tr><td>背側 where／how</td><td>V1→V5/MT→後頂葉（動作、位置）</td><td>後帶→後頂葉＋額葉運動表徵（位置、與動作／語音整合）</td></tr>\n<tr><td>病人證據</td><td>what 受損：臉失認／視覺失認；where 受損：忽略症</td><td>（投影片 Dis07 p.38 列出 what／where 的雙重分離：what 受損→面孔失認症、視覺失認症；where 受損→忽略症）<span class=\"tag\">投影片 Dis07 p.38</span></td></tr></table></div>"
+   }
+  ],
+  "traps": [
+   "只講聽覺、不講視覺——老師說「視覺和聽覺都有」，兩邊都要能舉證據。",
+   "只背 McGurk——老師 06:37 提醒題目會換角度，how 路徑還有新音素學習、複誦、輪替。",
+   "混淆 anterior／posterior belt：<b>前＝what、後＝where</b>（記法：前面是『前』因『認出內容』，後面定位）。",
+   "把「獼猴單細胞」說成人類研究——Rauschecker & Tian (2000) 是猴叫聲＋獼猴；人類是造影證據。",
+   "只寫路徑名稱沒有證據——題目問的是「證據」。"
+  ],
+  "oral": "感覺系統都要回答『是什麼』與『在哪／怎麼用』，所以分成腹側 what 與背側 where／how 兩條路徑。聽覺證據：Rauschecker & Tian 單細胞記錄顯示前帶區偏好聲音內容（what，通往顳葉前方與前額葉），後帶區偏好空間位置（where，通往後頂葉）；人類造影大致一致；Isenberg 等人顯示背側可再分 where 與 how，how 與額頂葉的運動表徵相連，功能包括後上顳溝的多感官整合（McGurk）、新音素學習、短期複誦與對話輪替。視覺同構：腹側 V1→V4→下顳葉，受損為臉失認／視覺失認；背側 V1→V5/MT→後頂葉，受損為動作失認、忽略症，TMS 干擾 MT 動作作業變差。",
+  "sources": [
+   "老師投影片 Dis08 p.29–40（聽覺雙路徑與 how 功能）；Dis07 p.28–38（視覺雙路徑與病人）—— 老師原件。",
+   "Ward 聽覺章「What versus where」段落：已逐字核對 Rauschecker & Tian (2000)、Barrett & Hall (2006)、Isenberg et al. (2012) 的描述（第 3 版 Ch10）。",
+   "「獼猴」一詞來自課本（monkey calls）；投影片只寫 Rauschecker and Tian (2000)。",
+   "「聽覺的 where 變成 how 是為了和動作整合」引自你猜題檔對 W7 03:14 的註記，我未另行逐句核對該段逐字稿。"
+  ],
+  "pri": "最高"
+ },
+ {
+  "id": "E_4_1",
+  "no": "4.1",
+  "ch": 4,
+  "tier": "A",
+  "title": "fMRI 背後的生理歷程是什麼？什麼決定它的時間與空間解析度？",
+  "signal": "W5 00:14:19「你用這個工具，它的成像原理是什麼？」、00:14:27「換言之，你在期中考，這個絕對會是重點」（已核對原檔）；W4「BOLD 大家一定要記得」；要能說這個工具的時間／空間解析度能回答什麼問題、設計用它合不合適（EEG 怕動、MRI 只能躺著）。",
+  "answer1": "fMRI 測的不是神經電活動，而是<b>神經活動 → 耗氧與血流增加 → 血中去氧血紅素比例改變 → 局部磁場扭曲 → BOLD 訊號</b>。因為依賴血流（HRF 要幾秒才上來），<b>時間解析度約數秒</b>；<b>空間解析度約 1 毫米等級，取決於體素大小</b>。所以它擅長回答「哪裡」，不擅長「什麼時候」。",
+  "skeleton": [
+   "<b>定位</b>：fMRI＝功能造影，測 BOLD（血氧濃度相依）訊號，是神經活動的間接指標。",
+   "<b>生理鏈</b>：神經元活動→耗氧→血流過度補償→去氧血紅素相對減少→磁場扭曲變小→BOLD↑。",
+   "<b>磁性原理</b>：帶氧血紅素抗磁性、去氧血紅素順磁性，去氧血紅素造成局部磁場扭曲，可被 MRI 偵測。",
+   "<b>HRF 三階段</b>：initial dip → overcompensation（平常測的）→ undershoot。",
+   "<b>時間解析度</b>：幾秒，因為 HRF 慢；但可用事件相關設計＋疊加 HRF。",
+   "<b>空間解析度</b>：約 1 mm，取決於體素大小。",
+   "<b>結論</b>：適合回答什麼問題／不適合什麼；與 EEG、PET、fNIRS 的取捨。"
+  ],
+  "sections": [
+   {
+    "h": "1. 先分清楚：MRI 與 fMRI",
+    "html": "\n<p><b>MRI（T1，結構）</b>：讓身體裡的氫原子對齊磁場 → 進動 → 用射頻脈衝使之共振 → 脈衝停止後各組織以不同速度「回復」→ 產生訊號 → 成像。灰質與白質回復速度不同（白質 T1 短、灰質 T1 長），所以能畫出結構。<span class=\"tag\">投影片 Dis04 p.16</span></p>\n<p><b>fMRI（T2，功能）</b>：偵測的是 <b>BOLD（Blood Oxygenation Level Dependent）</b> 訊號，和<b>血氧濃度、血流量、血容積</b>有關。<span class=\"tag\">投影片 Dis04 p.17</span></p>\n"
+   },
+   {
+    "h": "2. 生理歷程：一步一步串起來（要記的是因果鏈）",
+    "html": "\n<ol>\n<li><b>神經元活動</b>消耗氧氣，把帶氧血紅素（抗磁性）變成<b>去氧血紅素</b>（順磁性）。</li>\n<li>去氧血紅素有很強的順磁性，會<b>扭曲周圍的局部磁場</b>，這個扭曲能被 MRI 測到，所以測得到「去氧血紅素濃度」。<span class=\"tag\">課本 Ch4</span></li>\n<li>身體的反應是<b>增加該區域血流</b>，而且送來的氧<b>多於</b>消耗的氧（<b>過度補償</b>）→ 去氧血紅素相對<b>被沖淡</b> → 磁場扭曲變小 → <b>BOLD 訊號上升</b>。這是 fMRI 平常測量的成分。<span class=\"tag\">課本 Ch4</span></li>\n<li>所以：<b>BOLD 上升＝神經活動增加後的血流反應</b>，是間接的指標，不是直接量神經放電。<span class=\"tag inf\">我的整理：把投影片「抗磁／順磁」與課本「過度補償」連成一條因果鏈</span></li>\n</ol>\n<figure><svg viewBox=\"0 0 620 235\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><line x1=\"60\" y1=\"150\" x2=\"580\" y2=\"150\" stroke=\"#888\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"195\" stroke=\"#888\"/><polyline fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\" points=\"60.0,150.6 62.0,150.9 64.0,151.5 66.0,152.3 68.0,153.3 70.0,154.7 72.0,156.3 74.0,158.0 76.0,159.9 78.0,161.6 80.0,163.0 82.0,163.9 84.0,164.0 86.0,163.3 88.0,161.6 90.0,159.1 92.0,155.7 94.0,151.8 96.0,147.5 98.0,143.0 100.0,138.4 102.0,133.9 104.0,129.6 106.0,125.4 108.0,121.4 110.0,117.5 112.0,113.8 114.0,110.1 116.0,106.6 118.0,103.1 120.0,99.6 122.0,96.3 124.0,93.0 126.0,89.9 128.0,86.8 130.0,83.9 132.0,81.2 134.0,78.6 136.0,76.1 138.0,73.9 140.0,71.9 142.0,70.0 144.0,68.3 146.0,66.9 148.0,65.6 150.0,64.6 152.0,63.7 154.0,63.1 156.0,62.6 158.0,62.4 160.0,62.3 162.0,62.4 164.0,62.6 166.0,63.0 168.0,63.6 170.0,64.3 172.0,65.2 174.0,66.2 176.0,67.3 178.0,68.5 180.0,69.8 182.0,71.2 184.0,72.6 186.0,74.2 188.0,75.8 190.0,77.5 192.0,79.2 194.0,80.9 196.0,82.7 198.0,84.6 200.0,86.4 202.0,88.3 204.0,90.2 206.0,92.0 208.0,93.9 210.0,95.8 212.0,97.6 214.0,99.5 216.0,101.3 218.0,103.2 220.0,105.0 222.0,106.7 224.0,108.5 226.0,110.2 228.0,111.9 230.0,113.5 232.0,115.1 234.0,116.7 236.0,118.3 238.0,119.8 240.0,121.3 242.0,122.7 244.0,124.1 246.0,125.5 248.0,126.8 250.0,128.1 252.0,129.3 254.0,130.5 256.0,131.7 258.0,132.9 260.0,134.0 262.0,135.0 264.0,136.1 266.0,137.1 268.0,138.1 270.0,139.0 272.0,139.9 274.0,140.8 276.0,141.6 278.0,142.5 280.0,143.2 282.0,144.0 284.0,144.7 286.0,145.4 288.0,146.1 290.0,146.8 292.0,147.4 294.0,148.0 296.0,148.6 298.0,149.1 300.0,149.7 302.0,150.2 304.0,150.7 306.0,151.1 308.0,151.6 310.0,152.0 312.0,152.4 314.0,152.8 316.0,153.2 318.0,153.5 320.0,153.9 322.0,154.2 324.0,154.5 326.0,154.8 328.0,155.1 330.0,155.3 332.0,155.6 334.0,155.8 336.0,156.0 338.0,156.2 340.0,156.4 342.0,156.6 344.0,156.7 346.0,156.9 348.0,157.0 350.0,157.1 352.0,157.2 354.0,157.3 356.0,157.4 358.0,157.5 360.0,157.6 362.0,157.6 364.0,157.7 366.0,157.7 368.0,157.8 370.0,157.8 372.0,157.8 374.0,157.8 376.0,157.8 378.0,157.8 380.0,157.8 382.0,157.8 384.0,157.7 386.0,157.7 388.0,157.7 390.0,157.6 392.0,157.6 394.0,157.5 396.0,157.4 398.0,157.4 400.0,157.3 402.0,157.2 404.0,157.2 406.0,157.1 408.0,157.0 410.0,156.9 412.0,156.8 414.0,156.7 416.0,156.6 418.0,156.5 420.0,156.4 422.0,156.3 424.0,156.2 426.0,156.1 428.0,156.0 430.0,155.9 432.0,155.8 434.0,155.7 436.0,155.6 438.0,155.5 440.0,155.4 442.0,155.3 444.0,155.1 446.0,155.0 448.0,154.9 450.0,154.8 452.0,154.7 454.0,154.6 456.0,154.5 458.0,154.4 460.0,154.3 462.0,154.2 464.0,154.1 466.0,154.0 468.0,153.9 470.0,153.8 472.0,153.7 474.0,153.6 476.0,153.5 478.0,153.4 480.0,153.3 482.0,153.2 484.0,153.1 486.0,153.0 488.0,152.9 490.0,152.8 492.0,152.7 494.0,152.7 496.0,152.6 498.0,152.5 500.0,152.4 502.0,152.4 504.0,152.3 506.0,152.2 508.0,152.1 510.0,152.1 512.0,152.0 514.0,151.9 516.0,151.9 518.0,151.8 520.0,151.7 522.0,151.7 524.0,151.6 526.0,151.6 528.0,151.5 530.0,151.5 532.0,151.4 534.0,151.4 536.0,151.3 538.0,151.3 540.0,151.2 542.0,151.2 544.0,151.1 546.0,151.1 548.0,151.0 550.0,151.0 552.0,151.0 554.0,150.9 556.0,150.9 558.0,150.9 560.0,150.8 562.0,150.8 564.0,150.8 566.0,150.7 568.0,150.7 570.0,150.7 572.0,150.6 574.0,150.6 576.0,150.6 578.0,150.6 580.0,150.5\"/><text x=\"70\" y=\"190\" font-size=\"11.5\" fill=\"#222\">① 初始下降 initial dip</text><text x=\"70\" y=\"204\" font-size=\"11.5\" fill=\"#222\">神經元耗氧→去氧血紅素↑→BOLD 略降</text><text x=\"70\" y=\"218\" font-size=\"11.5\" fill=\"#222\">（不一定每次都看得到）</text><text x=\"150\" y=\"22\" font-size=\"11.5\" fill=\"#222\">② 過度補償 overcompensation</text><text x=\"150\" y=\"36\" font-size=\"11.5\" fill=\"#222\">血流增加 > 耗氧→去氧血紅素被沖淡→BOLD 上升</text><text x=\"150\" y=\"50\" font-size=\"11.5\" fill=\"#222\">＝fMRI 平常測的訊號</text><text x=\"400\" y=\"192\" font-size=\"11.5\" fill=\"#222\">③ 後下沖 undershoot</text><text x=\"400\" y=\"206\" font-size=\"11.5\" fill=\"#222\">回到基線前的暫時低於基線</text><text x=\"580\" y=\"168\" text-anchor=\"end\" font-size=\"11\" fill=\"#555\">時間（秒）：約 0 → 25</text><line x1=\"60\" y1=\"150\" x2=\"60\" y2=\"155\" stroke=\"#888\"/><text x=\"60\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" fill=\"#555\">0</text><line x1=\"160\" y1=\"150\" x2=\"160\" y2=\"155\" stroke=\"#888\"/><text x=\"160\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" fill=\"#555\">5</text><line x1=\"260\" y1=\"150\" x2=\"260\" y2=\"155\" stroke=\"#888\"/><text x=\"260\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" fill=\"#555\">10</text><line x1=\"360\" y1=\"150\" x2=\"360\" y2=\"155\" stroke=\"#888\"/><text x=\"360\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" fill=\"#555\">15</text><line x1=\"460\" y1=\"150\" x2=\"460\" y2=\"155\" stroke=\"#888\"/><text x=\"460\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" fill=\"#555\">20</text><line x1=\"560\" y1=\"150\" x2=\"560\" y2=\"155\" stroke=\"#888\"/><text x=\"560\" y=\"166\" text-anchor=\"middle\" font-size=\"10\" fill=\"#555\">25</text></svg><figcaption>圖：血流動力反應函數 HRF（示意曲線，形狀與課本／投影片 Dis04 p.17 一致；數值為示意，非實測）</figcaption></figure>\n<p><b>HRF（血流動力反應函數）</b>：BOLD 隨時間的變化。三階段：<b>① 初始下降</b>（耗氧＞供氧，BOLD 略降，不一定看得到）；<b>② 過度補償</b>（血流暴增，BOLD 明顯上升）；<b>③ 後下沖</b>（回基線前略低於基線）。訊號變化很小，大約 1–3%（1.5T 磁鐵）。<span class=\"tag\">課本 Ch4；投影片 Dis04 p.17</span></p>"
+   },
+   {
+    "h": "3. 什麼決定解析度？",
+    "html": "\n<p><b>空間解析度（能分辨多小的位置）</b>：約 <b>1 毫米</b>，取決於<b>體素（voxel）大小</b>。<span class=\"tag\">課本 Ch4</span>（BOLD 反映的是血流反應的範圍，而不是單一神經元，這也是它比單細胞記錄粗的原因。<span class=\"tag inf\">我的推論</span>）</p>\n<p><b>時間解析度（能分辨多短的時間差）</b>：約<b>數秒</b>，因為<b>血流動力反應慢</b>（要幾秒才上升、再慢慢下來），相對於認知歷程發生的速度（毫秒級）很慢。<span class=\"tag\">課本 Ch4</span></p>\n<p><b>可是不必等訊號回基線才能放下一個刺激</b>：多個 HRF 會<b>疊加</b>，統計上分析的是「依實驗設計與估計的 HRF 形狀預測的 BOLD 變化」。這使得事件相關設計（event-related design）可行；還可插入空白（null）試次，讓訊號有起伏、利於分析。<span class=\"tag\">課本 Ch4；投影片 Dis04 p.21–23</span></p>\n<p><b>設計的影響</b>：區塊設計（同類刺激放在一起，訊號起伏大、利於偵測，但容易引發策略與預期）；事件相關設計（刺激隨機，可分開不同刺激類型）。<span class=\"tag\">投影片 Dis04 p.21–24；逐字稿 W4 00:47:02</span></p>"
+   },
+   {
+    "h": "4. 所以它能回答什麼問題？（老師要的應用）",
+    "html": "\n<div class=\"tw\"><table><tr><th>工具</th><th>原理</th><th>時間</th><th>空間</th><th>適合／不適合</th></tr>\n<tr><td>fMRI</td><td>BOLD（血流）</td><td>慢（秒）</td><td>好（~1 mm）</td><td>問「哪裡」；受試者要躺著、被動</td></tr>\n<tr><td>EEG／ERP</td><td>頭皮電位</td><td>很好（毫秒）</td><td>差</td><td>問「什麼時候」；怕動來動去、便宜</td></tr>\n<tr><td>MEG</td><td>磁場</td><td>毫秒</td><td>可能不錯（2–3 mm）</td><td>貴、不普及</td></tr>\n<tr><td>fNIRS</td><td>近紅外光測 BOLD（約 800 nm）</td><td>慢</td><td>較粗</td><td>也是用血氧訊號</td></tr></table></div>\n<p class=\"note\">EEG／MEG 規格來自 Dis03；fNIRS 來自 Dis04 p.18「Light／BOLD／800 nm」。<span class=\"tag\">投影片 Dis03、Dis04 p.18；逐字稿 W5 00:14:30</span>。「fNIRS 空間較粗」<span class=\"tag inf\">需核對</span>。</p>"
+   }
+  ],
+  "traps": [
+   "寫「fMRI 測神經活動」——要寫「<b>間接</b>，測血氧（去氧血紅素）變化」。",
+   "混淆磁性：<b>帶氧＝抗磁；去氧＝順磁</b>，是去氧的順磁性造成磁場扭曲。",
+   "只背 BOLD 名稱，沒有因果鏈（耗氧→血流過度補償→訊號上升）。",
+   "忘記回答「解析度由什麼決定」：空間＝體素大小、時間＝HRF 的緩慢。",
+   "把 T1 與 T2 搞反：T1 結構、T2 功能（BOLD）。"
+  ],
+  "oral": "fMRI 測的是 BOLD 訊號，是神經活動的間接指標：神經元活動耗氧，把抗磁性的帶氧血紅素變成順磁性的去氧血紅素；隨後血流過度補償，送去的氧多於消耗，去氧血紅素被沖淡，局部磁場扭曲變小，BOLD 上升。其隨時間的變化稱為 HRF，有初始下降、過度補償、後下沖三階段。空間解析度約 1 毫米，由體素大小決定；時間解析度約數秒，因為血流反應緩慢，但多個 HRF 可疊加，所以可用事件相關設計。因此 fMRI 擅長問哪裡、不擅長問什麼時候，要問時間要搭配 EEG。",
+  "sources": [
+   "老師投影片 Dis04 p.16–24（MRI/fMRI 原理、BOLD、HRF、設計）、Dis03（EEG/MEG 規格）。",
+   "Ward Ch4（第 3 版）：已核對 BOLD 定義、HRF 三階段、1–3% 訊號變化、空間 ~1 mm／時間數秒、HRF 疊加與 null events。",
+   "W5 00:14:19、00:14:27、00:14:30 已核對 W5 逐字稿原檔；W4「box signal（BOLD）大家一定要記得」也已核對原檔。",
+   "「空間解析度也受血管範圍影響」與「fNIRS 較粗」為我的補充，未見於所讀片段，請核對課本。"
+  ],
+  "pri": "最高"
+ },
+ {
+  "id": "E_4_4",
+  "no": "4.4",
+  "ch": 4,
+  "tier": "A",
+  "title": "腦區在某作業中「活躍」，是否代表它對該作業是關鍵？不是的話為什麼？",
+  "signal": "W4 00:44:17 必要（necessary）vs. 充分（sufficient）：造影有活動，可能只是充分；W4 00:47:02 策略解釋（區塊設計易引起策略與預期）；W4 隨堂第 4 題。",
+  "answer1": "<b>不一定。</b>fMRI 的活躍只說明該區<b>與作業相關／可能充分</b>，不證明<b>必要</b>。造影顯示活躍而損傷沒影響（或相反）時，原因可能是：被試者的<b>策略</b>、<b>一般性資源</b>（難度、注意、喚醒）、該區其實是被<b>抑制</b>、或損傷研究檢定力不足；要證明必要，需要損傷、TMS／tES 等「讓它失效仍能看到作業失敗」的證據。",
+  "skeleton": [
+   "<b>先答立場</b>：不是；活躍＝相關／可能充分，≠ 必要。",
+   "<b>定義</b>：necessary（沒有它就不行）vs. sufficient（有它就夠，不見得非它不可）。",
+   "<b>造影有、損傷沒有的 4 個原因</b>：策略、一般資源、抑制、損傷研究不夠有力。",
+   "<b>造影沒有、損傷有的 3 個原因</b>：相減抵銷、區域小／個體差異、損傷到纖維束。",
+   "<b>其他造影的限制</b>：fMRI 對神經輸入敏感；activation vs deactivation 取決於基線。",
+   "<b>結論</b>：用多種方法交叉驗證；不一致本身有理論價值。"
+  ],
+  "sections": [
+   {
+    "h": "1. 兩個關鍵詞，先白話懂",
+    "html": "\n<ul>\n<li><b>必要（necessary）</b>：拿掉它，作業就做不好。→ 損傷或 TMS 才能檢驗。</li>\n<li><b>充分（sufficient）</b>：它活動了，足以參與作業；但沒有它，也許別的區域也能接手。→ 造影只能看到這個。</li>\n</ul>\n<p>類比：廚房的火災警報器響了，你知道<b>有人在煮東西</b>（有活動），卻不能確定警報器是不是<b>非有不可</b>（必要）。拔掉它房子還是可以煮飯。<span class=\"tag\">投影片 Dis04 p.37；逐字稿 W4 00:44:17（依整理檔）</span></p>\n<figure><svg viewBox=\"0 0 620 215\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><ellipse cx=\"190\" cy=\"105\" rx=\"165\" ry=\"88\" fill=\"#dbe8f5\" stroke=\"#1f4e79\" stroke-width=\"2\"/><text x=\"190\" y=\"40\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"#1f4e79\">fMRI「有活躍」的腦區</text><ellipse cx=\"190\" cy=\"118\" rx=\"80\" ry=\"42\" fill=\"#f9d9d3\" stroke=\"#a33a2a\" stroke-width=\"2\"/><text x=\"190\" y=\"116\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#a33a2a\">真正「必要」的區域</text><text x=\"190\" y=\"133\" text-anchor=\"middle\" font-size=\"11\" fill=\"#a33a2a\">（損傷／TMS 後作業失敗）</text><text x=\"75\" y=\"95\" font-size=\"11\" fill=\"#333\">策略</text><text x=\"278\" y=\"95\" font-size=\"11\" fill=\"#333\">一般資源</text><text x=\"82\" y=\"185\" font-size=\"11\" fill=\"#333\">被抑制</text><text x=\"272\" y=\"185\" font-size=\"11\" fill=\"#333\">只是參與</text><rect x=\"380\" y=\"30\" width=\"215\" height=\"50\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"487.5\" y=\"51\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">活躍 ⇏ 必要</text><text x=\"487.5\" y=\"67\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">（只能說：相關、可能充分）</text><rect x=\"380\" y=\"100\" width=\"215\" height=\"50\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"487.5\" y=\"121\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">要證明「必要」</text><text x=\"487.5\" y=\"137\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">→ 損傷、TMS、tES 讓它失效</text><rect x=\"380\" y=\"170\" width=\"215\" height=\"40\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"487.5\" y=\"194\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">兩種方法不一致＝有理論價值</text></svg><figcaption>圖：活躍的腦區遠多於必要的腦區（自繪，依 Dis04 p.37–41、Ward Ch4）</figcaption></figure>"
+   },
+   {
+    "h": "2. 造影「有活動」、損傷「沒影響」：為什麼？（四個原因）",
+    "html": "\n<ol>\n<li><b>策略</b>：被試者用了某種策略，造成該區活躍，但這個策略不是完成作業所必需。（老師：區塊設計容易引起策略與預期。）</li>\n<li><b>一般性認知資源</b>：作業變難、需要更多注意或喚醒，帶動該區活躍，但這區不專屬這個作業。</li>\n<li><b>該區其實被抑制</b>：fMRI 對神經的<b>輸入</b>敏感，而且不分興奮或抑制；活動增加不等於「被打開」。</li>\n<li><b>損傷研究不夠有力</b>：病人太少、損傷位置不對、或給病人的作業和造影用的不一樣。</li>\n</ol>\n\n<p><b>實例</b>：語意記憶作業中，「動詞生成 > 朗讀」會讓<b>左下額回</b>活躍（造影證據），但<b>語意型失智症</b>的損傷在<b>左前顳葉</b>（損傷證據）——兩者並不一致。<span class=\"tag\">投影片 Dis04 p.39</span></p>"
+   },
+   {
+    "h": "3. 反過來：造影「沒有」、損傷「有影響」",
+    "html": "\n<ol>\n<li><b>相減抵銷</b>：實驗作業與控制作業<b>都</b>依賴這區，相減之後就看不到，造成假的零結果。</li>\n<li><b>不容易偵測</b>：區域太小、個體差異大（位置不同）、或真實活動只引起很小的訊號變化。</li>\n<li><b>損傷到「過路的纖維束」</b>：作業變差的原因是通過該處的白質束受損，而不是該處灰質的突觸活動。</li>\n</ol>\n\n<p>Ward 的結論：不一致可能出在造影、損傷、或兩者；沒有神奇解法，只能靠更嚴謹的實驗；<b>不一致應被視為有理論價值，而不是某種方法失敗</b>。<span class=\"tag\">課本 Ch4 末段</span></p>"
+   },
+   {
+    "h": "4. 其他要記的造影限制（投影片 p.37）",
+    "html": "\n<ul>\n<li><b>Inhibition vs. excitation</b>：fMRI 對神經輸入較敏感，無法區分興奮或抑制。</li>\n<li><b>Activation vs. deactivation</b>：「活躍」是相對於基線；基線選什麼，結果就不同。</li>\n<li><b>Necessity vs. sufficiency</b>：該區可能「足以」執行作業，但不一定「必要」。</li>\n</ul>\n<p>→ 這也是為什麼要用<b>雙重分離</b>、<b>TMS</b> 等方法補強（見 5.1、5.5）。<span class=\"tag\">投影片 Dis04 p.37；逐字稿 W4 00:45:12</span></p>"
+   }
+  ],
+  "traps": [
+   "寫「活躍＝重要」或「活躍＝負責這個功能」——題目就是要你推翻這個說法。",
+   "只說『可能不是』，沒有說出原因——至少要有策略、一般資源、抑制、損傷研究不足這幾項。",
+   "把『造影有、損傷沒有』與『造影沒有、損傷有』的原因混在一起。",
+   "忘記提 TMS／損傷是用來檢驗『必要』的方法。"
+  ],
+  "oral": "不一定。fMRI 的活躍只代表該區與作業相關、可能充分，不能證明必要。造影有活動而損傷沒影響時，原因可能是被試者用了非必需的策略、反映任務難度等一般性資源、該區其實被抑制（fMRI 對輸入敏感、不分興奮抑制），或損傷研究樣本太少／位置不對／作業不同。反過來造影沒有而損傷有，可能因為實驗與控制作業都用到該區而被相減抵銷、區域太小或個體差異大，或損傷的是穿過該處的纖維束。因此要證明必要，需要損傷、TMS 等證據，並把不一致視為有理論價值的線索，用多種方法交叉驗證。",
+  "sources": [
+   "老師投影片 Dis04 p.37、p.39–42（necessity vs sufficiency、Image＋/lesion−、Image−/lesion＋；隨堂題 4 答案 E）。",
+   "Ward Ch4 末節「Why do functional imaging data sometimes disagree with lesion data?」：已核對『不一致有理論價值』的結論。",
+   "W4 00:44:17（必要 vs. 充分）、00:47:02（策略解釋）已核對原檔。",
+   "廚房警報器類比是我為了好懂加的，非課本內容。"
+  ],
+  "pri": "最高"
+ },
+ {
+  "id": "E_5_1",
+  "no": "5.1",
+  "ch": 5,
+  "tier": "A",
+  "title": "要從腦傷成人推論正常認知，必須接受哪些假設？這些假設合理嗎？",
+  "signal": "W4 00:45:12「請大家一定要好好瞭解，因為後面幾乎都會運用到 double dissociation 的推論」；投影片 Dis05：單一／雙重分離、task-resource 與 task-demand 假象。",
+  "answer1": "核心前提是：研究「不正常」可以看出「正常」的運作（逆向工程）。要成立，需要接受 Caramazza 的三個隱含假設：<b>區分性</b>（損傷能造成選擇性缺損）、<b>透明性</b>（損傷只是拿掉原系統的零件，不會造出全新系統）、<b>普遍性</b>（人人的認知系統基本相同）。<b>區分性</b>大致成立、<b>透明性</b>最有爭議但在成人、傷後不久相對合理、<b>普遍性</b>受個別差異挑戰；再用<b>雙重分離</b>排除作業難度假象，來加強推論。",
+  "skeleton": [
+   "<b>先說前提</b>：研究腦傷＝逆向工程，移除零件看系統還能做什麼（lesions carve cognition at its seams）。",
+   "<b>假設①區分性 fractionation</b>：損傷能造成選擇性缺損；是針對「認知模型中的成分」，不是針對腦區。",
+   "<b>假設②透明性 transparency</b>：損傷只拿掉零件，不重建新系統。",
+   "<b>假設③普遍性 universality</b>：所有人的認知系統基本相同。",
+   "<b>評估合理性</b>：區分性大致成立；透明性最有問題（可塑性、年齡、時間）；普遍性受個別差異挑戰。",
+   "<b>補強推論</b>：單一分離可能是假象（task-resource／task-demand）→ 用雙重分離＋其他證據。"
+  ],
+  "sections": [
+   {
+    "h": "1. 為什麼要有「假設」？",
+    "html": "\n<p>腦傷研究的基本邏輯是<b>逆向工程</b>：你看不到機器的內部，就拿掉一個零件，看機器還能做什麼、不能做什麼，來推測那個零件的功能。Ward 引用說法：損傷「在接縫處切開認知」。<span class=\"tag\">課本 Ch5 開頭</span></p>\n<p>但這個推論之所以有效，是因為背後藏著三個沒說出來的前提。Caramazza（1980 年代）第一次把它們正式講出來。<span class=\"tag\">課本 Ch5「Caramazza's assumptions」</span></p>\n<figure><svg viewBox=\"0 0 620 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"190\" height=\"70\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">① 區分性 fractionation</text><text x=\"105.0\" y=\"59\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">損傷能造成「選擇性」</text><text x=\"105.0\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">的認知缺損</text><rect x=\"215\" y=\"20\" width=\"190\" height=\"70\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">② 透明性 transparency</text><text x=\"310.0\" y=\"59\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">損傷只拿掉原系統的零件</text><text x=\"310.0\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">不會造出全新系統</text><rect x=\"420\" y=\"20\" width=\"190\" height=\"70\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"515.0\" y=\"44\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">③ 普遍性 universality</text><text x=\"515.0\" y=\"59\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">所有人的認知系統</text><text x=\"515.0\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">基本上相同</text><line x1=\"105\" y1=\"90\" x2=\"105\" y2=\"118\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"310\" y1=\"90\" x2=\"310\" y2=\"118\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"515\" y1=\"90\" x2=\"515\" y2=\"118\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"10\" y=\"118\" width=\"600\" height=\"40\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"142\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">才能從「腦傷者的表現」推論「正常人的認知」</text><text x=\"105\" y=\"178\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#333\">大致成立（視神經架構）</text><text x=\"310\" y=\"178\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#a33a2a\">最有爭議</text><text x=\"515\" y=\"178\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#333\">個別差異挑戰</text></svg><figcaption>圖：Caramazza 的三個隱含假設（自繪，內容依 Ward Ch5）</figcaption></figure>"
+   },
+   {
+    "h": "2. 三個假設：各是什麼、合不合理",
+    "html": "\n<p><b>① 區分性假設（fractionation）</b>：腦損傷可以造成<b>選擇性</b>的認知缺損（只壞一部分）。注意：這是針對<b>認知模型裡的某個成分</b>，不一定是某個腦區。<span class=\"tag\">課本 Ch5</span></p>\n<ul><li><b>合理嗎</b>：Kosslyn 與 van Kleek 提醒，能不能看到選擇性缺損<b>取決於神經架構</b>——若執行某運算的神經元<b>聚在一起</b>、而且<b>專屬</b>於這個運算，比較容易出現選擇性缺損；若分散或共用，就難以用損傷方法揭露。但選擇性缺損確實能被觀察到，所以在某個層次上大致成立。<span class=\"tag\">課本 Ch5</span></li></ul>\n<p><b>② 透明性假設（transparency）</b>：損傷只是拿掉原本認知系統的一個或多個成分，<b>不會從無到有造出一個重組過、完全不同的新系統</b>。因為我們研究異常是為了理解正常。<span class=\"tag\">課本 Ch5</span></p>\n<ul><li><b>合理嗎</b>：Ward 認為這是<b>最有問題</b>的一個。可塑性與復原看似反對它，但不一定——例如中風後失語改善，可能只是<b>原本的認知模型被恢復</b>，不是建了新方法；而且神經層面的可塑性普遍，不一定帶來功能改變。經驗法則：<b>成人比兒童</b>、<b>傷後不久比較晚</b>（或傷後表現穩定時）比較不容易違反透明性。此外它說的是認知組織的相似，<b>不是位置</b>（半球切除的孩子用右腦學說話，不一定違反）。<span class=\"tag\">課本 Ch5</span></li></ul>\n<p><b>③ 普遍性假設（universality）</b>：所有人的認知系統基本上相同。</p>\n<ul><li><b>合理嗎</b>：這是從單一病人推論到「人類正常認知」的前提；但個別差異存在，所以單一個案不能直接類推到所有人（見 5.3）。<span class=\"tag\">投影片 Dis05 p.26–27</span></li></ul>\n<p class=\"note\">Caramazza 自己承認這些假設在某些情況下可能不成立，真假要靠實證研究決定。<span class=\"tag\">課本 Ch5</span></p>"
+   },
+   {
+    "h": "3. 加強推論：用雙重分離排除「假象」",
+    "html": "\n<p>光看「病人 A 作業差、B 作業好」（<b>單一分離</b>）可能是假象，有兩種：<span class=\"tag\">投影片 Dis05 p.17–18；課本 Ch5</span></p>\n<ul>\n<li><b>Task-resource artifact（作業資源假象）</b>：兩個作業用<b>同一種資源</b>，只是其中一個用得比較多（比較難）；腦損傷＝資源變少，所以先壞掉的是難的那個。→ 這時單一分離<b>不代表</b>兩者用不同系統。</li>\n<li><b>Task-demand artifact（作業要求假象）</b>：某作業做不好只是因為做法不理想（誤解指示、用了奇怪的策略），並非該能力真的壞了。</li>\n</ul>\n<p>最有力的排除方法＝<b>雙重分離</b>：兩位病人表現<b>互補</b>。如果 B 只是「比較容易」，就不會有人 A 好、B 差。<span class=\"tag\">課本 Ch5</span></p>\n<figure><svg viewBox=\"0 0 640 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><text x=\"20\" y=\"24\" font-size=\"13\" font-weight=\"700\" fill=\"#555\">兩位病人、兩項作業</text><rect x=\"150\" y=\"34\" width=\"130\" height=\"34\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"215.0\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">作業 A</text><rect x=\"290\" y=\"34\" width=\"130\" height=\"34\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"355.0\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">作業 B</text><rect x=\"10\" y=\"78\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"75.0\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">病人 X</text><text x=\"75.0\" y=\"112\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（損傷在 X 區）</text><rect x=\"150\" y=\"78\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"215.0\" y=\"104\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">× 受損</text><rect x=\"290\" y=\"78\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"355.0\" y=\"104\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">○ 保留</text><rect x=\"10\" y=\"132\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"75.0\" y=\"150\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">病人 Y</text><text x=\"75.0\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（損傷在 Y 區）</text><rect x=\"150\" y=\"132\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"215.0\" y=\"158\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">○ 保留</text><rect x=\"290\" y=\"132\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"355.0\" y=\"158\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">× 受損</text><rect x=\"440\" y=\"78\" width=\"190\" height=\"98\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"535.0\" y=\"108\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">兩個單一分離</text><text x=\"535.0\" y=\"123\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">方向相反（互補）</text><text x=\"535.0\" y=\"139\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">＝雙重分離</text><text x=\"535.0\" y=\"154\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">→ A、B 用不同資源</text></svg><figcaption>圖：雙重分離＝兩個互補的單一分離（自繪，依 Dis05 p.14–22、Ward Ch5）</figcaption></figure>\n\n<p><b>語言能力例子</b>：投影片 p.21：病人 CF 母音差、子音好；病人 CW 子音差、母音好 → 母音與子音是不同能力。<span class=\"tag\">投影片 Dis05 p.21</span></p>\n<p><b>但雙重分離不是萬靈丹</b>：還需要其他作業的證據、錯誤類型（母音／子音獨立最初是從<b>錯誤類型</b>推出的，不是從雙重分離）；也不必要求病人是「純」案例，取決於你理論上認為哪些能力彼此獨立。<span class=\"tag\">課本 Ch5</span></p>"
+   }
+  ],
+  "traps": [
+   "假設只寫名稱、不說明意思或不評估是否合理——題目有第二問「合理嗎」。",
+   "把透明性說成「大腦不會有可塑性」——正確是「損傷後<b>認知系統的組織</b>不會變成全新的」，可塑性不一定違反它。",
+   "區分性假設寫成「損傷在某腦區就有某功能缺損」——它是針對認知模型的成分，不是腦區。",
+   "只寫雙重分離＝兩個單一分離，沒有說它<b>排除什麼</b>（task-resource 假象）。"
+  ],
+  "oral": "研究腦傷是逆向工程，要從腦傷成人推論正常認知，需接受 Caramazza 三假設：區分性（損傷能造成選擇性缺損，針對認知成分不是腦區，神經元聚集且專屬時較易觀察，大致成立）；透明性（損傷只移除原系統成分、不造出全新系統，最有爭議，但成人、傷後不久、表現穩定時較合理，復原不一定違反）；普遍性（所有人認知系統相同，受個別差異挑戰）。另外單一分離可能是 task-resource 或 task-demand 假象，需用雙重分離（兩病人互補）排除，並搭配其他作業與錯誤類型，因為它不是萬靈丹。",
+  "sources": [
+   "Ward Ch5「Caramazza's assumptions for theorizing in cognitive neuropsychology」與雙重分離段落（第 3 版，已逐段核對）。",
+   "老師投影片 Dis05 p.13–23（單一／雙重分離、task-resource／task-demand、母音／子音、Broca／Wernicke）。",
+   "W4 00:45:12（雙重分離「後面幾乎都會運用到」）已核對原檔。",
+   "投影片的 CF、CW 與課本 Cubelli／Kay & Hanley 的病人對應我沒有逐一確認，答題時寫「投影片的 CF／CW 例子」即可。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_5_3",
+  "no": "5.3",
+  "ch": 5,
+  "tier": "A",
+  "title": "用單一個案來推論正常認知，有什麼優點與缺點？",
+  "signal": "關鍵字 single-case studies（Dis05 Keywords）；W4 提及約 15 次；投影片 p.25–27 對照 group studies。",
+  "answer1": "<b>優點</b>：最適合<b>釐清認知歷程可以怎麼切分</b>（誰跟誰獨立），並避免把不同病人平均而掩蓋個別型態；兩個互補單一個案就能構成雙重分離。<b>缺點</b>：<b>無法只靠一個個案建立理論、也不能概括到所有人</b>，且依賴透明性／普遍性等假設與作業假象的排除。Ward 的結論：<b>方法要配合問題</b>——群體研究適合建立損傷—缺損的關聯，單一個案適合分析認知如何細分。",
+  "skeleton": [
+   "<b>先立兩大傳統</b>：古典神經心理學（腦區功能；群體研究）vs 認知神經心理學（能力受損／保留的型態；單一個案）。",
+   "<b>優點</b>：釐清認知歷程如何切分；保留個別型態；雙重分離建構；可深入多項作業與錯誤類型。",
+   "<b>缺點</b>：不能只憑單一個案建理論、不能概括；依賴假設；損傷常大且不純；可塑性／個別差異。",
+   "<b>對照群體研究</b>：群體適合建立損傷—缺損關聯（病因、位置），但個別差異被平均。",
+   "<b>結論</b>：方法要配合問題；兩者互補。"
+  ],
+  "sections": [
+   {
+    "h": "1. 兩個傳統，兩種方法",
+    "html": "\n<div class=\"tw\"><table><tr><th></th><th>古典神經心理學</th><th>認知神經心理學</th></tr>\n<tr><td>目標</td><td>某腦區的功能（損傷位置→缺損）</td><td>受損與保留能力的型態，推論認知「零件」（不管在哪）</td></tr>\n<tr><td>常用方法</td><td>群體研究</td><td>單一個案研究</td></tr>\n<tr><td>特別適合</td><td>建立「損傷—缺損」關聯</td><td>釐清認知歷程如何細分</td></tr></table></div>\n<p>Ward：兩者後來在認知神經科學中大致和解，而且<b>方法要適合你問的問題</b>。<span class=\"tag\">課本 Ch5 開頭；投影片 Dis05 p.25</span></p>"
+   },
+   {
+    "h": "2. 優點",
+    "html": "\n<ul>\n<li><b>最適合釐清認知歷程怎麼切分</b>：找出誰跟誰是獨立的零件（例如母音 vs 子音、說 vs 聽）。<span class=\"tag\">投影片 Dis05 p.27；課本 Ch5</span></li>\n<li><b>保留個別型態</b>：群體研究會把症狀不同的病人平均，掩蓋個別差異（群體研究的反對理由：個別差異）。<span class=\"tag\">投影片 Dis05 p.26</span></li>\n<li><b>可構成雙重分離</b>：兩個互補的單一個案，就能排除 task-resource 假象，強力支持兩種能力獨立（見 5.1）。</li>\n<li><b>可以深入檢查</b>：多種作業（視覺辨識、語意記憶、押韻、記憶等神經心理評估）與錯誤類型。<span class=\"tag\">投影片 Dis05 p.28–31；課本 Ch5</span></li>\n</ul>\n"
+   },
+   {
+    "h": "3. 缺點",
+    "html": "\n<ul>\n<li><b>不能只靠單一個案建立理論，也不能概括到一般人</b>（投影片原話：cannot create a theory based on observations from only a single case, or generalize from a single case）。<span class=\"tag\">投影片 Dis05 p.27</span></li>\n<li><b>依賴三個假設</b>：特別是透明性（病人是否重組了認知系統）與普遍性（病人跟一般人系統是否相同）。<span class=\"tag\">課本 Ch5</span></li>\n<li><b>單一分離可能是假象</b>：task-resource／task-demand artifact，需要雙重分離與其他作業證據來排除。</li>\n<li><b>損傷常大且不純</b>：腦損傷通常範圍大，很少只限於感興趣的區域，要定位「哪裡關鍵」常需多個病人。<span class=\"tag\">課本 Ch5「Group studies」</span></li>\n</ul>"
+   },
+   {
+    "h": "4. 群體研究怎麼補（對照）",
+    "html": "\n<p>群體研究把病人<b>分組</b>再比較：依症候群（如思覺失調）、依認知症狀（如幻聽、讀非字困難）、或依解剖損傷位置。它較適合建立<b>損傷位置—缺損</b>的關聯，也可和功能造影對照；缺點是個別差異被平均。<span class=\"tag\">課本 Ch5；投影片 Dis05 p.26</span></p>\n<p class=\"note\">所以最合理的結論：<b>群體研究問「哪裡」，單一個案問「怎麼切分」</b>，要看研究問題選方法，也可互補。<span class=\"tag inf\">我的整理</span></p>"
+   }
+  ],
+  "traps": [
+   "只寫優點或只寫缺點。",
+   "把「單一個案無法概括」寫成「單一個案沒用」——它對『切分認知歷程』最有用。",
+   "忘了提雙重分離需要兩個個案（互補）。",
+   "沒提到群體研究的對照，變成只講單一個案。"
+  ],
+  "oral": "單一個案屬認知神經心理學傳統，最適合釐清認知歷程如何切分，避免群體平均掩蓋個別差異，兩個互補個案可構成雙重分離排除作業資源假象。缺點是不能只靠單一個案建理論或概括到所有人，依賴區分性、透明性、普遍性假設，單一分離可能是假象，損傷又常大而不純。群體研究則適合建立損傷位置與缺損的關聯，但個別差異被平均。方法要配合研究問題，兩者互補。",
+  "sources": [
+   "老師投影片 Dis05 p.25–27（Single case vs Group）；p.28–31（神經心理評估）。",
+   "Ward Ch5 開頭與「Group studies and lesion-deficit analysis」（第 3 版）。",
+   "「W4 提及 15 次」來自你猜題檔的統計，我未重核。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_5_5",
+  "no": "5.5",
+  "ch": 5,
+  "tier": "A",
+  "title": "比較自然腦傷與 TMS／tES 這兩類「損傷法」",
+  "signal": "W4：TMS 是「類比腦傷」的可逆方法；W4 00:34:27 盲人點字 TMS；投影片 Dis05 p.33–46（TMS、tES）。",
+  "answer1": "<b>相同</b>：都用「讓某區功能失效、看作業會不會變差」來檢驗該區是否<b>必要</b>。<b>不同</b>：自然腦傷是<b>永久、範圍大且不精準、有個別差異與重組、發病前基線不明</b>；TMS／tES 是<b>在正常人身上、短暫可逆、定位較準</b>，還能做控制條件、探討時間與腦區互動，但效果較小、較偏「干擾」而非真的切除，且有安全限制。",
+  "skeleton": [
+   "<b>共同邏輯</b>：讓某區失效，看作業是否受損 → 檢驗「必要」。",
+   "<b>自然腦傷</b>：永久；範圍大；個別差異；可塑性；倫理；但能研究真實、嚴重的缺損。",
+   "<b>TMS</b>：電磁感應；正常人；暫時可逆；約 1 cm²；稱「虛擬損傷」但更準確是「干擾」；可問時間與連結；可促進也可干擾。",
+   "<b>tES（tDCS 等）</b>：弱電流；陽極↑興奮、陰極↓；後效與突觸可塑性有關。",
+   "<b>評估</b>：互補；TMS 補足腦傷研究的缺點，但不能完全取代。"
+  ],
+  "sections": [
+   {
+    "h": "1. 共同點：都是拿來檢驗「必要」",
+    "html": "\n<p>fMRI 看到活躍只能說相關；要證明某區<b>必要</b>，需要讓它失效。自然腦傷是「已經失效」，TMS／tES 是「暫時讓它失效（或改變）」。老師的說法：TMS 是<b>類比腦傷</b>的可逆方法，是在正常人身上<b>暫時模擬損傷</b>。<span class=\"tag\">逐字稿 W4（依整理檔）；課本 Ch5</span></p>"
+   },
+   {
+    "h": "2. 一眼比較（再用文字說明）",
+    "html": "\n<div class=\"tw\"><table><tr><th>面向</th><th>自然腦傷</th><th>TMS</th><th>tES（tDCS 為主）</th></tr>\n<tr><td>受試者</td><td>病人</td><td>正常人</td><td>正常人</td></tr>\n<tr><td>持續時間</td><td>永久</td><td>單脈衝：數十毫秒；rTMS 後效約 20 分鐘</td><td>刺激期間＋後效</td></tr>\n<tr><td>範圍／精準度</td><td>大、不精準、很少只限單一區</td><td>聚焦約 1 cm²</td><td>兩個電極貼片（Dis05 p.44），空間解析度比 TMS 差（課本 Ch5 摘要）</td></tr>\n<tr><td>方向</td><td>只有損失</td><td>可能干擾，也可能促進</td><td>陽極提高興奮、陰極降低</td></tr>\n<tr><td>主要用途</td><td>損傷—缺損關聯、認知切分</td><td>必要性、時間點、腦區互動</td><td>可塑性、表現調控</td></tr></table></div>"
+   },
+   {
+    "h": "3. TMS 怎麼運作、為什麼比腦傷精準",
+    "html": "\n<p><b>原理</b>：電磁感應。線圈中快速變化的電流產生磁場，磁場在下方神經元誘發電流，使神經元「放電」，如同它們對環境刺激反應。常用八字形線圈，聚焦點約 1 cm²。單一脈衝不到 1 毫秒，但對皮質的影響約數十毫秒，所以很快恢復。<span class=\"tag\">課本 Ch5「How does TMS work?」；投影片 Dis05 p.33</span></p>\n<p><b>「虛擬損傷」其實是干擾</b>：Ward 指出，更準確的說法是<b>干擾</b>：神經元同時被作業（內部）與 TMS（外部）激活，後者破壞前者；若該區與作業無關，就不會干擾。<span class=\"tag\">課本 Ch5「virtual lesion」</span></p>\n<p><b>能做自然腦傷做不到的事</b>：<span class=\"tag\">課本 Ch5 TMS 總結</span></p>\n<ul>\n<li><b>可逆、短暫</b>（主要優點）；</li>\n<li><b>可問時間</b>：在作業的哪個時間點該區是關鍵（單脈衝 vs rTMS）；</li>\n<li><b>可探討腦區間的互動</b>（功能連結）；</li>\n<li><b>有控制條件</b>：例如 sham（線圈拿在空中）、控制腦區。<span class=\"tag\">投影片 Dis05 p.34</span></li>\n</ul>\n<p><b>例子 1：盲人的「視覺」皮質用來做什麼</b>：對盲人，TMS 干擾<b>中枕葉（視覺皮質）</b>會使點字（觸覺）辨識變差，對戴眼罩的明眼人則不會；對明眼人，TMS 干擾<b>感覺運動皮質</b>才使觸覺辨別變差（Cohen et al., 1997）。這說明 fMRI 的「活躍」不等於功能關鍵，TMS 證明視覺皮質<b>在盲人身上真的必要</b>。<span class=\"tag\">投影片 Dis05 p.34–36；課本 Ch5</span></p>\n\n<p><b>例子 2：TMS 也可以讓表現變好</b>：V5/MT 搜尋作業——目標靠動作區分時，TMS 干擾 V5 使反應變慢（干擾）；目標靠顏色與形狀區分、動作無關時，TMS 反而使搜尋更快（促進）。表示視覺區之間可能互相競爭，去除不相關的區域可使相關區域運作更好。<span class=\"tag\">投影片 Dis05 p.38–42；課本 Ch5</span></p>"
+   },
+   {
+    "h": "4. tES：用弱電流調整興奮性",
+    "html": "\n<ul>\n<li><b>種類</b>：tDCS（持續）、tRNS（隨機）、tACS（有節律交替）。<span class=\"tag\">投影片 Dis05 p.44</span></li>\n<li><b>方向</b>：<b>陽極（＋）</b>tDCS 提高皮質興奮性與表現；<b>陰極（－）</b>降低興奮性與表現。<span class=\"tag\">投影片 Dis05 p.45</span></li>\n<li><b>機制</b>：立即效應作用在<b>靜息膜電位</b>；後效可能是<b>突觸可塑性</b>、影響學習與神經傳導物質系統。<span class=\"tag\">課本 Ch5 tDCS</span></li>\n</ul>"
+   },
+   {
+    "h": "5. 總評：互補，不是取代",
+    "html": "\n<p>TMS／tES 的主要優勢是<b>可逆、在正常人身上、可設控制條件、可問時間與互動</b>，補足自然腦傷（永久、大範圍、個別差異、重組）的缺點；但效果常較小，多改變反應時間而非產生明顯行為，且有<b>安全與倫理</b>限制（rTMS 有極小的癲癇風險，需排除癲癇史、體內植入物者）。自然腦傷仍是唯一能研究<b>嚴重、長期</b>缺損的來源，因此兩者互補。<span class=\"tag\">課本 Ch5</span></p>"
+   }
+  ],
+  "traps": [
+   "寫成「TMS 等於腦傷」——它是暫時、可逆的干擾，不是真的損傷。",
+   "只寫優點，沒有提 TMS 的限制（效果小、安全、定位仍有限）。",
+   "tDCS 方向搞反：<b>陽極＋＝提高興奮性；陰極－＝降低</b>。",
+   "沒有舉例（盲人點字 TMS 是老師投影片的核心例子）。"
+  ],
+  "oral": "兩者都用讓某區失效來檢驗必要性。自然腦傷永久、範圍大、不精準、有個別差異與重組。TMS 用電磁感應在正常人身上聚焦約 1 平方公分，單脈衝效應約數十毫秒，可逆，更準確是干擾而非損傷，可問時間點、腦區互動，可設控制條件，也可能促進表現；例如 TMS 干擾盲人中枕葉影響點字辨識、不影響明眼人，證明視覺皮質在盲人是必要的。tES 用弱電流，陽極提高、陰極降低興奮性，後效與突觸可塑性有關。TMS 效果較小且有安全限制，所以與自然腦傷互補。",
+  "sources": [
+   "Ward Ch5 TMS 章節：原理、virtual lesion=interference、盲人 TMS（Cohen et al. 1997）、V5 搜尋、安全、tDCS 機制（第 3 版，已核對）。",
+   "老師投影片 Dis05 p.33–46。「tES 範圍較廣」為我的補充，未見於所讀片段。",
+   "W4 00:45:12 老師說 TMS／TES 可用來「模擬腦傷病人」、效果可恢復且暫時，已核對原檔。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_4_2",
+  "no": "4.2",
+  "ch": 4,
+  "tier": "A",
+  "title": "功能造影的「認知減法」是什麼？它有什麼問題？",
+  "signal": "W4 投影片：Donders 減法法、純插入（pure insertion）；W4 隨堂題（factorial design 不需要 pure insertion）。",
+  "answer1": "<b>認知減法</b>：比較「用到某認知成分」的作業與「沒用到」的基線作業，兩者相減，剩下的活動就代表這個成分的腦區（Donders 的概念）。<b>問題</b>：它依賴<b>純插入</b>假設——加進一個成分不會改變其他成分的運作——但實際上會有<b>交互作用</b>；而且<b>基線選擇</b>會造成結果模糊。解法是用因子設計、認知聯集、參數設計等「超越減法」的設計。",
+  "skeleton": [
+   "<b>為什麼要減</b>：腦本來一直都在活動，單一作業看不出誰專門負責什麼，必須比較兩個以上條件。",
+   "<b>定義</b>：實驗作業 − 基線作業＝成分的腦區（Donders；Petersen 1988 例）。",
+   "<b>問題①純插入假設</b>：加成分不會改變其他成分。",
+   "<b>問題②基線選擇</b>：基線不夠乾淨 → 結果模糊。",
+   "<b>解法</b>：因子設計（交互作用）、認知聯集、參數設計。"
+  ],
+  "sections": [
+   {
+    "h": "1. 它在做什麼：減去共有的，留下特有的",
+    "html": "\n<p><b>想法</b>：把「用到某成分（例如視覺詞彙）的作業」與「沒用到的基線作業」比較，兩者共有的處理會在相減後被抵銷，剩下的就是該成分的專屬腦區。<span class=\"tag\">投影片 Dis04 p.25；課本 Ch4</span></p>\n<p>為什麼需要相減？因為腦<b>一直在活動</b>，你不能只看一個作業就知道哪些區域專屬於它的哪一部分，必須比較兩個以上條件。<span class=\"tag\">課本 Ch4</span></p>\n<figure><svg viewBox=\"0 0 620 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><text x=\"10\" y=\"18\" font-size=\"12.5\" fill=\"#555\">例：看到「字」的腦區（Petersen 型作業）</text><rect x=\"10\" y=\"28\" width=\"120\" height=\"46\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"70.0\" y=\"47\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">基線作業</text><text x=\"70.0\" y=\"63\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">看一個「＋」</text><rect x=\"150\" y=\"28\" width=\"150\" height=\"46\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"225.0\" y=\"47\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">實驗作業</text><text x=\"225.0\" y=\"63\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">看一個「字」</text><line x1=\"130\" y1=\"51\" x2=\"150\" y2=\"51\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"10\" y=\"94\" width=\"290\" height=\"36\" rx=\"8\" fill=\"#f3f3f3\" stroke=\"#888\"/><text x=\"155.0\" y=\"116\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">兩者共有：視覺處理（相減後被抵銷）</text><rect x=\"10\" y=\"140\" width=\"290\" height=\"36\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"155.0\" y=\"162\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">只有實驗作業有：詞彙辨識 → 留下來</text><rect x=\"330\" y=\"28\" width=\"280\" height=\"148\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"470.0\" y=\"60\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">陷阱＝「純插入」假設</text><text x=\"470.0\" y=\"75\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">加進一個成分，</text><text x=\"470.0\" y=\"91\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">不會改變其他成分的運作？</text><text x=\"470.0\" y=\"106\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\"></text><text x=\"470.0\" y=\"122\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">實際上：看字的視覺處理</text><text x=\"470.0\" y=\"137\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">≠ 看＋的視覺處理</text><text x=\"470.0\" y=\"153\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">→ 出現交互作用，結果模糊</text></svg><figcaption>圖：認知減法與「純插入」問題（自繪，依 Dis04 p.25–27、Ward Ch4）</figcaption></figure>\n<p><b>Petersen et al. (1988) 的做法</b>（造影認知研究的開創性實驗）：看字 − 看「＋」＝詞彙辨識；朗讀字 − 看字＝說出口；產生語意關聯 − 朗讀＝提取語意，各用一個相減。<span class=\"tag\">課本 Ch4</span></p>\n"
+   },
+   {
+    "h": "2. 問題",
+    "html": "\n<p><b>① 純插入（pure insertion）假設</b>：假設加入一個新成分，<b>不會改變其他成分的運作</b>。可是實際上，例如「看字」的視覺處理可能就和「看＋」的視覺處理不同（而且基線的視覺刺激更簡單）。成分彼此可能有<b>交互作用</b>，使造影資料「至多是模糊的」。<span class=\"tag\">投影片 Dis04 p.27；課本 Ch4</span></p>\n\n<p><b>② 基線的選擇很關鍵</b>：基線應該盡量和實驗作業相似。例如「朗讀 − 看字」其實包含：從詞彙庫提取、準備與執行說話動作、還聽到自己的聲音，一次相減包含好幾個階段，所以活動模式對應「哪個精確功能」是不明的。<span class=\"tag\">課本 Ch4</span></p>"
+   },
+   {
+    "h": "3. 怎麼解決：超越減法",
+    "html": "\n<ul>\n<li><b>因子設計（factorial design）</b>：同時操弄兩個以上因素（例如觸覺 × 動作產出：A−B、C−D 看觸覺，A−C、B−D 看動作，再看交互作用 A−B vs C−D）。<b>不需要純插入假設</b>，而且能看一個因素如何影響另一個因素。<span class=\"tag\">投影片 Dis04 p.29–32</span></li>\n<li><b>認知聯集（cognitive conjunction）</b>：找在多個減法中都出現的區域。<span class=\"tag\">投影片 Dis04 p.29</span></li>\n<li><b>參數設計（parametric design）</b>：自變項是連續維度（例如每分鐘字數 0、10、30、50、70、90），看活動隨之變化。<span class=\"tag\">投影片 Dis04 p.33</span></li>\n<li><b>其他</b>：靜息態與預設模式網路（DMN）、功能連結（腦區相關）。<span class=\"tag\">投影片 Dis04 p.34–35</span></li>\n</ul>\n<p class=\"note\">隨堂題 3：下列何者「不符合」factorial design？答案：「需要 pure insertion 的假設」。<span class=\"tag\">投影片 Dis04 p.32</span></p>"
+   }
+  ],
+  "traps": [
+   "只寫定義，沒寫問題；或只寫「基線不好」，沒寫純插入。",
+   "把因子設計說成需要純插入——相反，它是用來繞過純插入的。",
+   "沒說明為什麼要用相減（腦一直都在活動）。"
+  ],
+  "oral": "認知減法是比較用到某認知成分的實驗作業與沒用到的基線作業，共有處理相減抵銷，剩下的活動就代表該成分的腦區，源自 Donders，Petersen 1988 用來找詞彙辨識、說出、語意提取。問題是純插入假設：假設加進成分不會改變其他成分，但實際會有交互作用，使資料模糊；再加上基線選擇不乾淨，一個相減常包含多個階段。解法是因子設計（可看交互作用、不需純插入）、認知聯集、參數設計等。",
+  "sources": [
+   "老師投影片 Dis04 p.25–35、p.32（隨堂題 3）。",
+   "Ward Ch4「An example of cognitive subtraction methodology」及後續 pure insertion、baseline 段落（第 3 版，已核對）。",
+   "Petersen 的三個相減細節（第三個「語意關聯 − 朗讀」）依課本片段的『a number of cognitive subtractions』與常識歸納，請對照課本確認。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_4_3",
+  "no": "4.3",
+  "ch": 4,
+  "tier": "A",
+  "title": "功能造影最終會不會完全取代損傷法？",
+  "signal": "W4：造影資料與損傷資料不一致的討論；投影片 Dis04 p.37–42。",
+  "answer1": "<b>不會。</b>兩者回答的問題不同、限制也不同：造影看到的是「相關／可能充分」，只有損傷（與 TMS）能證明<b>必要</b>；造影本身有抑制、基線、相減假設、小訊號等限制；而損傷方法也受大範圍、個別差異、重組所限。因此兩者互補，且<b>兩者不一致本身有理論價值</b>。",
+  "skeleton": [
+   "<b>立場</b>：不會完全取代，是互補。",
+   "<b>理由①</b>：必要 vs 充分——只有損傷／TMS 能證必要。",
+   "<b>理由②</b>：造影有解釋限制（抑制、基線、減法假設、時間慢）。",
+   "<b>理由③</b>：不一致的兩個方向，每個方法都可能出錯。",
+   "<b>造影反過來幫損傷法</b>：精確定位病灶、約束理論。",
+   "<b>結論</b>：交叉驗證，不一致是線索。"
+  ],
+  "sections": [
+   {
+    "h": "1. 最核心的理由：造影證不了「必要」",
+    "html": "\n<p>Ward：功能造影中，區域「活躍或不活躍」有好幾種原因，<b>活躍不代表該區對作業是關鍵</b>；而對該區有損傷的病人研究，才能得出「關鍵」的結論。<span class=\"tag\">課本 Ch5「Group studies」段首</span></p>\n<p>老師的說法：造影有活動，可能只是<b>充分</b>，不一定是<b>必要</b>。<span class=\"tag\">逐字稿 W4 00:44:17 已核對；投影片 Dis04 p.37</span>（詳見 4.4）</p>\n<figure><svg viewBox=\"0 0 620 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"14\" width=\"250\" height=\"100\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"135.0\" y=\"45\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">功能造影（fMRI）</text><text x=\"135.0\" y=\"60\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">正常人、看到「哪裡有活動」</text><text x=\"135.0\" y=\"76\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">只能說：相關／可能充分</text><text x=\"135.0\" y=\"91\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">受限：抑制、基線、相減假設</text><rect x=\"360\" y=\"14\" width=\"250\" height=\"100\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"485.0\" y=\"45\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">損傷／TMS／tES</text><text x=\"485.0\" y=\"60\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">看「拿掉它會怎樣」</text><text x=\"485.0\" y=\"76\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">才能說：必要（因果）</text><text x=\"485.0\" y=\"91\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">受限：大範圍、個別差異、重組</text><line x1=\"260\" y1=\"64\" x2=\"360\" y2=\"64\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"360\" y1=\"74\" x2=\"260\" y2=\"74\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"155\" y=\"134\" width=\"310\" height=\"44\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"160\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">交叉驗證：兩者不一致＝有理論價值</text></svg><figcaption>圖：造影與損傷法是互補，不是取代（自繪，依 Ward Ch4 末段、Ch5 開頭）</figcaption></figure>"
+   },
+   {
+    "h": "2. 造影自己的限制",
+    "html": "\n<ul>\n<li><b>抑制 vs 興奮</b>：fMRI 對神經輸入敏感，分不出興奮或抑制。</li>\n<li><b>活化 vs 去活化</b>：結果取決於基線。</li>\n<li><b>認知減法的純插入假設</b>與基線問題（見 4.2）。</li>\n<li><b>時間解析度慢</b>（HRF 幾秒）。<span class=\"tag\">投影片 Dis04 p.37；課本 Ch4</span></li>\n</ul>"
+   },
+   {
+    "h": "3. 兩種資料不一致時：誰錯都有可能",
+    "html": "\n<div class=\"tw\"><table><tr><th>造影＋、損傷－</th><th>造影－、損傷＋</th></tr>\n<tr><td>被試者的非必要策略<br>一般性資源（難度、注意、喚醒）<br>該區被抑制而非興奮<br>損傷研究檢定力不足（人數、位置、作業不同）</td>\n<td>實驗與基線都依賴該區 → 相減抵銷<br>區域小／個體差異大／訊號小而偵測不到<br>損傷的是通過該處的纖維束而非灰質</td></tr></table></div>\n<p>Ward：不一致可能出在造影、損傷或兩者；<b>沒有神奇解法，只能靠更嚴謹的實驗</b>；不一致應被視為<b>有理論價值</b>，而不是某一種方法的失敗（Henson, 2005）。<span class=\"tag\">投影片 Dis04 p.40–41；課本 Ch4 末段</span></p>"
+   },
+   {
+    "h": "4. 損傷法也不能被取代，而且兩者互相支援",
+    "html": "\n<ul>\n<li><b>損傷法有造影缺的東西</b>：因果（必要性）；也只有它能研究嚴重缺損。</li>\n<li><b>造影反過來協助損傷法</b>：造影技術使病灶定位與量化更準確。<span class=\"tag\">課本 Ch5 開頭</span></li>\n<li><b>古典神經心理學提供造影的對照資料</b>；<b>認知神經心理學提供造影研究的認知框架</b>。<span class=\"tag\">課本 Ch5「Group studies」</span></li>\n<li><b>TMS 是橋梁</b>：在正常人上做類似損傷的檢驗。</li>\n</ul>\n<p>→ 因此答案不是「誰取代誰」，而是<b>用多種方法交叉驗證</b>（converging evidence）。<span class=\"tag inf\">我的整理</span></p>"
+   }
+  ],
+  "traps": [
+   "寫「會取代，因為造影無創、方便」——忽略必要 vs 充分。",
+   "只批評造影、完全沒提損傷法的限制（要平衡）。",
+   "沒有舉出造影與損傷不一致的具體原因。"
+  ],
+  "oral": "不會，兩者互補。造影看到的是相關或可能充分，無法證明必要，要證明必要需要損傷或 TMS；造影本身有抑制與興奮分不出、基線依賴、相減假設與時間解析度慢等限制。造影與損傷不一致時，可能是策略、一般資源、抑制、損傷研究不夠有力，也可能是相減抵銷、區域小、損傷到纖維束；沒有神奇解法，不一致本身有理論價值。損傷法也有範圍大、個別差異、重組的限制，但造影可協助病灶定位。結論是交叉驗證。",
+  "sources": [
+   "Ward Ch4 末段（不一致的處理，Henson 2005）；Ch5 開頭與「Group studies and lesion-deficit analysis」（第 3 版，已核對）。",
+   "老師投影片 Dis04 p.37–42。",
+   "「最終不會取代」是依上述證據的推論；課本並未用這句話下結論，標示為我的整理。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_7_1",
+  "no": "7.1",
+  "ch": 7,
+  "tier": "A",
+  "title": "什麼是盲視？它告訴我們正常視覺系統什麼？",
+  "signal": "關鍵字 blindsight（W6 提及 20 次）；老師 W6 00:25–00:32：V1 與視覺意識相關、「盲視≠一般視覺減掉視覺運作」；陳慶凱個案；隨堂題：強迫判斷正確率高於 50% 是盲視。",
+  "answer1": "<b>盲視</b>：V1 受損的病人主觀上說「看不到」該視野的刺激，但被強迫選擇時，位置、方向、有無等判斷的正確率<b>高於猜測</b>。它說明<b>視覺處理與視覺意識可以分離</b>：除了 LGN→V1 這條主要路徑，還有上丘、丘腦枕核等其他路徑可執行粗略的視覺功能，而 V1 對<b>有意識的精細視覺</b>特別重要。",
+  "skeleton": [
+   "<b>定義</b>：V1 受損 → 視野某區主觀看不到，但強迫選擇表現高於機率。",
+   "<b>與皮質盲的差別</b>：皮質盲是視野缺損的臨床概念；盲視是其中一種特殊的保留表現。",
+   "<b>證據</b>：病人 DB（指向、眼動、方向／動作／對比辨別），陳慶凱（避障礙）。",
+   "<b>解釋</b>：不是 V1 殘餘（MRI、盲點比較），而是其他路徑（上丘、丘腦枕核、LGN→V5）。",
+   "<b>它告訴我們</b>：①視覺有多條路徑；②V1 與視覺意識有關；③無意識視覺較粗略。",
+   "<b>提醒</b>：盲視≠正常視覺減去意識。"
+  ],
+  "sections": [
+   {
+    "h": "1. 先分清：皮質盲 vs 盲視",
+    "html": "\n<figure><svg viewBox=\"0 0 620 188\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"12\" width=\"290\" height=\"36\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"155.0\" y=\"34\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">皮質盲 cortical blindness</text><rect x=\"320\" y=\"12\" width=\"290\" height=\"36\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"465.0\" y=\"34\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">盲視 blindsight</text><rect x=\"10\" y=\"54\" width=\"290\" height=\"120\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"155.0\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">V1（或視放射）受損 → 對應視野缺損</text><text x=\"155.0\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">偏盲 hemianopia（半）</text><text x=\"155.0\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">象限盲 quadrantanopia（1/4）</text><text x=\"155.0\" y=\"126\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">盲點 scotoma（小區域）</text><text x=\"155.0\" y=\"140\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">主觀：看不到</text><text x=\"155.0\" y=\"156\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">行為：多半真的不行（臨床概念）</text><rect x=\"320\" y=\"54\" width=\"290\" height=\"120\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"465.0\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">V1 受損者的特殊表現</text><text x=\"465.0\" y=\"96\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">主觀：說「看不到」</text><text x=\"465.0\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">強迫選擇：位置、方向、有無，</text><text x=\"465.0\" y=\"126\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">正確率高於 50% 猜測</text><text x=\"465.0\" y=\"140\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">＝受損的視覺</text><text x=\"465.0\" y=\"156\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">＋沒有視覺意識（awareness）</text></svg><figcaption>圖：皮質盲與盲視不是同一件事（自繪，依 Dis07 p.20–26）</figcaption></figure>\n<p><b>皮質盲</b>是 V1 受損造成對應視野缺損：半側（偏盲）、四分之一（象限盲）、小區域（盲點）。<span class=\"tag\">投影片 Dis07 p.20；課本 Ch6</span>（V1 上半部對應下半視野、下半部對應上半視野，且排列和視網膜平行＝視網膜拓樸。）</p>\n<p><b>盲視</b>是 V1 受損者的特殊表現：<b>主觀說看不到</b>，但被強迫猜時<b>在位置、方向等判斷上準確</b>。隨堂題的答案：「覺得自己看不到，但強迫判斷方位時正確率大於猜測 50%」＝盲視。<span class=\"tag\">投影片 Dis07 p.21、26；逐字稿 W6 00:30</span></p>"
+   },
+   {
+    "h": "2. 證據：病人 DB 與陳慶凱",
+    "html": "\n<p><b>DB</b>：為治療偏頭痛切除部分 V1。盲視野中刺激出現時他說什麼都沒看到，但請他<b>伸手指向或移動眼睛</b>卻很準；方向（水平／垂直／斜）、有無動作、對比（灰在黑上 vs 灰在白上）都高於機率，但他自己覺得是在亂猜。形狀辨別有限：能分 X 與 O，不能分 X 與三角形，似乎只靠邊緣與方向。<span class=\"tag\">課本 Ch6</span></p>\n<p><b>陳慶凱</b>（老師課堂舉的臺灣個案）：車禍後一般視力檢查是全盲，卻能避開障礙物，後來鑑定與盲視相符。老師用它說明：神經科學知識能避免把盲視誤認成「裝盲」，協助保險、司法與臨床判斷。<span class=\"tag\">逐字稿 W6 00:25–00:31（已核對原話）</span></p>"
+   },
+   {
+    "h": "3. 怎麼解釋？（排除 + 其他路徑）",
+    "html": "\n<p>先要排除：<b>V1 還有殘餘嗎？</b>多數病人做過結構 MRI，確認盲視野對應的皮質已經沒有了；<b>散射光</b>？盲視野的表現比天然盲點更好，無法用散射光解釋。<span class=\"tag\">課本 Ch6</span></p>\n<p>所以最合理的解釋：視覺<b>不只一條路</b>。除了 LGN→V1（最主要、最清楚），還有約十條由眼到腦的路徑：<span class=\"tag\">投影片 Dis07 p.13–18、p.23；課本 Ch6</span></p>\n<ul>\n<li><b>上丘（中腦）、丘腦枕核</b>：定向與眼動，比 V1 路徑快，可作早期預警；</li>\n<li><b>LGN 的 K 細胞 → V5/MT</b>，直接繞過 V1，可解釋動作偵測；</li>\n<li><b>prestriate（紋外）皮質</b>。</li>\n</ul>\n<figure><svg viewBox=\"0 0 620 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"70\" width=\"90\" height=\"50\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"55.0\" y=\"99\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">視網膜</text><line x1=\"100\" y1=\"85\" x2=\"150\" y2=\"40\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"100\" y1=\"95\" x2=\"150\" y2=\"95\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"100\" y1=\"105\" x2=\"150\" y2=\"150\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"150\" y=\"18\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"245.0\" y=\"36\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">LGN → V1（主要路徑）</text><text x=\"245.0\" y=\"52\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">有意識的精細視覺</text><rect x=\"150\" y=\"74\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"245.0\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">上丘、丘腦枕核(pulvinar)</text><text x=\"245.0\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">定向、眼動、快速預警</text><rect x=\"150\" y=\"130\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"245.0\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">LGN K 細胞 → V5/MT</text><text x=\"245.0\" y=\"164\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（繞過 V1 的動作路徑）</text><line x1=\"340\" y1=\"40\" x2=\"380\" y2=\"40\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"340\" y1=\"96\" x2=\"380\" y2=\"96\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"340\" y1=\"152\" x2=\"380\" y2=\"152\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"380\" y=\"18\" width=\"230\" height=\"44\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"495.0\" y=\"44\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">V1 受損：看不到（無意識）</text><rect x=\"380\" y=\"74\" width=\"230\" height=\"44\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"495.0\" y=\"100\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">仍可能保留：位置、方向、眼動</text><rect x=\"380\" y=\"130\" width=\"230\" height=\"44\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"495.0\" y=\"156\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">仍可能保留：動作偵測</text></svg><figcaption>圖：V1 以外還有舊的視覺路徑，這就是盲視的神經基礎（自繪，依 Dis07 p.13–25、Ward Ch6）</figcaption></figure>\n\n"
+   },
+   {
+    "h": "4. 它告訴我們正常視覺系統什麼？",
+    "html": "\n<ol>\n<li><b>視覺不是單一路徑</b>：LGN→V1 之外還有舊的、平行的路徑，各有功能（定向、動作、生理時鐘 SCN 等）。<span class=\"tag\">投影片 Dis07 p.13–18</span></li>\n<li><b>V1 與視覺意識有關</b>：V1 受損使病人「不知道自己看到了」，所以 V1 的功能之一可能是產生視覺意識。老師：「視覺主要皮質跟我們的視覺意識可能是有關的」。<span class=\"tag\">逐字稿 W6 00:28–00:30（已核對）</span></li>\n<li><b>處理與意識可以分離</b>：無意識路徑也能做判別，但<b>粗略</b>，遠不及 V1 的精細辨別，所以意識路徑不是多餘。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>老師的提醒</b>：盲視不能說成「正常視覺減掉意識」，因為病人的視覺處理本身<b>也是受損的</b>。<span class=\"tag\">逐字稿 W6 00:29；投影片 Dis07 p.25</span></li>\n</ol>\n<p class=\"note\">邏輯上，這是「損傷法」推論 V1 功能的例子：病人保留 vs 失去什麼，推論 V1 的必要性（7.2 會接續討論）。<span class=\"tag inf\">我的整理</span></p>"
+   }
+  ],
+  "traps": [
+   "把盲視說成「看不到但其實看得到」——要說明是<b>強迫選擇</b>下高於機率、而且<b>主觀沒有視覺經驗</b>。",
+   "把皮質盲＝盲視；皮質盲是視野缺損的臨床概念，盲視是特殊表現。",
+   "說盲視＝「正常視覺扣掉意識」——老師明確說不能這樣說（處理本身也受損）。",
+   "只寫現象，沒寫「它告訴我們什麼」（題目第二問）。"
+  ],
+  "oral": "盲視是 V1 受損的病人主觀上說看不到某視野的刺激，但強迫選擇時位置、方向、有無等判斷的正確率高於猜測，如病人 DB 能指向和眼動、陳慶凱能避障礙。它不是 V1 殘餘或散射光，而是其他路徑（上丘、丘腦枕核、LGN 的 K 細胞直接到 V5/MT、紋外皮質）在運作。它告訴我們：視覺有多條平行路徑；V1 與有意識的視覺經驗有關；無意識視覺存在但較粗略；盲視不等於正常視覺減去意識，因為處理本身也受損。",
+  "sources": [
+   "老師投影片 Dis07 p.13–26（路徑、皮質盲、盲視、隨堂題 2）。",
+   "Ward Ch6「Cortical and non-cortical routes to seeing」與盲視段落（DB、排除殘餘 V1／散射光、粗略辨別）已逐段核對（第 3 版）。",
+   "老師逐字稿 W6（10/21）：已核對 00:25–00:32 的盲視與 V1 意識、陳慶凱原話。",
+   "「W6 提及 20 次」引自你的猜題檔，未重算。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_7_2",
+  "no": "7.2",
+  "ch": 7,
+  "tier": "A",
+  "title": "V1 對視知覺在多大程度上是必要的？",
+  "signal": "關鍵字 cortical blindness（W6 提及 14 次）；必要 vs 充分的推論軸；老師 W6：V1 功能可能與視覺意識有關。",
+  "answer1": "<b>V1 對「有意識的視知覺」幾乎是必要的，但對「所有視覺處理」不是必要的。</b>V1 受損造成對應視野的皮質盲、病人報告看不到；但盲視顯示其他路徑（上丘、丘腦枕核、LGN→V5）仍能做粗略功能，所以 V1 是<b>有意識、精細視覺</b>的必要條件，而不是視覺的唯一入口。",
+  "skeleton": [
+   "<b>立場</b>：對有意識視覺幾乎必要，對一般視覺處理不是唯一必要。",
+   "<b>支持必要</b>：V1 受損→皮質盲、報告看不到；V1 的地位（約十條路中最主要）。",
+   "<b>反對「唯一必要」</b>：盲視、其他路徑、V5 動作。",
+   "<b>如何用「必要 vs 充分」推論</b>：損傷法檢驗必要；V1 不是『充分』（V1 之後還有 V4、V5、IT）。",
+   "<b>限制</b>：殘餘 V1、病人差異、盲視處理較粗略。"
+  ],
+  "sections": [
+   {
+    "h": "1. 這題的邏輯：用「損傷」檢驗必要性",
+    "html": "\n<p>題目問的是「必要」（necessary）：<b>拿掉 V1 之後，視知覺還能剩多少？</b>這正是損傷法的邏輯（見 4.4、5.1）。答案分成兩層：</p>\n<figure><svg viewBox=\"0 0 620 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"70\" width=\"90\" height=\"50\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"55.0\" y=\"99\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">視網膜</text><line x1=\"100\" y1=\"85\" x2=\"150\" y2=\"40\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"100\" y1=\"95\" x2=\"150\" y2=\"95\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"100\" y1=\"105\" x2=\"150\" y2=\"150\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"150\" y=\"18\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"245.0\" y=\"36\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">LGN → V1（主要路徑）</text><text x=\"245.0\" y=\"52\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">有意識的精細視覺</text><rect x=\"150\" y=\"74\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"245.0\" y=\"92\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">上丘、丘腦枕核(pulvinar)</text><text x=\"245.0\" y=\"108\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">定向、眼動、快速預警</text><rect x=\"150\" y=\"130\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"245.0\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">LGN K 細胞 → V5/MT</text><text x=\"245.0\" y=\"164\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（繞過 V1 的動作路徑）</text><line x1=\"340\" y1=\"40\" x2=\"380\" y2=\"40\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"340\" y1=\"96\" x2=\"380\" y2=\"96\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"340\" y1=\"152\" x2=\"380\" y2=\"152\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"380\" y=\"18\" width=\"230\" height=\"44\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"495.0\" y=\"44\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">V1 受損：看不到（無意識）</text><rect x=\"380\" y=\"74\" width=\"230\" height=\"44\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"495.0\" y=\"100\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">仍可能保留：位置、方向、眼動</text><rect x=\"380\" y=\"130\" width=\"230\" height=\"44\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"495.0\" y=\"156\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">仍可能保留：動作偵測</text></svg><figcaption>圖：V1 以外還有舊的視覺路徑，這就是盲視的神經基礎（自繪，依 Dis07 p.13–25、Ward Ch6）</figcaption></figure>"
+   },
+   {
+    "h": "2. 支持「V1 很必要」的證據",
+    "html": "\n<ul>\n<li><b>V1 受損 → 皮質盲</b>：對應視野的刺激報告「看不到」，可能是半側、四分之一或小區域。<span class=\"tag\">投影片 Dis07 p.20；課本 Ch6</span></li>\n<li><b>V1 是最主要的路徑</b>：約十條眼到腦的路徑中，經 LGN 到 V1 的最清楚，也「對人類視覺知覺貢獻最大」。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>V1 是精細辨別的基礎</b>：V1 神經元偵測邊緣、方向、波長與亮度，是建構形狀、顏色、動作的基本零件（Hubel & Wiesel）。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>V1 與視覺意識</b>：病人不知道自己有看到東西。老師：V1 的功能可能跟「知道自己有看到」有關。<span class=\"tag\">逐字稿 W6 00:28–00:30</span></li>\n</ul>"
+   },
+   {
+    "h": "3. 但不是「唯一必要」：盲視的反證",
+    "html": "\n<ul>\n<li><b>盲視</b>：V1 全沒了，仍能在強迫選擇下判斷位置、方向、動作（高於機率）；這表示其他路徑（上丘、丘腦枕核、LGN K 細胞→V5/MT、紋外皮質）仍能提供視覺資訊。<span class=\"tag\">投影片 Dis07 p.23–25；課本 Ch6</span></li>\n<li><b>動作偵測的保留</b>：直接 LGN→V5/MT（繞過 V1）的路徑可解釋部分皮質盲病人仍能辨別動作。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>Beckers & Zeki (1995)</b>：到 V5/MT 至少有兩條路：V1→MT 與視網膜→上丘→MT。<span class=\"tag\">投影片 Dis07 p.36</span></li>\n</ul>\n<p>但這些路徑<b>不如 V1 精細</b>：無意識路徑只能做粗略辨別，無法取代 V1 的細緻功能。<span class=\"tag\">課本 Ch6</span></p>"
+   },
+   {
+    "h": "4. 結論要寫成「看哪一種視覺」",
+    "html": "\n<div class=\"tw\"><table><tr><th>視覺的哪一部分</th><th>V1 必要嗎</th><th>依據</th></tr>\n<tr><td>有意識的視覺經驗</td><td>幾乎必要</td><td>V1 受損→看不到、盲視者無意識</td></tr>\n<tr><td>精細辨別（形狀、細節）</td><td>很必要</td><td>無意識路徑只能粗略</td></tr>\n<tr><td>定位、定向、眼動</td><td>不是唯一必要</td><td>上丘、丘腦枕核</td></tr>\n<tr><td>動作偵測</td><td>不是唯一必要</td><td>LGN K 細胞→V5/MT</td></tr></table></div>\n<p>而「<b>V1 對視知覺是充分的嗎？</b>」不是——V1 之後還要有 V4（顏色）、V5（動作）、IT（物體）等區域才能完成完整視知覺。<span class=\"tag\">投影片 Dis07 p.28–32</span><span class=\"tag inf\">我的整理</span></p>\n<p class=\"note\">題目的重點是「<b>在多大程度上</b>」：答案不要寫成全有或全無，要說「對有意識的精細視覺高度必要，但視覺不只這一條路」。</p>"
+   }
+  ],
+  "traps": [
+   "回答成「V1 完全必要」或「V1 不必要」——題目問的是程度。",
+   "只寫盲視，沒有說 V1 受損的主要後果（皮質盲）。",
+   "沒有區分「有意識」與「無意識／粗略」視覺。",
+   "忘記提 V1 之外的路徑要靠哪些結構（上丘、丘腦枕核、K 細胞→V5）。"
+  ],
+  "oral": "V1 對有意識的、精細的視知覺幾乎是必要的：受損造成對應視野的皮質盲，病人報告看不到，V1 也是經 LGN 的最主要路徑，並負責邊緣、方向、波長等基本特徵。但對全部視覺處理不是唯一必要：盲視病人在強迫選擇下仍能判斷位置、方向、動作，因為上丘、丘腦枕核、LGN 的 K 細胞到 V5/MT 等路徑提供粗略視覺，只是比 V1 粗略且沒有意識。所以答案是程度之分：V1 對有意識精細視覺高度必要，但不是視覺的唯一入口；也不是充分，後面還需要 V4、V5、IT。",
+  "sources": [
+   "老師投影片 Dis07 p.13–25、p.36；Ward Ch6（第 3 版）路徑與盲視、V1 神經元特性。",
+   "老師逐字稿 W6：已核對 V1 與視覺意識的原話。",
+   "「V1 不是充分」是我依 V4、V5、IT 的角色串起來的推論，課本沒有用這句話。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_7_3",
+  "no": "7.3",
+  "ch": 7,
+  "tier": "A",
+  "title": "視覺系統如何達成顏色與物體恆常？",
+  "signal": "關鍵字 object constancy（W6 提及 12 次）；老師 W6 00:03:16 提到 object constancy「在知覺、視知覺當中，這個是一個非常重要的一個想法」；W6 約 00:53–00:54 講適應／促發（adaptation／priming）「這邊還蠻重要的一個研究邏輯」，並有隨堂第 4 題（已核對原檔）；顏色恆常屬 V4（Ward 7.3 題目一部分，老師關鍵字只列物體恆常）。",
+  "answer1": "恆常性＝知覺不會隨著輸入的物理變化而改變。<b>顏色恆常</b>靠 <b>V4</b> 比較不同位置的波長、計算「表面」顏色，不受光照影響；<b>物體恆常</b>靠把視覺表徵與記憶中<b>不隨視角改變的結構描述</b>比對，由<b>兩條路</b>達成：<b>左下顳葉（梭狀回）</b>負責與視角無關的物體身分，<b>右頂葉＋右下顳葉</b>處理視角與主軸方向。",
+  "skeleton": [
+   "<b>先定義恆常性</b>：輸入變、知覺不變（為什麼需要）。",
+   "<b>顏色恆常</b>：定義＋V4 比較整個場景的波長（V1 只看局部）＋色盲病人 MS 證據。",
+   "<b>物體恆常</b>：定義＋與記憶中的結構描述比對。",
+   "<b>兩種機制</b>：特徵／部分（Biederman）vs 主軸（Marr & Nishihara）；兩者皆有。",
+   "<b>兩條路徑的證據</b>：物體方向失認症 EL、適應／促發 fMRI（左梭狀回 vs 右）。",
+   "<b>神經基礎</b>：下顳葉(IT)接受大感受野、不管位置。"
+  ],
+  "sections": [
+   {
+    "h": "1. 恆常性：為什麼需要？",
+    "html": "\n<figure><svg viewBox=\"0 0 620 188\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"14\" width=\"290\" height=\"38\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"155.0\" y=\"38\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">色彩恆常 color constancy</text><rect x=\"320\" y=\"14\" width=\"290\" height=\"38\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"465.0\" y=\"38\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">物體恆常 object constancy</text><rect x=\"10\" y=\"58\" width=\"290\" height=\"118\" rx=\"8\" fill=\"#fdf1ef\" stroke=\"#a33a2a\"/><text x=\"155.0\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">問題：光照改變，反射的波長改變</text><text x=\"155.0\" y=\"91\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（紅番茄在不同燈光下）</text><text x=\"155.0\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">仍看成同一個顏色</text><text x=\"155.0\" y=\"121\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">V4：比較不同位置的波長，</text><text x=\"155.0\" y=\"136\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">計算「表面」顏色，</text><text x=\"155.0\" y=\"151\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">而不是只看局部波長</text><text x=\"155.0\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">V1：只回應局部波長</text><rect x=\"320\" y=\"58\" width=\"290\" height=\"118\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"465.0\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">問題：視角、距離、大小、光照改變</text><text x=\"465.0\" y=\"98\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">影像改變，仍認出同一物體</text><text x=\"465.0\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">兩條路：</text><text x=\"465.0\" y=\"128\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">左側下顳葉(梭狀回)：與視角無關的物體身分</text><text x=\"465.0\" y=\"144\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">右頂葉＋右下顳葉：視角、主軸方向</text><text x=\"465.0\" y=\"158\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">→ 與記憶中的結構描述比對</text></svg><figcaption>圖：兩種恆常性（自繪，依 Ward Ch6、Dis07 p.32/43）</figcaption></figure>\n<p>眼睛收到的只是一張會一直變的二維影像（光照、距離、視角都在變），可是你看到的世界卻穩定。老師的例子：咖啡壺轉個角度、放大縮小、關掉燈讓反射光不同，<b>你還是知道是同一個東西</b>，這就是 <b>object constancy</b>。<span class=\"tag\">逐字稿 W6（咖啡壺的例子，已核對）</span></p>"
+   },
+   {
+    "h": "2. 顏色恆常：V4 怎麼做到",
+    "html": "\n<p><b>顏色恆常</b>：同一個表面在不同光線下，雖然反射的波長組成不同，仍被知覺為同一顏色。例如高比例反射長波（紅光）的表面，在白光、紅光、綠光下都看起來是紅色；這讓你在各種光線下認得紅番茄。<span class=\"tag\">課本 Ch6</span></p>\n<ul>\n<li><b>V4 是關鍵區</b>：V4 的神經元「比較其接受域內的波長與其他接受域的波長」，所以能考慮<b>整個場景的光照</b>來計算<b>表面的顏色</b>（Land 的想法）。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>早期區域（V1）只回應局部波長</b>，光源一變，反應就變，即使刺激顏色沒變。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>V4 受損 → 色盲（achromatopsia）</b>：世界變灰階，但亮度、深度、質地仍在；病人 MS 能在兩個等亮度色塊相鄰共用邊緣時判斷是否相同，但分開就不能——因為波長比較在 V4 之外只發生在局部。<span class=\"tag\">課本 Ch6；投影片 Dis07 p.32</span></li>\n<li>V4 的神經元感受野較大，且有「圍繞色相的漸變選擇性」，像色環，可能有助於恆常。<span class=\"tag\">課本 Ch6</span></li>\n</ul>\n"
+   },
+   {
+    "h": "3. 物體恆常：結構描述與兩條路",
+    "html": "\n<p><b>怎麼做</b>：把當下建構出的視覺表徵，與記憶中儲存的、帶有<b>物體不變特性</b>的「結構描述」比對。<span class=\"tag\">課本 Ch6；投影片 Dis07 p.41</span></p>\n<p><b>兩種機制</b>（兩者可能都有）：<span class=\"tag\">課本 Ch6</span></p>\n<ul>\n<li><b>特徵／部分比對</b>：把物體的特徵或部件和結構描述比對（Biederman）。</li>\n<li><b>主軸（principal axis）比對</b>：抽出物體的主軸，較整體（Marr & Nishihara）；例如網球拍從縮短的角度看，主軸不明顯，就難辨認。</li>\n</ul>\n<p><b>兩條路徑的證據</b>：<span class=\"tag\">投影片 Dis07 p.43；課本 Ch6</span></p>\n<ul>\n<li><b>臨床</b>：有些視覺失認症病人能辨認常見視角的物體，卻無法辨認不尋常視角（右頂葉損傷）；另一些人（如 EL）能叫出各種方向的物體名稱，卻<b>無法判斷物體的方向對不對</b>——<b>物體方向失認症</b>。他們用的是<b>與視角無關</b>的路徑。</li>\n<li><b>fMRI 適應／促發</b>（Vuilleumier et al., 2002）：重複同一物體時，神經反應會降低；<b>左下顳葉（梭狀回）</b>不管視角或大小都降低（視為同一物體），而右半球的對應區<b>對視角敏感</b>（大小則否）。→ 至少兩條路。</li>\n</ul>\n<p><b>下顳葉（IT）</b>的特性（單細胞記錄）：神經元回應很特定的物體屬性，感受野大、幾乎涵蓋中央凹且延伸到兩側視野，所以<b>在意是什麼、不在意在哪裡</b>——很適合計算物體恆常。<span class=\"tag\">課本 Ch6</span></p>"
+   },
+   {
+    "h": "4. 老師的適應／促發實驗（要會用邏輯）",
+    "html": "\n<p><b>邏輯</b>（隨堂題 4）：如果 A 區域負責處理這項訊息，<b>重複出現時 A 區域的激發會變小</b>（適應）。先後呈現兩個刺激，若某區域「認為是相同的刺激」，它就會降低反應。<span class=\"tag\">投影片 Dis07 p.44–51</span></p>\n<p>投影片將不同區域對應：<b>LOC（外側枕葉複合區）</b>：形狀、大小；<b>左梭狀回</b>：視角；<b>Broca 區</b>：同類／名稱。<span class=\"tag\">投影片 Dis07 p.45</span>（投影片寫：「該區域認為是相同的刺激 ⟹ 激發較小」，也就是改變某個屬性後，若該區域反應仍然降低，代表它把前後視為相同。）</p>\n"
+   }
+  ],
+  "traps": [
+   "只寫「顏色恆常＝顏色不變」這種定義——要寫 V4 怎麼算（比較整個場景的波長）。",
+   "只講物體恆常的定義，沒有「兩條路徑」的證據。",
+   "把 V1 與 V4 的顏色處理混淆：V1 只回應局部波長。",
+   "說明適應／促發時邏輯寫反：重複同一屬性 → 該區<b>反應降低</b>。"
+  ],
+  "oral": "恆常性是輸入物理變化而知覺不變。顏色恆常靠 V4：它比較不同位置的波長，計算表面顏色，不受光照影響，V1 只看局部波長；V4 受損則為色盲，世界變灰階。物體恆常靠把視覺表徵與記憶中不隨視角變的結構描述比對，可用特徵／部分或主軸比對；至少兩條路：左下顳葉（梭狀回）與視角無關，右頂葉與右下顳葉處理視角／主軸，證據有物體方向失認症病人 EL，及適應／促發 fMRI（重複同一物體，反應下降）。下顳葉感受野大，重視是什麼、不重位置，適合計算恆常。",
+  "sources": [
+   "Ward Ch6「V4: color center」（色彩恆常、病人 MS）、「Accessing structural descriptions: object constancy」「Neural substrates of object constancy」（第 3 版，已核對）。",
+   "老師投影片 Dis07 p.32、p.41–51；逐字稿 W6 line 698–701（咖啡壺的例子，已核對）。",
+   "投影片 p.45 對應表（LOC：形狀、大小；左梭狀回：視角；Broca：同類／名稱）與「該區域認為是相同的刺激 ⟹ 激發較小」已核對原文。",
+   "「W6 提及 12 次」引自你的猜題檔。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_8_6",
+  "no": "8.6",
+  "ch": 8,
+  "tier": "A",
+  "title": "語音知覺有動作成分的證據是什麼？（動作理論、McGurk、類別知覺）",
+  "signal": "W7 05:01 動作理論「很重要，但不容易懂，請課餘搞清楚」；06:37 不要只背 McGurk；28:19 類別知覺、McGurk、雙重分離是「語音≠音樂」的證據；27:48 VOT「不代表我考你」。",
+  "answer1": "<b>動作理論</b>（Liberman 等）主張：語音知覺是靠推測說話者<b>想要做的發音動作</b>來辨認音素，所以聽覺與視覺都會匯聚到語音產出的<b>運動系統</b>（額葉）。證據：①<b>McGurk 效應</b>（看嘴型改變聽到的音，涉及後上顳溝＋運動系統）；②<b>造影與 TMS</b>：premotor 區在聲音模糊時才有貢獻；③<b>鏡像神經元</b>與<b>感知學習</b>。<b>限制</b>：動作區受損僅造成輕微語音知覺障礙，所以動作成分是輔助而非全部。",
+  "skeleton": [
+   "<b>先講問題</b>：語音訊號變動大（協同發音、無一對一對應）→ 要用什麼表徵比對？",
+   "<b>動作理論</b>：用發音動作的表徵比對。",
+   "<b>證據①McGurk</b>：多感官＋運動系統（兩種解釋）。",
+   "<b>證據②造影／TMS</b>：premotor 在模糊時才有貢獻。",
+   "<b>證據③鏡像神經元、感知學習</b>。",
+   "<b>限制與反例</b>：動作區損傷只有輕微語音知覺障礙。",
+   "<b>類別知覺</b>補充：連續→離散，也和動作區有關。"
+  ],
+  "sections": [
+   {
+    "h": "1. 為什麼會需要「動作理論」？",
+    "html": "\n<p>語音知覺是「困難的任務」：母語者每秒可處理約 50 個音素，非母語或非語音約每秒 1 個；<b>協同發音（co-articulation）</b>使一個音素的聲音受前後音素影響，所以<b>聲音訊號與你聽到的音素之間沒有一對一對應</b>。<span class=\"tag\">投影片 Dis08 p.58–68；課本 Ch10</span></p>\n<p>所以問題是：大腦把千變萬化的聲音，和什麼比對？動作理論的答案：<b>和自己產生這些音的動作表徵比對</b>。<span class=\"tag\">課本 Ch10</span></p>\n\n<p>課本補充：動作指令必須是<b>抽象的</b>（不用真的複誦才能理解）。<span class=\"tag\">課本 Ch10</span></p>"
+   },
+   {
+    "h": "2. 證據① McGurk 效應",
+    "html": "\n<p><b>現象</b>（投影片版）：視覺上看到「ba」的嘴型，聽覺上聽到「da」的聲音，人們聽到折衷的聲音「tha」。（課本版：聲音 baba＋嘴型 gaga → 聽成 dada；閉眼只聽就是正確的 baba。）<span class=\"tag\">投影片 Dis08 p.74–77；課本 Ch10</span></p>\n<p><b>為什麼這是動作成分的證據？</b>大腦把視覺（嘴型＝發音動作）和聽覺合併成最佳猜測。目前有兩種解釋，都和動作有關：<span class=\"tag\">課本 Ch10；投影片 Dis08 p.78–80</span></p>\n<ul>\n<li><b>多感官知覺</b>：<b>後上顳溝（posterior STS）</b>對語音與「看到有意義的嘴型」都有反應；對它做 TMS 會降低 McGurk 的敏感度（Beauchamp et al., 2010）；容易有此錯覺的人，此區對聲畫不一致的活動更強。（隨堂題 4：干擾 posterior STS 會影響 McGurk。）</li>\n<li><b>運動系統</b>：<b>下額葉／premotor 區與腦島</b>。Skipper et al. (2007)：由 ba 聲＋ga 嘴型造成的錯覺「da」，在動作區的活動和真正的 da 相似。</li>\n<li>兩區的關係：可能是「兩者的耦合」決定錯覺是否發生（Keil et al., 2012）。</li>\n</ul>\n"
+   },
+   {
+    "h": "3. 證據② 造影與 TMS：什麼時候動作區有貢獻",
+    "html": "\n<ul>\n<li><b>TMS premotor</b>：只有在聽覺訊號<b>很難分辨</b>時，premotor 才對語音知覺有貢獻（D'Ausilio et al., 2012）。<span class=\"tag\">課本 Ch10</span></li>\n<li><b>fMRI</b>：噪音中的音素<b>被正確知覺</b>時，動作／鏡像系統比誤聽時更活躍（Callan et al., 2010）；而且對 ba 與 da 之間的混合音，動作區的活動<b>追蹤受試者的類別判斷</b>（Lee et al., 2012）。<span class=\"tag\">課本 Ch10</span></li>\n<li>這些動作區與聽覺區透過<b>背側（how）路徑</b>相連（Chevillet et al., 2013）。<span class=\"tag\">課本 Ch10；投影片 Dis08 p.34–35</span></li>\n</ul>"
+   },
+   {
+    "h": "4. 證據③ 鏡像神經元與感知學習",
+    "html": "\n<ul>\n<li><b>鏡像神經元</b>（在 premotor 與下額葉，包括部分 Broca 區）：自己做動作時會放電，看到或聽到別人做同樣動作時也會放電，兼具動作與知覺性質（Rizzolatti & Craighero, 2004）。這讓動作理論近年復甦。老師 05:01–33:29：動作理論接到鏡像神經系統（最早在猴子 premotor area 發現）。<span class=\"tag\">課本 Ch10；逐字稿 W7</span></li>\n<li><b>感知學習</b>：只聽另一種語言的音素，不足以讓它們進入左半球的語音知覺系統；<b>也要自己說出來</b>才會觸發左側化的語音知覺（Best & Avery, 1999）。<span class=\"tag\">課本 Ch10</span></li>\n</ul>"
+   },
+   {
+    "h": "5. 限制：最強版本的動作理論不成立",
+    "html": "\n<p>最強版本會預測：<b>動作／鏡像區受損會嚴重損害語音知覺</b>。可是實際上，這些區域受損的病人，在音節辨別等作業只有<b>極輕微</b>的語音知覺障礙（Hickok et al., 2011）→ 聽覺相關區域就足以支持有效的語音知覺。所以結論：<b>動作表徵有貢獻，尤其在聲音不確定時，但不是語音知覺的唯一基礎</b>。<span class=\"tag\">課本 Ch10</span></p>\n<figure><svg viewBox=\"0 0 620 198\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"205\" y=\"6\" width=\"210\" height=\"40\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"30\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">語音知覺有動作成分嗎？</text><line x1=\"310\" y1=\"46\" x2=\"105\" y2=\"76\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"10\" y=\"76\" width=\"190\" height=\"76\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"103\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">① McGurk 效應</text><text x=\"105.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">看到嘴型改變聽到的音</text><text x=\"105.0\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（多感官＋動作系統）</text><line x1=\"310\" y1=\"46\" x2=\"310\" y2=\"76\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"215\" y=\"76\" width=\"190\" height=\"76\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"103\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">② 動作系統造影／TMS</text><text x=\"310.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">模糊時 premotor 才有貢獻</text><text x=\"310.0\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">正確感知時活動較大</text><line x1=\"310\" y1=\"46\" x2=\"515\" y2=\"76\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"420\" y=\"76\" width=\"190\" height=\"76\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"103\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">③ 鏡像神經元＋學習</text><text x=\"515.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\"> premotor/Broca 區</text><text x=\"515.0\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">講過才學得會外語音素</text><rect x=\"60\" y=\"160\" width=\"500\" height=\"30\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"310.0\" y=\"179\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">但：動作區受損只造成輕微的語音知覺障礙 → 動作成分是「輔助」，不是全部</text></svg><figcaption>圖：語音知覺動作成分的三類證據與限制（自繪，依 Ward Ch10、Dis08 p.66–77）</figcaption></figure>"
+   },
+   {
+    "h": "6. 補充：類別知覺（和動作區也有關）",
+    "html": "\n<p><b>類別知覺</b>：連續變化的輸入被映射成<b>離散</b>的知覺。例：da 與 ta 只差在聲帶振動何時開始（voice onset time，VOT）：從 0 毫秒（聽成 da）到 80 毫秒（聽成 ta），在中間值（如 30 毫秒）聽者不會聽到「第三種音」，而是一律聽成其中一個。投影片定義：跨類別的辨別比同類別內好。<span class=\"tag\">課本 Ch10；投影片 Dis08 p.81–83</span></p>\n<p class=\"note\">老師 27:48：VOT「如果沒有時間，不代表我考你」。重點是概念，不是 VOT 數字。另外 McGurk、類別知覺與雙重分離，是「語音處理和音樂處理不一樣」的證據（見 8.5）。<span class=\"tag\">逐字稿 W7 27:48、28:19</span></p>"
+   }
+  ],
+  "traps": [
+   "只寫 McGurk 一個例子——老師 06:37 明說不要只背一個；至少加上 premotor TMS／fMRI、鏡像神經元或感知學習。",
+   "把動作理論說成「聽到就一定要自己發音」——它是大腦用「抽象的發音動作表徵」比對，不是真的複誦。",
+   "寫成證據一面倒——要補上限制：動作區受損只有輕微障礙。",
+   "McGurk 的組合記錯：投影片是嘴型 ba＋聲音 da → tha；課本是聲音 baba＋嘴型 gaga → dada，兩種寫法都對，寫清楚是哪種來源。"
+  ],
+  "oral": "動作理論認為語音知覺是把變動的聲音和自己的發音動作表徵比對，聽覺與視覺匯聚到運動系統（額葉）。證據：McGurk 效應，視覺嘴型改變聽覺，涉及後上顳溝的多感官整合與下額葉／premotor 的運動系統；TMS 顯示 premotor 只在聲音模糊時才有貢獻，fMRI 顯示運動區在正確知覺及類別判斷時活躍；鏡像神經元兼具動作與知覺反應；學外語音素需自己發音才會左側化。限制：動作區受損只造成輕微語音知覺障礙，所以動作成分是輔助而非唯一。類別知覺則是連續聲音被映射成離散音素。",
+  "sources": [
+   "Ward Ch10「The motor theory of speech perception」與「McGurk Illusion」（第 3 版，已逐段核對：TMS、fMRI、鏡像神經元、Best & Avery、Hickok 限制）。",
+   "老師投影片 Dis08 p.58–83（語音知覺挑戰、動作理論、McGurk、類別知覺、隨堂題 4）。",
+   "老師逐字稿 W7 05:01（動作理論）、06:37（不要只背 McGurk）、27:48（VOT）、28:19（類別知覺、McGurk、雙重分離）、33:29（前運動區、鏡像神經元）已核對原檔。（逐字稿是自動轉錄，術語常被轉錯，例如把 motor theory 寫成 modern theory。）",
+   "投影片版與課本版的 McGurk 組合不同，已並列。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_3_1",
+  "no": "3.1",
+  "ch": 3,
+  "tier": "A",
+  "title": "大腦如何產生電訊號？電生理技術怎麼利用它？",
+  "signal": "W3：EEG／ERP／MEG 是重點；投影片關鍵字：動作電位、漸進電位、訊雜比、反應時間、突觸後神經元。Ward 章末第 1 題。",
+  "answer1": "神經元有兩種電訊號：<b>動作電位</b>（軸突，全有全無、不衰減）與<b>漸進電位／突觸後電位</b>（樹突，強度隨距離遞減）。<b>單細胞記錄</b>直接數動作電位（每秒放電次數）來看神經元如何編碼；<b>EEG／ERP</b>則記錄<b>大群、同步、排列平行</b>的神經元的突觸後電位疊加到頭皮的電場，有<b>毫秒級時間解析度</b>但空間定位差；<b>MEG</b>測對應磁場，空間較好但昂貴。",
+  "skeleton": [
+   "<b>兩種電位</b>：動作電位 vs. 漸進電位（來源、傳導、衰減）。",
+   "<b>單細胞記錄</b>：數動作電位、侵入性、神經元如何編碼（選擇性、稀疏編碼）。",
+   "<b>EEG 的來源與條件</b>：突觸後電位；同步＋平行排列；皮質可、丘腦不行。",
+   "<b>EEG 與 ERP 的用法</b>：頻率分析（腦波）；ERP 時間鎖定平均。",
+   "<b>MEG</b>：磁場、較佳空間解析度、昂貴。",
+   "<b>優缺點</b>：時間好、空間差（逆問題）；非侵入；皮質下難測。"
+  ],
+  "sections": [
+   {
+    "h": "1. 大腦怎麼產生電訊號：兩種電位",
+    "html": "\n<figure><svg viewBox=\"0 0 620 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"295\" height=\"36\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"157.5\" y=\"32\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">動作電位 action potential</text><rect x=\"315\" y=\"10\" width=\"295\" height=\"36\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"462.5\" y=\"32\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">漸進電位（突觸後電位 PSP）</text><rect x=\"10\" y=\"52\" width=\"295\" height=\"86\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"157.5\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">軸突；全有或全無、傳遞不衰減</text><text x=\"157.5\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">主動傳導；頭皮上很難直接記錄</text><text x=\"157.5\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">↓</text><text x=\"157.5\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">單細胞／多單位記錄：數「每秒放電次數」</text><text x=\"157.5\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（侵入性，多用動物）</text><rect x=\"315\" y=\"52\" width=\"295\" height=\"86\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"462.5\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">樹突／細胞體；EPSP／IPSP</text><text x=\"462.5\" y=\"84\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">強度隨距離遞減、被動傳導</text><text x=\"462.5\" y=\"99\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">大群神經元同步＋平行排列→疊加</text><text x=\"462.5\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">↓</text><text x=\"462.5\" y=\"129\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">EEG／ERP（頭皮）、MEG（磁場）</text><rect x=\"10\" y=\"146\" width=\"600\" height=\"34\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"167\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">EEG 的來源是突觸後樹突電流，不是動作電位（所以皮質錐體細胞看得到，丘腦看不到）</text></svg><figcaption>圖：兩種電位、兩類技術（自繪，依 Dis03 p.21、Ward Ch3）</figcaption></figure>\n\n<ul>\n<li><b>漸進電位（突觸後電位 PSP）</b>：突觸傳遞後，在<b>樹突／細胞體</b>產生；分為興奮（EPSP）與抑制（IPSP）；強度會<b>隨距離衰減</b>、<b>被動</b>傳導。<span class=\"tag\">投影片 Dis03 p.21</span></li>\n<li><b>動作電位（AP）</b>：沿<b>軸突</b>傳遞，<b>全有或全無</b>、傳遞過程中<b>不減弱</b>，包含被動與主動成分。<span class=\"tag\">投影片 Dis03 p.21</span></li>\n</ul>\n<p class=\"note\">投影片對照表的速度欄寫「漸進電位：快速；動作電位：相對較慢」，老師 W3 也這樣說（00:23:59 漸進電位傳遞「還蠻快的」；00:24:40 動作電位傳遞「雖然慢」，但強度不減、較主動）。這個角度與課本「主動傳導才能長距離訊號」不同，答題以老師與投影片為準。<span class=\"tag\">投影片 Dis03 p.21；逐字稿 W3 已核對原檔</span></p>"
+   },
+   {
+    "h": "2. 技術①：單細胞記錄（直接數動作電位）",
+    "html": "\n<ul>\n<li><b>做法</b>：把極細電極放進神經元內（細胞內）或旁邊（細胞外，哺乳類常用），數「每秒動作電位次數」（spikes/s）對刺激的反應。多個鄰近神經元一起記＝多單位記錄。<b>侵入性</b>，主要用於動物，偶爾用於手術中的人。頭皮上無法測單一神經元的動作電位（訊號太弱、雜訊太多）。<span class=\"tag\">課本 Ch3</span></li>\n<li><b>用途</b>：看神經元<b>如何編碼</b>資訊——放電率是連續變數、反映資訊內容；看反應的<b>選擇性</b>（只對臉、不對物體）。<span class=\"tag\">課本 Ch3；Ward 章末摘要</span></li>\n</ul>"
+   },
+   {
+    "h": "3. 技術②：EEG／ERP（記錄突觸後電位的疊加）",
+    "html": "\n<p><b>EEG 的來源是突觸後樹突電流，而不是軸突的動作電位。</b>要在頭皮測到，要同時滿足：<span class=\"tag\">課本 Ch3</span></p>\n<ol>\n<li><b>一大群神經元同步活動</b>，才能產生夠大的電場；</li>\n<li>這群神經元要<b>平行排列</b>，電場才會相加而不是抵銷——大腦皮質（錐體細胞）符合；丘腦的神經元排列使其活動在頭皮「看不見」。<span class=\"tag\">課本 Ch3；逐字稿 W3（整理檔）</span></li></ol>\n<ul>\n<li><b>做法</b>：頭皮電極（10–20 系統；F 額、P 頂、O 枕、T 顳、C 中央；奇數＝左、偶數＝右、z＝中線），測的是兩點之間的電壓差。<span class=\"tag\">投影片 Dis03 p.20；課本 Ch3</span></li>\n<li><b>頻率分析（EEG）</b>：腦波 Gamma（注意）、Beta（警覺、專注）、Alpha（放鬆、冥想）、Theta、Delta（深睡）；越專注頻率越高。<span class=\"tag\">投影片 Dis03 p.24–25</span></li>\n<li><b>時間分析（ERP）</b>：把許多段 EEG 以刺激起始對齊、平均，得到 ERP（見 3.3）。</li>\n</ul>\n<p><b>重要提醒</b>：頭皮某處測到的電位不一定來自該處下方（電訊號會傳到遠處），所以 EEG／ERP <b>不擅長</b>定位。<span class=\"tag\">課本 Ch3</span></p>"
+   },
+   {
+    "h": "4. 技術③：MEG（測磁場）與優缺點比較",
+    "html": "\n\n<div class=\"tw\"><table><tr><th>面向</th><th>EEG／ERP</th><th>MEG</th></tr>\n<tr><td>測什麼</td><td>頭皮電位</td><td>神經電活動產生的磁場</td></tr>\n<tr><td>顱骨影響</td><td>訊號受顱骨、腦膜影響</td><td>不受影響</td></tr>\n<tr><td>深層偶極</td><td>難測</td><td>淺與深都能測</td></tr>\n<tr><td>時間解析度</td><td>毫秒</td><td>毫秒</td></tr>\n<tr><td>空間解析度</td><td>差</td><td>可能不錯（約 2–3 毫米）</td></tr>\n<tr><td>成本與普及</td><td>便宜、普及</td><td>昂貴（超導 SQUID、液態氦、磁屏蔽室）、少見</td></tr></table></div>\n<p><span class=\"tag\">投影片 Dis03 p.36；課本 Ch3</span></p>\n<p><b>為什麼 EEG 空間解析度差？</b>因為<b>逆問題</b>：頭皮電位是已知的，但腦中的電源有多少個、在哪裡、多強是未知的，數學上有無限多解；常用<b>偶極模型</b>（假設有幾個電源）來逼近，或乾脆改用 fMRI、MEG 補空間。<span class=\"tag\">課本 Ch3</span></p>\n<p><b>電生理工具的共同優點</b>：非侵入（EEG／MEG）、毫秒級時間解析度、價格相對低（EEG）。<span class=\"tag\">投影片 Dis03 隨堂題 2</span></p>"
+   }
+  ],
+  "traps": [
+   "寫「EEG 記錄動作電位」——錯。EEG 主要反映<b>突觸後（漸進）電位</b>的疊加。",
+   "漏掉條件（同步、平行排列），也說不出為什麼皮質看得到、丘腦看不到。",
+   "只寫優點，沒有寫空間解析度差與逆問題。",
+   "混淆單細胞記錄（數動作電位、侵入）與 EEG（頭皮、非侵入）。"
+  ],
+  "oral": "神經元有兩種電訊號：軸突的動作電位（全有全無、不衰減）與樹突的漸進電位（突觸後電位，隨距離衰減）。單細胞記錄直接數動作電位，看神經元如何編碼與選擇性，侵入性；EEG 記錄大群同步且平行排列的神經元的突觸後電位疊加，皮質看得到、丘腦看不到，可做腦波頻率分析與 ERP，時間解析度達毫秒但空間差，因為有逆問題；MEG 測磁場，不受顱骨影響、空間較好但昂貴。",
+  "sources": [
+   "老師投影片 Dis03 p.20–25、p.36（10-20、漸進／動作電位、腦波、MEG）。",
+   "Ward Ch3「Single-cell recordings」「How does EEG work?」「spatial resolution of ERPs」與章末摘要（第 3 版，已核對）。",
+   "「皮質／丘腦」的說法在課本與你的 W3 整理檔都有；W3 逐字稿我只重核了 ERP 推論那一段。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_3_3",
+  "no": "3.3",
+  "ch": 3,
+  "tier": "A",
+  "title": "ERP 是什麼？如何用來檢驗認知理論？",
+  "signal": "W3 00:37:43：「成分對應運作，實際上這都是一個推論，不代表絕對」「可能是好多不同來源彙整加總」（已核對原話）；ERP 時間鎖定、平均、訊雜比。",
+  "answer1": "<b>ERP（事件相關電位）</b>是把 EEG 以刺激（或反應）起始為零點切段、<b>平均</b>後得到的波形，用平均提高<b>訊雜比</b>，波形上的 P／N 成分反映與事件有關的處理。用法：<b>系統性操弄刺激或作業</b>，看哪個成分的<b>時間（潛時）或大小（振幅）</b>跟著變，推論認知歷程的<b>順序與獨立性</b>；例如 N170 與臉、N250 與熟悉度。但<b>成分對應認知運作是推論</b>，波形常是多個來源加總，空間定位差。",
+  "skeleton": [
+   "<b>定義</b>：事件鎖定、平均的 EEG 電位（訊號 vs 雜訊）。",
+   "<b>怎麼取得</b>：time-locked、平均、需要許多試次；成分命名（P／N＋序號或毫秒）。",
+   "<b>怎麼檢驗理論</b>：操弄刺激／作業 → 看成分潛時、振幅 → 推論歷程的時間與獨立性。",
+   "<b>例子①</b>：臉的階段（N170→N250→P400–600）與 Schweinberger 1996 的聯想促發。",
+   "<b>例子②</b>：N170 與 caricature；符號對在臉脈絡下才有 N170。",
+   "<b>限制</b>：推論、波形加總、逆問題、外因干擾。"
+  ],
+  "sections": [
+   {
+    "h": "1. ERP 是什麼、怎麼得到",
+    "html": "\n<figure><svg viewBox=\"0 0 620 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"130\" height=\"60\" rx=\"8\" fill=\"#eee\" stroke=\"#555\"/><text x=\"75.0\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">連續 EEG</text><text x=\"75.0\" y=\"62\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">（訊號＋雜訊）</text><line x1=\"140\" y1=\"50\" x2=\"175\" y2=\"50\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"175\" y=\"20\" width=\"150\" height=\"60\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"250.0\" y=\"39\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">以刺激起始為 0</text><text x=\"250.0\" y=\"54\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">切成多段（試次）</text><text x=\"250.0\" y=\"69\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">＝time-locked</text><line x1=\"325\" y1=\"50\" x2=\"360\" y2=\"50\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"360\" y=\"20\" width=\"120\" height=\"60\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"420.0\" y=\"46\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">平均</text><text x=\"420.0\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（約 30–100 次以上）</text><line x1=\"480\" y1=\"50\" x2=\"515\" y2=\"50\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"515\" y=\"20\" width=\"95\" height=\"60\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"562.5\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">ERP 波形</text><text x=\"562.5\" y=\"62\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">P／N 成分</text><rect x=\"10\" y=\"100\" width=\"600\" height=\"40\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"310.0\" y=\"124\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">與刺激鎖定的訊號每次都出現 → 留下；與刺激無關的背景活動（α、β、眨眼等）正負隨機 → 平均後趨近 0</text></svg><figcaption>圖：ERP 的取得（自繪，依 Dis03 p.29–30、Ward Ch3）</figcaption></figure>\n<ul>\n<li><b>為什麼要平均</b>：EEG 反映<b>全腦</b>的活動，其中和作業有關的只是一小部分，其餘多是背景（喚醒程度等）；所以單次試次的訊雜比很低。以<b>刺激起始</b>為零點、把許多次（例如 50–100 次；投影片寫至少 30 次）疊加平均，和刺激鎖定的訊號會浮現，雜訊平均後趨近零。<span class=\"tag\">投影片 Dis03 p.29–30；課本 Ch3</span></li>\n<li><b>怎麼讀波形</b>：x 軸＝時間（毫秒）、y 軸＝電位（微伏）；峰值用 P（正）／N（負）加序號或毫秒命名，例如 P300 是約 300 毫秒的正向峰、N400 是約 400 毫秒的負向峰。<b>正負極性本身沒有認知意義</b>（不代表興奮或抑制）。<span class=\"tag\">課本 Ch3</span></li>\n<li><b>與 EEG 的差別</b>：EEG 是連續訊號，可做頻率分析；ERP 是對特定事件時間鎖定平均後的訊號，做時間向度分析。<span class=\"tag\">投影片 Dis03 隨堂題 4</span></li>\n</ul>\n"
+   },
+   {
+    "h": "2. 怎麼用 ERP 檢驗認知理論",
+    "html": "\n<p>邏輯：<b>ERP 波形是各個認知成分的電訊號總和</b>。系統性改變刺激或作業的某些面向（例如臉是否模糊、是否熟悉），看波形的<b>哪個部分</b>跟著改變，就能推論那個處理的<b>時間點</b>與<b>是否獨立</b>。<span class=\"tag\">Ward 章末摘要</span></p>\n<p><b>例子：臉的處理階段</b>——投影片：<span class=\"tag\">投影片 Dis03 p.34</span></p>\n<figure><svg viewBox=\"0 0 620 148\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"190\" height=\"52\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">知覺編碼</text><text x=\"105.0\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（這是臉嗎？臉部結構）</text><rect x=\"215\" y=\"10\" width=\"190\" height=\"52\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">臉部辨識</text><text x=\"310.0\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（熟悉度、身份）</text><rect x=\"420\" y=\"10\" width=\"190\" height=\"52\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"515.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">人物辨識</text><text x=\"515.0\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（臉與名字）</text><line x1=\"200\" y1=\"36\" x2=\"215\" y2=\"36\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"405\" y1=\"36\" x2=\"420\" y2=\"36\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"10\" y=\"74\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">N170（約 170 毫秒）</text><text x=\"105.0\" y=\"102\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">右後顳區最強</text><text x=\"105.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">人臉、動物臉、笑臉＞物體</text><text x=\"105.0\" y=\"131\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">與是否有名無關；臉變差則變小</text><rect x=\"215\" y=\"74\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">N250</text><text x=\"310.0\" y=\"102\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">名人／熟人臉＞陌生臉</text><text x=\"310.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">不同照片的同一人也有反應</text><text x=\"310.0\" y=\"131\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（編碼的是人，不是圖片）</text><rect x=\"420\" y=\"74\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#f3faf5\" stroke=\"#2f7d4f\"/><text x=\"515.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">P400–600（300 毫秒後）</text><text x=\"515.0\" y=\"102\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">對臉與名字的重複／熟悉</text><text x=\"515.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">都有效果</text><text x=\"515.0\" y=\"131\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（跨形式的身份）</text></svg><figcaption>圖：臉部處理的假想階段與對應的 ERP 成分（自繪，依 Dis03 p.34、Ward Ch3）</figcaption></figure>\n\n<p><b>例子：用 ERP 判斷聯想促發的位置</b>（Schweinberger, 1996）：先看到葉爾欽的臉或名字，會使「戈巴契夫的臉是否熟悉」判斷更快（聯想促發）。反應時間法（Sternberg）發現促發與刺激「劣化」有交互作用，暗示發生在<b>知覺階段</b>；但 ERP 顯示聯想促發發生在 <b>300 毫秒之後</b>的晚期成分（較像知覺後階段），而劣化效果在 <b>150 毫秒以內</b>。作者結論：反應時間法可能得到無效結論，因為它假設階段是離散的。→ <b>ERP 的優勢是能分開看早與晚的時間點</b>。<span class=\"tag\">課本 Ch3</span></p>\n<p><b>例子：caricature（漫畫臉）</b>：未熟悉者的漫畫臉一開始使 N170 增強；N170 通常與臉的<b>知覺編碼</b>有關而非記憶，所以支持「是知覺上的獨特性幫助辨認」，而不是「記憶中的臉本身就是漫畫化的」。<span class=\"tag\">課本 Ch3</span></p>"
+   },
+   {
+    "h": "3. 成分的兩類與解釋限制（老師強調）",
+    "html": "\n<ul>\n<li><b>外因性（exogenous）vs 內因性（endogenous）</b>：前者與<b>刺激的物理性質</b>有關（通常較早）；後者與<b>作業</b>有關（可在刺激沒出現時也出現）。這是一個連續維度，不是截然二分。例：兩個水平點通常沒有 N170，但先看過它們當作臉裡的「眼睛」之後就會出現 N170——所以 N170 取決於詮釋，無法簡單歸類。<span class=\"tag\">投影片 Dis03 p.35；課本 Ch3</span></li>\n<li><b>「成分↔認知運作」是推論</b>：老師 W3 00:37:43：成分可能跟什麼運作有關，「實際上這都是一個推論的過程……不代表絕對」，因為得到的波形可能是<b>好多不同來源彙整加總的結果</b>（投影片 p.33 圖：(a) 觀察到的三個峰，可能來自 (b) 三個成分，也可能來自 (c) 成分形狀不同的另一組）。<span class=\"tag\">逐字稿 W3 00:37:43（已核對原話）；投影片 Dis03 p.33</span></li>\n<li><b>空間定位差</b>：逆問題。常用偶極模型；N170 與 N250 的可能來源分別在後枕區與梭狀回（Schweinberger et al., 2002）。<span class=\"tag\">課本 Ch3</span></li>\n<li><b>實務限制</b>：需要許多試次；眨眼與眼動會干擾；不易記錄說話反應（下巴動作會干擾）；假設應預測「某個特定成分」，否則容易得到偶然顯著。<span class=\"tag\">課本 Ch3</span></li>\n</ul>\n"
+   }
+  ],
+  "traps": [
+   "只寫定義，沒有「如何檢驗理論」的邏輯（操弄→看成分→推論時間與獨立性）。",
+   "把成分當成「一對一就是某個認知運作」——老師明講那是推論，不代表絕對。",
+   "忘了說「平均」是為了提高訊雜比（雜訊與刺激無關，平均後趨近零）。",
+   "說 N 向下＝抑制、P 向上＝興奮——極性沒有這種意義。"
+  ],
+  "oral": "ERP 是把 EEG 以刺激起始為零點對齊、取許多試次平均後的電位波形，時間鎖定的訊號保留、背景雜訊平均為零，因此訊雜比提高；波形有以 P／N 命名的成分。檢驗理論時，系統性操弄刺激或作業，看哪個成分的潛時或振幅隨之改變，推論認知歷程的時間與獨立性，例如臉的 N170（知覺編碼）、N250（熟悉度）、P400–600（人物），Schweinberger 用 ERP 顯示聯想促發在 300 毫秒後、不是知覺階段。限制：成分與認知運作的對應是推論，波形是多來源加總，空間定位差。",
+  "sources": [
+   "老師投影片 Dis03 p.29–35；W3 逐字稿 00:37:43–00:38:09：已核對原話（「這個都是一個推論的過程」「好多不同來源彙整加總」）。",
+   "Ward Ch3「Event-related potentials」「Face processing: ERP」「Endogenous and exogenous」「spatial resolution」（第 3 版，已核對）。",
+   "「至少 30 次」引自投影片 p.30，「50–100 次」引自課本，兩者並列。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_3_4",
+  "no": "3.4",
+  "ch": 3,
+  "tier": "A",
+  "title": "電生理研究對臉的表徵與處理有什麼貢獻？",
+  "signal": "W3：N170、人臉與動物臉；投影片 Dis03 p.34（臉的 ERP 階段）；Ward 章末題。",
+  "answer1": "<b>單細胞記錄</b>顯示顳葉有對臉選擇性的神經元，多半對<b>數張</b>臉有漸進式反應（不支持嚴格的祖母細胞），人腦中則有高度特異的稀疏編碼神經元；<b>ERP</b>則提供<b>時間序列</b>：N170（臉的知覺編碼）→N250（熟悉度／身份）→晚期成分（跨臉與名字的人物身份），並能用來裁決理論（聯想促發的位置、漫畫臉效應）。",
+  "skeleton": [
+   "<b>先立架構</b>：臉的處理有幾個假想階段（知覺編碼→辨識身份→人物表徵）。",
+   "<b>單細胞貢獻</b>：選擇性、漸進反應、稀疏編碼（vs 祖母細胞）、非身份屬性（視線方向）。",
+   "<b>ERP 貢獻</b>：N170／N250／晚期成分；時間序列。",
+   "<b>用 ERP 裁決理論</b>：聯想促發位置；漫畫臉。",
+   "<b>限制</b>：N170 與詮釋有關；空間定位差。"
+  ],
+  "sections": [
+   {
+    "h": "1. 臉的處理：一個假想的階段模型",
+    "html": "\n<p>一個簡單的模型：先對臉做<b>知覺編碼</b>（結構：眼、鼻、嘴），再進入<b>臉的辨識</b>（把知覺編碼對應到已知的臉，且不受光線與角度影響），最後是不依賴感官形式的<b>人物身份</b>（臉與名字都能提取，如職業等知識）。<span class=\"tag\">課本 Ch3；投影片 Dis03 p.34</span></p>\n<figure><svg viewBox=\"0 0 620 148\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"190\" height=\"52\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">知覺編碼</text><text x=\"105.0\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（這是臉嗎？臉部結構）</text><rect x=\"215\" y=\"10\" width=\"190\" height=\"52\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">臉部辨識</text><text x=\"310.0\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（熟悉度、身份）</text><rect x=\"420\" y=\"10\" width=\"190\" height=\"52\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"515.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">人物辨識</text><text x=\"515.0\" y=\"48\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（臉與名字）</text><line x1=\"200\" y1=\"36\" x2=\"215\" y2=\"36\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"405\" y1=\"36\" x2=\"420\" y2=\"36\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"10\" y=\"74\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">N170（約 170 毫秒）</text><text x=\"105.0\" y=\"102\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">右後顳區最強</text><text x=\"105.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">人臉、動物臉、笑臉＞物體</text><text x=\"105.0\" y=\"131\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">與是否有名無關；臉變差則變小</text><rect x=\"215\" y=\"74\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">N250</text><text x=\"310.0\" y=\"102\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">名人／熟人臉＞陌生臉</text><text x=\"310.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">不同照片的同一人也有反應</text><text x=\"310.0\" y=\"131\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（編碼的是人，不是圖片）</text><rect x=\"420\" y=\"74\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#f3faf5\" stroke=\"#2f7d4f\"/><text x=\"515.0\" y=\"87\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">P400–600（300 毫秒後）</text><text x=\"515.0\" y=\"102\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">對臉與名字的重複／熟悉</text><text x=\"515.0\" y=\"116\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">都有效果</text><text x=\"515.0\" y=\"131\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（跨形式的身份）</text></svg><figcaption>圖：臉部處理的假想階段與對應的 ERP 成分（自繪，依 Dis03 p.34、Ward Ch3）</figcaption></figure>"
+   },
+   {
+    "h": "2. 單細胞記錄的貢獻：神經元怎麼表徵臉",
+    "html": "\n<ul>\n<li><b>選擇性</b>：猴子顳葉的神經元對<b>不同的臉</b>有反應，但對物體沒有；通常對同類別中好幾個刺激反應（程度不同），例如回應數張臉、不回應物體。<span class=\"tag\">課本 Ch3（Bayliss et al., 1985）</span></li>\n<li><b>不支持嚴格的「祖母細胞」</b>（只對單一刺激反應的神經元），也不支持「完全分散」的表徵；較支持<b>稀疏編碼</b>。人類手術中記錄顯示內側顳葉有神經元對名人（如 Halle Berry、Jennifer Aniston）最強，不管圖片、衣著，甚至對<b>她的名字</b>也有反應；但不能下結論說它「只」對她反應，因為不可能測遍無限多刺激（Quiroga et al., 2005）。<span class=\"tag\">課本 Ch3</span></li>\n<li><b>不只編碼身份</b>：猴子 STS 的神經元可編碼<b>視線方向</b>（例如朝下看），可能與解讀社交線索（眼神接觸）有關。<span class=\"tag\">課本 Ch3（Perrett et al., 1992）</span></li>\n</ul>\n<p class=\"note\">要寫「表徵」時，三個名詞要懂：局部表徵（祖母細胞）、完全分散、稀疏分散。<span class=\"tag\">課本 Ch3（Rolls & Deco, 2002）</span></p>"
+   },
+   {
+    "h": "3. ERP 的貢獻：處理的時間序列",
+    "html": "\n<ul>\n<li><b>N170</b>：約 170 毫秒的負向峰，在<b>右後顳</b>電極最強，對<b>人臉與動物臉</b>都大、對物體小；與臉有無名氣<b>無關</b>，對笑臉符號也有反應，臉被知覺劣化時變小。→ <b>臉的早期知覺編碼</b>，不是身份辨識。<span class=\"tag\">課本 Ch3；投影片 Dis03 p.34；逐字稿 W3（整理檔）</span></li>\n<li><b>N250</b>：對名人或個人熟悉的臉比陌生臉大，且對<b>同一個人的不同照片</b>都有反應。→ 編碼的是<b>特定的臉</b>而不是特定的圖片。<span class=\"tag\">課本 Ch3</span></li>\n<li><b>300 毫秒之後的正向成分</b>：對特定人物的重複與熟悉度敏感，且<b>對名字也有效</b>。→ 跨形式的人物身份。<span class=\"tag\">課本 Ch3</span></li>\n</ul>\n"
+   },
+   {
+    "h": "4. 用電生理資料裁決理論（貢獻的最重要一環）",
+    "html": "\n<ul>\n<li><b>聯想促發的位置</b>：Schweinberger (1996) 以 ERP 顯示聯想促發是<b>晚期（300 毫秒後）</b>的效應，更符合<b>知覺後</b>的位置；而刺激劣化效果在 150 毫秒內。ERP 能分開早晚時間點，反應時間法的「離散階段」假設反而可能導致無效結論。<span class=\"tag\">課本 Ch3</span></li>\n<li><b>漫畫臉為什麼容易認</b>：陌生人的漫畫臉讓 N170 先增強，N170 與知覺編碼有關，所以較支持「<b>知覺上的獨特性</b>」，而非「記憶中的臉本身是漫畫化的」。<span class=\"tag\">課本 Ch3（Kaufmann & Schweinberger, 2008）</span></li>\n<li><b>N170 取決於詮釋</b>：兩個水平點在「臉」的脈絡下才引發 N170，顯示它不只受物理刺激影響（Bentin et al., 2002）。<span class=\"tag\">課本 Ch3</span></li>\n</ul>\n<p><b>限制</b>：ERP 空間定位差——偶極模型推測 N170 來源在後枕區、N250 在梭狀回（Schweinberger et al., 2002）；且成分與運作的對應是推論（見 3.3）。<span class=\"tag\">課本 Ch3</span></p>"
+   }
+  ],
+  "traps": [
+   "把 N170 說成「辨認這是誰」——它是臉的<b>知覺編碼</b>，與名氣無關；身份在 N250 之後。",
+   "只講 ERP、忘了單細胞記錄對「表徵」的貢獻（選擇性、稀疏編碼）。",
+   "把 Halle Berry 神經元說成嚴格的祖母細胞——課本說無法下此結論，且較支持稀疏編碼。",
+   "沒有寫出電生理如何「裁決理論」（聯想促發、漫畫臉）。"
+  ],
+  "oral": "單細胞記錄顯示顳葉神經元對臉有選擇性、對數張臉有漸進式反應，不支持嚴格的祖母細胞，人腦內側顳葉有對名人高度特異的稀疏編碼神經元，STS 神經元也編碼視線方向。ERP 提供時間序列：N170（約 170 毫秒、右後顳、人臉與動物臉＞物體、與有無名氣無關）反映知覺編碼；N250 反映熟悉度與特定的臉；300 毫秒後成分跨臉與名字。並可裁決理論：Schweinberger 以 ERP 顯示聯想促發是晚期效應；漫畫臉增強 N170，支持知覺獨特性。限制是空間定位差。",
+  "sources": [
+   "老師投影片 Dis03 p.34–35（臉的 ERP 階段、N170 人臉／動物臉／物體）。",
+   "Ward Ch3「Distributed versus sparse coding」「Face processing」「Why are caricatures easy to recognize?」（第 3 版，已核對）。",
+   "N170「約 130–200 毫秒、非身份」來自你的 W3 整理檔（Plaud 摘要），未重核逐字稿。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_5_4",
+  "no": "5.4",
+  "ch": 5,
+  "tier": "A",
+  "title": "TMS 與 tDCS 研究對我們理解大腦可塑性有什麼貢獻？",
+  "signal": "W4 00:34:27 盲人點字 TMS；W6 00:02:18「大腦不養廢物」（視覺皮質改處理觸覺、可塑性）；投影片 Dis05 p.34–36、44–46。Ward 章末題。",
+  "answer1": "<b>TMS</b>提供了「<b>必要性</b>」證據：fMRI／PET 只看到盲人讀點字時視覺皮質活躍（相關），TMS 干擾<b>中枕葉</b>使盲人（不是明眼人）點字辨識變差，證明視覺皮質<b>真的被改作觸覺處理</b>；TMS 映射也顯示使用量決定皮質地圖大小（盲人讀字指、球拍選手擴大、截肢者縮小）。<b>tDCS</b>顯示陽極提高、陰極降低皮質興奮性與表現，立即效應在靜息膜電位，<b>後效</b>與突觸可塑性、學習有關。",
+  "skeleton": [
+   "<b>可塑性是什麼</b>：區域功能因經驗／感覺剝奪而改變。",
+   "<b>TMS 的獨特貢獻</b>：把「活躍」變成「必要」。",
+   "<b>主要證據</b>：Cohen 1997（盲人點字）；皮質地圖隨使用量改變（盲人、球拍、截肢）。",
+   "<b>可塑性的範圍</b>：同功能（精細空間辨別）換感官；也有更不同的作業（Amedi 2004）。",
+   "<b>tDCS</b>：陽極↑、陰極↓；後效與突觸可塑性；機制。",
+   "<b>限制</b>：TMS 效應較小、空間範圍不完全清楚；層級。"
+  ],
+  "sections": [
+   {
+    "h": "1. 可塑性的問題：「活躍」不夠，要證明「必要」",
+    "html": "\n<figure><svg viewBox=\"0 0 620 156\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"12\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">fMRI／PET</text><text x=\"105.0\" y=\"47\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">盲人讀點字時視覺皮質活躍</text><text x=\"105.0\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">→ 只是相關、不一定必要</text><line x1=\"200\" y1=\"43\" x2=\"225\" y2=\"43\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"225\" y=\"12\" width=\"190\" height=\"62\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"320.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">TMS 干擾中枕葉</text><text x=\"320.0\" y=\"47\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">→ 點字辨識變差（盲人）</text><text x=\"320.0\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">→ 視覺皮質「必要」</text><line x1=\"415\" y1=\"43\" x2=\"440\" y2=\"43\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"440\" y=\"12\" width=\"170\" height=\"62\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"525.0\" y=\"32\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">結論：大腦區域可改作</text><text x=\"525.0\" y=\"47\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">他用（可塑性）</text><text x=\"525.0\" y=\"62\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">「大腦不養廢物」</text><rect x=\"10\" y=\"90\" width=\"295\" height=\"54\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"157.5\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">tDCS 陽極（＋）：提高興奮性與表現</text><text x=\"157.5\" y=\"121\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">陰極（－）：降低興奮性與表現</text><text x=\"157.5\" y=\"136\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">立即效應＝靜息膜電位</text><rect x=\"315\" y=\"90\" width=\"295\" height=\"54\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"462.5\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">後效（刺激後仍持續）</text><text x=\"462.5\" y=\"121\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">≈ 突觸可塑性、學習</text><text x=\"462.5\" y=\"136\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（GABA／麩胺酸系統）</text></svg><figcaption>圖：TMS／tDCS 如何揭露可塑性（自繪，依 Dis05 p.34–36、45，Ward Ch5）</figcaption></figure>\n<p>造影研究（Sadato et al., 1996）發現：早盲的點字讀者在讀點字時，<b>初級視覺皮質活躍</b>；晚盲或閉眼的明眼人沒有。但功能造影看到的活躍<b>不一定對作業有貢獻</b>（可能只是試圖用視覺皮質）。要確認，需要損傷方法；而「早盲且晚期僅限枕葉損傷」的病人極少，所以 <b>TMS 是最合適的方法</b>。<span class=\"tag\">課本 Ch5；逐字稿 W4（整理檔）</span></p>"
+   },
+   {
+    "h": "2. TMS 的核心證據：盲人的「視覺」皮質",
+    "html": "\n<p><b>Cohen et al. (1997)</b>：受試者把手指放在字母上（盲人讀點字、盲人與明眼人都辨識凸起的羅馬字母），同時給一串 TMS。TMS 位置有三種：<b>中枕葉（「視覺」皮質）</b>、<b>感覺運動皮質</b>、<b>「空氣」（控制）</b>。<span class=\"tag\">課本 Ch5；投影片 Dis05 p.34</span></p>\n<ul>\n<li><b>盲人</b>：TMS 干擾<b>中枕葉</b>使觸覺字母辨識變差 → 視覺皮質在盲人是用來處理<b>觸覺</b>的。</li>\n<li><b>明眼人（戴眼罩）</b>：中枕葉 TMS <b>無效</b>；要干擾<b>感覺運動皮質</b>，觸覺辨別才變差。<span class=\"tag\">投影片 Dis05 p.35</span></li>\n</ul>\n\n<p>隨堂題 3 的答案：「以 TMS 影響視覺區域，會顯著影響到盲人的點字閱讀辨識」。<span class=\"tag\">投影片 Dis05 p.36</span></p>\n<p>→ 這說明：<b>大腦區域可以改作他用</b>，老師的說法：「<b>大腦不養廢物</b>」（W6 00:02:18）。<span class=\"tag\">逐字稿 W6 00:02:18 已核對</span></p>"
+   },
+   {
+    "h": "3. TMS 的其他貢獻：皮質地圖隨使用量變",
+    "html": "\n<ul>\n<li>盲人讀字的手指，體感覺皮質的代表區<b>放大約 2–3 倍</b>（Pascual-Leone & Torres, 1993）。</li>\n<li>技巧球拍選手的皮質代表區擴大（Pearce et al., 2000）；<b>截肢者</b>的相應皮質縮小（Cohen et al., 1991）。</li>\n<li>→ <b>使用程度是可塑性的關鍵</b>。<span class=\"tag\">課本 Ch5</span></li>\n</ul>\n<p><b>可塑性有多大？</b>盲人視覺皮質改做的是<b>功能相似</b>的事（都做精細的空間辨別，只是感官從視覺換成觸覺）；但較近的研究顯示盲人的枕葉也能支持<b>很不同的作業</b>，例如動詞生成（Amedi et al., 2004）。<span class=\"tag\">課本 Ch5</span></p>\n<p><b>TMS 的方法優勢（對研究可塑性很重要）</b>：真實腦傷可能造成認知系統重組（違反透明性），而 TMS 的效應<b>短暫且可逆</b>，可以在同一人身上比較有／無干擾。<span class=\"tag\">課本 Ch5</span></p>"
+   },
+   {
+    "h": "4. tDCS 的貢獻：怎麼調整、為什麼會有後效",
+    "html": "\n<ul>\n<li><b>方向</b>：<b>陽極（＋）tDCS</b>提高皮質興奮性與表現；<b>陰極（－）</b>降低。例如陽極刺激視覺皮質，使早期視覺 ERP 成分（N100）增強、偵測弱視覺刺激更好；陰極則相反。<span class=\"tag\">投影片 Dis05 p.45；課本 Ch5</span></li>\n<li><b>立即效應 vs 後效</b>：立即效應作用在<b>靜息膜電位</b>（動物模型：陽極增加自發放電率，陰極降低）；<b>後效</b>可能是<b>突觸可塑性</b>的改變，影響學習，並牽涉神經傳導物質系統（陽極影響 GABA 系統、陰極影響麩胺酸系統）。<span class=\"tag\">課本 Ch5</span></li>\n<li><b>實務</b>：電流極弱，受試者常分不出是否真刺激（可做 sham 控制），不適感少。<span class=\"tag\">課本 Ch5</span></li>\n</ul>\n"
+   },
+   {
+    "h": "5. 限制（寫完貢獻要補）",
+    "html": "\n<ul>\n<li>TMS 只能刺激顱骨下方的位置；其影響的空間範圍<b>未完全清楚</b>，可能影響與刺激處相連的較遠區域。<span class=\"tag\">課本 Ch5</span></li>\n<li>TMS 效應通常小，多改變反應時間；tDCS 機制仍在釐清（立即效應與後效要分開看）。<span class=\"tag\">課本 Ch5</span></li>\n<li>所以 TMS／tDCS 是自然腦傷與造影的<b>補充</b>：造影提出假說（活躍），TMS 檢驗必要，自然腦傷提供嚴重案例。<span class=\"tag inf\">我的整理</span></li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "只說「TMS 證明可塑性」——要說明邏輯：造影只有相關，TMS 才證明<b>必要</b>。",
+   "盲人 TMS 結果寫反：盲人中枕葉 TMS 影響觸覺辨識，明眼人要干擾<b>感覺運動皮質</b>。",
+   "tDCS 方向搞反（陽極＝提高、陰極＝降低）。",
+   "只寫 TMS、完全沒寫 tDCS（題目有兩者）。"
+  ],
+  "oral": "TMS 把造影看到的相關變成必要性證據：Cohen 等人發現 TMS 干擾盲人的中枕葉（視覺皮質）使觸覺字母辨識變差，對戴眼罩的明眼人無效、明眼人要干擾感覺運動皮質才影響，證明盲人的視覺皮質被改作觸覺處理（大腦不養廢物）；TMS 映射也顯示使用量決定皮質地圖大小（盲人讀字指放大約 2–3 倍、球拍選手擴大、截肢者縮小）。tDCS：陽極提高、陰極降低興奮性與表現，立即效應在靜息膜電位，後效與突觸可塑性與學習有關。限制是 TMS 空間範圍不完全清楚、效應小。",
+  "sources": [
+   "Ward Ch5「What is the visual cortex of a blind person used for?」「TMS advantages over organic lesions」「tDCS」（第 3 版，已核對）。",
+   "老師投影片 Dis05 p.34–36（盲人 TMS、隨堂題 3）、p.44–46（tES）。",
+   "W4 00:34:27（盲人點字 TMS）、W6 00:02:18「大腦是不養廢物的」已核對原檔。",
+   "課本寫的是 Cohen 研究受試者為「早盲者」；投影片只寫 blind。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_1_1",
+  "no": "1.1",
+  "ch": 1,
+  "tier": "A",
+  "title": "什麼是心身問題？有哪些解決的框架？",
+  "signal": "W1 提及 13 次；老師：神經科學「絕對不會是支持二元論，比較是支持一元論」；投影片 Dis01 關鍵字 Mind body problem、Cartesian interactionism、Double-aspect、Identity theory；隨堂題 1。",
+  "answer1": "<b>心身問題</b>：物質的大腦／身體如何產生感覺、思想、情緒等心理經驗？（Ward 說更準確應稱「心—腦問題」。）主要框架有三種：<b>二元論</b>（笛卡兒：心與身是不同實體，在松果體交互作用）、<b>雙重面向論</b>（同一實體的兩種描述層次）、<b>一元論／化約論</b>（心理活動就是大腦運作，心理概念終將被神經概念取代）。認知神經科學主流偏<b>一元論</b>。",
+  "skeleton": [
+   "<b>先定義問題</b>：物質的大腦如何產生心理經驗？",
+   "<b>二元論（笛卡兒的互動論）</b>：兩種不同的實體＋松果體；為什麼對認知神經科學不利。",
+   "<b>雙重面向論（斯賓諾莎）</b>：同一事物的兩個面向；波粒類比。",
+   "<b>一元論／化約論</b>：心理＝大腦運作；燃素的類比。",
+   "<b>評估與立場</b>：認知神經科學偏一元論；化約論 vs. 雙重面向的爭論。"
+  ],
+  "sections": [
+   {
+    "h": "1. 問題是什麼",
+    "html": "\n<p>人類很早就想知道：<b>一團物質（大腦）怎麼能產生感覺、思想與情緒？</b>這叫<b>心身問題（mind–body problem）</b>；Ward 指出它更正確的名稱是<b>心—腦問題</b>，因為現在大家都同意大腦是認知中最關鍵的身體部分。<span class=\"tag\">課本 Ch1</span></p>\n<figure><svg viewBox=\"0 0 620 206\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"190\" height=\"36\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"105.0\" y=\"32\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">二元論 dualism</text><rect x=\"215\" y=\"10\" width=\"190\" height=\"36\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"32\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">雙重面向論 dual-aspect</text><rect x=\"420\" y=\"10\" width=\"190\" height=\"36\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"515.0\" y=\"32\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">一元論／化約論</text><rect x=\"10\" y=\"52\" width=\"190\" height=\"108\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"105.0\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">心（非物質）與身（物質）</text><text x=\"105.0\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">是兩種不同的東西</text><text x=\"105.0\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">會交互作用（笛卡兒：</text><text x=\"105.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">松果體）</text><text x=\"105.0\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">→ 神經科學無從研究</text><text x=\"105.0\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">非物質的心</text><rect x=\"215\" y=\"52\" width=\"190\" height=\"108\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">同一個實體，兩種描述層次</text><text x=\"310.0\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（斯賓諾莎）</text><text x=\"310.0\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">心理學看到一個面向</text><text x=\"310.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">生理學看到另一個面向</text><text x=\"310.0\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">類比：波－粒二象性</text><text x=\"310.0\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">心理概念不會被取代</text><rect x=\"420\" y=\"52\" width=\"190\" height=\"108\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"515.0\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">心理活動＝大腦運作的產物</text><text x=\"515.0\" y=\"88\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">可由研究大腦來理解</text><text x=\"515.0\" y=\"102\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">化約論：心理概念終將</text><text x=\"515.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">被神經概念取代</text><text x=\"515.0\" y=\"132\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（像「燃素」被取代）</text><text x=\"515.0\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">課程與多數神經科學家偏此</text><rect x=\"10\" y=\"168\" width=\"600\" height=\"28\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"186\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">題目的標準答案：「心智是大腦功能的產物，可以透過研究大腦的活動來理解」（隨堂題 1 的 B）</text></svg><figcaption>圖：心身問題的三種主要框架（自繪，依 Dis01 p.8–13、Ward Ch1）</figcaption></figure>"
+   },
+   {
+    "h": "2. 框架①：二元論（笛卡兒的互動論）",
+    "html": "\n<ul>\n<li><b>主張</b>：心與身是<b>不同種類的實體</b>：心是非物質、不朽的；身體是物質、會死的。兩者可以<b>交互作用</b>（可交換能量）。笛卡兒認為交互作用發生在<b>松果體</b>。<span class=\"tag\">投影片 Dis01 p.10；課本 Ch1</span></li>\n<li><b>老師補充</b>：松果體被選中的理由——它是大腦裡少見的單一（不成對）結構，笛卡兒推論它特別重要。<span class=\"tag\">逐字稿 W1（Plaud 摘要）</span></li>\n<li><b>對認知神經科學的意義</b>：如果二元論是真的，認知神經科學<b>幾乎沒有希望</b>，因為物理與生物科學的方法無法觸及非物質領域。<span class=\"tag\">課本 Ch1</span></li>\n</ul>\n"
+   },
+   {
+    "h": "3. 框架②：雙重面向論（dual-aspect theory）",
+    "html": "\n<ul>\n<li><b>主張</b>：心與腦是對<b>同一事物</b>的<b>兩個層次的描述</b>，不是兩種不同的東西（斯賓諾莎）。投影片說法：<b>形上學的一元論、知識論的二元論</b>——只有一個底層實在，但生理學看到一個面向、心理學看到另一個面向。<span class=\"tag\">投影片 Dis01 p.11；課本 Ch1</span></li>\n<li><b>類比</b>：物理學的波粒二象性——同一個電子，可以被描述成波，也可以被描述成粒子。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>老師的例子</b>：用眼睛看得到形狀；用手握得到重量與另一種形狀；敲一敲得到聲音——方法不同，看到的面向不同，但是同一個東西。<span class=\"tag\">逐字稿 W1（Plaud 摘要）</span></li>\n<li><b>為什麼有人偏好它</b>：就算完全理解情緒的神經基礎，情緒「感覺起來」還是情緒，所以心理概念不會被完全取代。<span class=\"tag\">課本 Ch1</span></li>\n</ul>"
+   },
+   {
+    "h": "4. 框架③：一元論與化約論",
+    "html": "\n<ul>\n<li><b>一元論（identity theory）</b>：心理活動來自身體（大腦）的運作，關注可測量的生理結構。身體運作出問題，心理活動就受影響。<span class=\"tag\">投影片 Dis01 p.12；逐字稿 W1</span></li>\n<li><b>化約論（reductionism）</b>：目前心理概念（情緒、記憶、注意）雖有用，但終將被純生物概念（神經元放電、神經傳導物質釋放）<b>取代</b>，心理學最後會化約為生物學。歷史類比：十七世紀人們相信可燃物含「<b>燃素</b>」，後來被「與氧結合」的化學理解取代；化約論者認為意識經驗將來也像燃素。<span class=\"tag\">課本 Ch1</span></li>\n</ul>\n<p class=\"note\">投影片的「Identity theory（一元論）」與課本的「reductionism」我對應成同一支一元論路線，這是我的整理，課本沒有明說兩者完全等同。<span class=\"tag inf\">我的對應</span></p>"
+   },
+   {
+    "h": "5. 評估：認知神經科學站在哪裡？",
+    "html": "\n<ul>\n<li><b>老師的立場</b>：這門課偏向<b>一元論</b>；神經科學「絕對不會是支持二元論，比較是支持一元論」，所以看神經運作能幫助了解心靈活動。（有些神經科學家不這麼想，不必糾結細節。）<span class=\"tag\">逐字稿 W1（已核對原話）</span></li>\n<li><b>隨堂題 1</b>：最能支持認知神經科學立場的敘述＝「心智是大腦功能的產物，並且可以透過研究大腦的活動來理解」。<span class=\"tag\">投影片 Dis01 p.13</span></li>\n<li><b>化約論 vs. 雙重面向論尚無定論</b>：Ward：心理概念會被取代，還是與神經概念並存，是未來的事；但目前，心理（認知）概念在認知神經科學中扮演<b>必要的角色</b>。<span class=\"tag\">課本 Ch1 末段</span></li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "只列三個名詞，沒有說明各自的主張與評價。",
+   "把雙重面向論說成「二元論的一種」——它形上學上是一元，只是兩種描述層次。",
+   "忘記回答「認知神經科學偏哪一邊、為什麼」。",
+   "寫成「大腦＝心智，所以心理學沒用」——課本說心理概念目前仍必要。"
+  ],
+  "oral": "心身問題是物質的大腦如何產生心理經驗。二元論（笛卡兒互動論）主張心是非物質、身是物質，兩者在松果體交互作用，但這使神經科學無從研究；雙重面向論（斯賓諾莎）認為心與腦是對同一事物的兩個描述層次，像波粒二象性；一元論／化約論認為心理活動就是大腦運作，心理概念終將被神經概念取代，像燃素被取代。認知神經科學與老師立場偏一元論，但化約與雙重面向尚無定論，目前心理概念仍必要。",
+  "sources": [
+   "老師投影片 Dis01 p.8–13（笛卡兒互動論、雙重面向、Identity theory、隨堂題 1）。",
+   "Ward Ch1「The mind–body problem」「dualism」「dual-aspect theory」「reductionism」「phlogiston」（第 3 版，已核對）。",
+   "老師逐字稿 W1：已核對二元論與一元論的原話；其餘解說（松果體理由、眼手敲擊例子）來自 Plaud 自動摘要。",
+   "「W1 提及 13 次」引自你的猜題檔。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_1_2",
+  "no": "1.2",
+  "ch": 1,
+  "tier": "A",
+  "title": "認知神經科學是不是新的顱相學？",
+  "signal": "關鍵字 phrenology；W1 功能定位 32 次；老師 W1：「功能定位論 vs 功能分散論，你需要去知道這兩個理論在說什麼」，沒有誰絕對錯；Goldstein 折衷；隨堂題 2、3。",
+  "answer1": "<b>不是，但要小心變成它。</b>顱相學有兩個假設：①不同腦區有不同功能（這個<b>保留到今天</b>）；②腦區大小使頭骨變形並對應個人能力（<b>錯誤</b>），而且它的功能清單<b>不是實證得來、也不受認知理論約束</b>。認知神經科學有<b>實證方法</b>（造影、損傷、刺激、電生理）與<b>認知理論</b>來界定功能；但若只用造影「找位置」而不懂其運作，就有淪為新顱相學的危險（Uttal）。",
+  "skeleton": [
+   "<b>先立場</b>：不是，但有風險。",
+   "<b>顱相學是什麼</b>：兩個假設（功能專門化／頭骨大小）。",
+   "<b>保留與推翻</b>：①保留（Broca、Wernicke、電刺激）；②錯（頭骨與認知無關）。",
+   "<b>為何顱相學失敗</b>：缺乏科學基礎＋心理概念太天真（母愛、破壞性）。",
+   "<b>今天的差別</b>：實證方法、多重證據、認知理論。",
+   "<b>仍然有風險</b>：只求定位、不求運作；造影的詮釋限制；模組性的爭議。",
+   "<b>定位 vs 分散的現代觀點</b>：Goldstein 折衷。"
+  ],
+  "sections": [
+   {
+    "h": "1. 顱相學是什麼",
+    "html": "\n<p>Gall 與 Spurzheim（1810）的顱相學有<b>兩個關鍵假設</b>：<span class=\"tag\">課本 Ch1</span></p>\n<ol>\n<li><b>不同腦區執行不同功能</b>，並對應不同行為；</li>\n<li><b>腦區的大小</b>會使頭骨變形，並與個別差異（認知、人格）有關。</li>\n</ol>\n\n<p>Gall 與 Spurzheim 也有正確的貢獻：大腦皮質由神經組成、兩半球透過胼胝體交換訊息、運動系統的錐體系在腦幹交叉。<span class=\"tag\">投影片 Dis01 p.25</span></p>"
+   },
+   {
+    "h": "2. 哪個保留、哪個推翻",
+    "html": "\n<figure><svg viewBox=\"0 0 620 190\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"290\" height=\"34\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"155.0\" y=\"30\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">顱相學（Gall & Spurzheim）</text><rect x=\"320\" y=\"8\" width=\"290\" height=\"34\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"465.0\" y=\"30\" text-anchor=\"middle\" font-size=\"13.5\" fill=\"#1b1b1b\">認知神經科學</text><rect x=\"10\" y=\"48\" width=\"290\" height=\"40\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"155.0\" y=\"72\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">假設①：不同腦區有不同功能</text><rect x=\"320\" y=\"48\" width=\"290\" height=\"40\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"465.0\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">仍然成立（功能專門化）：</text><text x=\"465.0\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">Broca、Wernicke、Penfield 電刺激…</text><rect x=\"10\" y=\"94\" width=\"290\" height=\"40\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"155.0\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">假設②：腦區大小→頭骨形狀</text><text x=\"155.0\" y=\"126\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">→個人能力與人格</text><rect x=\"320\" y=\"94\" width=\"290\" height=\"40\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"465.0\" y=\"110\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">錯誤：頭骨形狀與認知無關</text><text x=\"465.0\" y=\"126\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（現在直接測腦，不測頭骨）</text><rect x=\"10\" y=\"140\" width=\"290\" height=\"40\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"155.0\" y=\"156\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">功能清單（母愛、破壞性、堅定…）</text><text x=\"155.0\" y=\"172\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">不是從資料推出、也不受認知理論約束</text><rect x=\"320\" y=\"140\" width=\"290\" height=\"40\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"465.0\" y=\"156\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">功能由實證與認知理論界定</text><text x=\"465.0\" y=\"172\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">（資訊處理模型、認知神經心理學）</text></svg><figcaption>圖：顱相學與認知神經科學的對照（自繪，依 Ward Ch1、Dis01 p.24–25）</figcaption></figure>\n<ul>\n<li><b>保留：功能專門化</b>。這個觀念「在 200 年挑戰中仍存活」（Flourens 1824、Lashley 1929 的挑戰都挺過來了）。例如 Penfield 的腦電刺激、<b>Broca (1861)</b> 的兩位病人（說話能力受損、其他認知相對完好 → 語言可定位）、後來 Lichtheim 與 Wernicke 指出語言可再分成語音辨識、語音產出與概念知識。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>推翻：頭骨形狀與認知無關</b>。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>方法的缺陷</b>：顱相學的功能（Fowler 的顱相學頭像上有「母愛」「破壞性」「堅定」）<b>不是從實證資料推出的</b>，也<b>不受認知理論約束</b>。<span class=\"tag\">課本 Ch1</span></li>\n</ul>"
+   },
+   {
+    "h": "3. 為什麼顱相學失敗？今天不一樣在哪",
+    "html": "\n<p>Ward 的診斷：顱相學失敗有兩個原因——① <b>方法沒有科學基礎</b>；② <b>使用的心理概念太天真</b>。認知神經科學和它不同：<span class=\"tag\">課本 Ch1 末段</span></p>\n<ul>\n<li><b>實證、多重證據</b>：造影、損傷、TMS／tES、電生理、單細胞記錄互相驗證（見 4.3、5.5）。</li>\n<li><b>有認知理論</b>：資訊處理模型與認知神經心理學來界定「認知的零件」，在不涉及位置時就能推論功能是否可分（例如說話與聽話可獨立受損）。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>造影帶動了領域發展</b>，同時也讓腦損傷被精確描述。<span class=\"tag\">課本 Ch1</span></li>\n</ul>"
+   },
+   {
+    "h": "4. 但風險仍在：變成「新顱相學」",
+    "html": "\n<ul>\n<li><b>只求定位、不問運作</b>：Ward 的摘要：功能造影推動了領域，但「<b>只用這些方法來定位認知功能而不理解它們如何運作</b>」是危險。造影與其他神經科學進展<b>需要認知心理學</b>來提出適當研究問題，才不會變成新顱相學（Uttal, 2001）。<span class=\"tag\">課本 Ch1 末段</span></li>\n<li><b>造影的詮釋限制</b>：活躍≠必要（見 4.4）；活躍位置只是相關。<span class=\"tag\">投影片 Dis04 p.37</span></li>\n<li><b>模組性的爭議</b>：Fodor 的強版本（領域特定、先天、獨立的模組）不被經驗證據支持，但腦區是「領域特定」還是「領域通用」仍在辯論。<span class=\"tag\">課本 Ch1</span></li>\n</ul>"
+   },
+   {
+    "h": "5. 補充：功能定位 vs. 功能分散（老師要求要知道）",
+    "html": "\n<figure><svg viewBox=\"0 0 620 134\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"16\" width=\"150\" height=\"60\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"85.0\" y=\"35\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">功能定位論</text><text x=\"85.0\" y=\"50\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">Gall、Broca、Wernicke、</text><text x=\"85.0\" y=\"64\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">Fritsch & Hitzig、Brodmann</text><rect x=\"235\" y=\"16\" width=\"150\" height=\"60\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"35\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">折衷：Goldstein</text><text x=\"310.0\" y=\"50\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">基本功能（視、聽、動作）偏定位</text><text x=\"310.0\" y=\"64\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">高階功能偏分散</text><rect x=\"460\" y=\"16\" width=\"150\" height=\"60\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"535.0\" y=\"35\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">功能分散論</text><text x=\"535.0\" y=\"50\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">Flourens、Goltz、Lashley</text><text x=\"535.0\" y=\"64\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（等位潛能、量而非位置）</text><line x1=\"160\" y1=\"46\" x2=\"235\" y2=\"46\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"460\" y1=\"46\" x2=\"385\" y2=\"46\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"10\" y=\"90\" width=\"600\" height=\"34\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"111\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">現代：腦區有專門化，但彼此高度連結；某些區域在特定功能中更關鍵（隨堂題 2 的 C）</text></svg><figcaption>圖：功能定位論與分散論（自繪，依 Dis01 p.26–37）</figcaption></figure>\n\n<ul>\n<li><b>定位論</b>：Gall、Broca（左額葉→表達）、Wernicke（顳頂→理解）、1870 年 Fritsch & Hitzig 電刺激狗的運動區、Brodmann（1909，依細胞結構把皮質分成 52 區，結構~功能）。<span class=\"tag\">投影片 Dis01 p.26–33</span></li>\n<li><b>分散論</b>：Flourens（鳥類受損後恢復）、Goltz（狗；破壞後仍能動）、Lashley（大鼠；等位潛能 equipotentiality，損傷程度與組織的「量」而非「位置」相關）。<span class=\"tag\">投影片 Dis01 p.30–34、p.32</span></li>\n<li><b>折衷（Goldstein）</b>：基本功能（視覺、聽覺、動作）偏定位；高階功能（記憶、語言、推理、情緒）需多腦區協作，偏分散。<span class=\"tag\">投影片 Dis01 p.35；逐字稿 W1</span></li>\n<li><b>隨堂題 2</b>：正確敘述＝「大腦區域之間高度互聯，但特定腦區在特定認知功能中扮演更為關鍵的角色」。<span class=\"tag\">投影片 Dis01 p.21</span></li>\n</ul>\n<p class=\"note\">老師說這兩個理論「沒有誰絕對對錯」（W1 00:26:42，已核對原檔）。</p>"
+   }
+  ],
+  "traps": [
+   "回答「是」或「不是」就結束——要說兩個假設各自的命運與風險。",
+   "把顱相學說成「完全錯」——功能專門化的觀念保留到今天。",
+   "只說「現在用科學方法」，沒說清楚是哪些方法、哪些理論約束。",
+   "忘了提「新顱相學」的警告：只定位、不問運作（Uttal）。"
+  ],
+  "oral": "不是，但要小心。顱相學有兩個假設：不同腦區有不同功能（保留到今天，如 Broca 與 Penfield 的證據），以及腦區大小改變頭骨並對應人格能力（錯誤，頭骨與認知無關），且其功能清單不是實證得來、不受認知理論約束，心理概念也太天真。認知神經科學則有造影、損傷、TMS、電生理等多重實證方法，並以認知理論界定功能。但若只用造影找位置而不理解運作，就可能變成新顱相學（Uttal），需要認知心理學提出好問題。現代觀點是 Goldstein 折衷：基本功能偏定位、高階功能偏分散。",
+  "sources": [
+   "Ward Ch1「Scientific approaches to mind and brain」（顱相學兩假設、Broca、cognitive neuropsychology）與末段「new phrenology」「Is the brain modular?」「Summary」（第 3 版，已核對）。",
+   "老師投影片 Dis01 p.24–37（顱相學、定位 vs 分散、Lashley、Brodmann、Goldstein、隨堂題 2）。",
+   "W1 逐字稿：已核對定位論起源（1745）等段落；「兩個理論沒有誰絕對對錯」（W1 00:26:42）已核對原檔。",
+   "「W1 功能定位 32 次」引自你的猜題檔。"
+  ],
+  "pri": null
+ },
+ {
+  "id": "E_2_2",
+  "no": "2.2",
+  "ch": 2,
+  "tier": "B",
+  "title": "神經元如何產生電訊號與化學訊號？",
+  "signal": "猜題檔標「中高」：衝接影片 4；W3 動作電位／漸變電位（逐字稿關鍵字統計：動作電位 21 次、漸變電位 15 次，已用逐字稿重數相符）；Dis03 p.21 有整張比較表。",
+  "answer1": "<b>電訊號</b>有兩種：樹突與細胞本體的<b>漸進（突觸後）電位</b>——被動傳導、會衰減、可興奮或抑制、彼此相加；以及軸突的<b>動作電位</b>——總和夠強時在軸突起始處觸發，主動傳導、<b>全有全無</b>、不衰減。軸突終端的動作電位使<b>神經傳導物質</b>釋放進突觸間隙（<b>化學訊號</b>），結合下一個神經元的受體，又產生新的突觸電位。",
+  "skeleton": [
+   "<b>電訊號 ①</b>：突觸電位（漸進電位）——被動、衰減、興奮／抑制、總和。",
+   "<b>電訊號 ②</b>：動作電位——門檻、Na⁺ 流入、K⁺ 流出、超極化、全有全無。",
+   "<b>化學訊號</b>：終端釋放神經傳導物質→受體→興奮或抑制。",
+   "<b>串起來</b>：電→化學→電；兩種電訊號的差別（Dis03 p.21）。"
+  ],
+  "sections": [
+   {
+    "h": "1. 先看全貌：電、化學、再電",
+    "html": "\n<p>神經元的基本構造：<b>樹突</b>接收訊息、<b>細胞本體</b>整合、<b>軸突</b>把訊息送出去；每個神經元有很多樹突，但只有一條軸突。<span class=\"tag\">課本 Ch2</span></p>\n<figure><svg viewBox=\"0 0 672 122\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"5\" y=\"14\" width=\"118\" height=\"62\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"64.0\" y=\"20\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">樹突＋細胞本體</text><text x=\"64.0\" y=\"34\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">接收突觸電位</text><text x=\"64.0\" y=\"49\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（漸進電位）</text><text x=\"64.0\" y=\"63\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">被動、會衰減</text><text x=\"64.0\" y=\"78\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">興奮／抑制相加</text><rect x=\"150\" y=\"14\" width=\"100\" height=\"62\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"200.0\" y=\"27\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">軸突起始處</text><text x=\"200.0\" y=\"42\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（hillock）</text><text x=\"200.0\" y=\"56\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">總和夠強→</text><text x=\"200.0\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">觸發動作電位</text><rect x=\"277\" y=\"14\" width=\"118\" height=\"62\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"336.0\" y=\"27\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">軸突</text><text x=\"336.0\" y=\"42\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">動作電位（主動）</text><text x=\"336.0\" y=\"56\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">全有全無、不衰減</text><text x=\"336.0\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">Na⁺ / K⁺ 通道</text><rect x=\"422\" y=\"14\" width=\"100\" height=\"62\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"472.0\" y=\"34\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">軸突終端</text><text x=\"472.0\" y=\"49\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">釋放神經</text><text x=\"472.0\" y=\"63\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">傳導物質</text><rect x=\"548\" y=\"14\" width=\"118\" height=\"62\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"607.0\" y=\"27\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">突觸間隙→</text><text x=\"607.0\" y=\"42\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">下一個神經元</text><text x=\"607.0\" y=\"56\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">受體結合→</text><text x=\"607.0\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">新的突觸電位</text><line x1=\"123\" y1=\"45\" x2=\"150\" y2=\"45\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"250\" y1=\"45\" x2=\"277\" y2=\"45\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"395\" y1=\"45\" x2=\"422\" y2=\"45\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"522\" y1=\"45\" x2=\"548\" y2=\"45\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"5\" y=\"88\" width=\"245\" height=\"24\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"127.5\" y=\"104\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">電訊號（被動）</text><rect x=\"277\" y=\"88\" width=\"118\" height=\"24\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"336.0\" y=\"104\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">電訊號（主動）</text><rect x=\"422\" y=\"88\" width=\"244\" height=\"24\" rx=\"8\" fill=\"#f1faf3\" stroke=\"#2f7d4f\"/><text x=\"544.0\" y=\"104\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">化學訊號（神經傳導物質）</text></svg><figcaption>圖：訊號沿神經元的流向——電、化學、再電（自繪，依 Ward Ch2、Dis03 p.21）</figcaption></figure>"
+   },
+   {
+    "h": "2. 動作電位怎麼產生",
+    "html": "\n<ul>\n<li><b>靜止電位</b>：細胞膜內外的 Na⁺、K⁺ 離子分布不均，膜內相對於膜外約 <b>−70 mV</b>。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>觸發</b>：若流到軸突起始處的被動電流夠強，電壓閘控的 <b>Na⁺ 通道</b>開始打開；Na⁺ 流入，膜內負電下降（<b>去極化</b>），約 <b>−50 mV</b> 時膜完全通透，膜內電荷瞬間反轉，這個「突然去極化再恢復」就是動作電位。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>恢復</b>：K⁺ 通道讓 K⁺ 流出、Na⁺ 通道關閉，負電位恢復；之後有短暫的<b>超極化</b>，使軸突不易立刻再放電，也避免動作電位往回傳。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>傳導</b>：一處的動作電位打開鄰近的 Na⁺ 通道，所以沿軸突一路傳下去；<b>髓鞘</b>能加快傳導，動作電位在郎飛氏結之間「跳」過去。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>只有軸突</b>有電壓閘控通道，所以只有軸突能產生動作電位。<span class=\"tag\">課本 Ch2</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 660 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><path d=\"M 40 150 L 120 150 C 150 150 160 140 170 120 L 185 30 C 195 10 205 10 215 35 L 235 130 C 245 170 265 185 285 178 C 305 172 320 155 345 150 L 540 150\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><line x1=\"40\" y1=\"150\" x2=\"560\" y2=\"150\" stroke=\"#999\" stroke-dasharray=\"4 4\"/><text x=\"565\" y=\"154\" font-size=\"11.5\" fill=\"#444\">靜止 −70 mV</text><line x1=\"40\" y1=\"118\" x2=\"560\" y2=\"118\" stroke=\"#c9792b\" stroke-dasharray=\"2 4\"/><text x=\"565\" y=\"122\" font-size=\"11.5\" fill=\"#444\">門檻約 −50 mV</text><text x=\"45\" y=\"170\" font-size=\"12\" fill=\"#1b1b1b\">①靜止</text><text x=\"60\" y=\"108\" font-size=\"12\" fill=\"#b8561f\">②Na⁺通道開</text><text x=\"222\" y=\"22\" font-size=\"12\" fill=\"#1f4e79\">③Na⁺流入：去極化</text><text x=\"300\" y=\"132\" font-size=\"12\" fill=\"#2f7d4f\">④K⁺流出：再極化</text><text x=\"285\" y=\"198\" font-size=\"12\" fill=\"#a33a2a\">⑤超極化（短暫更負）</text></svg><figcaption>圖：動作電位的階段示意（自繪；數值與順序依 Ward Ch2，曲線形狀僅為示意）</figcaption></figure>"
+   },
+   {
+    "h": "3. 化學訊號：突觸傳遞",
+    "html": "\n<ul>\n<li>動作電位到達軸突終端→釋放<b>神經傳導物質</b>進<b>突觸間隙</b>→結合<b>突觸後神經元</b>的受體（多為傳導物質閘控的離子通道）。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>興奮性</b>（如乙醯膽鹼）：讓突觸後神經元更容易放電。<b>抑制性</b>（如 GABA）：例如開 Cl⁻ 通道使膜內更負，更難去極化。<span class=\"tag\">課本 Ch2</span></li>\n<li>突觸後神經元會把<b>很多個</b>、來自不同遠近樹突位置的突觸電位<b>加總</b>，不是一個接一個的簡單連鎖反應。<span class=\"tag\">課本 Ch2</span></li>\n<li>例外：少數突觸（如視網膜的 gap junction）是直接用電訊號、不用化學訊號。<span class=\"tag\">課本 Ch2</span></li>\n</ul>"
+   },
+   {
+    "h": "4. 老師投影片的比較表：漸進電位 vs. 動作電位",
+    "html": "\n\n<ul>\n<li><b>漸進電位</b>：興奮／抑制（EPSPs／IPSPs）；傳遞會漸漸減弱；被動。</li>\n<li><b>動作電位</b>：只有興奮；全有全無（傳遞過程不減弱）；包含被動與主動。<span class=\"tag\">投影片 Dis03 p.21</span></li>\n<li class=\"note\">投影片的「速度」那一列寫漸進電位「快速」、動作電位「相對較慢」，老師在 W3 也這樣說：00:23:59 漸進電位傳遞「還蠻快的」，00:24:40 動作電位傳遞「雖然慢」，但強度維持、較主動。這和課本「主動傳導才能長距離、髓鞘可加速」的角度不同，答題以老師與投影片為準：漸進電位＝被動、快、會衰減；動作電位＝較主動、相對慢、不衰減、全有全無。<span class=\"tag\">投影片 Dis03 p.21；逐字稿 W3 已核對原檔</span></li>\n</ul>\n<p>為什麼這和 EEG 有關：EEG 的訊號主要來自<b>突觸後樹突電流</b>（被動），而不是軸突的動作電位。<span class=\"tag\">課本 Ch3</span></p>"
+   }
+  ],
+  "traps": [
+   "只寫動作電位，沒寫突觸後的漸進電位，也沒講化學訊號怎麼接回電訊號。",
+   "把「全有全無」寫成「越強越大」——強度改變的是<b>放電次數</b>，不是大小。",
+   "把漸進電位寫成會「不衰減地傳很遠」；它是被動、短距離、會衰減。",
+   "忘記抑制性突觸：突觸電位可以是興奮也可以是抑制，動作電位只有一種。"
+  ],
+  "oral": "神經元用兩種電訊號和一種化學訊號溝通。樹突和細胞本體接收突觸後電位，也就是漸進電位：被動、會衰減、可興奮或抑制、彼此加總。總和在軸突起始處夠強、到約負五十毫伏，Na⁺ 通道打開、Na⁺ 流入去極化，隨後 K⁺ 流出再極化，形成動作電位；它全有全無、主動傳導、不衰減，有髓鞘會加速。動作電位到軸突終端，釋放神經傳導物質進突觸間隙，結合突觸後受體，產生興奮或抑制的新突觸電位。",
+  "sources": [
+   "Ward Ch2「Structure and Function of the Neuron」「Electrical signaling and the action potential」「Chemical signaling and the postsynaptic neuron」（第 3 版，已讀）；Ch3 EEG 段（突觸後電流）。",
+   "老師投影片 Dis03 p.21（漸進電位 vs. 動作電位比較表；關鍵字 Action potentials、Gradient potentials、Postsynaptic neuron）。",
+   "W3 00:23:59、00:24:40 老師講漸進電位與動作電位的特性，已核對原檔；動作電位曲線僅為示意圖。"
+  ],
+  "pri": "中高"
+ },
+ {
+  "id": "E_2_1",
+  "no": "2.1",
+  "ch": 2,
+  "tier": "B",
+  "title": "神經元之間如何溝通？",
+  "signal": "猜題檔標「中」：衝接影片 4；W3 突觸後。內容與 2.2 高度重疊，建議先讀 2.2。",
+  "answer1": "神經元之間靠<b>突觸</b>溝通：上游（突觸前）神經元的動作電位傳到軸突終端，釋放<b>神經傳導物質</b>進突觸間隙，結合下游（突觸後）神經元的受體，產生興奮或抑制的突觸電位；下游神經元把許多突觸電位<b>加總</b>，夠強才在軸突起始處觸發自己的動作電位。少數突觸（如視網膜 gap junction）是電突觸。",
+  "skeleton": [
+   "<b>突觸</b>：突觸前→突觸間隙→突觸後，方向是軸突到樹突或細胞本體。",
+   "<b>化學傳遞</b>：動作電位→釋放傳導物質→結合受體→突觸電位。",
+   "<b>興奮 vs. 抑制</b>：乙醯膽鹼 vs. GABA。",
+   "<b>加總</b>：多個突觸電位相加，超過門檻才放電；不是簡單連鎖反應。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>方向</b>：資訊從上游神經元的軸突終端，送到下游神經元的樹突或細胞本體；前者叫<b>突觸前</b>，後者叫<b>突觸後</b>。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>化學傳遞</b>：動作電位到軸突終端→<b>神經傳導物質</b>進突觸間隙→結合突觸後受體→形成突觸電位。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>兩種效果</b>：興奮性（乙醯膽鹼）讓下游更易放電；抑制性（GABA）讓下游更不易放電。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>整合</b>：下游神經元把許多不同位置的突觸電位<b>加總</b>，總和在軸突起始處夠強，才觸發動作電位。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>例外</b>：少數突觸直接用電訊號（如視網膜 gap junction）。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>老師關鍵字</b>：Postsynaptic neuron（Dis03）。<span class=\"tag\">投影片 Dis03</span></li>\n</ul>\n<p>訊號流向的圖見 2.2（電→化學→電）。</p>"
+   }
+  ],
+  "traps": [
+   "寫成「神經元一個接一個傳」就結束，沒提加總與門檻。",
+   "只講興奮，沒講抑制。",
+   "把突觸電位（被動）和動作電位（主動）混在一起。"
+  ],
+  "oral": "神經元之間靠突觸做化學傳遞：突觸前神經元的動作電位到軸突終端，釋放神經傳導物質進突觸間隙，結合突觸後受體，產生興奮或抑制的突觸電位。突觸後神經元把許多突觸電位加總，夠強才在軸突起始處觸發自己的動作電位。少數突觸用電訊號。",
+  "sources": [
+   "Ward Ch2「Structure and Function of the Neuron」「Chemical signaling and the postsynaptic neuron」（第 3 版，已讀）。",
+   "老師投影片 Dis03 關鍵字 Postsynaptic neuron；「衝接影片 4」引自你的猜題檔，我沒有看過該影片。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_3_2",
+  "no": "3.2",
+  "ch": 3,
+  "tier": "B",
+  "title": "神經元如何編碼資訊？",
+  "signal": "猜題檔標「中」：放電頻率。你的猜題檔註記「W3 隨堂（刺激強度）」，但 Dis03 的 4 題隨堂（反應時間、電生理優點、腦波頻率、ERP 敘述）與 W3 逐字稿中，我都沒找到刺激強度的隨堂題。",
+  "answer1": "最基本的是<b>率編碼</b>：動作電位大小固定，資訊在<b>每秒放電次數</b>；神經元對某些刺激放電多、對其他放電少。另一種是<b>時間編碼</b>：資訊在多個神經元放電的<b>同步性</b>。就表徵的分布而言，神經元通常對同類的多個刺激都有反應，不支持嚴格的「祖母細胞」，課本傾向<b>稀疏分散式</b>表徵。",
+  "skeleton": [
+   "<b>基本單位</b>：動作電位大小固定→資訊在放電率（率編碼）。",
+   "<b>證據</b>：單細胞記錄（臉細胞、Halle Berry 神經元、凝視方向）。",
+   "<b>時間編碼</b>：同步性（Engel 1991）。",
+   "<b>分布方式</b>：局部／完全分散／稀疏分散；祖母細胞評估。"
+  ],
+  "sections": [
+   {
+    "h": "1. 率編碼",
+    "html": "\n<ul>\n<li>動作電位的<b>大小不變</b>，但<b>每秒個數</b>連續變化；放電率就是神經元攜帶資訊的「碼」。有的神經元說話時放電多、看東西時不放電，另一些則相反。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>單細胞記錄</b>：在動物腦中插微電極，數對刺激放電的次數。顳葉皮質神經元對一組臉中的多張臉都有反應、程度不同（Bayliss 1985）；人類內側顳葉有神經元對特定人物（如 Halle Berry）反應較強（Quiroga 2005）；猴子 STS 神經元對向下的凝視方向反應（Perrett 1992）。<span class=\"tag\">課本 Ch3</span></li>\n<li><b>老師隨堂</b>：猜題檔註記「W3 隨堂（刺激強度）」，我在 Dis03 隨堂題與 W3 逐字稿都沒查到對應題目，因此不引用。若你記得那題在哪裡，請告訴我。<span class=\"tag inf\">查無對應</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 152\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"31\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">率編碼 rate coding</text><rect x=\"215\" y=\"10\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"31\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">時間編碼 temporal coding</text><rect x=\"420\" y=\"10\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"31\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">表徵的分布方式</text><rect x=\"10\" y=\"50\" width=\"190\" height=\"92\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">動作電位大小固定</text><text x=\"105.0\" y=\"85\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">資訊在每秒放電次數</text><text x=\"105.0\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（刺激越強，放電越多）</text><text x=\"105.0\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">例：顳葉神經元對</text><text x=\"105.0\" y=\"129\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">不同臉反應程度不同</text><rect x=\"215\" y=\"50\" width=\"190\" height=\"92\" rx=\"8\" fill=\"#f1faf3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">資訊在放電的同步性</text><text x=\"310.0\" y=\"85\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">例：Engel 1991，</text><text x=\"310.0\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">同一條光棒刺激兩區，</text><text x=\"310.0\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">兩區放電同步；</text><text x=\"310.0\" y=\"129\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">兩條不同光棒則不同步</text><rect x=\"420\" y=\"50\" width=\"190\" height=\"92\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">局部（祖母細胞）</text><text x=\"515.0\" y=\"85\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">完全分散</text><text x=\"515.0\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">稀疏分散（課本傾向）</text><text x=\"515.0\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">反例：神經元通常</text><text x=\"515.0\" y=\"129\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">對同類多個刺激都有反應</text></svg><figcaption>圖：神經元編碼資訊的方式（自繪，依 Ward Ch2–3）</figcaption></figure>"
+   },
+   {
+    "h": "2. 時間編碼",
+    "html": "\n<ul>\n<li>資訊也可以在<b>放電的同步性</b>。Engel 等人（1991）在猴子初級視覺皮質記錄多細胞：兩個區域被<b>同一條</b>光棒刺激時，放電同步；被<b>兩條不同</b>光棒刺激時，兩區都有放電率增加，但沒有同步。<span class=\"tag\">課本 Ch3</span></li>\n</ul>"
+   },
+   {
+    "h": "3. 表徵怎麼分布？祖母細胞的評估",
+    "html": "\n<ul>\n<li>Rolls & Deco（2002）：<b>局部</b>表徵（一個神經元攜帶全部資訊，如祖母細胞）、<b>完全分散</b>（全部神經元都攜帶）、<b>稀疏分散</b>（一小部分神經元攜帶）。<span class=\"tag\">課本 Ch3</span></li>\n<li>研究發現神經元通常對<b>同一類別中的多個刺激</b>有反應，與嚴格的祖母細胞不一致；但也有出奇的專一性。課本結論：資訊以放電率、有時以同步性表徵，兩者都可能依賴<b>稀疏分散式編碼</b>。<span class=\"tag\">課本 Ch3 Evaluation</span></li>\n<li>稀疏編碼好處：省能量、記憶容量可能大；分散表徵不怕損失個別神經元，也利於類化與分類。<span class=\"tag\">課本 Ch3 Evaluation</span></li>\n<li>心理表徵與神經表徵不會一對一：外在世界並不是被「複製」進腦中。<span class=\"tag\">課本 Ch3</span></li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "寫成「刺激越強，動作電位越大」——動作電位大小固定，改變的是次數。",
+   "把祖母細胞當成已被證實的事實。",
+   "忘記單細胞記錄是侵入性方法，通常只在動物（或手術中的病人）身上做。"
+  ],
+  "oral": "神經元用放電率編碼資訊：動作電位大小固定，資訊在每秒放電次數，單細胞記錄顯示神經元對某些臉或凝視方向放電較多。也可以用同步性編碼，如 Engel 的視覺皮質研究。多數神經元對同類多個刺激都有反應，不支持嚴格的祖母細胞，課本傾向稀疏分散式表徵。",
+  "sources": [
+   "Ward Ch2「How do neurons code information?」；Ch3「In Search of Neural Representations: Single-Cell Recordings」、Distributed versus sparse coding、Evaluation（第 3 版，已讀）。",
+   "「W3 隨堂（刺激強度）」引自你的猜題檔；我已查 Dis03 的 4 題隨堂與 W3 逐字稿，沒有找到對應題，不引用細節。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_8_5",
+  "no": "8.5",
+  "ch": 8,
+  "tier": "B",
+  "title": "語音知覺為什麼不同於音樂知覺？",
+  "signal": "猜題檔標「中高」：W7 28:19 類別知覺、McGurk、雙重分離都是「語音和音樂不同」的證據；45:51 CN 單側分離「我一定會考」，「後面全部的例子都可以拿去考你」（已核對原檔）。Dis08 p.51–57、69–80。",
+  "answer1": "語音與音樂<b>部分共用、部分分開</b>。分開的證據：①<b>雙重分離</b>——純詞聾（左顳葉：聽不懂語音，卻認得音樂與環境音）vs. 病人 CN（雙側顳葉：認不出熟悉旋律，卻認得歌詞、人聲與環境音）；②語音有「特殊」性質——<b>類別知覺</b>、<b>McGurk 效應</b>、<b>動作理論</b>；③音樂有自己的子歷程（音高、節奏、旋律）。但早期聽覺處理兩者共用，且不是簡單的「左腦＝語言、右腦＝音樂」。",
+  "skeleton": [
+   "<b>先下結論</b>：部分共用、部分分開；不是簡單的左右腦。",
+   "<b>證據①雙重分離</b>：純詞聾 vs. 病人 CN（再加阿茲海默症 vs. 右前顳葉）。",
+   "<b>證據②語音「特殊」</b>：類別知覺、McGurk、動作理論。",
+   "<b>證據③音樂內部的分工</b>：Peretz & Coltheart 模型；音高 vs. 節奏；先天性失樂症。",
+   "<b>評估</b>：共用的早期歷程、左右腦的修正。"
+  ],
+  "sections": [
+   {
+    "h": "1. 證據①：雙重分離",
+    "html": "\n<ul>\n<li><b>純詞聾</b>：左顳葉受損；<b>能說話</b>，能認得環境音與音樂，但<b>認不出語音</b>。<span class=\"tag\">投影片 Dis08 p.55–57；課本 Ch8</span></li>\n<li><b>病人 CN</b>（非音樂家，雙側顳葉受損）：認不出<b>熟悉的旋律</b>，卻能認出口說歌詞、人聲、環境音；她仍可分辨說話的語調（需要音高輪廓、不需要曲調知識）。<span class=\"tag\">投影片 Dis08 p.51–54；課本 Ch8</span></li>\n<li><b>另一個方向</b>：有病人失去辨認口說詞的能力，卻仍認得曲調（Mendez 2001）。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>兩者合起來就是雙重分離</b>：一邊壞語音、音樂好；另一邊壞音樂、語音好 → 支持兩者至少部分使用不同歷程。老師說，要說明「A 與 B 不同」就可以用雙重分離，且「後面全部的例子都可以拿去考你」。<span class=\"tag\">逐字稿 W7 00:45:51 已核對原檔</span></li>\n<li><b>旋律記憶屬於語意記憶</b>：右前顳葉受損（語意性失智）者難認熟悉曲調；阿茲海默症（情節記憶較差）只有輕微問題（Hsieh 2011）。老師把「阿茲海默症（語言記憶差、音樂能喚起記憶）」與 CN 合起來當雙重分離。<span class=\"tag\">課本 Ch8；投影片 Dis08 p.53；逐字稿 W7 00:47:35 已核對原檔</span></li>\n</ul>\n\n<figure><svg viewBox=\"0 0 620 150\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"29\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">純詞聾 pure word deafness</text><rect x=\"420\" y=\"8\" width=\"190\" height=\"34\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"29\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">病人 CN（雙側顳葉）</text><rect x=\"10\" y=\"48\" width=\"190\" height=\"92\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">左顳葉受損</text><text x=\"105.0\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">聽不懂語音 ✗</text><text x=\"105.0\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">認得環境音與音樂 ✓</text><text x=\"105.0\" y=\"120\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">能說話 ✓</text><rect x=\"420\" y=\"48\" width=\"190\" height=\"92\" rx=\"8\" fill=\"#fdf5ee\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"76\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">認不出熟悉旋律 ✗</text><text x=\"515.0\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">認得歌詞語句、人聲、</text><text x=\"515.0\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">環境音 ✓</text><text x=\"515.0\" y=\"120\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">說話語調 △（部分）</text><rect x=\"222\" y=\"48\" width=\"176\" height=\"92\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"75\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">語音處理與</text><text x=\"310.0\" y=\"90\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">音樂處理</text><text x=\"310.0\" y=\"106\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">至少有部分</text><text x=\"310.0\" y=\"121\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">可以分開</text><line x1=\"200\" y1=\"94\" x2=\"222\" y2=\"94\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"420\" y1=\"94\" x2=\"398\" y2=\"94\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/></svg><figcaption>圖：語音與音樂的雙重分離證據（自繪，依 Dis08 p.54–57、Ward Ch8）</figcaption></figure>"
+   },
+   {
+    "h": "2. 證據②：語音是「特殊」的",
+    "html": "\n<p>投影片 p.69 的標題就是「Speech perception is 'special'」，列出<b>動作理論</b>與<b>類別知覺</b>；觀點上分「Ordinary（語音就是聲音）」與「Special（語音 ≠ 聲音）」。<span class=\"tag\">投影片 Dis08 p.69</span></p>\n<ul>\n<li><b>類別知覺</b>：連續的聲音變化被對應成不連續的音位。例：「da」與「ta」只差發聲起始時間（0 ms→da，80 ms→ta），中間值如 30 ms 也只會聽成其中一個，不會聽成第三種聲音。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>McGurk 效應</b>：看到「ba」的嘴形、聽到「da」的聲音，會聽成另一個音，顯示語音知覺整合視覺。<span class=\"tag\">投影片 Dis08 p.74–80；課本 Ch8</span></li>\n<li><b>動作理論</b>：語音知覺可能依賴我們推斷說話者如何發音（motor theory）；詳見 Q13（8.6）。這個說法有爭議。<span class=\"tag\">投影片 Dis08 p.70–73；課本 Ch8</span></li>\n<li><b>老師提醒</b>：不要只背 McGurk，要知道題目換角度時該舉什麼例子；VOT 的數字「不代表我考你」（W7 00:06:37、00:27:48 已核對原檔）。</li>\n</ul>"
+   },
+   {
+    "h": "3. 證據③：音樂內部有自己的分工",
+    "html": "\n<figure><svg viewBox=\"0 0 620 156\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"600\" height=\"30\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"27\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">聽到有人唱「生日快樂」→ 至少兩條處理路線（Peretz & Coltheart 2003）</text><rect x=\"10\" y=\"48\" width=\"290\" height=\"60\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"155.0\" y=\"74\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">語音與音樂共用的歷程（藍）</text><text x=\"155.0\" y=\"90\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">例如早期聽覺分析、聲音物件分離</text><rect x=\"320\" y=\"48\" width=\"290\" height=\"60\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"465.0\" y=\"67\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">可能音樂專屬的歷程（綠）</text><text x=\"465.0\" y=\"82\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">音高組織（輪廓→音程→調性）</text><text x=\"465.0\" y=\"97\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">時間組織（節奏、拍子）</text><rect x=\"10\" y=\"116\" width=\"600\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"135\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">音高與節奏還可以彼此分開：只壞節奏、或只壞音高的個案都有</text></svg><figcaption>圖：音樂處理的分工（自繪，依 Ward Ch8「Music perception」）</figcaption></figure>\n<ul>\n<li><b>Peretz & Coltheart（2003）模型</b>：先分「與語音共用」vs.「可能音樂專屬」；音樂內再分<b>音高組織</b>（輪廓→音程→調性編碼）與<b>時間組織</b>（節奏、拍子）。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>音高與節奏可分開</b>：有急性失樂症個案能處理旋律卻無法從聽覺辨認節奏（Di Pietro 2004）；KE 家族節奏有問題但音高旋律正常（Alcock 2000）。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>先天性失樂症（音痴）</b>：最多約 4% 的人，能偵測節奏錯誤卻偵測不到音高錯誤，與一般智力無關，和右半球異常有關。對語音音高的辨別較輕微受損，顯示<b>部分共用、不是完全分離</b>。<span class=\"tag\">課本 Ch8</span></li>\n</ul>"
+   },
+   {
+    "h": "4. 評估：不要答成「左腦語言、右腦音樂」",
+    "html": "\n<ul>\n<li>課本說這個假設「有趣但有誤導性」，因為語言和音樂都不是單一能力。右半球可能對音高訊息較優勢，但左半球對音樂的某些面向（如時間）也重要。<span class=\"tag\">課本 Ch8</span></li>\n<li>兩側的初級聽覺皮質對語音與其他聲音的反應<b>相當</b>（Binder 2000），分歧發生在較後面的階段。<span class=\"tag\">課本 Ch8</span></li>\n<li>所以最穩的結論：<b>早期聽覺分析共用，之後逐步分化</b>；雙重分離證據來自較高階的處理與記憶。<span class=\"tag inf\">我的整理</span></li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "只舉 McGurk 一個例子（老師特別提醒過）。",
+   "只講一邊：純詞聾或 CN 只提其中一個，就算不上雙重分離。",
+   "直接答「語音在左腦、音樂在右腦」。",
+   "把「不同」寫成「完全獨立」：課本與先天性失樂症的資料顯示有共用歷程。"
+  ],
+  "oral": "語音與音樂部分共用、部分分開。證據一是雙重分離：純詞聾病人左顳葉受損，認不出語音卻認得音樂；病人 CN 雙側顳葉受損，認不出熟悉旋律卻認得語句、人聲與環境音。證據二是語音特殊：類別知覺、McGurk 效應與動作理論。證據三是音樂內部有自己的分工：音高與節奏可以分開，先天性失樂症能測到節奏錯卻測不到音高錯。但早期聽覺處理共用，也不是簡單的左腦語言、右腦音樂。",
+  "sources": [
+   "老師投影片 Dis08 p.51–57（CN、純詞聾、語意記憶與阿茲海默症表）、p.69–80（語音特殊、動作理論、McGurk）。",
+   "Ward Ch8「Music perception」「Speech perception」「The nature of the speech signal」（第 3 版，已讀；本頁用 Ch8 對應第 3 版的聽覺章）。",
+   "老師逐字稿 W7 時間點（28:19、45:51、47:35、27:48、06:37）已核對原檔。",
+   "「左右腦修正」與「早期共用、之後分化」的總結為我的整理。"
+  ],
+  "pri": "中高"
+ },
+ {
+  "id": "E_4_5",
+  "no": "4.5",
+  "ch": 4,
+  "tier": "B",
+  "title": "功能造影能不能用來測謊？能不能讀出別人的想法與感覺？",
+  "signal": "猜題檔標「中高」：W5 非同步討論（說謊研究）——研究設計要簡化現象、真話與假話交替；Ward Ch4 開頭與結尾都以「老大哥」為主題。",
+  "answer1": "<b>可以部分做到，但很有限</b>。測謊：fMRI 直接測產生謊言的大腦，比測身體喚起的<b>測謊機</b>更有可能，但謊言由多個認知成分組成（心智理論、抑制真話、編造替代答案），<b>沒有單一的「說謊模組」</b>，不同類型的謊活化的區域不同，所以不太可能是簡單的解答。讀心：用 <b>MVPA</b> 可以相當準確判斷「看的是哪一類刺激」和簡單決定，但<b>很難讀出具體想法</b>，因為每個人的經驗與大腦都不同。",
+  "skeleton": [
+   "<b>先講傳統測謊機的問題</b>：測身體喚起，不專屬於罪惡感。",
+   "<b>fMRI 測謊</b>：前扣帶皮質；沒有說謊模組；預先記好的謊不同；結論。",
+   "<b>讀心（MVPA）</b>：判斷類別、重建簡單圖像、預測簡單決定、植物人溝通。",
+   "<b>限制</b>：封閉選項 vs. 具體內容；個體差異；實驗室與真實情境的落差。"
+  ],
+  "sections": [
+   {
+    "h": "1. 傳統測謊機（polygraph）有什麼問題",
+    "html": "\n<ul>\n<li>測汗、呼吸、心跳等身體反應，都比「產生謊言的思考」更<b>下游</b>。<span class=\"tag\">課本 Ch4</span></li>\n<li>這些指標反映的是一般的<b>喚起</b>（如焦慮），<b>不能專屬偵測罪惡感</b>；如果說謊的人沒有罪惡感，可能沒有明顯反應。所以使用「極有疑問」。<span class=\"tag\">課本 Ch4</span></li>\n</ul>"
+   },
+   {
+    "h": "2. fMRI 測謊：有希望，但不是簡單答案",
+    "html": "\n<ul>\n<li><b>為什麼有希望</b>：大腦才是產生謊言的器官，直接研究大腦，理論上比測下游的身體反應更可靠。<span class=\"tag\">課本 Ch4</span></li>\n<li><b>謊言是複合的</b>：需要理解別人的心理狀態可以和自己不同（心智理論）、抑制真話、編造可信的替代答案，因此<b>可能沒有單一的「說謊模組」</b>。<span class=\"tag\">課本 Ch4</span></li>\n<li><b>研究結果</b>：自發說謊（如「度假時見了誰」「剛剛看到的是這張牌嗎」）活化包含<b>前扣帶皮質（ACC）</b>在內的多個區域。ACC 與監控衝突與錯誤有關，也與產生測謊機所測的身體反應有關。<span class=\"tag\">課本 Ch4（Ganis 2003、Langleben 2002 等）</span></li>\n<li><b>但不是所有謊都一樣</b>：若受試者在進入掃描儀前就<b>背熟了謊言</b>，ACC 不參與，反而是記憶提取相關區域參與。結論：fMRI 或許有用，但不太可能提供簡單的解決方案（Sip 2007）。<span class=\"tag\">課本 Ch4</span></li>\n<li><b>老師在 W5 討論課提醒的實驗設計</b>：研究說謊時，不可能要受試者<b>一直</b>說謊；真實情境多半是<b>真話與假話交替</b>，而且說謊的人說的真話一定比假話多。做研究要「簡化現象」，但要先想一般人能不能一直那樣做。<span class=\"tag\">逐字稿 W5 原文</span></li>\n</ul>"
+   },
+   {
+    "h": "3. 「讀心」：MVPA 能做到什麼",
+    "html": "\n<ul>\n<li><b>MVPA（多體素型樣分析）</b>：不找最強活化點，而是看<b>一整群體素的活動型樣</b>；分類器先用已知刺激訓練，再用新資料測試，這時受試者的腦就等於被「讀」了。<span class=\"tag\">課本 Ch4</span></li>\n<li><b>判斷看的／想的是哪一類</b>：Haxby 2001 用 8 類物體（貓、房子、臉、鞋…），兩兩比較約 <b>96%</b> 能判斷受試者看到什麼；想像（O'Craven & Kanwisher 2000）也有類似結果。<span class=\"tag\">課本 Ch4</span></li>\n<li><b>重建圖像</b>：Miyawaki 2008 以初級視覺皮質活動，重建 10×10 方格呈現的字母與單字；複雜圖像成績有限（Naselaris 2009 只能從大型資料庫找最相近的圖）。<span class=\"tag\">課本 Ch4</span></li>\n<li><b>內在意圖</b>：前額葉型樣可預測受試者要加還是減數字（Haynes 2007），也在行動前；看商品時的腦活動可預測購買決定（Knutson 2007），高於機率。<span class=\"tag\">課本 Ch4</span></li>\n<li><b>臨床價值</b>：植物人病人聽到「想像打網球」或「想像走遍你的家」，兩者神經基礎不同，可當作回答是／否的溝通方式（Owen 2006；Monti 2010）。<span class=\"tag\">課本 Ch4</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 170\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"150\" height=\"34\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"85.0\" y=\"29\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">較可行</text><rect x=\"235\" y=\"8\" width=\"150\" height=\"34\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"29\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">有進展但有限</text><rect x=\"460\" y=\"8\" width=\"150\" height=\"34\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"535.0\" y=\"29\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">不太可能</text><rect x=\"10\" y=\"48\" width=\"150\" height=\"112\" rx=\"8\" fill=\"#f1faf3\" stroke=\"#2f7d4f\"/><text x=\"85.0\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">判斷「看的是哪一類」</text><text x=\"85.0\" y=\"86\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（臉、屋、鞋…）</text><text x=\"85.0\" y=\"101\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">Haxby 2001：兩兩比較</text><text x=\"85.0\" y=\"115\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">約 96%</text><text x=\"85.0\" y=\"130\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">簡單決定：加或減</text><text x=\"85.0\" y=\"144\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（Haynes 2007）</text><rect x=\"235\" y=\"48\" width=\"150\" height=\"112\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"72\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">重建簡單圖像</text><text x=\"310.0\" y=\"86\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（Miyawaki 2008：</text><text x=\"310.0\" y=\"101\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">10×10 方格的字母）</text><text x=\"310.0\" y=\"115\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">植物人以想像網球／</text><text x=\"310.0\" y=\"130\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">房間回答是非題</text><text x=\"310.0\" y=\"144\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">測謊：有線索、不簡單</text><rect x=\"460\" y=\"48\" width=\"150\" height=\"112\" rx=\"8\" fill=\"#fdf0ee\" stroke=\"#a33a2a\"/><text x=\"535.0\" y=\"79\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">讀出「具體想的內容」</text><text x=\"535.0\" y=\"93\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">例：想的是自己的貓</text><text x=\"535.0\" y=\"108\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">還是隔壁的貓</text><text x=\"535.0\" y=\"122\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">因為每人經驗不同、</text><text x=\"535.0\" y=\"137\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">大腦也有個體差異</text><line x1=\"160\" y1=\"104\" x2=\"235\" y2=\"104\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"385\" y1=\"104\" x2=\"460\" y2=\"104\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/></svg><figcaption>圖：fMRI「讀腦」的能力光譜（自繪，依 Ward Ch4 Brain-Reading 與 Evaluation）</figcaption></figure>"
+   },
+   {
+    "h": "4. 為什麼不能讀出「具體想法」",
+    "html": "\n<ul>\n<li>以上多半是<b>封閉選項</b>的分類（鞋 vs. 瓶子）。要判斷某人想的是<b>自己的貓還是隔壁的貓</b>，就需要知道個別刺激在這個人腦中如何、在哪裡表徵。<span class=\"tag\">課本 Ch4 Evaluation</span></li>\n<li>每個人的生活經驗不同、大腦也有細微差異，這是<b>自然界限</b>，光靠技術進步不太可能解決。<span class=\"tag\">課本 Ch4 Evaluation</span></li>\n<li>資料分析本身包含許多階段與假設，不是「直接讀出」訊號。<span class=\"tag\">課本 Ch4</span></li>\n<li>與 Q04（4.4）相連：區域「活躍」不等於它是這個作業的必要區域；同理，看到 ACC 活躍也不能直接說「這個人在說謊」。<span class=\"tag inf\">我的推論：把 4.4 的邏輯套到測謊</span></li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "寫成「fMRI 可以完全讀心」或「完全不可能」；課本的結論是中間：粗略的辨別可以、詳細的想法不行。",
+   "忘記講傳統測謊機的問題，答案缺少比較對象。",
+   "把 ACC 活化當成「說謊的證據」；它與衝突監控、身體反應有關，且不同的謊不一樣。",
+   "只講實驗室結果，沒提真實情境的差異（老師：真話與假話交替）。"
+  ],
+  "oral": "功能造影可以部分測謊與讀心，但很有限。傳統測謊機測身體喚起，不專屬於罪惡感。fMRI 直接測大腦，但謊言由心智理論、抑制真話與編造答案組成，沒有單一說謊模組；自發說謊會活化前扣帶皮質，背好的謊卻不會。讀心方面，MVPA 能以約九成六判斷看的是哪一類物體，也能重建簡單圖像、預測簡單決定，甚至讓植物人回答是非題，但很難讀出具體想法，因為每個人的經驗與大腦不同。",
+  "sources": [
+   "Ward Ch4「Could Functional Imaging be Used as a Lie Detector?」「Brain-Reading: Is “Big Brother” Round the Corner?」「Evaluation」（第 3 版，已讀）；章末摘要與例題。",
+   "老師逐字稿 W5（Plaud）：說謊研究的設計討論（真話與假話交替），已查到原文段落。",
+   "「中高」優先度與「W5 非同步討論」來自你的猜題檔；我沒有看到老師是否會把這題列入期中。把 4.4 邏輯套到測謊是我的推論。"
+  ],
+  "pri": "中高"
+ },
+ {
+  "id": "E_7_4",
+  "no": "7.4",
+  "ch": 7,
+  "tier": "B",
+  "title": "臉是不是「特殊」的？為什麼？",
+  "signal": "猜題檔標「中」：W3 臉與 N170；W6 腹側路徑。可與 Q16（電生理與臉）一起讀。",
+  "answer1": "有部分證據顯示臉是特殊的：①有<b>獨立的神經基礎</b>（梭狀回臉區 FFA、ERP 的 N170）；②可被<b>選擇性損壞</b>（臉盲，如 De Renzi 的病人）。但「為什麼特殊」有爭議：<b>任務難度</b>的解釋被 Farah 1995 排除；剩下<b>領域特定</b>（臉是特別類別）、<b>整體處理</b>（Farah）、<b>視覺專家</b>（Gauthier）三種，彼此不互斥。",
+  "skeleton": [
+   "<b>證據</b>：神經基礎（FFA、N170）、臉盲。",
+   "<b>解釋①任務難度</b>：被排除（LH）。",
+   "<b>解釋②整體處理</b>、<b>③視覺專家</b>、<b>④領域特定</b>。",
+   "<b>評估</b>：特殊性是事實，原因仍有爭議；強的領域特定不容易成立。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>臉與其他物體的差異</b>：臉識別的目標通常是辨認<b>某一個人</b>，而不是只分類「這是臉」。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>神經基礎</b>：FFA 對臉的反應比其他物體（含身體）強，右側較強，且可能對<b>熟悉臉</b>特別重要（Kanwisher）；ERP 有臉相關的 <b>N170</b>。<span class=\"tag\">課本 Ch6、Ch3</span></li>\n<li><b>臉盲（prosopagnosia）</b>：不是早期視覺分析的問題；De Renzi 的病人認不出家人的臉，卻能靠聲音認出，也能做臉的知覺配對，其他物體正常。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>四種解釋（可並存）</b>：①<b>任務難度</b>——臉很像、很難；但有視覺失認症卻無臉盲的病人，且 Farah 讓臉與鏡框作業難度相同（控制組都 85%），病人 LH 臉 62%、鏡框 92%，排除此說。②<b>整體 vs. 部分處理</b>（Farah）——臉靠整體處理、文字靠部分處理；之後出現各種單獨分離的案例，支持各有獨立儲存。③<b>視覺專家</b>（Gauthier）——臉需要同類內精細辨別，我們有大量經驗；Greebles 專家與汽車專家會活化 FFA，Greebles 也出現 N170。④<b>領域特定</b>——臉本身是特別的類別。<span class=\"tag\">課本 Ch6</span></li>\n<li><b>評估</b>：特殊性有證據，但原因爭議；證據對強版本的領域特定（區域只處理臉）不算堅強。<span class=\"tag\">課本 Ch6：「對強的形式是否成立並不清楚」</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 156\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"600\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"27\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">證據：臉有獨立的神經基礎（FFA、N170），也可以被選擇性損壞（臉盲）</text><rect x=\"10\" y=\"46\" width=\"145\" height=\"100\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"82.5\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">領域特定</text><text x=\"82.5\" y=\"85\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">domain-specific</text><text x=\"82.5\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">臉本身是特別的類別</text><text x=\"82.5\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">FFA 對臉反應最強</text><text x=\"82.5\" y=\"129\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（Kanwisher）</text><rect x=\"165\" y=\"46\" width=\"145\" height=\"100\" rx=\"8\" fill=\"#fbe3de\" stroke=\"#a33a2a\"/><text x=\"237.5\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">任務難度</text><text x=\"237.5\" y=\"85\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">臉很相似、很難</text><text x=\"237.5\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">→ 被排除：Farah 1995</text><text x=\"237.5\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">病人 LH 臉差 62%、</text><text x=\"237.5\" y=\"129\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">鏡框 92%</text><rect x=\"320\" y=\"46\" width=\"145\" height=\"100\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"392.5\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">整體 vs. 部分處理</text><text x=\"392.5\" y=\"85\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（Farah）</text><text x=\"392.5\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">臉靠整體、文字靠部分</text><text x=\"392.5\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">分離案例顯示可能</text><text x=\"392.5\" y=\"129\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">各有獨立儲存</text><rect x=\"475\" y=\"46\" width=\"135\" height=\"100\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"542.5\" y=\"78\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">視覺專家（Gauthier）</text><text x=\"542.5\" y=\"93\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">同類內精細辨別</text><text x=\"542.5\" y=\"107\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">Greebles 專家也活化</text><text x=\"542.5\" y=\"122\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">FFA、出現 N170</text></svg><figcaption>圖：臉為什麼特殊——四種解釋（自繪，依 Ward Ch6）</figcaption></figure>"
+   }
+  ],
+  "traps": [
+   "只列證據，沒講「為什麼」的幾種解釋。",
+   "把 FFA 當成「臉專用區」的定論；課本說原因有爭議。",
+   "忘記提 N170（老師有提到）。"
+  ],
+  "oral": "臉有部分證據是特殊的：有獨立的神經基礎，像梭狀回臉區和 N170，也能被選擇性損壞，也就是臉盲。為什麼特殊有四種解釋：任務難度，被 Farah 的病人 LH 排除；整體處理；視覺專家，Greebles 專家也活化臉區並出現 N170；還有領域特定。這些解釋不互斥，特殊性是事實，原因仍有爭議。",
+  "sources": [
+   "Ward Ch6「Recognizing Faces」「Evidence that faces are special」「Why are faces special?」（第 3 版，已讀）；Ch3 N170。",
+   "「W3 臉與 N170；W6 腹側路徑」引自你的猜題檔，我沒重讀逐字稿。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_8_2",
+  "no": "8.2",
+  "ch": 8,
+  "tier": "B",
+  "title": "單一細胞記錄對我們了解聽覺表徵有什麼貢獻？",
+  "signal": "猜題檔標「中」：老師關鍵字 tonotopic organization；W7 28:38–30:36 說「外側高頻、中間低頻（像笑臉）」要自己發展記憶策略（00:28:38–00:30:36 已核對原檔）。Dis08 p.25、33。",
+  "answer1": "單細胞記錄顯示：①聽覺皮質有<b>音調拓樸（tonotopic）組織</b>，中央對低頻、外側對高頻；②皮質有<b>階層</b>：核心區神經元對窄頻率反應，帶區對寬頻與複雜聲音（如鳴叫、頻率變化方向）反應；③有神經元對<b>音量與空間位置</b>選擇；④前帶區偏「是什麼」、後帶區偏「在哪裡」，是 what／where 雙路徑的起點。",
+  "skeleton": [
+   "<b>音調拓樸</b>：頻率→皮質位置；中央低、外側高。",
+   "<b>階層</b>：核心→帶區→旁帶區；窄頻→寬頻→複雜聲音。",
+   "<b>其他特徵</b>：音量、空間位置、頻率變化方向。",
+   "<b>what／where</b>：Rauschecker & Tian 2000。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>音調拓樸排列</b>：頻率相近的聲音，由空間上相近的神經元表徵。聽神經與初級聽覺皮質的中央區對低頻、兩側外圍對高頻（人與動物都有證據）。投影片圖：頻率 high–low–high（像笑臉）。<span class=\"tag\">投影片 Dis08 p.25；課本 Ch8</span></li>\n<li><b>階層</b>：靈長類單細胞記錄顯示核心區（含初級聽覺皮質）神經元對很窄的頻率（如 200 Hz）反應；帶區神經元對較寬頻（如 200–300 Hz）反應，可能是加總核心區的活動。帶區神經元對<b>鳴叫等複雜聲音</b>的反應比純音強；有的只對<b>頻率變化及其方向</b>反應（類似視覺的複雜細胞對運動方向）。初級皮質也發現類似中心—周邊的特性（ON／OFF 頻帶）。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>音量與位置</b>：貓初級聽覺皮質（Clarey 1994）有神經元只對特定音量或位置反應，多為對側；超過三分之一對特定音量與位置都選擇。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>what／where</b>：猴子前帶區神經元對猴叫聲高度選擇（不論位置），後帶區對空間位置選擇性最高，是腹側（what）與背側（where）兩條路徑的起點（Rauschecker & Tian 2000）。<span class=\"tag\">投影片 Dis08 p.33；課本 Ch8</span></li>\n<li><b>多感官</b>：猴子 STS 神經元看到並聽到同一個叫聲時放電增加，說明它整合聽與視覺。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>限制</b>：單細胞記錄是侵入性方法，多在動物身上做；與視覺相比，聽覺特徵「模組化」的證據較不完整。<span class=\"tag\">課本 Ch3、Ch8</span></li>\n</ul>\n\n<figure><svg viewBox=\"0 0 620 138\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"16\" width=\"170\" height=\"74\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"95.0\" y=\"35\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">核心區 core</text><text x=\"95.0\" y=\"50\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（初級聽覺皮質）</text><text x=\"95.0\" y=\"64\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">神經元對很窄的頻率</text><text x=\"95.0\" y=\"79\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">反應（如 200 Hz）</text><rect x=\"225\" y=\"16\" width=\"170\" height=\"74\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"35\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">帶區 belt</text><text x=\"310.0\" y=\"50\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">對較寬的頻率帶反應</text><text x=\"310.0\" y=\"64\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">（如 200–300 Hz）</text><text x=\"310.0\" y=\"79\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">對鳴叫等複雜聲音更強</text><rect x=\"440\" y=\"16\" width=\"170\" height=\"74\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"525.0\" y=\"42\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">旁帶區 parabelt</text><text x=\"525.0\" y=\"57\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">更複雜的組合</text><text x=\"525.0\" y=\"71\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">→ 分流到 what／where</text><line x1=\"180\" y1=\"53\" x2=\"225\" y2=\"53\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"395\" y1=\"53\" x2=\"440\" y2=\"53\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><rect x=\"10\" y=\"100\" width=\"600\" height=\"28\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"310.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12\" fill=\"#1b1b1b\">類比視覺：帶區加總核心區，如簡單細胞加總中心—周邊細胞</text></svg><figcaption>圖：聽覺皮質的階層（自繪，依 Ward Ch8；Kosaki 1997、Kaas 1999）</figcaption></figure>"
+   }
+  ],
+  "traps": [
+   "只寫 tonotopic，沒說這是「單細胞記錄」的發現與其貢獻。",
+   "把頻率高低位置寫反（中央低頻、外側高頻）。",
+   "忘記說明這種方法是侵入性、多在動物身上做。"
+  ],
+  "oral": "單細胞記錄顯示聽覺皮質有音調拓樸組織，中央對低頻、外側對高頻；核心區神經元對窄頻率反應，帶區對寬頻與複雜聲音反應，呈階層；有神經元對音量與空間位置選擇；前帶區偏 what、後帶區偏 where，是雙路徑起點。限制是侵入性、多用動物。",
+  "sources": [
+   "Ward Ch8「Early auditory processing」「What versus where」；Ch3 單細胞記錄（第 3 版，已讀）。",
+   "老師投影片 Dis08 p.25（tonotopic）、p.33（Rauschecker & Tian 2000）。",
+   "W7 28:38–30:36 的說法引自你的整理檔，我沒重讀逐字稿。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_8_4",
+  "no": "8.4",
+  "ch": 8,
+  "tier": "B",
+  "title": "音樂知覺是否依賴與其他聽覺刺激不同的腦機制？",
+  "signal": "猜題檔標「中」：W7 47:35 阿茲海默症與 CN 的雙重分離證據；老師 00:44:59 說「音樂我今天沒有講，但書上有寫」（已核對原檔）。與 Q23（8.5）大量重疊，先讀 Q23。",
+  "answer1": "<b>部分是</b>。證據：病人 CN 認不出熟悉旋律、卻認得語音與環境音；純詞聾相反（雙重分離）；音樂內部分音高與節奏，先天性失樂症能測到節奏錯卻測不到音高錯；右側額顳網絡的異常與失樂症有關；節奏與聽覺—動作系統（前運動皮質、基底核、小腦）有關；情緒音樂活化獎賞迴路。但早期聽覺處理與語音共用，右腦音樂左腦語言的說法過度簡化。",
+  "skeleton": [
+   "<b>先答</b>：部分不同，部分共用。",
+   "<b>雙重分離</b>：CN vs. 純詞聾；語意性失智 vs. 阿茲海默症。",
+   "<b>音樂內部</b>：音高 vs. 節奏；先天性失樂症。",
+   "<b>其他機制</b>：聽覺—動作、情緒獎賞。",
+   "<b>修正</b>：不是左右腦二分。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>與語音的雙重分離</b>：CN（雙側顳葉）認不出熟悉旋律、卻認得口說歌詞與人聲；有病人則相反（Mendez 2001）；純詞聾（左顳葉）聽不懂語音卻認得音樂。<span class=\"tag\">投影片 Dis08 p.51–57；課本 Ch8</span></li>\n<li><b>旋律記憶＝語意記憶</b>：右前顳葉受損的語意性失智者難認熟悉曲調；阿茲海默症只有輕微問題。<span class=\"tag\">投影片 Dis08 p.53；課本 Ch8</span></li>\n<li><b>音樂內部的分工</b>：Peretz & Coltheart 模型分音高（輪廓、音程、調性）與時間（節奏、拍子）；音高與節奏可單獨受損；先天性失樂症（最多約 4%）與右半球聽覺皮質與右下額葉異常有關。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>聽覺—動作系統</b>：聽規律節奏活化前運動皮質、輔助動作區與小腦；基底核在維持節拍時最活躍。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>情緒與獎賞</b>：情緒音樂活化與其他情緒刺激、獎賞迴路相同的區域；杏仁核受損者辨認恐怖音樂可能也有問題。<span class=\"tag\">課本 Ch8</span></li>\n<li><b>修正</b>：右腦對音高較有優勢，但左腦對時間等面向也重要；不要寫成右腦＝音樂。<span class=\"tag\">課本 Ch8</span></li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "寫成「音樂在右腦」。",
+   "只給一條證據；要至少講雙重分離加音樂內部分工。",
+   "與 8.5 的答題混在一起：8.4 問的是「音樂用的腦機制」，不必展開類別知覺、McGurk。"
+  ],
+  "oral": "音樂知覺部分依賴不同的腦機制：病人 CN 與純詞聾形成雙重分離；音樂內部音高與節奏可分開，先天性失樂症能測到節奏錯卻測不到音高錯；節奏與前運動皮質、基底核、小腦的聽覺動作系統有關；情緒音樂活化獎賞迴路。但早期聽覺處理與語音共用，不是右腦音樂、左腦語言。",
+  "sources": [
+   "Ward Ch8「Music perception」（第 3 版，已讀）；老師投影片 Dis08 p.51–57。",
+   "W7 00:44:59、00:47:35 已核對原檔（阿茲海默症：語言記憶較差、年輕時的音樂能喚起記憶，合起來成為雙重分離）。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_5_2",
+  "no": "5.2",
+  "ch": 5,
+  "tier": "B",
+  "title": "批判性評估團體研究在神經心理學中的角色",
+  "signal": "猜題檔標「中」：W4 團體 vs 單一個案。與 Q06（5.3 單一個案）互補。",
+  "answer1": "團體研究的價值：①可以回答<b>哪個腦區對某作業「必要」</b>，作為功能造影的<b>收斂證據</b>；②可以用<b>統計地圖</b>（逐體素）找損傷「熱點」。問題：①病人損傷通常<b>很大、不侷限於目標區</b>；②分組方式影響結論；③影像可能低估損傷；④<b>遠距效應（diaschisis）</b>；⑤把「損傷→功能受損」說成「功能就在該區」會變新顱相學。",
+  "skeleton": [
+   "<b>角色</b>：必要性證據；與造影互補。",
+   "<b>方法</b>：三種分組（症候群、症狀、損傷位置）。",
+   "<b>優點</b>：統計地圖；可能找出多個關鍵區。",
+   "<b>問題</b>：損傷大、影像限制、diaschisis、新顱相學。",
+   "<b>與單一個案的比較</b>。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>為什麼需要</b>：功能造影的「活躍」不代表區域<b>必要</b>；有損傷的病人研究才能得出必要性結論。但病人損傷常很大，很少侷限於目標區，所以需要<b>團體研究</b>來找出共同受損的位置。<span class=\"tag\">課本 Ch5</span></li>\n<li><b>三種分組方式</b>：①<b>依症候群</b>（如失語症亞型）：較粗略，適合研究疾病的神經相關；②<b>依認知症狀</b>：較精細，找各人共同的受損處；③<b>依解剖損傷</b>：先選損傷在某區的人再測缺損，用來檢驗造影的預測。沒有絕對對錯，看研究問題。<span class=\"tag\">課本 Ch5</span></li>\n<li><b>症狀→損傷（②）的優點</b>：可能發現<b>不只一個</b>區域是關鍵，例如缺損可能由 X 或 Y 區的損傷造成；若先按 X 區分組，會誤判 X 才是唯一關鍵。可用逐體素的 MRI 比對做出統計的「熱點」地圖。<span class=\"tag\">課本 Ch5</span></li>\n<li><b>問題與限制</b>：結構影像不一定能準確畫出損傷（腫瘤、水腫、出血、頭部外傷較難；中風慢性期、病毒性腦炎、手術後較合適）；<b>diaschisis</b>：局部損傷可能影響遠處完好的區域；以及推論的陷阱：「功能 F 在損傷 X 後受損」→ 只能保守說「X 對 F 的某些面向是關鍵」，不能說 F 位於 X、或 X 的目的就是 F（新顱相學）。<span class=\"tag\">課本 Ch5</span></li>\n<li><b>與單一個案研究</b>：單一個案強調個案內部的功能分離與認知模型；團體研究強調損傷位置與缺損的統計關聯，兩者互補。<span class=\"tag inf\">我的整理</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 136\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">依症候群</text><rect x=\"215\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">依認知症狀</text><rect x=\"420\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">依解剖損傷位置</text><rect x=\"10\" y=\"44\" width=\"190\" height=\"82\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"67\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">例：失語症亞型</text><text x=\"105.0\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">較粗略</text><text x=\"105.0\" y=\"96\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">適合了解疾病的</text><text x=\"105.0\" y=\"111\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">神經相關</text><rect x=\"215\" y=\"44\" width=\"190\" height=\"82\" rx=\"8\" fill=\"#f1faf3\" stroke=\"#2f7d4f\"/><text x=\"310.0\" y=\"67\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">例：聽幻覺、唸不出</text><text x=\"310.0\" y=\"82\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">非詞</text><text x=\"310.0\" y=\"96\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">較精細；可由症狀</text><text x=\"310.0\" y=\"111\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">找出共同損傷「熱點」</text><rect x=\"420\" y=\"44\" width=\"190\" height=\"82\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"515.0\" y=\"74\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">先選損傷在某區的人</text><text x=\"515.0\" y=\"89\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">再測缺損；用來檢驗</text><text x=\"515.0\" y=\"103\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">功能造影的預測</text></svg><figcaption>圖：病人分組的三種方式（自繪，依 Ward Ch5）</figcaption></figure>"
+   }
+  ],
+  "traps": [
+   "只寫優點或只寫缺點，沒有「批判性」評估。",
+   "把「損傷→缺損」直接推成「該區負責該功能」。",
+   "忘記說明它與功能造影互補。"
+  ],
+  "oral": "團體研究可以回答某腦區對作業是否必要，與功能造影互補，也可以用統計地圖找損傷熱點。分組方式有症候群、症狀與損傷位置三種，各有適用。限制包括損傷常很大、影像可能低估損傷、遠距效應，以及推論時要保守，不能說功能就位於該區，否則會變成新顱相學。",
+  "sources": [
+   "Ward Ch5「Group Studies and Lesion-Deficit Analysis」「Caveats and complications」「Evaluation」（第 3 版，已讀）。",
+   "「W4 團體 vs 單一個案」引自你的猜題檔；與單一個案的比較為我的整理。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_2_3",
+  "no": "2.3",
+  "ch": 2,
+  "tier": "B",
+  "title": "比較前腦、中腦與後腦的功能",
+  "signal": "猜題檔標「中」：W2 投影片 p.16、23–25；軸④結構連功能。",
+  "answer1": "<b>前腦</b>（終腦＋間腦）：大腦皮質、基底核、邊緣系統、視丘（感覺中繼）、下視丘（體溫、飢渴、內分泌）→ 高階認知、動作調節、情緒與記憶。<b>中腦</b>：上丘（整合視、聽、觸，快速定向）、下丘（聽覺）、黑質（連基底核）。<b>後腦</b>：小腦（動作協調）、橋腦（連接小腦與大腦）、延髓（呼吸、吞嚥、心跳、睡醒週期）。",
+  "skeleton": [
+   "<b>前腦</b>：終腦（皮質、基底核、邊緣系統）＋間腦（視丘、下視丘）。",
+   "<b>中腦</b>：上丘、下丘、黑質。",
+   "<b>後腦</b>：小腦、橋腦、延髓。",
+   "<b>比較軸</b>：越往下越基本、維持生命；越往上越高階。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<figure><svg viewBox=\"0 0 620 172\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">前腦 forebrain</text><rect x=\"215\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">中腦 midbrain</text><rect x=\"420\" y=\"8\" width=\"190\" height=\"30\" rx=\"8\" fill=\"#dff0e3\" stroke=\"#2f7d4f\"/><text x=\"515.0\" y=\"27\" text-anchor=\"middle\" font-size=\"13\" fill=\"#1b1b1b\">後腦 hindbrain</text><rect x=\"10\" y=\"44\" width=\"190\" height=\"118\" rx=\"8\" fill=\"#f4f8fc\" stroke=\"#1f4e79\"/><text x=\"105.0\" y=\"78\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">終腦：大腦皮質、基底核、</text><text x=\"105.0\" y=\"92\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">邊緣系統（杏仁核、海馬迴）</text><text x=\"105.0\" y=\"107\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">間腦：視丘（感覺中繼）、</text><text x=\"105.0\" y=\"121\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">下視丘（體溫、飢渴、</text><text x=\"105.0\" y=\"136\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">內分泌）</text><rect x=\"215\" y=\"44\" width=\"190\" height=\"118\" rx=\"8\" fill=\"#fffbea\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"78\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">上丘：整合視、聽、觸</text><text x=\"310.0\" y=\"92\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">快速定向</text><text x=\"310.0\" y=\"107\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">下丘：聽覺</text><text x=\"310.0\" y=\"121\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">黑質：連基底核；</text><text x=\"310.0\" y=\"136\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">細胞流失→帕金森氏症</text><rect x=\"420\" y=\"44\" width=\"190\" height=\"118\" rx=\"8\" fill=\"#f1faf3\" stroke=\"#2f7d4f\"/><text x=\"515.0\" y=\"85\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">小腦：動作的流暢與協調</text><text x=\"515.0\" y=\"100\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">橋腦：連接小腦與大腦</text><text x=\"515.0\" y=\"114\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">延髓：呼吸、吞嚥、心跳、</text><text x=\"515.0\" y=\"129\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">睡醒週期</text></svg><figcaption>圖：前腦、中腦、後腦的主要構造與功能（自繪，依 Ward Ch2、Dis02 p.16、23–25）</figcaption></figure>\n<ul>\n<li><b>前腦</b>：①<b>基底核</b>（尾核、殼核、蒼白球）：調節動作、學習獎賞與習慣；損傷如帕金森氏症（動作太少）、亨廷頓氏症（動作過多）。②<b>邊緣系統</b>：杏仁核（偵測恐懼與威脅）、海馬迴（學習與記憶）、扣帶回（衝突偵測）。③<b>視丘</b>：除嗅覺外所有感覺的主要中繼站；LGN 連初級視覺皮質、MGN 連初級聽覺皮質。④<b>下視丘</b>：體溫、飢渴、性活動、內分泌調節。<span class=\"tag\">課本 Ch2</span></li>\n<li><b>中腦</b>：上丘整合視、聽、觸；下丘專司聽覺；這些路徑不同於主要的皮質感覺路徑，演化上較古老，可能提供在有意識看見或聽見前就快速定向的路徑。<b>黑質</b>與基底核相連，細胞流失與帕金森氏症有關。<span class=\"tag\">課本 Ch2；投影片 Dis02 p.24</span></li>\n<li><b>後腦</b>：<b>小腦</b>＝動作的流暢與協調（單側損傷→同側協調差；雙側→步態蹣跚、構音障礙、眼震）；<b>橋腦</b>＝連接小腦與大腦、接收視覺資訊控制眼與身體動作；<b>延髓</b>＝呼吸、吞嚥、心跳、睡醒週期。<span class=\"tag\">課本 Ch2；投影片 Dis02 p.23</span></li>\n<li class=\"note\">課本與投影片用詞略有差異：投影片 p.16 的腦分區圖（圖註為 Pearson 教科書圖）分成前腦（終腦、間腦）、中腦、後腦（後腦＝後腦與延髓），課本以構造分類說明。表格依兩者整理，不影響作答。<span class=\"tag inf\">我的對應</span></li>\n</ul>"
+   }
+  ],
+  "traps": [
+   "只列構造名稱，沒有說明各自的功能。",
+   "把視丘寫成大腦皮質的一部分。",
+   "忘記提中腦的上丘／下丘與快速定向。"
+  ],
+  "oral": "前腦包括大腦皮質、基底核、邊緣系統、視丘與下視丘，負責高階認知、動作調節、情緒記憶與感覺中繼。中腦有上丘整合視聽觸、下丘處理聽覺、黑質連基底核。後腦有小腦負責動作協調、橋腦連接小腦與大腦、延髓控制呼吸心跳等維生功能。",
+  "sources": [
+   "Ward Ch2「Subcortical structures」「The midbrain and hindbrain」（第 3 版，已讀）。",
+   "老師投影片 Dis02 p.16、23–25（腦的分區與主要結構）。",
+   "W2 的老師講解我沒重讀；各構造清單以課本與投影片為準。"
+  ],
+  "pri": "中"
+ },
+ {
+  "id": "E_1_3",
+  "no": "1.3",
+  "ch": 1,
+  "tier": "B",
+  "title": "認知心理學需要大腦嗎？神經科學需要認知心理學嗎？",
+  "signal": "猜題檔標「中低」：W1 未特別強調。",
+  "answer1": "<b>兩者互相需要</b>。認知心理學可以不提大腦而發展，但腦的資料（血流、EEG）可以當作<b>另一種依變項</b>來檢驗認知理論，且大腦對資訊處理有<b>因果上的約束</b>（軟硬體類比會誤導）。神經科學則需要認知心理學提供合理的問題與概念，否則看到的只是灰質與血管，容易變成<b>新顱相學</b>。",
+  "skeleton": [
+   "<b>認知心理學需要大腦嗎</b>：不一定「必須」，但有幫助；腦資料＝另一種依變項；大腦約束資訊處理。",
+   "<b>軟體／硬體類比的問題</b>。",
+   "<b>神經科學需要認知心理學嗎</b>：需要；避免新顱相學。",
+   "<b>結論</b>：互相約束；心理概念目前有必要。"
+  ],
+  "sections": [
+   {
+    "h": "精簡重點",
+    "html": "\n<ul>\n<li><b>認知心理學需要大腦嗎？</b>認知心理學自 1950 年代用資訊處理模型發展，不直接提到大腦，而且很成功，沒有理由非改不可。Coltheart 等人甚至質疑腦影像資料能否在<b>認知層次</b>上判定理論。Henson 則主張：功能造影的血流、血氧資料只是<b>另一種依變項</b>（像反應時間、錯誤率、皮膚電、EEG），可以用來檢驗認知理論，原則上可以、實際上也辦得到。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>例子</b>：Dehaene 等人用反應時間與 fMRI 同時測量，發現無論詞的大小寫是否相同，左梭狀回與反應時間都顯示重複呈現的好處，說明「早期視覺詞形處理與大小寫無關」；功能造影不只是告訴我們「在哪裡」。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>軟體／硬體類比</b>：「認知心理學＝軟體、神經科學＝硬體」可以部分成立，但會誤導——電腦軟體由程式設計師任意與硬體配對，而資訊處理不是被第三者寫進大腦，是<b>大腦對資訊處理有因果約束</b>。例：認知研究的證據傾向詞彙是<b>平行搜尋</b>而非串列搜尋；但電腦兩種方式都做得到，人類用平行搜尋，很可能是因為神經反應較慢（不利於串列）。認知心理學可說明資訊處理的結構，卻不一定回答「為什麼是這種配置」。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>神經科學需要認知心理學嗎？</b>看腦內看到的是灰質、白質、血管，不是記憶或知覺；連結兩者必然涉及心身問題。顱相學失敗，原因之一是它的心理概念太天真；所以功能造影需要認知心理學的洞見來提出合適的問題，才不會成為新顱相學（Uttal）。<span class=\"tag\">課本 Ch1</span></li>\n<li><b>結論</b>：心理概念最終被取代（化約論）還是與神經概念並存（雙重面向），要看未來；但目前，認知（心理）概念在認知神經科學中扮演<b>必要的角色</b>。<span class=\"tag\">課本 Ch1</span></li>\n</ul>\n<figure><svg viewBox=\"0 0 620 138\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"-apple-system,PingFang TC,sans-serif\"><defs><marker id=\"ah\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 z\" fill=\"#555\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"220\" height=\"70\" rx=\"8\" fill=\"#fde6d3\" stroke=\"#b8561f\"/><text x=\"120.0\" y=\"44\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">認知心理學</text><text x=\"120.0\" y=\"59\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">資訊處理模型</text><text x=\"120.0\" y=\"75\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">（不必提到大腦）</text><rect x=\"390\" y=\"20\" width=\"220\" height=\"70\" rx=\"8\" fill=\"#dbe8f5\" stroke=\"#1f4e79\"/><text x=\"500.0\" y=\"44\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">神經科學</text><text x=\"500.0\" y=\"59\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">腦區、神經元、血流</text><text x=\"500.0\" y=\"75\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">（看到的是灰質與血管）</text><line x1=\"230\" y1=\"40\" x2=\"390\" y2=\"40\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><line x1=\"390\" y1=\"70\" x2=\"230\" y2=\"70\" stroke=\"#555\" stroke-width=\"2\" marker-end=\"url(#ah)\"/><text x=\"310\" y=\"34\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">腦資料＝另一種依變項</text><text x=\"310\" y=\"88\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#1b1b1b\">提供合理的問題與概念</text><rect x=\"10\" y=\"100\" width=\"600\" height=\"28\" rx=\"8\" fill=\"#fff4d6\" stroke=\"#b8561f\"/><text x=\"310.0\" y=\"118\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#1b1b1b\">結論：兩者互相約束；否則神經科學可能變成新顱相學</text></svg><figcaption>圖：認知心理學與神經科學互相需要（自繪，依 Ward Ch1）</figcaption></figure>"
+   }
+  ],
+  "traps": [
+   "答成「認知心理學已被神經科學取代」；課本說不是取代。",
+   "只回答半題：兩個問題都要答。",
+   "只用軟硬體類比，沒說明它為什麼誤導。"
+  ],
+  "oral": "兩者互相需要。認知心理學可以不提大腦，但腦資料是另一種依變項，能檢驗認知理論，大腦也對資訊處理有因果約束，軟體硬體類比會誤導。神經科學需要認知心理學提供合適的問題和概念，否則只看到灰質與血管，容易變成新顱相學。目前心理概念在認知神經科學仍然必要。",
+  "sources": [
+   "Ward Ch1「Does Cognitive Psychology Need the Brain?」「Does Neuroscience Need Cognitive Psychology?」「Summary」（第 3 版，已讀）。",
+   "「W1 未特別強調」引自你的猜題檔；我沒有逐字稿佐證老師是否提過。"
+  ],
+  "pri": "中低"
+ }
+]

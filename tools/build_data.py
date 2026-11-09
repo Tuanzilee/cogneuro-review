@@ -459,6 +459,17 @@ def build():
         essays.append({'id': 'E_' + e['no'].replace('.', '_'), 'no': e['no'], 'ch': e['ch'], 'pri': e['pri'], 'q': e['q'],
                        'a': part(e['a']), 'b': part(e['b']), 'terms': [list(t) for t in e['terms']], 'pitfall': e['pitfall'],
                        'concepts': [ids[k] for k in e['concepts']]})
+    # 詳答（2026-11 從「期中申論詳解」併入）：tools/essay_detail.json 由詳解專案的 build/export_app.py 產生
+    detail = json.load(open('tools/essay_detail.json', encoding='utf8'))
+    byid = {e['id']: e for e in essays}
+    for d in detail:
+        det = {k: d[k] for k in ('title', 'signal', 'answer1', 'skeleton', 'sections', 'traps', 'oral', 'sources')}
+        det['audio'] = f"audio/{d['id']}.mp3"
+        if d['id'] in byid:
+            byid[d['id']]['detail'] = det
+        else:
+            essays.append({'id': d['id'], 'no': d['no'], 'ch': d['ch'], 'pri': d['pri'], 'q': d['title'],
+                           'terms': [], 'pitfall': d['traps'][0] if d['traps'] else '', 'concepts': [], 'detail': det})
     json.dump(essays, open('essays.json', 'w'), ensure_ascii=False, indent=1)
     for n, d in (('concepts', cards), ('quiz', quiz), ('weeks', weeks)):
         json.dump(d, open(f'{n}.json', 'w'), ensure_ascii=False, indent=1)

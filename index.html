@@ -88,6 +88,20 @@ textarea.draft { display: block; width: 100%; min-height: 130px; box-sizing: bor
 .eq { font-size: 17px; font-weight: 600; line-height: 1.5; }
 ul.pts { margin: 6px 0 0; padding-left: 20px; }
 ul.pts li { margin: 4px 0; }
+.det h3 { font-size: 15px; margin: 18px 0 6px; }
+.det p, .det li { font-size: 15px; line-height: 1.75; }
+.det ul, .det ol { padding-left: 20px; margin: 6px 0; }
+.det figure { margin: 10px 0; text-align: center; }
+.det figure svg { width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.det figcaption { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.det .tag { display: inline-block; font-size: 11px; padding: 0 7px; margin: 0 2px; vertical-align: middle; }
+.det .tag.inf { color: var(--bad); border-color: var(--bad); }
+.det .note { font-size: 13px; color: var(--muted); }
+.det .tw { overflow-x: auto; }
+.det table { border-collapse: collapse; font-size: 13px; }
+.det td, .det th { border: 1px solid var(--line); padding: 4px 6px; text-align: left; vertical-align: top; }
+.chk { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 15px; line-height: 1.6; }
+.chk input { width: 22px; height: 22px; margin-top: 2px; flex: none; }
 </style>
 </head>
 <body>
@@ -218,11 +232,12 @@ function renderHome() {
       <div class="muted" style="margin:6px 0 18px">張卡等你複習（到期 ${due} · 新卡 ${fresh}）</div>
       <button class="btn" id="goCards">開始複習</button><p class="muted" style="font-size:12px;margin-top:14px">依每張卡的自評安排下次複習。</p><button class="btn ghost" id="exportProgress" style="margin-top:12px">匯出進度備份</button>
     </div>
+    ${ESSAYS.length ? `<button class="btn" id="goEssay" style="margin-top:14px">申論題手寫練習（${ESSAYS.length} 題・詳答＋音檔）</button>` : ''}
+    <a class="btn ghost" href="diagrams/" style="margin-top:14px;text-decoration:none">30 題圖解（結構在哪、訊號怎麼走）</a>
     <div class="row" style="margin-top:14px">
       <button class="btn ghost" id="goQuiz">情境題 10 題</button>
       <button class="btn ghost" id="goWeeks">每週重點</button>
     </div>
-    ${ESSAYS.length ? `<button class="btn ghost" id="goEssay" style="margin-top:14px">申論題練習（期中考重點）</button>` : ''}
     ${weak ? `<button class="btn ghost" id="goWeak" style="margin-top:14px">錯題本（${weak}）</button>` : ''}
     <div style="margin-top:28px"><div class="muted" style="margin-bottom:8px">換範圍</div>${scopeChips()}</div>
     <div class="muted" style="text-align:center;margin-top:28px;font-size:12px">共 ${CONCEPTS.length} 張概念卡 · ${QUIZ.length} 題情境題<br>整理自課堂錄音摘要（未經人工核聽），已改寫成自己的話</div>`;
@@ -360,54 +375,76 @@ function renderQuiz() {
 }
 
 // ---------- 申論題 ----------
-let essayState = load('cn_essay', {}); // id -> {draft, rate(0|1|2), at}
+let essayState = load('cn_essay', {}); // id -> {draft, rate(0|1|2), at, chk:[bool], secs}
 const saveEssay = () => save('cn_essay', essayState);
 const RATE_LABEL = ['還不行', '差不多', '可以'];
 const eStep = {}; // 每題這輪開到第幾步（不存檔）
+let eTimer = null;
+const fmtClock = n => `${String(Math.floor(n / 60)).padStart(2, '0')}:${String(n % 60).padStart(2, '0')}`;
 function renderEssayList() {
+  clearInterval(eTimer);
   const done = ESSAYS.filter(e => essayState[e.id]?.rate === 2).length;
-  const groups = [['最高', '最高優先'], ['高', '高優先'], ['中高', '中高優先']];
+  const groups = [['最高', '最高優先'], ['高', '高優先'], ['中高', '中高優先'], ['中', '中優先'], ['中低', '中低優先']];
   app.innerHTML = `
     <div class="card"><h2 style="margin-top:0">申論題練習</h2>
-      <p style="margin:0 0 8px">老師說期中會有申論題，要用專業語言：<b>先說清楚「是什麼」，再評估「能告訴我們什麼、有什麼問題」</b>。</p>
-      <ol class="pts"><li>先自己寫或口述，不要偷看</li><li>看答題骨架，補漏</li><li>看參考要點，對照後自評</li></ol>
+      <p style="margin:0 0 8px">考試是申論題，要<b>自己從零寫出來</b>：先說清楚「是什麼」，再評估「能告訴我們什麼、有什麼問題」。</p>
+      <ol class="pts"><li>先在<b>紙上手寫</b>（約 25 分鐘，不看資料）</li><li>對照骨架檢核表，有寫到的打勾</li><li>看詳答與音檔，把沒寫到的點在紙上補寫一次</li><li>自評，之後再回來重寫</li></ol>
       <div class="muted" style="margin-top:10px">題目與優先度依你整理的《期中考考點》。已「可以」 ${done} / ${ESSAYS.length}</div></div>
     ${groups.map(([k, label]) => { const list = ESSAYS.filter(e => e.pri === k); return list.length ? `<div class="muted" style="margin:16px 0 4px">${label}</div>` + list.map(e =>
       `<button class="opt" data-e="${e.id}"><span class="tag">${esc(e.no)}</span> ${esc(e.q)}${essayState[e.id]?.rate != null ? `<div class="muted" style="margin-top:6px">自評：${RATE_LABEL[essayState[e.id].rate]}</div>` : ''}</button>`).join('') : ''; }).join('')}`;
   document.querySelectorAll('[data-e]').forEach(b => b.onclick = () => go('essay', b.dataset.e));
 }
 function renderEssay(id) {
-  const e = ESSAYS.find(x => x.id === id); if (!e) return renderEssayList();
+  clearInterval(eTimer);
+  const e = ESSAYS.find(x => x.id === id); if (!e || !e.detail) return renderEssayList();
+  const d = e.detail;
   const st = essayState[id] || (essayState[id] = {});
+  const chk = st.chk || (st.chk = []);
   const step = eStep[id] || 0;
-  const skeleton = p => `<div style="margin-top:10px"><b>${esc(p.title)}</b><ul class="pts">${p.prompts.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
-  const points = p => `<div style="margin-top:10px"><b>${esc(p.title)}</b><ul class="pts">${p.points.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
-  const rels = e.concepts.map(cid => CONCEPTS.find(c => c.id === cid)).filter(Boolean);
+  const rels = (e.concepts || []).map(cid => CONCEPTS.find(c => c.id === cid)).filter(Boolean);
+  const nChk = () => d.skeleton.filter((_, i) => chk[i]).length;
   app.innerHTML = `
     <button class="spk" id="eBack" style="margin:8px 0">← 題目列表</button>
     <div class="card"><span class="tag">${esc(e.no)} · ${esc(e.pri)}優先</span><div class="eq" style="margin-top:8px">${esc(e.q)}</div></div>
-    <div class="card"><b><span class="step">1</span>先自己寫或口述</b>
-      <div class="muted" style="margin-top:4px">想像在考場：先說清楚是什麼，再評估能告訴我們什麼。草稿只存在這支手機。</div>
-      <textarea class="draft" id="eDraft" placeholder="在這裡寫你的答案…">${esc(st.draft || '')}</textarea>
-      ${step < 1 ? `<button class="btn" id="eNext1" style="margin-top:12px">我寫好了，看答題骨架</button>` : ''}</div>
-    ${step >= 1 ? `<div class="card" id="eSk"><b><span class="step">2</span>答題骨架（想想這些問題你有沒有答到）</b>${skeleton(e.a)}${skeleton(e.b)}
-      <div style="margin-top:12px"><b>要用的專業語言</b><div class="chips" style="margin-top:6px">${e.terms.map(t => `<span class="tag">${esc(t[0])}　${esc(t[1])}</span>`).join('')}</div></div>
-      ${step < 2 ? `<button class="btn" id="eNext2" style="margin-top:12px">補完了，看參考要點</button>` : ''}</div>` : ''}
-    ${step >= 2 ? `<div class="card" id="eRef"><b><span class="step">3</span>參考要點（對照你的草稿）</b>${points(e.a)}${points(e.b)}
-      <div class="why" style="margin-top:12px"><b>常見陷阱</b><br>${esc(e.pitfall)}</div>
-      ${rels.length ? `<div style="margin-top:12px"><b>相關概念卡</b><div class="chips" style="margin-top:6px">${rels.map(c => `<span class="tag">${esc(c.term)}</span>`).join('')}</div></div>` : ''}</div>
+    <div class="card"><b><span class="step">1</span>先在紙上手寫</b>
+      <div class="muted" style="margin-top:4px">不看資料，約 25 分鐘。先寫結論一句，再寫 3–5 個論點與證據，最後寫評估或限制。${st.secs ? `上次用時 ${fmtClock(st.secs)}。` : ''}</div>
+      <div class="row" style="margin-top:10px;align-items:center"><button class="btn ghost" id="eTimer" style="flex:none;width:auto;padding:10px 18px">開始計時</button><span id="eClock" style="font-size:22px;font-variant-numeric:tabular-nums">00:00</span></div>
+      <details style="margin-top:10px"><summary class="muted">也想在手機上打字？</summary>
+        <textarea class="draft" id="eDraft" placeholder="在這裡寫你的答案…（草稿只存在這支手機）">${esc(st.draft || '')}</textarea></details>
+      ${step < 1 ? `<button class="btn" id="eNext1" style="margin-top:12px">我寫好了，對照檢核表</button>` : ''}</div>
+    ${step >= 1 ? `<div class="card" id="eSk"><b><span class="step">2</span>骨架檢核表（有寫到的打勾）</b>
+      <div class="muted" style="margin:4px 0 6px">已勾 <span id="eCnt">${nChk()}</span> / ${d.skeleton.length}。沒勾到的點，等一下看完詳答後，在紙上補寫一次。</div>
+      ${d.skeleton.map((t, i) => `<label class="chk"><input type="checkbox" data-c="${i}" ${chk[i] ? 'checked' : ''}><span>${t}</span></label>`).join('')}
+      ${step < 2 ? `<button class="btn" id="eNext2" style="margin-top:12px">對照詳答</button>` : ''}</div>` : ''}
+    ${step >= 2 ? `<div class="card det" id="eRef"><b><span class="step">3</span>詳答</b>
+      <div class="muted" style="margin-top:6px">${d.signal}</div>
+      <div class="why"><b>一句話答案</b><br>${d.answer1}</div>
+      <audio controls preload="none" src="${d.audio}" style="width:100%;margin-top:10px"></audio>
+      ${d.sections.map(x => `<h3>${esc(x.h)}</h3>${x.html}`).join('')}
+      <h3>容易失分</h3><ul class="pts">${d.traps.map(x => `<li>${x}</li>`).join('')}</ul>
+      <h3>90 秒默寫版</h3><p>${d.oral}</p>
+      ${e.terms && e.terms.length ? `<h3>要用的專業語言</h3><div class="chips">${e.terms.map(t => `<span class="tag">${esc(t[0])}　${esc(t[1])}</span>`).join('')}</div>` : ''}
+      ${rels.length ? `<h3>相關概念卡</h3><div class="chips">${rels.map(c => `<span class="tag">${esc(c.term)}</span>`).join('')}</div>` : ''}
+      <details style="margin-top:14px"><summary class="muted">資料來源與可信度</summary><ul class="pts">${d.sources.map(x => `<li>${x}</li>`).join('')}</ul></details></div>
       <div class="card"><b>這題你覺得…</b><div class="row rate" style="margin-top:10px">${RATE_LABEL.map((l, i) => `<button class="btn ${['bad', 'mid', 'good'][i]}" data-r="${i}">${l}</button>`).join('')}</div>
-        <div class="muted" style="margin-top:8px">選「還不行」會把相關概念加進錯題本${st.rate != null ? `（目前自評：${RATE_LABEL[st.rate]}）` : ''}</div></div>` : ''}`;
+        <div class="muted" style="margin-top:8px">檢核表打勾 ${nChk()} / ${d.skeleton.length}${nChk() < d.skeleton.length / 2 ? '，漏了一半以上，建議選「還不行」，隔幾天重寫' : ''}。${rels.length ? '選「還不行」會把相關概念加進錯題本。' : ''}${st.rate != null ? `（目前自評：${RATE_LABEL[st.rate]}）` : ''}</div></div>` : ''}`;
   $('#eBack').onclick = () => go('essay');
   $('#eDraft').oninput = ev => { st.draft = ev.target.value; saveEssay(); };
-  const adv = (n, anchor) => () => { eStep[id] = n; renderEssay(id); const el = $(anchor); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+  let t0 = 0;
+  $('#eTimer').onclick = () => {
+    if (eTimer) { clearInterval(eTimer); eTimer = null; st.secs = Math.round((Date.now() - t0) / 1000); saveEssay(); $('#eTimer').textContent = '再計一次'; return; }
+    t0 = Date.now(); $('#eTimer').textContent = '停止';
+    eTimer = setInterval(() => { $('#eClock').textContent = fmtClock(Math.round((Date.now() - t0) / 1000)); }, 500);
+  };
+  document.querySelectorAll('[data-c]').forEach(c => c.onchange = () => { chk[+c.dataset.c] = c.checked; saveEssay(); $('#eCnt').textContent = nChk(); });
+  const adv = (n, anchor) => () => { clearInterval(eTimer); eTimer = null; eStep[id] = n; renderEssay(id); const el = $(anchor); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
   if ($('#eNext1')) $('#eNext1').onclick = adv(1, '#eSk');
   if ($('#eNext2')) $('#eNext2').onclick = adv(2, '#eRef');
   document.querySelectorAll('[data-r]').forEach(b => b.onclick = () => {
     const r = +b.dataset.r; st.rate = r; st.at = Date.now(); saveEssay();
-    if (r === 0) e.concepts.forEach(markWeak);
-    const next = ESSAYS.find(x => x.id !== id && essayState[x.id]?.rate !== 2 && essayState[x.id]?.rate == null) || null;
-    toast(r === 2 ? '很好，這題過關' : r === 1 ? '再看一次會更穩' : '已把相關概念加進錯題本');
+    if (r === 0) (e.concepts || []).forEach(markWeak);
+    const next = ESSAYS.find(x => x.id !== id && essayState[x.id]?.rate == null) || null;
+    toast(r === 2 ? '很好，這題過關' : r === 1 ? '再看一次會更穩' : '先記下來，過幾天回來重寫');
     go('essay', next ? next.id : undefined);
   });
 }

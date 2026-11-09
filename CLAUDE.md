@@ -78,3 +78,13 @@ audio/ check.py sw.js manifest.json icon-*.png（米色底「腦」字）
 - 排程與資料保存的程式在 src/fsrs-adapter.mjs；src/browser-entry.mjs 暴露給 index.html 使用。修改後執行 npm run build 產生 vendor 瀏覽器程式。vendor JS 全部必須列入 sw.js 的快取清單，變更時 bump CACHE。
 - cn_srs 保持舊資料；cn_srs_before_fsrs_v1 為首次儲存前備份；新排程、錯題旗標及歷程在 cn_fsrs_v1。不得虛構舊自評紀錄來反推模型狀態。
 - 檢查：npm test、python3 check.py；另外驗證翻面自評、到期顯示與重新載入的保存。
+
+## 2026-11-09 合併（詳答＋圖解）
+
+- hai 要求三個認知網站只留 App：把「期中申論詳解」（30 題詳答＋音檔）與「30 題圖解」併進來。
+- **申論分頁改成手寫優先**：① 紙上手寫（可計時，也可在手機打字）→ ② 骨架檢核表打勾（`cn_essay[id].chk`）→ ③ 詳答（一句話答案、分段詳解與自繪圖、容易失分、90 秒默寫版、音檔、來源）→ ④ 自評。共 30 題，優先度新增「中」「中低」兩組。
+- 詳答資料：`tools/essay_detail.json`（由詳解專案 `100_Todo/projects/認知神經科學導論_90plus/期中申論詳解/build/export_app.py <本資料夾>` 產生，同時複製音檔到 `audio/E_{章}_{題}.mp3`）；`tools/build_data.py` 把它併進 `essays.json` 的 `detail` 欄位，沒有舊版骨架的 11 題直接新增。更新詳解請改詳解專案的 `content_*.py`，再重跑 export_app.py 與 build_data.py，不要手改 JSON。
+- 詳答已去掉投影片圖片，只留自繪 SVG；音檔為 TTSMaker 家豪（非雲哲男聲），沒預快取（sw.js 只快取靜態檔，音檔走網路優先的執行期快取）。
+- `diagrams/index.html`：另一個對話做的「30 題圖解」單檔頁，已移除原本依賴 Artifact 空間的 30 個音檔（講解音檔改用申論分頁的詳答音檔）；原始版本備份在 `認知神經科學導論_90plus/_備份/`。首頁有連結。
+- 引文：詳答裡的老師逐字稿引文與時間點已於 2026-10-29 回原檔核對（見詳解頁「核對紀錄」）；投影片頁碼只抽查。
+- sw.js 的 CACHE 已 bump 到 v12-essay。
